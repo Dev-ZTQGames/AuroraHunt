@@ -1,0 +1,32 @@
+[2023-11-26 09:38:12] NODE - SourceIP : 35.191.33.7, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:12] NODE - SourceIP : 35.191.24.145, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:12] NODE - SourceIP : 35.191.32.15, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:12] NODE - SourceIP : 35.191.24.185, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:13] NODE - SourceIP : 35.191.24.189, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:13] NODE - SourceIP : 35.191.32.176, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:13] NODE - SourceIP : 35.191.24.189, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:13] NODE - SourceIP : 35.191.32.131, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:25] NODE - SourceIP : 35.191.32.129, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:25] NODE - SourceIP : 35.191.29.163, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:26] NODE - SourceIP : 35.191.32.199, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:26] NODE - SourceIP : 35.191.32.233, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:26] NODE - SourceIP : 35.191.32.134, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:26] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-11-26 09:38:27] NODE - SourceIP : 35.191.32.135, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":73486645.6}
+[2023-11-26 09:38:27] NODE - SourceIP : 35.191.13.84, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}

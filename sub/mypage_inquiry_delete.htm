@@ -1,0 +1,14 @@
+<?php 
+include $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
+
+$index = escape_string(trim($_REQUEST['index']));
+
+$connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $DB_INFO['NAME']);
+
+$result = mysqli_query ($connect, "DELETE FROM CSCenter WHERE m_index = '".$index."'");
+
+mysqli_close();
+?>
+<script>
+parent.location='mypage_inquiry_list.htm';
+</script>

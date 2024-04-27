@@ -1,0 +1,91 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="ad_banner ad_728x90"><img src="https://dummyimage.com/728x90/000/fff"></div>
+
+            <div class="basic_table_wrap">
+                <div class="select select_filter select_language">
+                    <label for="select_email" class="sr_only"><?php echo $lang['Language_Selection']; ?></label>
+                    <select id="select_email" class="select_email selectric">
+                        <option value="<?php echo $lang['Language']; ?>"><?php echo $lang['Language']; ?></option>
+                        <option value="한국어">한국어</option>
+                        <option value="中文">中文</option>
+                        <option value="English">English</option>
+                    </select>                                                   
+                </div>
+                <div class="search_field">
+                    <label class="search_label">
+                        <span class="sr_only"><?php echo $lang['Enter_Search']; ?></span>
+                        <input name="search" type="text" value="" placeholder="<?php echo $lang['Enter_Search']; ?>" class="form_input search_input">
+                    </label>
+                    <button class="search_button basic_btn basic_btn_primary"><?php echo $lang['Search']; ?></button>
+                </div><!-- .search_field -->
+				<table class="basic_table rwd_table inquiry_list_table">
+				    <caption><?php echo $lang['Developers_List']; ?></caption>
+                    <colgroup>
+                        <col style="width: 15%;"/>
+                        <col style="width: 40%"/>
+                        <col style="width: 15%;"/>
+                        <col style="width: 15%;"/>
+                        <col style="width: 15%;"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><?php echo $lang['Classification']; ?></th>
+                            <th><?php echo $lang['Title_Name']; ?></th>
+                            <th><?php echo $lang['Writer']; ?></th>
+                            <th><?php echo $lang['Account_Name']; ?></th>
+                            <th><?php echo $lang['Date_Of_Creation']; ?></th>
+                        </tr>
+                    </thead>
+				    <tbody>
+					    <tr>
+							<td class="type">??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td class="name">오로라</td>
+							<td class="id">aurora123</td>
+							<td class="date">2020-05-01</td>
+						</tr>
+						<tr>
+							<td class="type">??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td class="name">오로라</td>
+							<td class="id">aurora123</td>
+							<td class="date">2020-05-01</td>
+						</tr>
+                        <tr>
+							<td class="type">??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td class="name">오로라</td>
+							<td class="id">aurora123</td>
+							<td class="date">2020-05-01</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <div class="tabe_pagination">
+					<a class="page_numbers first" href="#">&gt;</a>
+					<a class="page_numbers prev" href="#">&gt;&gt;</a>
+					<span class="current page_numbers">1</span>
+					<a class="page_numbers" href="#">2</a>
+					<a class="page_numbers" href="#">3</a>
+					<a class="page_numbers next" href="#">&gt;</a>
+					<a class="page_numbers last" href="#">&gt;&gt;</a>
+				</div><!-- .tabe_pagination -->
+			</div><!-- .gift_table_wrap -->
+
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

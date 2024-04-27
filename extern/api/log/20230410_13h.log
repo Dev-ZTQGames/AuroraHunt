@@ -1,0 +1,24 @@
+[2023-04-10 13:13:39] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:13:49] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:13:56] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:13:57] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:17:35] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:17:40] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:17:42] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:17:44] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:18:20] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:18:24] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:18:26] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-10 13:18:28] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}

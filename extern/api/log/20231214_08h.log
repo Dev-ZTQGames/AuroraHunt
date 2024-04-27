@@ -1,0 +1,60 @@
+[2023-12-14 08:48:53] CRYPTOOO - SourceIP : 35.191.32.199, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=testSpolive001|partner=Payletter|date=231214044852
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zGGGOJBV91a9C%2Frhc1XHC8xxvjztbpDQ6zxYb74d1RMLeSXzVweBQ4GK4qiC%2BzHbRJ2XVXVkGwCqEuXnY%2FOX1DE%3D"}
+[2023-12-14 08:48:53] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zGGGOJBV91a9C/rhc1XHC8xxvjztbpDQ6zxYb74d1RMLeSXzVweBQ4GK4qiC+zHbRJ2XVXVkGwCqEuXnY/OX1DE=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000150","login_id":"testSpolive001","name":"testSpolive","email":"neoguru001@gmail.com","lang_code":"tw"}
+[2023-12-14 08:48:58] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=testSpolive001|partner=Payletter|date=231214044858
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zGGGOJBV91a9C%2Frhc1XHC8xxvjztbpDQ6zxYb74d1RMLeSXzVweBQ4GK4qiC%2BzHbRFZoXUvNdSFLR7Wsi440E3Y%3D"}
+[2023-12-14 08:48:58] API - SourceIP : 35.191.32.192, proc1: R+jyYDzxeatxe0LWIiJ8zGGGOJBV91a9C/rhc1XHC8xxvjztbpDQ6zxYb74d1RMLeSXzVweBQ4GK4qiC+zHbRFZoXUvNdSFLR7Wsi440E3Y=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000150","login_id":"testSpolive001","name":"testSpolive","email":"neoguru001@gmail.com","lang_code":"tw"}
+[2023-12-14 08:49:29] CRYPTOOO - SourceIP : 35.191.32.199, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214044929
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QWOWQo3D25%2FYChXYfZEXRsNfCkkl18itneamayTtkzjY%3D"}
+[2023-12-14 08:49:29] API - SourceIP : 35.191.32.199, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QWOWQo3D25/YChXYfZEXRsNfCkkl18itneamayTtkzjY=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:49:30] CRYPTOOO - SourceIP : 35.191.32.199, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214044930
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QzTJNOk5J%2FPXX6DMN2XKlJ%2FgCjpVDlCofxsc5eHNr8PQ%3D"}
+[2023-12-14 08:49:30] API - SourceIP : 35.191.32.192, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QzTJNOk5J/PXX6DMN2XKlJ/gCjpVDlCofxsc5eHNr8PQ=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:49:34] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214044934
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QzTJNOk5J%2FPXX6DMN2XKlJxBYC6v%2FTD66OHmRUjaRWtU%3D"}
+[2023-12-14 08:49:34] API - SourceIP : 35.191.32.199, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QzTJNOk5J/PXX6DMN2XKlJxBYC6v/TD66OHmRUjaRWtU=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:49:35] CRYPTOOO - SourceIP : 35.191.32.199, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214044935
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QzTJNOk5J%2FPXX6DMN2XKlJ2uYh3mbvwZOxmA8CQNo5Pw%3D"}
+[2023-12-14 08:49:35] API - SourceIP : 35.191.32.201, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QzTJNOk5J/PXX6DMN2XKlJ2uYh3mbvwZOxmA8CQNo5Pw=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:49:35] CRYPTOOO - SourceIP : 35.191.32.195, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214044935
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QzTJNOk5J%2FPXX6DMN2XKlJ2uYh3mbvwZOxmA8CQNo5Pw%3D"}
+[2023-12-14 08:49:35] API - SourceIP : 35.191.32.199, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QzTJNOk5J/PXX6DMN2XKlJ2uYh3mbvwZOxmA8CQNo5Pw=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:07] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045007
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qfn8TRQjF%2BkS9ubj%2F%2F4MUhigObFVDtAaKkcWovP6QWu0%3D"}
+[2023-12-14 08:50:07] API - SourceIP : 35.191.32.201, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qfn8TRQjF+kS9ubj//4MUhigObFVDtAaKkcWovP6QWu0=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:07] CRYPTOOO - SourceIP : 35.191.32.195, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045007
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qfn8TRQjF%2BkS9ubj%2F%2F4MUhigObFVDtAaKkcWovP6QWu0%3D"}
+[2023-12-14 08:50:07] API - SourceIP : 35.191.32.195, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qfn8TRQjF+kS9ubj//4MUhigObFVDtAaKkcWovP6QWu0=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:08] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045008
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qfn8TRQjF%2BkS9ubj%2F%2F4MUhrxsGlRk8RKgc5GKgrxsXDo%3D"}
+[2023-12-14 08:50:08] API - SourceIP : 35.191.32.198, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qfn8TRQjF+kS9ubj//4MUhrxsGlRk8RKgc5GKgrxsXDo=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:08] CRYPTOOO - SourceIP : 35.191.32.201, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045008
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qfn8TRQjF%2BkS9ubj%2F%2F4MUhrxsGlRk8RKgc5GKgrxsXDo%3D"}
+[2023-12-14 08:50:08] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qfn8TRQjF+kS9ubj//4MUhrxsGlRk8RKgc5GKgrxsXDo=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:15] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045015
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q6u4WIfCW%2Bg%2B3OXnPnt%2FGKRQ9fSI2pEaJGL6Cw7uJDqc%3D"}
+[2023-12-14 08:50:15] API - SourceIP : 35.191.32.198, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q6u4WIfCW+g+3OXnPnt/GKRQ9fSI2pEaJGL6Cw7uJDqc=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:16] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045016
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q6u4WIfCW%2Bg%2B3OXnPnt%2FGKY9FH8e5fINKFyWaNsI5fF0%3D"}
+[2023-12-14 08:50:16] API - SourceIP : 35.191.32.192, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q6u4WIfCW+g+3OXnPnt/GKY9FH8e5fINKFyWaNsI5fF0=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:53] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045053
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qe4Deyb%2FIE4ESonvUEfOaTvfGM0jEWE1dwJFGt9aU1HY%3D"}
+[2023-12-14 08:50:53] API - SourceIP : 35.191.32.192, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qe4Deyb/IE4ESonvUEfOaTvfGM0jEWE1dwJFGt9aU1HY=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-14 08:50:53] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231214045053
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Qe4Deyb%2FIE4ESonvUEfOaTvfGM0jEWE1dwJFGt9aU1HY%3D"}
+[2023-12-14 08:50:53] API - SourceIP : 35.191.32.199, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Qe4Deyb/IE4ESonvUEfOaTvfGM0jEWE1dwJFGt9aU1HY=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}

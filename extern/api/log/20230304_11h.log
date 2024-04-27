@@ -1,0 +1,12 @@
+[2023-03-04 11:38:13] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-03-04 11:38:18] BILLING - SourceIP : 34.80.134.81, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, item_id : 1001, cash : 30
+{"result":"0","msg":"HTTP Status Code - 400, Failure."}
+[2023-03-04 11:38:30] BILLING - SourceIP : 34.80.134.81, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, item_id : 1005, cash : 100
+{"result":"1","msg":"Request OK, Success."}
+[2023-03-04 11:39:06] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":170}
+[2023-03-04 11:39:28] BILLING - SourceIP : 34.80.134.81, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, item_id : 1005, cash : 20
+{"result":"1","msg":"Request OK, Success."}
+[2023-03-04 11:39:45] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":150}

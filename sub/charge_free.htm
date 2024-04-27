@@ -1,0 +1,68 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_charge">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Charge']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_charge.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="has_cash_box wondercash_box">
+                <b class="tit"><?php echo $lang['My_Wonder_Money']; ?></b>
+                <p class="cash">원더게임 <span>5,500</span> 원더머니</p>
+			</div><!-- .has_cash_box -->
+
+            <div class="charge_guide wonder_guide">
+                <h3><?php echo $lang['WonderGame_Charging_Guide']; ?></h3>
+                <div class="charge_guide_list">
+                    <ul class="num_info">
+                        <li><?php echo $lang['Free_Charging_Desc']; ?></li>
+                        <li><?php echo $lang['How_To_Use_Wonder_Money']; ?></li>
+                    </ul><!-- .dot_info -->
+                    <p><?php echo $lang['Wonder_Money_Notice']; ?></p>
+                </div><!-- .charge_guide_list -->
+            </div>
+
+            <div class="form_charge">
+                <div class="form_field_item_wrap">
+                    <div class="form_field_item">
+                        <label class="form_label" for="charge_game"><span><?php echo $lang['Free_Charge_Affiliate']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <div class="custom_checkbox_wrap">
+                                <label class="custom_radio"><input type="radio" name="charge_game" checked><span class="checkmark"></span><?php echo $lang['I_Like_Click']; ?></label>
+                            </div><!-- .custom_checkbox_wrap -->
+                        </div>
+                    </div><!-- .form_field_item -->
+
+                    <div class="form_field_item free_charge_list">
+						<p class="label_item"><?php echo $lang['Free_Charging']; ?></p>
+						<div class="input_item">
+                            <div class="free_charge_item">
+                                <figure>
+                                    <img src="../images/sub/free_charge_01.jpg" alt="">
+                                </figure>
+                                <a href="#"><span>17머니</span></a>
+                                <p class="free_charge_name"><?php echo $lang['Phone_Protection_Service']; ?></p>
+                            </div><!-- .free_charge_item -->
+                            <div class="free_charge_item">
+                                <figure>
+                                    <img src="../images/sub/free_charge_01.jpg" alt="">
+                                </figure>
+                                <a href="#"><span>17머니</span></a>
+                                <p class="free_charge_name"><?php echo $lang['Prevent_Theft_Phone_Num']; ?></p>
+                            </div><!-- .free_charge_item -->
+                        </div>
+					</div><!-- .form_field_item -->
+
+                </div><!-- .form_field_item_wrap -->
+            </div><!-- .form_charge -->
+            <div class="ad_banner ad_1200_672"><img src="https://dummyimage.com/1200x672/000/fff"></div>
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

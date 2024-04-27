@@ -1,0 +1,136 @@
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$index = escape_string(trim($_REQUEST['index']));
+
+$connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $DB_INFO['NAME']);
+
+$result = mysqli_query ($connect, "SELECT * FROM CSCenter WHERE m_index = '".$index."'");
+
+$info = array();
+
+$row = mysqli_fetch_array($result);
+
+$info = $row; 
+
+	switch($info['m_game_code']){
+		case '1' : $game = 'Claw Machine';
+		break;
+	}
+
+//상태표시 클래스 확인 필요
+	switch($info['m_status']){
+		case '0' : $status = '<span class="inquiry_state accepting">'.$lang['Receiving'].'</span>';
+		break;
+		case '1' : $status = '<span class="inquiry_state confirming">'.$lang['Checking'].'</span>';
+		break;
+		case '2' : $status = '<span class="inquiry_state confirming">'.$lang['Checking'].'</span>';
+		break;
+		case '7' : $status = '<span class="inquiry_state complete">'.$lang['Answer_Complete'].'</span>';
+		break;
+	}
+
+?>
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+
+            <div class="inquiry_view_header">
+                <div class="inquiry_view_title">
+					<?php echo $status; ?>
+                    <h2><span class="inquiry_single_title"><?php echo $info['m_title']; ?></span></h2>
+                </div>
+                <!-- .inquiry_view_title -->
+                <div class="inquiry_view_info_wrap">
+                    <ul class="inquiry_view_info">
+                        <!--li class="service"><span><?php echo $game; ?></span></li-->
+                        <li class="date"><span><time class="date" datetime="2020-06-06"><?php echo substr($info['m_date'],0,10); ?></time></span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .inquiry_view_header -->
+            <div class="inquiry_view_body">
+                <div class="inquiry_view_content">
+                    <?php echo $info['m_content']; ?>
+                </div><!-- .inquiry_view_content -->
+
+<?php
+
+$result1 = mysqli_query ($connect, "SELECT * FROM CSCenter WHERE m_reply = '".$index."'");
+
+$info1 = array();
+
+$row1 = mysqli_fetch_array($result1);
+
+$info1 = $row1;
+
+if($info1['m_content'] != ''){?>
+	<div class="inquiry_answer_wrap">
+		<form class="comment_form" method="post">
+			<div class="inquiry_answer_container">
+				<div class="inquiry_answer_header">
+					<span class="inquiry_answer_name"><?php echo $lang['AuroraHunt']; ?></span>
+					<span class="inquiry_answer_date"><?php echo substr($info1['m_date'],0,10);?></span>
+				</div><!-- .inquiry_answer_header -->
+				<div class="inquiry_answer_body">
+					<div class="comment">
+					<?php echo $info1['m_content']; ?>
+					</div><!-- .inquiry_answer_content -->
+				</div><!-- .inquiry_answer_body -->
+			</div><!-- .inquiry_answer_container -->
+		</form>
+	</div><!-- .inquiry_answer_wrap -->
+
+<?php
+}
+
+?>
+
+          <div class="inquiry_control">
+                    <div class="inquiry_control_left">
+                        <a href="mypage_inquiry_list.htm" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_To_Lists']; ?></span></a>
+                    </div><!-- .inquiry_control_left -->
+                    <div class="inquiry_control_right">
+                        <a href="#" class="basic_btn basic_btn_secondary btn_delete" onclick="chk_delete();"><span><?php echo $lang['Delete']; ?></span></a>
+                    </div><!-- .inquiry_control_right -->
+                </div>
+                <!-- .inquiry_control -->
+            </div>
+            <!-- .inquiry_view_body -->
+
+
+
+
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+function chk_delete(){
+	swal({
+		text: '<?php echo $lang['Really_wanna_delete']; ?>',
+		buttons: {
+			cancel : '<?php echo $lang['Cancel']; ?>',
+			confirm : {
+				text : '<?php echo $lang['Confirm']; ?>',
+				value : 'catch'
+			},
+		},
+	}).then(function(value){
+		if(value == 'catch'){
+			location.href='mypage_inquiry_delete.htm?index=<?php echo $index; ?>';
+		}
+	})
+
+
+}
+</script>

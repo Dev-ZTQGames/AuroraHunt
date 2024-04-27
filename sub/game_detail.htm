@@ -1,0 +1,135 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$get_m_game_code = escape_string(trim($_REQUEST['m_game_code'])) ;
+
+
+$info = array();
+
+$query = "SELECT * FROM GamesLanding where m_game_code = '" .$get_m_game_code. "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+$image_mount = 'https://image.aurorahunt.xyz';
+
+$main_banner = $image_mount.$row['m_main_banner_img'];
+
+$sub_banner = explode(",",$row['m_sub_banner']);
+
+
+?>
+
+<style>
+
+    .test_wrap {min-height: 1000px;background: gray;padding: 200px 100px;  }
+
+</style>
+
+<div class="test_wrap" >
+
+
+
+
+    <div>
+        <p><?php echo $lang['Game_Name']; ?> : <?php echo $row['m_title'] ?> </p> <br><br>
+
+        <p>main banner 이미지 : <img src="<?php echo $main_banner ?>"></p><br><br>
+
+        <p><?php echo $lang['Platform_Rating']; ?> :
+            <?php if($row['m_platform_rating'] === '0'){
+
+                echo "전체 이용가 입니다.";
+
+            }else if($row['m_platform_rating'] === '12'){
+
+                echo "12세 이용가 입니다.";
+
+            }else if($row['m_platform_rating'] === '15'){
+
+                echo "15세 이용가 입니다.";
+            }else if($row['m_platform_rating'] === '18'){
+
+                echo "청소년 이용불가 입니다.";
+
+            }
+
+            ?>
+        </p><br><br>
+
+        <p>플랫폼 호환 기기 :
+            <?php
+
+            if($row['m_platform_icon_i'] === 'Y'){
+
+                echo $lang['ISO_Icon_Output'];
+
+            }else {
+
+                echo $lang['ISO_Icon_No_Output'];
+
+            }
+
+            if($row['m_platform_icon_o'] === 'Y'){
+
+                echo $lang['ISO_Icon_Output'];
+
+            }else {
+
+                echo $lang['ISO_Icon_No_Output'];
+
+            }
+
+            if($row['m_platform_icon_pc'] === 'Y'){
+
+                echo $lang['ISO_Icon_Output'];
+
+            }else {
+
+                echo $lang['ISO_Icon_No_Output'];
+
+            }
+
+            ?>
+        </p><br><br>
+
+        <p><?php echo $lang['Hashtag']; ?> : <?php echo $row['g_hashtag'] ?> </p><br><br>
+
+        <p><?php echo $lang['Game_Introduction']; ?> : <?php echo $row['m_content'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_Address']; ?> : <?php echo $row['g_address'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_Business_Num']; ?> : <?php echo $row['g_business_num'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_CEO']; ?> : <?php echo $row['g_ceo'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_Security_Officer']; ?> : <?php echo $row['g_security_officer'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_Tel']; ?> : <?php echo $row['g_phone'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Company_Fax_Num']; ?> : <?php echo $row['g_fax_num'] ?> </p> <br><br>
+
+        <p><?php echo $lang['Game_Code']; ?> : <?php echo $row['$get_m_game_code'] ?> </p> <br><br>
+
+        <div>
+            <p><?php echo $lang['Sub_Banner_List']; ?> : </p> <br><br>
+            <ul>
+
+                <?php
+                foreach($sub_banner as $value)
+                {
+                    echo "<li>";
+                echo "<img src='$image_mount$value'>"."<br/>";
+                echo "</li>";
+                }
+
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

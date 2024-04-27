@@ -1,0 +1,4 @@
+[2023-06-04 12:46:41] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":22073}
+[2023-06-04 12:46:43] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":22073}

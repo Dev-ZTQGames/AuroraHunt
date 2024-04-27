@@ -1,0 +1,10 @@
+[2023-12-07 05:04:40] BILLING - SourceIP : 35.191.32.176, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-07 05:04:42] BILLING - SourceIP : 35.191.32.184, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-07 05:04:42] BILLING - SourceIP : 35.191.32.183, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, cash : 30
+{"result":"0","msg":"HTTP Status Code - 401, Failure."}
+[2023-12-07 05:04:48] BILLING - SourceIP : 35.191.29.169, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, cash : 30
+{"result":"0","msg":"HTTP Status Code - 401, Failure."}
+[2023-12-07 05:06:50] API - SourceIP : 35.191.29.160, proc1: mkKey, proc2: Payletter
+{"result":"1","msg":"HjuSA4M2kVb8hpFc1pzWjQ%3D%3D"}

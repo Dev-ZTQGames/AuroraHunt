@@ -1,0 +1,4 @@
+[2023-03-12 14:25:17] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"024d97b6d7d101d9de30924d35db600f05e7cf04a43cbd9e73e71f78bc8cce468b"}
+[2023-03-12 14:42:52] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"024d97b6d7d101d9de30924d35db600f05e7cf04a43cbd9e73e71f78bc8cce468b"}

@@ -1,0 +1,16 @@
+[2023-12-05 08:01:15] BILLING - SourceIP : 35.191.24.191, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code ( 403 ), Failure."}
+[2023-12-05 08:03:13] BILLING - SourceIP : 35.191.24.191, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-12-05 08:31:30] CRYPTOOO - SourceIP : 35.191.32.132, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=Tester1perugia|pw=perugia1|partner=Spofeed|date=231205083130|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes%2FSHvb%2FYy7pAaFA1fF2uOdzO8wHxQcg%2FOZliokXabY%2FddnOhj61WKLv6kHIKpQX1K6wf2Km3YmP9CKY0rpf27DMIcw5fw%3D%3D"}
+[2023-12-05 08:31:30] API - SourceIP : 35.191.32.225, proc1: TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes/SHvb/Yy7pAaFA1fF2uOdzO8wHxQcg/OZliokXabY/ddnOhj61WKLv6kHIKpQX1K6wf2Km3YmP9CKY0rpf27DMIcw5fw==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000124","msg":"1010"}
+[2023-12-05 08:31:50] CRYPTOOO - SourceIP : 35.191.29.166, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=Tester1perugia|pw=perugia1|partner=Spofeed|date=231205083150|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes%2FSHvb%2FYy7pAaFA1fF2uOdzO8wHxeTP%2B4TMQlsh363mxsvSxXTpvydTP%2FMtLIZ783JD7HwlNtEp5ccuHhrPdY0DHGjgvA%3D%3D"}
+[2023-12-05 08:31:50] API - SourceIP : 35.191.16.196, proc1: TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes/SHvb/Yy7pAaFA1fF2uOdzO8wHxeTP+4TMQlsh363mxsvSxXTpvydTP/MtLIZ783JD7HwlNtEp5ccuHhrPdY0DHGjgvA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000124","msg":"1010"}
+[2023-12-05 08:31:54] CRYPTOOO - SourceIP : 35.191.32.14, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=Tester1perugia|pw=perugia1|partner=Spofeed|date=231205083154|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes%2FSHvb%2FYy7pAaFA1fF2uOdzO8wHxSY6ivoDar%2Bl2mg1CpXi6866Ns%2FexXSYuRdMHH%2Bgt5JwTDKBDfGh7eKKLnAgiqkScA%3D%3D"}
+[2023-12-05 08:31:54] API - SourceIP : 35.191.24.150, proc1: TOoCpsxAmpMnZZqTbujTpEoQFJptlAVyU7eCjVtF2TxGwdUxzpaL19ckes/SHvb/Yy7pAaFA1fF2uOdzO8wHxSY6ivoDar+l2mg1CpXi6866Ns/exXSYuRdMHH+gt5JwTDKBDfGh7eKKLnAgiqkScA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000124","msg":"1010"}

@@ -1,0 +1,96 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$query		= escape_string(trim($_REQUEST['query']));
+$password	= escape_string(trim($_REQUEST['password']));
+
+
+$info = array();
+
+if($query == 'checkpw'){
+
+	$query = "SELECT login_pw,PASSWORD('".$password."') as check_pw FROM Accounts WHERE login_id='".$_COOKIE['login_id']."'";
+
+	$que = mysqli_query($connect, $query);
+
+	$row = mysqli_fetch_array($que);
+
+	$info = $row;
+
+	if($info['login_pw'] == $info['check_pw']){
+		echo '<script>location.href="mypage_withdraw.htm";</script>';
+	}else{
+?>
+			  <script>
+				swal({
+				  text: '<?php echo $lang["Password_Not_Match"]; ?>',
+				  buttons: '<?php echo $lang["Confirm"]; ?>',
+				})
+			  </script> 
+<?php
+	}
+}
+?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->        
+        <? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage form_pw">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Member_Info']; ?></h3>
+				</div><!-- .form_basic_head -->
+
+                <form name="query_checkpw" action="mypage_withdraw_check_pw.htm" method="POST">
+					<input type="hidden" name="query" value="checkpw">
+					<div class="form_basic_body">
+						<p class="form_desc"><?php echo $lang['Re_Enter_Password']; ?></p>
+                         <div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<div class="form_input_wrap">
+									<input type="password" class="form_input" name="password" placeholder="<?php echo $lang['Enter_Password']; ?>">
+								</div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+					</div><!-- .form_basic_body -->
+				</form>
+			</div><!-- .form_basic -->
+			
+			<!--div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3>A-Hunt Developers</h3>
+				</div--><!-- .form_basic_head -->
+				<!--div class="form_basic_body">
+					 <div class="filed_item">
+						 <p class="label_item">회사명</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">홈페이지</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">담당자</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">연락처</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+				<!--</div>--><!-- .form_basic_body -->
+			<!--</div>--><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <button class="basic_btn basic_btn_primary" onclick="document.query_checkpw.submit();"><span><?php echo $lang['Check']; ?></span></button>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

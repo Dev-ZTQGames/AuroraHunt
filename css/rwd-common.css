@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+
+
+
+
+
+@media (max-width: 1480px) {
+    /* FORM */
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-11rem;}
+
+}
+
+
+/* **************************************** *
+ * 1200px
+ * **************************************** */
+@media (max-width: 1200px){
+
+}
+
+/* **************************************** *
+ * 1023px
+ * **************************************** */
+@media (max-width: 1023px){
+    /* BUTTON */
+    .basic_btn { font-size:14rem;}
+
+    /* FORM */
+    .email_wrap .input_email_domain {width:26%;}
+    .btn_email_verify {width:20%;font-size:14rem;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-103rem;}
+}
+
+
+@media (max-width: 860px) {
+    
+    .swiper_navigation {width:80rem; }
+    .swiper_navigation > button {width:40rem;}
+    .swiper_navigation > button:after {font-size:12rem;}
+    .swiper_control .swiper-pagination-fraction > span {font-size:12rem;}
+    .swiper_progress_wrap {width:100rem;}
+    .swiper_progress_hidden_space {width:100rem;}
+
+
+    /* BUTTON */
+    .process_btn_wrap {margin-top:60rem;}
+
+    /* FORM */
+    .form_basic_head h3 {font-size:20rem;}
+    .form_basic_body {padding:30rem 0}
+    .form_basic_body {padding:30rem 0}
+    .form_input {padding-left:15rem; padding-right:15rem;}
+    .email_wrap .input_email_domain {width:25%;}
+    .btn_email_verify {width:21%;padding:0 6rem;}
+    html[lang="en"] .form_label {font-size:14rem;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-96rem;}
+
+
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap,
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_code_vertify_wrap {width:43%;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap {width:82%}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn:last-child {width:28%;}
+
+
+    /* CHECK BOX */
+    .custom_checkbox {font-size:15rem;}
+    .custom_radio {font-size:15rem; padding-left:30rem;}
+    .custom_radio_btn input + span {font-size:15rem; padding: 6rem 16rem 8rem;}
+
+    /* TABEL */
+    .basic_table th {font-size:15rem; padding:17rem 5rem;}
+    .basic_table tr td {font-size:14rem;padding: 15rem 10rem; word-break: break-word;}
+
+    .rwd_table {display:block; clear:both;border-top: 2rem solid #999;}
+    .rwd_table thead {display:none;}
+    .rwd_table tbody {display:block;}
+    .rwd_table tr {display: block;padding: 15rem 22rem 16rem;font-size: 0;border-bottom: 1rem solid #444;}
+    .rwd_table tr td {display: block;padding: 0;text-align: left;border-bottom: none; padding:0; font-size:15rem;}
+    .rwd_table tr td.type {font-size:14rem;}
+    .rwd_table tr td.tit {padding:0; font-size:16rem; font-weight:600; margin:10rem 0;}
+    .rwd_table .name, .rwd_table .id, .rwd_table .date {display: inline-block;vertical-align: middle;width: auto;font-size: 14rem;color: #999;}
+    .rwd_table .name, .rwd_table .id {padding-right: 14rem;position: relative;}
+    .rwd_table .name:after, .rwd_table .id:after {content: '';display: block;width: 1rem;height: 10rem;position: absolute;right: 7rem;top: 50%;margin-top: -4rem;background: #999;}
+    .rwd_table tr.no_list td {text-align:center;}
+
+    .tabe_pagination .page_numbers {line-height:27rem;}
+
+    /* SCROLL BAR */
+    .scrollbar_box {padding: 15rem 20rem 15rem 20rem;}
+
+    /* NO LIST */
+    .no_list {font-size:18rem;}
+
+    /* MAGNIFIC POPUP */
+    button.mfp-close
+    .mfp-iframe-holder button.mfp-close,
+    .mfp-image-holder button.mfp-close {width:42rem; height:42rem;}
+    .mfp-container {padding-left:50rem; padding-right:50rem;}
+    .mfp-container button.mfp-arrow { width: 56rem; height: 56rem;}
+    button.mfp-arrow:after { font-size: 18rem; line-height: 56rem;}
+    button.mfp-arrow.mfp-arrow-left { left: -26rem}
+    button.mfp-arrow.mfp-arrow-right { right: -26rem}
+}
+
+
+@media(max-width: 768px) {
+
+}
+
+
+@media (max-width: 680px){
+
+    /* BUTTON */
+    .basic_btn {font-size:14rem;}
+
+    /* FORM */
+    .form_field_item .valid_message_confirm, 
+    .form_field_item .valid_message_error,
+    .form_field_item .guide_message_info {margin-left:20%;}
+
+	.form_field_item.secondary .form_input {padding-left:17%;}
+    html[lang="ja"] .form_field_item.secondary .form_input {padding-left:17%;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap { width: 80%;}
+    .email_wrap .form_field_item > label {width:20%;}
+    .email_wrap .input_email_domain {width:27%}
+    .btn_email_verify {width:19%; }
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap { width: 80%;}
+    .code_vertify_wrap .form_field_item > label {width:20%;}
+
+    .form_mypage .label_item {width:16%;}
+    .form_mypage .input_item { width:84%;}
+    .form_field_item .email_form { width:80%;}
+    .form_label { width:16%;}
+    .form_input {padding-left:15rem; padding-right:15rem;}
+    .form_field_item > .form_input_wrap { width:84%;}
+
+    .form_register .form_field_item_wrap {width:100%; margin-bottom:20rem;}
+    .form_register .form_label {width:20%;}
+    .form_register .form_field_item > .form_input_wrap {width:80%;}
+
+
+    html[lang="en"] .form_basic_head_guide {display:block; position:static; margin-top:10rem;}
+    html[lang="en"] .form_register .form_field_item > .form_input_wrap, html[lang="en"] .form_register .form_label {width:100%;}
+    html[lang="en"] .form_label, html[lang="en"] .label_item {margin-bottom:10rem;}
+    html[lang="en"] .form_field_item .email_form {width:100%;}
+    html[lang="en"] .email_wrap .input_email_local  {width: 30%;}
+    html[lang="en"] .email_wrap .input_email_domain {width: 35%;}
+    html[lang="en"] .email_wrap .select{width: 28%;}
+    html[lang="en"] .email_wrap .form_field_item > label,
+    html[lang="en"] .email_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-11rem;}
+    html[lang="en"] .btn_email_verify {width:100%; margin:10rem 0 5rem;}
+
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap, 
+    html[lang="en"] .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_code_vertify_wrap {width: 47%;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn {width:23%; }
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn:last-child {width:26%; margin-top: 0; margin-bottom: 0;}
+
+    /* TABLE */
+    .basic_table_wrap {margin-top:60rem;}
+    .basic_table_wrap .select_language {width:30%;}
+    .basic_table_wrap .search_field {width:65%;}
+    .basic_table_wrap .search_label { width: 70%; display: inline-block;}
+    .basic_table_wrap .search_label input {width:100%;}
+    .basic_table_wrap .search_button { width: calc(30% - 10rem);}
+
+}
+
+@media (max-width: 540px){
+
+    /* BUTTON */
+    .basic_btn {min-width:120px; height:50rem; line-height:50rem; margin:0 5rem;}
+
+    /* FORM */
+    .form_basic_head_guide {display:block; position:static; margin-top:10rem;}
+    .form_label, .label_item {width:100%; display:block; margin-bottom:10rem;}
+    .form_field_item > .form_input_wrap, .input_item {display:block; width:100%;}
+    .form_field_item .email_form {width:100%;}
+
+    .form_field_item .valid_message_confirm, 
+    .form_field_item .valid_message_error,
+    .form_field_item .guide_message_info {margin-left:0;}
+
+    .birth_form {width:100%;}
+    .birth_form .form_input_wrap {width:31%;}
+    .birth_form .form_input_wrap:last-child {margin-right:0;}
+
+    .phone_wrap .select {width:30%;}
+    .phone_wrap .form_input {width:31%;}
+
+    .form_field_item.secondary:not(.form_field_email_vertify) .form_label {position:relative; margin-bottom:10rem;}
+    .form_field_item.secondary .form_input {height:45rem; padding-left:0;}
+    html[lang="ja"] .form_field_item.secondary .form_input {padding-left:0;}
+    .form_input {height:50rem; padding:9rem 10rem 10rem; font-size:15rem; }
+
+	.email_wrap .secondary .input_email_local {width:35%;}
+	.email_wrap .secondary .input_email_domain {width:27%;}
+	.email_wrap .secondary .select {width:26%}
+    .email_wrap .input_email_local  {width: 30%;}
+    .email_wrap .input_email_domain {width: 35%;}
+    .email_wrap .select{width: 28%;}
+    .email_wrap .form_field_item > label,
+    .email_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
+    .email_vertify_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width:68%;}
+    .email_vertify_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn {width:30%;}
+	.btn_email_verify {width:100%; margin:10rem 0 5rem;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap {width:100%;}
+	.email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width: 49%;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn:last-child {width:23%;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn.btn_email_verify {margin-top:0; margin-bottom:0;}
+    html[lang="zh-TW"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width: 70%;}
+    html[lang="zh-TW"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn { width: 28%; margin-right: 0;}
+    html[lang="zh-TW"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn:last-child {width:100%; margin-top:10rem;}
+    .form_field_item .email_form input {height:50rem;}
+
+
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap {width:100%;}
+	.code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_code_vertify_wrap {width: 50%;}
+    .code_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_email_code_wrap {width:68%;}
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .basic_btn {width:23%;}
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .basic_btn.btn_email_verify {margin-top:0; margin-bottom:0;}
+
+    .form_register .form_field_item > .form_input_wrap, .form_register .form_label {width:100%;}
+    .form_field_item #timer {top:14rem;}
+    .form_mypage .form_label {width:100%;}
+
+    /* select */
+    .selectric {height:50rem;}
+    .selectric .label { height: 48rem; line-height: 48rem;}
+    .selectric .button {height: 48rem;}
+    html.mobile .select:before {line-height:50rem;}
+
+    /* TABEL */
+    .basic_table thead {display:none;}
+    .basic_table th {font-size:14rem;}
+    .basic_table tr:first-child {border-top:1px solid #666;}
+    .basic_table tr {display:block;border-bottom:1px solid #666;text-align: left;padding: 10rem 0;}
+    .basic_table tr td {display: table;width: 100%;border-bottom:none;text-align: left;padding: 6rem 0;}
+    /* .basic_table tr td:before {content: attr(data-title);font-weight: 600;color: #ddd;width: 30%;margin-right:5rem;display: table-cell;} */
+    .rwd_table tr:first-child {border-top:none;}
+    .rwd_table tr td:before {display:none;}
+
+    .tabe_pagination .page_numbers { margin: 0 3rem;}
+
+    /* NO LIST */
+    .no_list {font-size:16rem; padding:30rem 0;}
+
+    /* MAGNIFIC POPUP */
+    .mfp-container {padding-left:30rem; padding-right:30rem;}
+    .mfp-container button.mfp-arrow { width: 50rem; height: 50rem;}
+    button.mfp-arrow:after {font-size: 16rem; line-height: 50rem;}
+    button.mfp-arrow.mfp-arrow-left {left:10rem;}
+    button.mfp-arrow.mfp-arrow-right {right:10rem;}
+
+}
+
+
+
+/* **************************************** *
+ * 480px
+ * **************************************** */
+@media (max-width: 480px){
+
+    /* BUTTON */
+    .basic_btn { min-width:auto; width: calc(50% - 10rem); margin:0 5rem; font-size:14rem;}
+    .basic_table_wrap .search_button {width: calc(30% - 5rem); margin-right:0;}
+    .process_btn_wrap {margin-top:50rem;}
+    .basic_btn_alone {min-width:calc(50% - 10rem);width:auto;}
+    
+    /* FORM */
+    .email_wrap .input_email_local,
+    .email_wrap .secondary .input_email_local {width:42%}
+    .email_wrap .separator_email {width:8%;}
+    .email_wrap .input_email_domain,
+    .email_wrap .secondary .input_email_domain {width:50%;}
+    .email_wrap .select,
+    .email_wrap .secondary .select {width:100%; margin-left:0; margin-top:10rem;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn {width:40%;margin-right:0;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn.btn_email_verify {width:100%; margin-top:10rem;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width:58%;}
+	.form_field_item.form_field_email_vertify .input_email_vertify {padding-right:55rem; letter-spacing: 3rem; font-size:14rem;}
+	.btn_email_verify {width:100%; margin:10rem 0 5rem;}
+	.form_field_item.form_field_email_vertify .basic_btn {width: calc(28% - 10rem);}
+    .form_field_item #timer {font-size:14rem;}
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .basic_btn {width:25%;}
+    .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_code_vertify_wrap {width:46%;}
+	.form_field_item.form_field_code_vertify .input_code_vertify {padding-right:55rem; letter-spacing: 3rem;}
+	/* .form_field_item.form_field_email_vertify .basic_btn span {display:none;} */
+
+    html[lang="en"] .email_wrap .input_email_local,
+    html[lang="en"] .email_wrap .secondary .input_email_local {width:42%}
+    html[lang="en"] .email_wrap .input_email_domain,
+    html[lang="en"] .email_wrap .secondary .input_email_domain {width:50%;}
+    html[lang="en"] .email_wrap .select,
+    html[lang="en"] .email_wrap .secondary .select {width:100%; margin-left:0; margin-top:10rem;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn {width:40%;margin-right:0;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn.btn_email_verify {width:100%; margin-top:10rem;}
+    html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width:58%;}
+
+    .form_input {padding-left:15rem; padding-right:15rem;}
+    .form_desc {font-size:16rem;}
+
+    .form_basic_head h3 {font-size:18rem;}
+
+    /* TABLE */
+    .basic_table_wrap {margin-top:45rem;}
+    .basic_table_wrap h3 {font-size:18rem;}
+    .basic_table_wrap .select_language {width:100%; max-width:100%; margin-bottom:10rem;}
+    .basic_table_wrap .search_field {width:100%; margin-bottom:25rem;}
+    .basic_table {margin-top:15rem;}
+    .basic_table tr td {padding:3rem 0;}
+    .rwd_table tr {padding:14rem 0 15rem;}
+    .rwd_table tr td.tit {margin:5rem 0;}
+
+    /* PAGINATION */
+    .tabe_pagination {margin-top: 40rem; margin-bottom: 60rem;}
+    .tabe_pagination .page_numbers.first {margin-right:5rem;}
+    .tabe_pagination .page_numbers.prev { margin-right: 10rem;}
+    .tabe_pagination .page_numbers.next { margin-left: 10rem;}
+    .tabe_pagination .page_numbers.last { margin-left: 5rem;}
+
+    /* MAGNIFIC POPUP */
+    .mfp-container { padding-left: 15rem; padding-right: 15rem;}
+    button.mfp-close,
+    .mfp-iframe-holder button.mfp-close,
+    .mfp-image-holder button.mfp-close {width:32rem; height:32rem;}
+    .mfp-container button.mfp-arrow { width: 40rem; height: 40rem;}
+    button.mfp-arrow:after {font-size: 14rem; line-height: 40rem;}
+    button.mfp-arrow.mfp-arrow-left {left:10rem;}
+    button.mfp-arrow.mfp-arrow-right {right:10rem;}
+    .mfp-zoom-out-cur .mfp-image-holder .mfp-close {top:10rem; right:10rem;}
+    
+    /* CLIPBOARD */
+    .clipboard_copynote, .clipboard_copynote_type2 {width: 60%;}
+}
+
+
+@media (max-width: 375px){
+    /* SWEET ALERT */
+    .swal-modal { max-width: 80%; padding: 40rem 20rem;}
+}
+

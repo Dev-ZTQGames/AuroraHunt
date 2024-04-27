@@ -1,0 +1,16 @@
+[2024-01-11 06:04:44] CRYPTOOO - SourceIP : 35.191.32.136, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111020444
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMYmOPzP0WD0No6JZh7SxV9A%3D%3D"}
+[2024-01-11 06:04:44] API - SourceIP : 35.191.24.185, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMYmOPzP0WD0No6JZh7SxV9A==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}
+[2024-01-11 06:36:17] NODE - SourceIP : 35.191.29.164, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-11 06:36:17] NODE - SourceIP : 35.191.24.185, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-11 06:36:22] NODE - SourceIP : 35.191.32.8, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-11 06:36:22] NODE - SourceIP : 35.191.33.5, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-11 06:36:30] NODE - SourceIP : 35.191.32.182, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-11 06:36:30] NODE - SourceIP : 35.191.13.85, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

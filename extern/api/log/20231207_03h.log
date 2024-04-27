@@ -1,0 +1,30 @@
+[2023-12-07 03:01:00] API - SourceIP : 35.191.24.191, proc1: spolive.no1, proc2: q J8p9NSyafc2jsqb4sXlg==
+{"result":"0","msg":"-10"}
+[2023-12-07 03:01:04] API - SourceIP : 35.191.33.1, proc1: spolive.no1, proc2: q J8p9NSyafc2jsqb4sXlg==
+{"result":"0","msg":"-10"}
+[2023-12-07 03:01:06] API - SourceIP : 35.191.33.4, proc1: spolive.no1, proc2: q J8p9NSyafc2jsqb4sXlg==
+{"result":"0","msg":"-10"}
+[2023-12-07 03:14:11] API - SourceIP : 35.191.32.8, proc1: , proc2: 
+{"result":"0","msg":"-20"}
+[2023-12-07 03:20:13] BILLING - SourceIP : 35.191.32.165, proc1: , proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-12-07 03:51:06] CRYPTOOO - SourceIP : 35.191.33.4, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:52:23] CRYPTOOO - SourceIP : 35.191.33.1, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:53:59] CRYPTOOO - SourceIP : 35.191.3.25, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:54:09] CRYPTOOO - SourceIP : 35.191.32.160, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:54:13] CRYPTOOO - SourceIP : 35.191.24.146, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:57:49] CRYPTOOO - SourceIP : 35.191.3.25, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:57:55] CRYPTOOO - SourceIP : 35.191.24.151, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:57:57] CRYPTOOO - SourceIP : 35.191.24.151, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:57:59] CRYPTOOO - SourceIP : 35.191.3.25, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}
+[2023-12-07 03:59:27] CRYPTOOO - SourceIP : 35.191.16.198, proc1: dxatY fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=test0001|partner=Payletter|date=231206054018
+{"result":"1","return":"7WVAlqaL%2FykCZWUFILsqJtaDo24NKjdq0aEasIOEoKAgSCEJ8pdGdO9iP0Wfi%2Fjprz2nmver3aM%2FcQ7BWY4PSw%3D%3D"}

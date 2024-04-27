@@ -1,0 +1,8 @@
+[2024-01-11 07:01:03] CRYPTOOO - SourceIP : 35.191.13.81, proc1: , proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Spofeed|date=240111070103|ip=210.59.144.44|gamecode=spolive
+{"result":"0","msg":"empty items"}
+[2024-01-11 07:01:03] API - SourceIP : 35.191.32.136, proc1: , proc2: 
+{"result":"0","msg":"-20"}
+[2024-01-11 07:01:49] CRYPTOOO - SourceIP : 35.191.32.193, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Spofeed|date=240111070149|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS%2BtZdghUo3dPeNSZmvPbrezdGwK1R%2F8cUnsp2hkyCkv3Rh%2B2Qqb%2BgoFahnfxO8U%2FIkBuIBn4g35APL%2BxhOIMivFbEPAkuxo%2BzZ2HQ9OsMX8f%2FRFWtqoopA%3D%3D"}
+[2024-01-11 07:01:49] API - SourceIP : 35.191.32.13, proc1: qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS+tZdghUo3dPeNSZmvPbrezdGwK1R/8cUnsp2hkyCkv3Rh+2Qqb+goFahnfxO8U/IkBuIBn4g35APL+xhOIMivFbEPAkuxo+zZ2HQ9OsMX8f/RFWtqoopA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000000","msg":"1010"}

@@ -1,0 +1,12 @@
+[2023-04-23 09:35:26] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-23 09:35:29] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24723}
+[2023-04-23 09:35:45] NODE - SourceIP : 52.13.201.178, proc1: getAddress, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"0297492b9ea24a2eb5ae4b2a1fc4e0d7577cf57833905db965eff3054ade6b9998"}
+[2023-04-23 09:35:47] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"7|131|132|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmUuH7jve2jrGAPDntNMFgsQFxmCxTQ9s8PESBZuw6MYFd\/7.png|https:\/\/ipfs.io\/ipfs\/QmUuH7jve2jrGAPDntNMFgsQFxmCxTQ9s8PESBZuw6MYFd\/131.png|https:\/\/ipfs.io\/ipfs\/QmUuH7jve2jrGAPDntNMFgsQFxmCxTQ9s8PESBZuw6MYFd\/132.png|"}
+[2023-04-23 09:35:48] NODE - SourceIP : 52.13.201.178, proc1: getBalance, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24724}
+[2023-04-23 09:39:36] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24019}

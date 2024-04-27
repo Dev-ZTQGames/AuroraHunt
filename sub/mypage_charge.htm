@@ -1,0 +1,79 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+if ( $_SESSION['sess_login_id'] == "" )	{
+?>
+<script type='text/javascript'>
+	swal({
+		text: '<?php echo $lang["Login_Required"]; ?>',
+		buttons: {
+			cancel : '<?php echo $lang["Cancel"]; ?>',
+			confirm : {
+				text : '<?php echo $lang["Go_To_Login"]; ?>',
+				value : 'catch'
+			},
+		},
+	}).then(function(value){
+		if(value == 'catch'){
+			location.href='/extern/sso/login.htm?return_path=<?php echo $HOST; ?>.aurorahunt.xyz/sub/mypage_charge.htm';
+		} else {
+			location.href='/index.htm';
+		} 
+	})
+
+</script>
+<?php
+}
+
+?>
+	<!-- Page Content -->
+    <div class="container">
+	<?php
+		if ( $lang_code == "ko" )	{
+			if($region == "dev" || $region == "test"){
+				//test url 연결 필요
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billkotest.aurorahunt.xyz/MyList/Cash?tab=fillup" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			} else {
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billko.aurorahunt.xyz/MyList/Cash?tab=fillup" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			}		
+		}
+		else {
+			if($region == "dev" || $region == "test"){
+				//test url 연결 필요
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billtest.aurorahunt.xyz/MyList/Cash?tab=fillup" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			} else {
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://bill.aurorahunt.xyz/MyList/Cash?tab=fillup" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			}	
+		}
+	?>
+    </div>
+    <!-- /.container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+
+<?php
+
+	// 충전시에 실명인증을 했는지는 추가로 확인하지 않는다
+	// 실수로 실명인증을 하지 않았더라도 결제는 가능해야 할수도 있고
+	// 원더게임의 경우 계정을 생성했을때 게임 진입만 막으면, 결제는 나중문제기 때문이다.
+	// 게임을 못하는 사람이 결제를 하지는 않기 때문이다...
+	// 플랫폼과 펫포인트는 나눠서 생각하되 보다 간편한 방법을 생각해야 한다.
+
+?>

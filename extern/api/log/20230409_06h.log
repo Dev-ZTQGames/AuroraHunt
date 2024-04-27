@@ -1,0 +1,24 @@
+[2023-04-09 06:49:35] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:49:39] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:49:42] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:49:48] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:49:51] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:49:53] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:51:14] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:51:16] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:51:18] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:52:59] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:53:20] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 06:53:35] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}

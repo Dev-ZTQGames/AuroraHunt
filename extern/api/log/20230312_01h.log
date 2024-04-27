@@ -1,0 +1,6 @@
+[2023-03-12 01:56:34] NODE - SourceIP : 34.80.134.81, proc1: , proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-03-12 01:57:46] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+Array
+[2023-03-12 01:57:55] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+Array

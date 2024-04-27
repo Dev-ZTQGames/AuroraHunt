@@ -1,0 +1,171 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+	<input type="hidden" id="pw_commit">
+	<input type="hidden" id="ck_pw_commit">
+		<div class="article_body">
+			<div class="wrap_narrow">
+				<div class="form_basic form_mypage pw_change">
+					<div class="form_basic_head">
+						<h3><?php echo $lang['Change_Password']; ?></h3>
+						<p class="form_basic_head_guide"><?php echo $lang['Periodically_Change_Password']; ?></p>
+					</div><!-- .form_basic_head -->
+					<div class="form_basic_body">
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="new_pw"><span><?php echo $lang['New_Password']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="password" class="form_input" name="new_pw" id="new_pw" maxlength="16" onkeyup="check_passwd(this.value)"/>
+								</div><!-- .form_input_wrap -->
+								<div id="valid_messge_pw"><p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['Alphanumeric_Combinations']; ?></span></p></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="new_pw_confirm"><span><?php echo $lang['Confirm_New_Password']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="password" class="form_input" id="new_pw_confirm" maxlength="16"/>
+								</div><!-- .form_input_wrap -->
+								<div id="valid_messge_chk_pw"><p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['Password_Not_Match']; ?></span></p></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+					</div><!-- .form_basic_body -->
+				</div><!-- .form_basic -->
+
+				<div class="process_btn_wrap"> 
+					<a href="mypage_info.htm" class="basic_btn basic_btn_secondary"><span><?php echo $lang['Cancel']; ?></span></a>
+					<a href="javascript:void(0);" class="basic_btn basic_btn_primary" onclick="change_pw();"><span><?php echo $lang['Confirm']; ?></span></a>
+				</div><!-- .process_btn_wrap -->
+			</div><!-- .wrap -->
+		</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+
+String.prototype.trim = function() {
+    return this.replace(/(^\s*)|(\s*$)/gi, "");
+}
+
+function isValidPassword(pw) {
+//	var check = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+	var check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/;	
+
+	if (!check.test(pw))     {
+		return false;
+	}
+
+	if (pw.length < 8 || pw.length > 16) {
+		return false;
+	}
+
+	return true;
+};
+
+
+
+function check_passwd(passwd) {
+	if ( passwd.length > 0)	{
+
+		if (passwd == "" || !isValidPassword(passwd)) {
+			$("#pw_commit").val("N");
+			$("#valid_messge_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Alphanumeric_Combinations']; ?></span></p>");
+			return false;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: "change_validate_pw.htm",
+			data : ({pw: passwd }),
+			cache: false,
+			success: function(args){
+				if(args.trim().includes("bad_pw")){
+					$("#valid_messge_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Alphanumeric_Combinations']; ?></span></p>");
+					$("#pw_commit").val("N");
+				}
+				else {
+					$("#pw_commit").val("Y");
+					$("#valid_messge_pw").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Available_Passwords']; ?></span></p>");
+				}
+
+			}
+		});
+	}
+}
+
+$("#new_pw_confirm").keyup(function(){
+ 
+	if($("#new_pw").val() != $("#new_pw_confirm").val()){
+		$("#valid_messge_chk_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Password_Not_Match']; ?></span></p>");
+		$("#ck_pw_commit").val("N");
+	} else {
+		$("#valid_messge_chk_pw").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Password_Match']; ?></span></p>");
+		$("#ck_pw_commit").val("Y");
+	}
+
+});
+
+function change_pw(){
+	if($("#ck_pw_commit").val() == "Y" && $("#pw_commit").val() == "Y" && $("#new_pw").val() != "" ){
+	  $.ajax({
+	   type:"POST",        
+	   url:"change_pw_prc.htm",     
+	   data : ({new_pw: $("#new_pw").val() }),
+	   timeout : 5000,  
+	   cache : false,  
+	/*
+	   beforeSend: function (){
+		loading();
+	   },
+	   complete: function (){
+		endLoading();
+	   },
+	*/
+	   success: function whenSuccess(args){
+		switch(args.trim()){
+			 case("success"):
+			  swal({
+				  text: '<?php echo $lang['Password_Changed']; ?>',
+				  buttons: '<?php echo $lang['Confirm']; ?>',
+				}).then(function(isConfirm){
+					if(isConfirm){
+						location.href='mypage_info.htm';
+					}
+				})
+			 break;
+			 case("fail"):
+			   swal({
+				  text: '<?php echo $lang['Try_Again_Later']; ?>',
+				  buttons: '<?php echo $lang['Confirm']; ?>',
+				})
+			 break;
+			 case("already"):
+				swal({
+				  text: '<?php echo $lang['Same_Old_Password']; ?>',
+				  buttons: '<?php echo $lang['Confirm']; ?>',
+				})
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+	} else {
+		 swal({
+		  text: '<?php echo $lang['Please_Confirm_Password']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+	}
+}
+
+</script>

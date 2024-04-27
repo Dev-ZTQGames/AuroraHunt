@@ -1,0 +1,4 @@
+[2024-02-19 02:37:38] NODE - SourceIP : 35.191.13.86, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-02-19 02:37:38] NODE - SourceIP : 35.191.32.15, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

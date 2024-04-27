@@ -1,0 +1,8 @@
+[2023-06-13 11:08:40] NODE - SourceIP : 52.13.201.178, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02f1a189fbbe82efadc5accf554745a35e863191963190c1282b487696ea644cfa"}
+[2023-06-13 11:08:42] NODE - SourceIP : 52.13.201.178, proc1: MiningStart, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null,"NFT_images":null}
+[2023-06-13 11:08:44] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":9859}
+[2023-06-13 11:08:58] NODE - SourceIP : 52.13.201.178, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":9859}

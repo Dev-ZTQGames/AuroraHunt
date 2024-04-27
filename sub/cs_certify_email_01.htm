@@ -1,0 +1,50 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+            <div class="certify_email_01">
+			    <h3><?php echo $lang['Check_Email_Address']; ?></h3>
+				<table class="secondary_table">
+				    <caption><?php echo $lang['Email_Information']; ?></caption>
+					<colgroup>
+						<col style="width: 30%;"/>
+						<col style="width: 70%;"/>
+					</colgroup>
+				    <tbody>
+					    <tr>
+						    <th><?php echo $lang['Email']; ?></th>
+							<td>so******6@gmail.com</td>
+						</tr>
+					</tbody>
+				</table>
+                <div class="certify_email_guide">
+                    <p class="guide_message_info"><i class="icon"></i><span><?php echo $lang['Check_And_Change_Email_Verification']; ?></span></p>
+                    <a href="#" class="basic_btn basic_btn_secondary"><span><?php echo $lang['Check_And_Change_Email']; ?></span></a>
+                </div><!-- .certify_email_guide -->
+			</div><!-- .certify_email -->
+
+            <ul class="dot_info">
+                <li><?php echo $lang['Verification_Button_Email_Service']; ?></li>
+                <li><?php echo $lang['Email_Important_Information']; ?></li>
+                <li><?php echo $lang['Prevent_Theft_Minimize_Damage']; ?></li>
+                <li><?php echo $lang['Check_Spam_Folder']; ?></li>
+            </ul><!-- .dot_info -->
+
+            <div class="process_btn_wrap"> 
+                <a href="cs_certify_email_02.htm" class="basic_btn basic_btn_primary"><span><?php echo $lang['Verify_Email']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

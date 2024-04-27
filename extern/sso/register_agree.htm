@@ -1,0 +1,197 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm';
+
+if(! isset($_REQUEST['return_path'])) {
+	$_REQUEST['return_path'] = $return_url;
+}
+
+$return_path = escape_string(trim($_REQUEST['return_path']));
+$referral = escape_string(trim($_REQUEST['referral']));
+if ( $referral ) $referral_path = "&referral=" . $referral;
+
+$login_id = $_COOKIE['login_id'];
+$prefix_id = $_REQUEST['prefix_id'];
+?>
+
+<div id="container" class="page_register">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Join']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap">
+            <div class="policy_wrap">
+                <div class="custom_checkbox_wrap">
+                    <label class="custom_checkbox"><?php echo $lang['Full_Consent']; ?>
+                        <input type="checkbox" id="agree" onchange="agree_all();">
+                        <span class="checkmark"></span>
+                    </label>
+                </div><!-- .custom_checkbox_wrap -->
+		   </div><!-- .policy_wrap -->
+
+		   <div class="policy_wrap">
+				<h3 class="policy_title">이용약관 <span>(필수)</span></h3>
+	
+				<div class="scrollbar_box policy_box_wrap">
+					<?php include $_SERVER['DOCUMENT_ROOT'].'/sub/policy_terms_content.htm'; ?>
+				</div><!-- .scrollbar_box -->
+                <div class="custom_checkbox_wrap">
+                    <label class="custom_checkbox"><?php echo $lang['Agree']; ?>
+                        <input type="checkbox" id="agree1">
+                        <span class="checkmark"></span>
+                    </label>
+                </div><!-- .custom_checkbox_wrap -->
+			</div><!-- .policy_wrap -->
+
+            <div class="policy_wrap">
+				<h3 class="policy_title">개인정보 취급방침 <span>(필수)</span></h3>
+				<div class="scrollbar_box policy_box_wrap">
+					<?php include $_SERVER['DOCUMENT_ROOT'].'/sub/policy_terms_content_02.htm'; ?>
+				</div><!-- .scrollbar_box -->
+                <div class="custom_checkbox_wrap">
+                    <label class="custom_checkbox"><?php echo $lang['Agree']; ?>
+                        <input type="checkbox" id="agree2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div><!-- .custom_checkbox_wrap -->
+			</div><!-- .policy_wrap -->
+
+            <div class="policy_wrap">
+				<h3 class="policy_title">개인정보의 위탁 <span>(필수)</span></h3>
+				<div class="scrollbar_box policy_box_wrap">
+                    <div class="scrollbar-inner">
+                        <div class="policy_box">
+                            <div class="policy_content_box">
+                                <h3>제 6 조 (서비스 이용 신청)</h3>
+                                <ul class="primary_num_list">
+                                    <li>이용자로 가입하여 본 서비스를 이용하고자 하는 이용고객은 회사에서 요청하는 정보(이름, 생년월일, 성별, 아이핀, 연락처 등)를 제공하여야 합니다. 이용자가 제공한 정보는 본인식별절차 및 실명확인, 중복가입 확인등에 사용되며 개인정보취급방침에 따라 철저하게 관리됩니다.</li>
+                                    <li>이용자는 제 1항의 이용 신청 시 반드시 본인의 이름과 생년월일, 성별을 (또는 아이핀) 기재하여야만 합니다. 본인의 실명 및 실제 정보를 기재하지 아니한 이용자는 법적인 보호를 받을 수 없고 일체의 권리를 회사에 주장할 수 없습니다.</li>
+                                    <li>실명인증, 보호자 가입 동의 등 회사가 제시하는 가입 양식과 절차가 완료되지 않은 아이디의 경우는 일부 서비스 이용에 제한이 있을 수 있습니다.</li>
+                                    <li>타인의 명의(이름 및 생년월일, 아이핀 등)를 도용하여 이용 신청을 한 이용자의 모든 이용자 아이디는 계약 해지 및 삭제 처리됩니다. 또한 주민등록법에 따라 처벌 받을 수 있습니다.</li>
+                                    <li>아이핀번호로 이용계약을 체결하기 위해서는 공인된 기관(서울신용평가정보, 코리아크레딧뷰로, 한국신용정보, 한국신용평가정보, 한국정보인증, 행정안전부 공공아이핀센터 중 한 곳)에서 발급한 아이핀만을 사용해야 합니다.</li>
+                                    <li>회사는 본 서비스를 이용하는 이용자에 대하여 등급 별로 구분하여 이용시간, 이용회수, 서비스 메뉴 등을 세분하여 이용에 차등을 둘 수 있습니다.</li>
+                                </ul>
+                            </div><!-- .policy_content_box -->
+                        </div><!-- .policy_box -->
+                    </div><!-- .scrollbar-inner -->
+				</div><!-- .scrollbar_box -->
+                <div class="custom_checkbox_wrap">
+                    <label class="custom_checkbox"><?php echo $lang['Agree']; ?>
+                        <input type="checkbox" id="agree3">
+                        <span class="checkmark"></span>
+                    </label>
+                </div><!-- .custom_checkbox_wrap -->
+			</div><!-- .policy_wrap -->
+
+            <div class="policy_wrap">
+				<h3 class="policy_title">개인정보 제공 및 공유 <span>(필수)</span></h3>
+				<div class="scrollbar_box policy_box_wrap">
+                    <div class="scrollbar-inner">
+                        <div class="policy_box">
+                            <div class="policy_content_box">
+                                <h3>제 5 조 (서비스 이용계약의 성립)</h3>
+                                <ul class="primary_num_list">
+                                    <li>이 약관 내용에 대해 이용고객이 동의 후 회사가 제시하는 양식과 절차에 따라 이용신청을 하고, 이용신청에 대하여 회사가 이용 승낙을 함으로써 회사와 이용자간 이용계약이 체결됩니다.</li>
+                                    <li>이 약관에 대한 동의는 해당 회원가입 페이지의 '동의함' 버튼을 누름으로써 이 약관 동의의 의사표시가 완료됩니다.</li>
+                                </ul>
+                            </div><!-- .policy_content_box -->
+                        </div><!-- .policy_box -->
+                    </div><!-- .scrollbar-inner -->
+				</div><!-- .scrollbar_box -->
+                <div class="custom_checkbox_wrap">
+                    <label class="custom_checkbox"><?php echo $lang['Agree']; ?>
+                        <input type="checkbox" id="agree4">
+                        <span class="checkmark"></span>
+                    </label>
+                </div><!-- .custom_checkbox_wrap -->
+			</div><!-- .policy_wrap -->
+
+            <div class="process_btn_wrap"> 
+                <a href="/" class="basic_btn basic_btn_secondary"><span><?php echo $lang['Cancel']; ?></span></a>
+				<?php
+				if($login_id != ''){?>
+				<a href="login_check.php?register=ok" class="basic_btn basic_btn_primary" onclick="check_agree_all();"><span>완료</span></a>
+				<?php
+				} else {?>
+				<a href="#" class="basic_btn basic_btn_primary" onclick="check_agree_all();"><span><?php echo $lang['Next']; ?></span></a>
+				<?php
+				}
+				?>
+                
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+</body>
+</html>
+
+<script>
+function agree_all() {
+	var agree = $("#agree").is(":checked");
+
+	if (agree == true) {
+		$("#agree1").prop("checked",true);
+		$("#agree2").prop("checked",true);
+		$("#agree3").prop("checked",true);
+		$("#agree4").prop("checked",true);
+	}
+	else {
+		$("#agree1").prop("checked",false);
+		$("#agree2").prop("checked",false);
+		$("#agree3").prop("checked",false);
+		$("#agree4").prop("checked",false);
+	}
+
+}
+
+$("#agree1").on('click',function(){
+	if($("#agree1").is(":checked") != true){
+		$("#agree").prop("checked",false);
+	}
+});
+
+$("#agree2").on('click',function(){
+	if($("#agree2").is(":checked") != true){
+		$("#agree").prop("checked",false);
+	}
+});
+
+$("#agree3").on('click',function(){
+	if($("#agree3").is(":checked") != true){
+		$("#agree").prop("checked",false);
+	}
+});
+
+$("#agree4").on('click',function(){
+	if($("#agree4").is(":checked") != true){
+		$("#agree").prop("checked",false);
+	}
+});
+
+
+function check_agree_all()	{
+	var agree1 = $("#agree1").is(":checked");
+	var agree2 = $("#agree2").is(":checked");
+	var agree3 = $("#agree3").is(":checked");
+	var agree4 = $("#agree4").is(":checked");
+
+
+	if(agree1 == true && agree2 == true && agree3 == true && agree4 == true){
+		
+		location.href = "register_form.htm?return_path=<?php echo $return_path . $referral_path; ?>";
+		
+	} 
+	else {
+		swal({
+			text: '<?php echo $lang['Agree_Required_Items']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})	
+	}
+}
+
+</script>

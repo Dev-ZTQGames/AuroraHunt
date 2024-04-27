@@ -1,0 +1,97 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_contact_us">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title">CONTACT US</h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+            <div class="company_intro_item">
+               <h3><?php echo $lang['About_Us']; ?></h3>
+                <p><?php echo $lang['About_Us_Perugia']; ?></p>
+            </div><!-- .company_intro_item -->
+            
+            <div class="company_section company_section_cosmos">
+                <div id="company_location_map" class="company_location_map" data-lat="37.48827224055522" data-lng="127.01506731634254" data-zoom="16"></div>
+                <div class="company_info">
+                    <div class="company_logo">
+                        <figure><img src="../images/sub/logo_perugia_white.svg" alt="PERUGIA"></figure>
+                    </div><!-- .company_logo -->
+                    <h3><?php echo $lang['Perugia_Corporation']; ?></h3>
+                    <ul>
+                        <li>
+                            <h4><?php echo $lang['Head_Office']; ?></h4>
+                            <p><?php echo $lang['Head_Office_Details']; ?></p>
+                        </li>
+                    </ul>
+                </div><!-- .company_info -->
+            </div><!-- .company_section -->
+
+            <div class="contact_inquiry">
+                <h3><?php echo $lang['Affiliate_Inquiry']; ?></h3>
+
+                <div class="form_field_item_wrap inquiry_wrap">
+                    <div class="form_field_item required">
+                        <label class="form_label" for="inquiry_name"><span><?php echo $lang['Name']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <input type="text" class="form_input" id="inquiry_name"/>
+                        </div><!-- .form_input_wrap -->
+                    </div><!-- .form_field_item -->
+                    <div class="form_field_item required">
+                        <label class="form_label" for="inquiry_phone"><span><?php echo $lang['Contact']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <input type="text" class="form_input" id="inquiry_phone"/>
+                        </div><!-- .form_input_wrap -->
+                    </div><!-- .form_field_item -->
+                    <div class="form_field_item required">
+                        <label class="form_label" for="inquiry_email"><span><?php echo $lang['Email']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <input type="text" class="form_input" id="inquiry_email"/>
+                        </div><!-- .form_input_wrap -->
+                    </div><!-- .form_field_item -->
+                    <div class="form_field_item required">
+                        <label class="form_label" for="inquiry_message"><span><?php echo $lang['Message']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <textarea class="form_field" id="inquiry_message"></textarea>
+                        </div><!-- .form_input_wrap -->
+                    </div><!-- .form_field_item -->
+                    <div class="process_btn_wrap"> 
+                        <a href="#" class="basic_btn basic_btn_primary"><span><?php echo $lang['Send_Message']; ?></span></a>
+                    </div><!-- .process_btn_wrap -->
+                </div><!-- .form_field_item_wrap -->  
+            </div><!-- .contact_inquiry -->
+
+		</div><!-- .wrap_middle -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<script>
+    function change_map(target)	{
+
+        if (target == "cosmos_hq")	{
+            document.getElementById('target_map_cosmos').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.7191095333737!2d127.0584965156121!3d37.51454257980756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca469c3023cbd%3A0xa4c11cfdb4883b8e!2z66-47LyI656AMTA3!5e0!3m2!1sko!2stw!4v1559284334707!5m2!1sko!2stw";
+        }
+
+        if (target == "cosmos_base")	{
+            document.getElementById('target_map_cosmos').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.186572915993!2d127.03689521563898!3d37.73876697976597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8613bd7c3bad37d0!2z642V7JWU7Jik7ZS87Iqk7YWU!5e0!3m2!1sko!2stw!4v1532965198713";
+        }
+
+        if (target == "lamatetw_dev")	{
+            document.getElementById('target_map_lamatetw').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.833858001291!2d121.22631731535007!3d24.971766684001587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682225f92c57d5%3A0xd52d5fe9f592ac8c!2sNo.+258%2C+Nanyuan+2nd+Road%2C+Zhongli+District%2C+Taoyuan+City%2C+320!5e0!3m2!1sko!2stw!4v1559323847842!5m2!1sko!2stw";
+        }
+
+        if (target == "lamatetw_op")	{
+            document.getElementById('target_map_lamatetw').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5451110089366!2d121.55546001535133!3d25.04950698396505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abea83580479%3A0xb73bd51ecc2f602c!2sNo.+36%2C+Guangfu+North+Road%2C+Songshan+District%2C+Taipei+City%2C+105!5e0!3m2!1sko!2stw!4v1559323929568!5m2!1sko!2stw";
+        }
+
+        if (target == "lamatetw_base")	{
+            document.getElementById('target_map_lamatetw').src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.016962594135!2d120.6650753153409!3d24.17113787848905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917d4a24aae6f%3A0x6842cc1f226af60!2sNo.+262%2C+Section+2%2C+Huamei+St%2C+North+District%2C+Taichung+City%2C+404!5e0!3m2!1sko!2stw!4v1513188045974";
+        }
+
+    }
+</script>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

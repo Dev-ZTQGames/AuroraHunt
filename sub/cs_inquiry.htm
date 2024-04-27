@@ -1,0 +1,206 @@
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<?php
+
+if ( $_SESSION['sess_login_id'] == "" )	{
+?>
+	<script>location.href="/";</script>
+<?php
+exit;
+}
+$id = $_COOKIE["login_id"];
+
+$connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $DB_INFO['NAME']);
+
+$account = mysqli_query($connect,"SELECT * FROM Accounts where login_id = '".$id."'");
+$row = mysqli_fetch_array($account);
+$email = $row['email'];
+
+$query = escape_string(trim($_REQUEST['query']));
+$game_name = escape_string(trim($_REQUEST['cs_game']));
+$type = escape_string(trim($_REQUEST['cs_type']));
+$title = escape_string(trim($_REQUEST['cs_tit']));
+$content = escape_string(trim($_REQUEST['cs_txt']));
+$filename = $_FILES['cs_file']['name'];
+
+
+if($query == 'cs_inquiry'){
+
+	$result = mysqli_query($connect, "INSERT INTO CSCenter (m_login_id,m_email,m_type,m_title,m_content,m_date,m_game_code) VALUES ('".$id."','".$email."',$type,'".$title."','".$content."',now(),'".$game_name."')");
+
+	if($result>0){
+	mysqli_close($connect);
+?>
+	<script type='text/javascript'>
+	swal({
+		  text: "<?php echo $lang['Inquiry_Received']; ?>",
+		  buttons: "<?php echo $lang['Confirm']; ?>",
+		}).then(function(isConfirm){
+		if(isConfirm){
+			location.href='mypage_inquiry_list.htm';
+		}
+	})
+	</script>
+<?php
+	} else {
+?>
+	<script type='text/javascript'>
+	swal({
+		  text: "'<?php echo $lang['Try_Again_Later']; ?>'",
+		  buttons: "'<?php echo $lang['Confirm']; ?>'",
+		})
+	})
+	</script>
+<?php
+	}
+}
+?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<?php include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="form_basic form_inquiry">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Inquiry']; ?></h3>
+					<p class="form_basic_head_guide"><?php echo $lang['Fill_It_Out']; ?></p>
+				</div><!-- .form_basic_head -->
+				<form name="cs_inquiry_form" action="cs_inquiry.htm" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="query" value="cs_inquiry">
+					<div class="form_basic_body">
+						<!--div class="form_field_item_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="cs_game"><span>서비스</span></label>
+								<div class="form_input_wrap">
+									<div class="custom_checkbox_wrap">
+										<label class="custom_radio"><input type="radio" name="cs_game" value="1"><span class="checkmark"></span>Claw Machine - Catch! The Friends -</label>
+									</div><!-- .custom_checkbox_wrap -->
+								<!--/div><!-- .form_input_wrap -->
+							<!--/div><!-- .form_field_item -->
+						<!--/div><!-- .form_field_item_wrap -->
+						<div class="form_field_item_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="cs_type"><span><?php echo $lang['Question_Type']; ?></span></label>
+								<div class="form_input_wrap">
+									<div class="custom_checkbox_wrap">
+										<label class="custom_radio"><input type="radio" name="cs_type" value="1"><span class="checkmark"></span><?php echo $lang['Game_Inquiry']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="2"><span class="checkmark"></span><?php echo $lang['Bad_User']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="3"><span class="checkmark"></span><?php echo $lang['Event']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="4"><span class="checkmark"></span><?php echo $lang['Bug']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="5"><span class="checkmark"></span><?php echo $lang['Recovery_Request']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="6"><span class="checkmark"></span><?php echo $lang['Suggestions']; ?></label>
+										<label class="custom_radio"><input type="radio" name="cs_type" value="7"><span class="checkmark"></span><?php echo $lang['Payment_Refund']; ?></label>
+									</div><!-- .custom_checkbox_wrap -->
+								</div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+						<div class="form_field_item_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="cs_tit"><span><?php echo $lang['Inquiry_Title']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="text" class="form_input" id="cs_tit" name="cs_tit" maxlength="100" placeholder="<?php echo $lang['Enter_Title']; ?>"/>
+								</div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+						<div class="form_field_item_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="cs_txt"><span><?php echo $lang['Inquiry_Contents']; ?></span></label>
+								<div class="form_input_wrap">
+									<textarea class="form_input" id="cs_txt" name="cs_txt" placeholder="<?php echo $lang['Enter_Contents']; ?>"></textarea>
+								</div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+					<!--
+						<div class="form_field_item_wrap form_file" id="files1">
+							<div class="form_field_item">
+								<label class="form_label" for=""><span>첨부파일</span></label>
+								<div class="form_input_wrap">
+									<span class="basic_btn basic_btn_secondary btn_file">파일찾기<input type="file" name="cs_file[]" class="multi_file"/></span>
+									<p class="info_guide">최대 2MB 크기의 파일(txt, log, jpg, png, gif, bmp, zip, hwp, doc, xls, ppt, pdf)등을 3개까지 첨부할 수 있습니다 (총 6MB)</p>
+									<div class="file_list"></div>
+								</div><!-- .form_input_wrap -->
+							<!--/div><!-- .form_field_item -->
+						<!--/div><!-- .form_field_item_wrap -->-->
+
+					</div><!-- .form_basic_body -->
+				</form>
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="#" onclick="return chk_form();" class="basic_btn basic_btn_primary"><span><?php echo $lang['Receiving_Inquiry']; ?></span></a>
+                <a href="#" class="basic_btn basic_btn_secondary btn_contents_delet"><span><?php echo $lang['Delete_Contents']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+<script>
+function chk_form(){
+
+/*
+var chk_game = document.getElementsByName('cs_game');
+var sel_type1 = null;
+
+	for(var i=0;i<chk_game.length;i++){
+		if(chk_game[i].checked == true){ 
+			sel_type1 = chk_game[i].value;
+		}
+	}
+
+	if(sel_type1 == null){
+			alert("서비스유형을 선택하세요."); 
+		return false;
+	}
+*/
+var chk_svc = document.getElementsByName('cs_type');
+var sel_type2 = null;
+
+	for(var i=0;i<chk_svc.length;i++){
+		if(chk_svc[i].checked == true){ 
+			sel_type2 = chk_svc[i].value;
+		}
+	}
+
+	if(sel_type2 == null){
+		swal({
+			text:'<?php echo $lang['Select_Question_Type']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+var title = $('#cs_tit').val();
+
+	if(title == ''){
+		swal({
+			text:'<?php echo $lang['Enter_Title']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+var content = $('#cs_txt').val();
+
+	if(content == ''){
+		swal({
+			text:'<?php echo $lang['Enter_Contents']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+ document.cs_inquiry_form.submit();
+}
+
+</script>

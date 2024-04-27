@@ -1,0 +1,132 @@
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+
+$mode				= escape_string(trim($_REQUEST['mode']));
+
+if ( $_SESSION['sess_login_id'] == "" ) {
+?>
+	<script>location.href="/";</script>
+<?php
+	exit;
+}
+
+// 이 부분 이제 필요하지 않다. 
+if ( $_SESSION['sess_login_id'] != "" && $mode == "getAddress") {
+
+// 지갑 생성
+//	$url = "https://" . $HOST . ".aurorahunt.xyz/extern/api/node/peer.php?mode=getAddress&login_id=" . $_SESSION['sess_login_id'] . "&game_code=clwmc";
+//	$return_data = curl_return_json($url);
+
+?>
+
+<div id="container" class="assets_view">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <a href="#" class="btn_back"><span class="sr_only"><?php echo $lang['GetBack']; ?></span></a>
+                    <div class="wallet_pmw">
+                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                        <b><?php echo $lang['CreateCATWalletDone']; ?></b>
+                        <!--span>$0.00</span-->
+                    </div><!-- .wallet_pmw -->                    
+
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php
+}
+else {		// 이하 내용만 현재는 유효함. $mode 사용하지 않음
+?>
+<div id="container" class="assets_view">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <a href="javascript:void(0);" class="btn_back"><span class="sr_only"><?php echo $lang['GetBack']; ?></span></a>
+					<div class="wallet_pmw">
+                        <figure><img src="../images/sub/nft/CAT_symbol.svg" alt=""></figure>
+                        <b><?php echo $total_CAT; ?> CAT</b>
+                        <!--span>$0.00</span-->
+                    </div>
+                    <!--div class="wallet_pmw">
+                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                        <b>- CAT</b>
+                        <span>$0.00</span>
+                    </div--><!-- .wallet_pmw -->                    
+                    <ul class="wallet_function">
+                        <!--li class="wallet_function_receive"><a href="#"><i></i><span>Receive</span></a></li>
+                        <li class="wallet_function_send"><a href="./wallet_send.htm"><i></i><span>Send</span></a></li-->
+
+                        <li class="wallet_function_swap"><a href="./wallet_swap.htm"><i></i><span>Swap</span></a></li>
+
+                    </ul><!-- .wallet_function -->
+
+					<div class="activity_wrap">
+                        <div class="activity_head">
+                            <p class="tit">Assets</p>
+                            <select class="select_small selectric">
+                                <option value="All">All</option>
+                                <option value="CAT">CAT</option>
+                            </select>
+                        </div>
+                        <div class="activity_list">
+                            <div class="activity_item">
+                                <figure><img src="../images/sub/nft/CAT_symbol.svg" alt=""></figure>
+                                <p><b>Claw Machine</b></p>
+                                <p><b><?php echo $return_data_clwmc["balance"]; ?> CAT</b>
+                            </div>
+                            <div class="activity_item">
+                                <figure><img src="../images/sub/nft/CAT_symbol.svg" alt=""></figure>
+                                <p><b>Minning Maze</b></p>
+                                <p><b><?php echo $return_data_mm["balance"]; ?> CAT</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--div class="activity_wrap">
+                        <div class="activity_head">
+                            <p class="tit">Activity</p>
+                            <select class="select_small selectric">
+                                <option value="All">All</option>
+                                <option value="Receive">Receive</option>
+                                <option value="Send">Send</option>
+                                <option value="Swap">Swap</option>
+                            </select>
+                        </div>
+                        <div class="activity_list">
+                            <div class="activity_item">
+                                <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                <p><b>Receive</b><span>From : 0x281…8ds9</span><span>July 23, 2022 at 11:30</span></p>
+                                <p><b>0.000 PMW</b><span>$0.00</span></p>
+                            </div>
+                            <div class="activity_item">
+                                <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                <p><b>Send</b><span>To : 0x281…8ds9</span><span>July 23, 2022 at 10:30</span></p>
+                                <p><b>0.000 PSCT</b><span>~000PMW</span></p>
+                            </div>
+                            <div class="activity_item">
+                                <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                <p><b>Swap</b><span>PSCT -> PMW</span><span>July 23, 2022 at 09:30</span></p>
+                                <p><b>0.000 PMW</b><span>$0.00</span></p>
+                            </div>
+                        </div>
+                    </div--><!-- .activity_list -->
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php 
+}
+
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; 
+?>

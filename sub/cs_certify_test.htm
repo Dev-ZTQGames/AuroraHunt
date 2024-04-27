@@ -1,0 +1,54 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<script>
+	opener.document.getElementById('query_name').value					= 'aaaaaaaa';
+	window.close();
+</script>
+<?php
+if($_REQUEST['tid']){
+	$tid		= escape_string(trim($_REQUEST['tid']));
+	$auth_info	= escape_string(trim($_REQUEST['auth_info']));
+	$client_id	= "pay_test";
+
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://testpgapi.payletter.com/v1.0/auth/info/".$tid."?client_id=".$client_id."&auth_info=".$auth_info,
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => '',
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 0,
+	  CURLOPT_FOLLOWLOCATION => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => 'GET',
+	  CURLOPT_HTTPHEADER => array(
+		'Authorization: PLKEY MUI3MjM0RUExQTgyRDA1ODZGRDUyOEM4OTY2QTVCN0Y=',
+		'Content-Type: application/json'
+		),
+	));
+
+	$response = curl_exec($curl);
+
+	curl_close($curl);
+
+	print_r( $response );
+	exit;
+} else {
+	echo "
+		<script>
+		swal({
+			text: '문제가 발생했습니다. 다시 시도해주세요.',
+			buttons: {
+				confirm : {
+					text : '확인',
+					value : 'catch'
+				},
+			},
+		}).then(function(value){
+			if(value == 'catch'){
+				location.href='https://".$HOST.".aurorahunt.xyz';
+			}
+		})
+		</script>
+		";
+}
+?>

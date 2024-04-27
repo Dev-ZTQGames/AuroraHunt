@@ -1,0 +1,866 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm';
+
+$return_path =escape_string(trim($_REQUEST['return_path']));
+$query = escape_string(trim($_REQUEST['query']));
+$user_name =  escape_string(trim($_REQUEST['register_name']));
+$user_id = escape_string(trim($_REQUEST['register_id']));
+$user_pw = escape_string(trim($_REQUEST['register_pw']));
+$email_id = escape_string(trim($_REQUEST['email_id']));
+$select_email = escape_string(trim($_REQUEST['select_email']));
+$input_email = escape_string(trim($_REQUEST['input_email']));
+$social_id = escape_string(trim($_REQUEST['social_id']));
+
+$referral = escape_string(trim($_REQUEST['referral']));
+$recaptcha = escape_string(trim($_REQUEST['g-recaptcha']));
+$recaptchachk = escape_string(trim($_REQUEST['g-recaptchachk_commit']));
+
+
+if(!$select_email){
+	$user_email = $email_id.'@'.$input_email;
+} else {
+	$user_email = $email_id.'@'.$select_email;
+}
+
+if($query == "join_process"){
+
+	//보안 강화 끝
+	$data = array('id' => $user_id);
+	$url = "https://" . $HOST . ".aurorahunt.xyz/extern/sso/join_validate_id.php";
+	$return_data = curl_post($url, $data);
+	if ( $return_data != "true" ) exit;
+
+	$data = array('email' => $user_email);
+	$url = "https://" . $HOST . ".aurorahunt.xyz/extern/sso/join_validate_email.php";
+	$return_data = curl_post($url, $data);
+	if ( $return_data != "true" ) exit;
+
+	$data = array('name' => $user_name);
+	$url = "https://" . $HOST . ".aurorahunt.xyz/extern/sso/join_validate_name.php";
+	$return_data = curl_post($url, $data);
+	if ( $return_data != "true" ) exit;
+	//보안 강화 끝
+
+	$join_query = "INSERT INTO Accounts (login_id,login_pw,email,email_cert,createdAt,usn,name,lang_code,ip) VALUES ('".$user_id."',PASSWORD('".$user_pw."'),'".$user_email."','y',now(),(SELECT max(usn)+1 FROM Accounts account),'".$user_name."','".$lang_code."', '".$ip."')";
+
+	if(!mysqli_query($connect,$join_query)){
+		echo "<script>alert('".mysqli_error($connect)."');location.href = 'register_form.htm'; ;</script>";
+	};
+
+	if ( $referral && $recaptchachk ) {
+		
+		$secretKey = "6LesuzsnAAAAAHCm0GqLwlhQnNwZEIaxyj-9eu4p";
+		$data = array(
+		  'secret' => $secretKey,
+		  'response' => $recaptcha,
+		  'remoteip' => $_SERVER['REMOTE_ADDR']
+		);
+
+		$url = "https://www.google.com/recaptcha/api/siteverify";
+		$return_data =  json_decode(curl_post($url, $data), true);
+
+		if ($return_data["success"]) {
+		  $referral_query = "INSERT INTO AccountsReferral (m_login_id,m_referral,m_date) VALUES ('".base64_decode($referral)."', '".$user_id."', now())";
+		  mysqli_query($connect,$referral_query);
+		  $msg_referral = $lang['Referral_Success'];
+		} else {
+		  $msg_referral = $lang['Referral_Failure'];
+		}
+		
+		$msg_success = $lang["Welcome_Registration_Complete"] . "\\n\\n" . $msg_referral;
+	}
+	else {
+		$msg_success = $lang["Welcome_Registration_Complete"];
+	}
+
+//	print_r($return_data);
+//	var_dump($return_data);
+//	echo $msg_success;
+//	exit;
+
+	mysqli_close($connect);
+
+?>
+	<form name="go_login" action="login.htm" method="POST">
+		<input type="hidden" name="return_path" value="<?php echo $return_path; ?>">
+		<input type="hidden" name="id" value="<?php echo $user_id; ?>">
+	</form>
+	<script>
+		swal({
+		  text: '<?php echo $user_name?> '+'<?php echo $msg_success; ?>',
+		  buttons: '<?php echo $lang["Registration_Login"]; ?>',
+		}).then(function(isConfirm){
+			if(isConfirm){
+				document.go_login.submit();
+			}
+		});
+	</script>
+<?php
+}
+?>
+
+<?php
+
+$social_name = escape_string(trim($_REQUEST['social_name']));
+$social_email = escape_string(trim($_REQUEST['social_email']));
+$register_type = escape_string(trim($_REQUEST['register_type']));
+$social_chk_id = escape_string(trim($_REQUEST['social_chk_id']));
+
+$social_email_id = explode('@',$social_email)[0];
+$social_email_domain = explode('@',$social_email)[1];
+
+if($social_email != ''){
+	$disabled_cert_btn = '';
+	$readonly = 'readonly';
+} else {
+	$disabled_cert_btn = 'disabled';
+	$readonly = '';
+}
+
+?>
+<script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit" async defer></script>
+
+<div id="container" class="page_register">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Join']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_register">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Enter_Registration_Info']; ?></h3>
+					<p class="form_basic_head_guide"><?php echo $lang['Fill_It_Out']; ?></p>
+				</div><!-- .form_basic_head -->
+				<form name="register_form" action="register_form.htm" method="POST">
+				<input type='hidden' name='query' id='query' value='join_process'>
+				<input type="hidden" name="namechk_commit" id="namechk_commit" value="">
+				<input type="hidden" name="idchk_commit" id="idchk_commit" value="">
+				<input type="hidden" name="passwdchk_commit" id="passwdchk_commit" value="">
+				<input type="hidden" name="emailchk_commit" id="emailchk_commit" value="">
+				<input type="hidden" name="social_id" id="social_id" value="<?php echo $social_chk_id; ?>">
+				<input type="hidden" name="type" id="type" value="<?php echo $register_type; ?>">
+				<input type="hidden" name="return_path" id="return_path" value="<?php echo $return_path; ?>">
+				<input type="hidden" name="g-recaptcha" id="g-recaptcha" value="">
+				<input type="hidden" name="g-recaptchachk_commit" id="g-recaptchachk_commit" value="">
+					<div class="form_basic_body">
+						<div class="form_field_item_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="register_name"><span><?php echo $lang['Nickname']; ?></span></label>
+								<div class="form_input_wrap">
+                                    <input type="text" class="form_input" id="register_name" name="register_name" maxlength="20"  value="<?php echo $social_name; ?>" placeholder="<?php echo $lang['Valid_Message_Name']; ?>"/>
+                                </div><!-- .form_input_wrap -->
+								<div id="valid_message_name"></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+						<div class="form_field_item_wrap not_valid">
+							<div class="form_field_item required">
+								<label class="form_label" for="register_id"><span><?php echo $lang['ID']; ?></span></label>
+                                <div class="form_input_wrap">
+								    <input type="text" class="form_input" id="register_id" name="register_id" maxlength="16" placeholder="<?php echo $lang['Valid_Message_Id']; ?>"/>
+                                </div><!-- .form_input_wrap -->
+								<div id="valid_message_id"></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+						<div class="form_field_item_wrap pw_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="register_pw"><span><?php echo $lang['Password']; ?></span></label>
+                                <div class="form_input_wrap">
+								    <input type="password" class="form_input" id="register_pw" name="register_pw" maxlength="16" onkeyup="check_passwd(this.value)" placeholder="<?php echo $lang['Valid_Message_Id']; ?>"/>
+                                </div><!-- .form_input_wrap -->
+                                <div id="valid_message_pw"></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+						<div class="form_field_item_wrap pw_check_wrap">
+							<div class="form_field_item required">
+								<label class="form_label" for="register_pw_check"><span><?php echo $lang['Confirm_Password']; ?></span></label>
+                                <div class="form_input_wrap">
+								    <input type="password" class="form_input" id="register_pw_check"/>
+                                </div><!-- .form_input_wrap -->
+								<div id="valid_message_check_pw"></div>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+						<div class="form_field_item_wrap email_wrap">
+							<div class="form_field_item required">
+								 <label class="form_label" for="form_email"><span><?php echo $lang['Email']; ?></span></label>
+								 <div class="email_form">
+									<input class="form_input input_email_local" id="form_email" type="text" name="email_id" value="<?php echo $social_email_id; ?>" <?php echo $readonly; ?>/>
+									<span class="separator_email">@</span>
+									<input class="form_input input_email_domain" type="text" id="input_email" name="input_email" value="<?php echo $social_email_domain; ?>" <?php echo $readonly; ?>/>
+
+									<button type="button" class="basic_btn btn_email_verify <?php echo $disabled_cert_btn; ?>" onclick="return email_verify();"><span><?php echo $lang['Email_Verification']; ?></span></button>
+								 </div>
+							</div><!-- .form_field_item -->
+
+							 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+							 <script>
+									$( "select_email" ).change(function(){
+										$("#input_email").val( $("#select_email").val() );
+									});
+							 </script>
+							 -->
+
+							<p class="guide_message_info"><i class="icon"></i><span><?php echo $lang['Enter_Using_Email']; ?></span></p>
+							<div class="form_field_item required form_field_email_vertify">
+								<label class="form_label" for="email_vertify"><span><?php echo $lang['Email_Verification_Num']; ?></span></label>
+                                <div class="form_input_wrap">
+                                    <div class="input_email_vertify_wrap">
+                                        <input type="text" class="form_input input_email_vertify" id="email_vertify" onkeyup="check_email_cert_number();"/>
+                                        <input type="hidden" name="emailchk_cert_num" id="emailchk_cert_num" value="">
+                                        <span id="timer"></span>
+                                    </div><!-- .input_email_vertify_wrap -->
+								    <a class="basic_btn basic_btn_primary" id="btn_cert" href="javascript:email_cert_number_confirm();"><span><?php echo $lang['Authenticate']; ?></a>
+								    <a class="basic_btn btn_email_verify disabled" id="resend" href="javascript:resend_mail();"><span><?php echo $lang['Retransmit_Code']; ?></a>
+                                </div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="register_pw_check"><span><?php echo $lang['My_Referral']; ?></span></label>
+                                <div class="form_input_wrap col2">
+								    <input type="text" class="form_input" id="referral" name="referral" value="<?php echo $referral; ?>">
+									<a class="basic_btn basic_btn_primary" id="btn_confirm_referral" href="javascript:confirm_referral();" style="display:none"><span><?php echo $lang['Verify']; ?></span></a>
+									<div id="spam_check_area" style="display:none"></div>
+                                </div><!-- .form_input_wrap -->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+						
+                        <!--div class="form_field_item_wrap user_auth">
+							<div class="form_field_item required">
+								<button type="button" class="basic_btn btn_user_auth basic_btn_secondary"><span>본인 인증</span></button>
+							</div--><!-- .form_field_item -->
+						<!--/div--><!-- .form_field_item_wrap -->
+
+					</div><!-- .form_basic_body -->
+				</form>
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="#" class="basic_btn basic_btn_primary" onclick="return join_check();"><span><?php echo $lang['Next']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+</body>
+</html>
+
+<script type="text/javascript">
+var verifyCallback = function(response) {
+	$('#g-recaptcha').val(response);
+};
+
+var onloadCallback = function() {
+	grecaptcha.enterprise.render('spam_check_area', {
+	  'sitekey' : '6LesuzsnAAAAAJk7cYHdFCn8njCnC8AM8t_XGwJ2',
+	  'callback' : verifyCallback,
+	  'theme' : 'dark'
+	});
+};
+
+function confirm_referral() {
+
+	$.ajax({
+	   type:"POST",        
+	   url:"join_validate_referral.php",     
+	   data : ({id: $("#referral").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		//console.log(args);
+		if ( args.trim() == "false" ) {
+		//	grecaptcha.enterprise.ready(async () => {
+		//		const token = await grecaptcha.enterprise.execute('6LesuzsnAAAAAJk7cYHdFCn8njCnC8AM8t_XGwJ2', {action: 'LOGIN'});
+		//		$('#g-recaptcha').val(token);
+			//	console.log(token);
+		//	});
+			$("#spam_check_area").css('display','inline-block');
+			swal({
+			  text: '<?php echo $lang['Referral_Verified_done']; ?>',
+			  buttons: '<?php echo $lang['Confirm']; ?>',
+			});
+			$("#g-recaptchachk_commit").val("Y");
+			$("#referral").attr('readonly', true);
+			$("#btn_confirm_referral").prop('disabled', true);
+		}
+		else {
+			swal({
+			  text: '<?php echo $lang['Referral_Code_incorrect']; ?>',
+			  buttons: '<?php echo $lang['Confirm']; ?>',
+			});
+			$("#referral").val("");
+		}	   
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+
+}
+
+function isValidName(name) {
+	var check = /[`~!@#$%^&*|\\\'\";:\/?^=^+_()<>]/;
+
+	if (check.test(name))     {
+		return false;
+	}
+
+	if (name.length > 20) {
+		return false;
+	}
+
+	return true;
+};
+
+
+function isValidLoginId(id) {
+	var check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/;
+
+	if (!check.test(id))     {
+		return false;
+	}
+
+	if (id.length < 8 || id.length > 16) {
+		return false;
+	}
+
+	return true;
+};
+
+function isValidPassword(pw) {
+//	var check = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+	var check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/;
+
+	if (!check.test(pw))     {
+		return false;
+	}
+
+	if (pw.length < 8 || pw.length > 16) {
+		return false;
+	}
+
+	return true;
+};
+
+
+function isValidEmail(email) {
+	var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+	if(regex.test(email) == false) {
+		return false;
+	}
+
+	return true;
+};
+
+function join_check(){
+	var join_name = $.trim($("#register_name").val());
+	var join_id = $.trim($("#register_id").val());
+	var join_pw = $.trim($("#register_pw").val());
+	var check_pw = $.trim($("#register_pw_check").val());
+	var email_id = $.trim($("#form_email").val());
+	var email_address = $.trim($("#input_email").val());
+
+	var email = email+"@"+email_address;
+
+	if (join_name == "" || !isValidName(join_name) ) {
+		swal({
+		  text: '<?php echo $lang['Check_Nickname']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+	if (join_id == "" || !isValidLoginId(join_id)) {
+		 swal({
+		  text: '<?php echo $lang['ID_Check']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		 return false;
+	} 
+
+	if (join_pw == "" || !isValidPassword(join_pw)) {
+		swal({
+		  text: '<?php echo $lang['Please_Confirm_Password']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	} 
+
+	if (join_pw != check_pw) {
+		swal({
+		  text: '<?php echo $lang['Password_Not_Match']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+	if (email_id == "" || email_address == "" || !isValidEmail(email)) {
+		swal({
+		  text: '<?php echo $lang['Email_Check']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	} 		
+	
+	if ( $("#idchk_commit").val() != "Y" ) {
+		swal({
+		  text: '<?php echo $lang['ID_Check']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	} 
+
+	if (  $("#emailchk_commit").val() != "Y" ) {
+		swal({
+		  text: '<?php echo $lang['Check your email verification']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		return false;
+	}
+
+	document.register_form.submit();
+   
+}
+
+$("#register_name").keyup(function(){
+	$.ajax({
+	   type:"POST",        
+	   url:"join_validate_name.php",     
+	   data : ({name: $("#register_name").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		$("#namechk_commit").val("");
+		switch(args.trim()){
+			 case("true"):
+			  $("#valid_error_msg").html("");
+			  $("#idchk_commit").val("Y");
+			  $("#valid_message_name").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Available_Nickname']; ?></span></p>");
+			 break;
+			 case("false"):			  				 
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Nickname_Already_Exists']; ?></span></p>");
+			 break;
+			 case("none"):
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Enter_Nickname']; ?></span></p>");
+			 break;
+			 case("long"):
+			   $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Within_20_Characters']; ?></span></p>");
+			 break;
+			 case("bad_character"):
+			   $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Within_20_Characters']; ?></span></p>");
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+});
+
+
+$("#register_id").keyup(function(){
+	$.ajax({
+	   type:"POST",        
+	   url:"join_validate_id.php",     
+	   data : ({id: $("#register_id").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		//console.log(args);
+		$("#idchk_commit").val("");
+		switch(args.trim()){
+			 case("true"):
+			  $("#valid_message_id").html("");
+			  $("#idchk_commit").val("Y");
+			  $("#valid_message_id").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Available_ID']; ?></span></p>");
+			 break;
+			 case("false"):			  				 
+			  $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Exist_ID']; ?></span></p>");
+			 break;
+			 case("none"):
+			  $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Enter_Using_ID']; ?></span></p>");
+			 break;
+			 case("short"):
+			   $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Valid_Message_Id_Possible']; ?></span></p>");
+			 break;
+			 case("long"):
+			   $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Valid_Message_Id_Possible']; ?></span></p>");
+			 break;
+			 case("bad_character"):
+			   $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Valid_Message_Id_Possible']; ?></span></p>");
+			 break;
+			 case("bad_character2"):
+			   $("#valid_message_id").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Valid_Message_Id_Possible']; ?></span></p>");
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+});
+
+
+function check_passwd(passwd) {
+	if ( passwd.length >= 0 )	{
+
+		if (passwd == "" || !isValidPassword(passwd)) {
+			$("#passwdchk_commit").val("N");
+			$("#valid_message_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Alphanumeric_Combinations']; ?></span></p>");
+			return false;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: "join_validate_pw.php",
+			data : ({ pw: passwd }),
+			cache: false,
+			success: function(args){
+				if(args.trim().includes("bad_pw")){
+					$("#valid_message_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Alphanumeric_Combinations']; ?></span></p>");
+					$("#pw_commit").val("N");
+				}
+				else {
+					$("#passwdchk_commit").val("Y");
+					$("#valid_message_pw").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Available_Passwords']; ?></span></p>");
+				}
+
+			}
+		});
+	}
+}
+
+//비밀번호
+$("#register_pw").keyup(function(){
+	if($('#register_pw').val() != $('#register_pw_check').val() || $('#register_pw_check').val() == ''){
+		$("#valid_message_check_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Password_Not_Match']; ?></span></p>");
+	} else {
+		$("#valid_message_check_pw").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Password_Match']; ?></span></p>");
+	}
+});
+
+//비밀번호 확인
+$("#register_pw_check").keyup(function(){
+	if($('#register_pw').val() != $('#register_pw_check').val() || $('#register_pw_check').val() == ''){
+		$("#valid_message_check_pw").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Password_Not_Match']; ?></span></p>");
+	} else {
+		$("#valid_message_check_pw").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Password_Match']; ?></span></p>");
+	}
+});
+
+
+
+$("#form_email").keyup(function(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	if($("#form_email").val() != '' && $("#input_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+		/*
+		$.ajax({
+			   type:"POST",       
+			   url:"join_validate_email.php",   
+			   data : ({email: email}),
+			   timeout : 5000,     
+			   cache : false,       
+			   success: function whenSuccess(args){  
+				$(".btn_email_verify").removeClass('disabled');
+				switch(args.trim()){
+				 case("true"):
+				  $("#valid_error_msg").html("");
+				 break;
+				 case("none"):
+				   $("#valid_error_msg").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+				   $(".btn_email_verify").addClass('disabled');
+				 break;
+				}
+			   },
+			   error: function whenError(e){    // ERROR FUNCTION
+				//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+			   }
+		  });*/
+		} else {
+			$(".btn_email_verify").addClass('disabled');
+		}
+});
+
+
+$("#input_email").keyup(function(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	if($("#form_email").val() != '' && $("#input_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+	} else {
+		$(".btn_email_verify").addClass('disabled');
+	}
+	/*
+	$.ajax({
+		   type:"POST",       
+		   url:"join_validate_email.php",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+		    $("#valid_error_msg").html("");
+			switch(args.trim()){
+			 case("true"):
+			 $(".btn_email_verify").removeClass('disabled');
+			 break;
+			 case("none"):
+			   $("#valid_error_msg").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+			   $(".btn_email_verify").addClass('disabled');
+			 break;
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });*/
+});
+
+$("#select_email").change(function(){
+	var value  = $(this).val();
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#select_email").val());
+	if($("#select_email").val() != '' && $("#form_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+	} else {
+		$(".btn_email_verify").addClass('disabled');
+	}
+	/*
+	if($("#selectBox option:selected").val() != '' && $.trim($("#form_email").val()) != ''){
+		$.ajax({
+		   type:"POST",       
+		   url:"join_validate_email.php",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+		    $("#valid_error_msg").html("");
+			switch(args.trim()){
+			 case("true"):
+			 $(".btn_email_verify").removeClass('disabled');
+			 break;
+			 case("none"):
+			   $("#valid_error_msg").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+			   $(".btn_email_verify").addClass('disabled');
+			 break;
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });
+	}*/
+	
+});
+
+function email_verify(){
+
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	
+	$.ajax({
+	   type:"POST",       
+	   url:"join_validate_email.php",   
+	   data : ({email: email}),
+	   timeout : 5000,     
+	   cache : false,
+	   success: function whenSuccess(args){  
+		switch(args.trim()){
+			case("true"):
+				send_mail();
+				break;
+			case("false"):
+				swal({
+					text: email+', <?php echo $lang['Signed_Up_Same_Email']; ?>',
+					buttons: {
+						cancel : '<?php echo $lang['Cancel']; ?>',
+						confirm : {
+							text : '<?php echo $lang['Confirm']; ?>',
+							value : 'catch'
+						},
+					},
+				}).then(function(value){
+					if(value == 'catch'){
+						location.href='login.htm?return_path=<?php echo $return_url; ?>';
+					} else {
+						$(".btn_email_verify").removeClass('disabled');
+					}
+				})
+				$(".btn_email_verify").addClass('disabled');
+			 break;
+			case("bad_character"):
+				swal({
+				  text: '<?php echo $lang['Email_Check']; ?>',
+				  buttons: '<?php echo $lang['Confirm']; ?>',
+				})
+				$(".btn_email_verify").removeClass('disabled');
+				break;
+		}
+	   },
+	   error: function whenError(e){    // ERROR FUNCTION
+		swal({
+		  text: '<?php echo $lang['Try_Again_Later']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	   }
+  });
+	
+}
+
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function send_mail(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	var num = rand(000000, 999999);
+
+	$.ajax({
+	   type:"POST",       
+	   url:"sendmail_certificate.htm",   
+	   data : ({email: email, num:num}),
+	   timeout : 5000,     
+	   cache : false,  
+	   
+	   beforeSend: function (){
+		showLoadingBar();
+	   },
+	   complete: function (){
+		loading();
+		$("#emailchk_cert_num").val(num);
+	//	$("#email_vertify").val(num);
+		swal({
+		  text: email+', <?php echo $lang['Verification_Code_Sending_Text']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		}).then(function(isConfirm) {
+		  if (isConfirm) {
+			  $('.form_field_email_vertify').addClass('active');
+			  $('.btn_email_verify').addClass('disabled');
+
+			  var time = 600;
+			  var min = '';
+			  var sec = '';
+
+			  var x = setInterval(function(){
+				min = parseInt(time/60);
+				sec = time%60;
+
+				if(sec < 10){
+					sec = '0'+sec;
+				} 
+
+				$('#timer').html(min+':'+sec);
+				time--;
+
+				if(time < 0){
+					clearInterval(x);
+					$('#timer').html('<?php echo $lang['Timeout']; ?>');
+					$("#btn_cert").addClass("disabled");
+					$("#emailchk_cert_num").val('timeout');
+				}
+			  },1000)
+
+			  setTimeout(function(){
+				$('#resend').removeClass('disabled');
+			  },300000);
+
+		  }
+		})
+	   },
+  });
+}
+
+function resend_mail(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	var num = rand(000000, 999999);
+
+	$.ajax({
+	   type:"POST",       
+	   url:"sendmail_certificate.htm",   
+	   data : ({email: email, num:num}),
+	   timeout : 5000,     
+	   cache : false,  
+		
+	   beforeSend: function (){
+		showLoadingBar();
+	   },
+	   complete: function (){
+		loading();
+		$("#emailchk_cert_num").val(num);
+		swal({
+		  text: email+', <?php echo $lang['Verification_Code_Resending_Text']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		}).then(function(isConfirm) {
+		  if (isConfirm) {
+			  $('.form_field_email_vertify').addClass('active');
+			  $('.btn_email_verify').addClass('disabled');
+			  $("#btn_cert").removeClass("disabled");
+			  $('#timer').css("display","default");
+
+			  var time = 600;
+			  var min = '';
+			  var sec = '';
+
+			  var x = setInterval(function(){
+				min = parseInt(time/60);
+				sec = time%60;
+				
+				if(sec < 10){
+					sec = '0'+sec;
+				} 
+
+				$('#timer').html(min+':'+sec);
+				time--;
+
+				if(time < 0){
+					clearInterval(x);
+					$('#timer').html('<?php echo $lang['Timeout']; ?>');
+					$("#btn_cert").addClass("disabled");
+					$("#emailchk_cert_num").val('timeout');
+				}
+			  },1000)
+
+			  setTimeout(function(){
+				$('#resend').removeClass('disabled');
+			  },300000);
+		  }
+		})
+	   },
+  });
+}
+
+
+function check_email_cert_number(){
+	$("#email_vertify").val($("#email_vertify").val().replace(/[^0-9]/g,""));
+}
+
+function email_cert_number_confirm(){
+		
+	if ( $("#email_vertify").val() != $("#emailchk_cert_num").val() ) 	{
+		//alert
+		swal({
+		  text: '<?php echo $lang['Not_Match_Verification_Code']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+	} else {
+		$('#form_email').prop('readonly', true);
+		$('#input_email').prop('readonly', true);
+		$("#emailchk_commit").val("Y");
+		//alert
+		swal({
+		  text: '<?php echo $lang['Have_Been_Authenticated']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		$("#btn_cert").addClass("disabled");
+		$('#timer').css("display","none");
+		$("#btn_confirm_referral").css('display','inline-block');
+	}
+}
+
+</script>

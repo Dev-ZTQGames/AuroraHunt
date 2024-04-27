@@ -1,0 +1,8 @@
+[2023-12-22 06:32:32] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-22 06:32:32] NODE - SourceIP : 35.191.29.161, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-22 06:32:46] NODE - SourceIP : 35.191.32.137, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-22 06:32:46] NODE - SourceIP : 35.191.32.9, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

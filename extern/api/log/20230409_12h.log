@@ -1,0 +1,166 @@
+[2023-04-09 12:04:36] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2418}
+[2023-04-09 12:04:38] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2419}
+[2023-04-09 12:04:39] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2420}
+[2023-04-09 12:04:50] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2425}
+[2023-04-09 12:05:02] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2432}
+[2023-04-09 12:05:09] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2434}
+[2023-04-09 12:05:19] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2439}
+[2023-04-09 12:05:22] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2441}
+[2023-04-09 12:05:43] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2293}
+[2023-04-09 12:05:47] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2295}
+[2023-04-09 12:05:55] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2299}
+[2023-04-09 12:06:01] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2302}
+[2023-04-09 12:06:06] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2304}
+[2023-04-09 12:06:08] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2305}
+[2023-04-09 12:06:14] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2308}
+[2023-04-09 12:06:15] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2309}
+[2023-04-09 12:06:17] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2309}
+[2023-04-09 12:06:30] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2474}
+[2023-04-09 12:06:32] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2475}
+[2023-04-09 12:08:54] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2544}
+[2023-04-09 12:09:01] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2547}
+[2023-04-09 12:09:06] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:23:04] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:23:42] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:23:52] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:23:55] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:26:37] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3061}
+[2023-04-09 12:26:45] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3065}
+[2023-04-09 12:26:47] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3066}
+[2023-04-09 12:26:57] NODE - SourceIP : 52.13.201.178, proc1: getAddress, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"0297492b9ea24a2eb5ae4b2a1fc4e0d7577cf57833905db965eff3054ade6b9998"}
+[2023-04-09 12:26:58] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/707.png|https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/615.png|"}
+[2023-04-09 12:26:59] NODE - SourceIP : 34.213.208.16, proc1: getBalance, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3071}
+[2023-04-09 12:27:07] NODE - SourceIP : 52.13.201.178, proc1: MiningStart, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/707.png|https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/615.png|"}
+[2023-04-09 12:27:09] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3076}
+[2023-04-09 12:27:23] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2925}
+[2023-04-09 12:27:25] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2926}
+[2023-04-09 12:27:42] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2935}
+[2023-04-09 12:27:46] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2937}
+[2023-04-09 12:27:59] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2943}
+[2023-04-09 12:28:03] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2945}
+[2023-04-09 12:28:07] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2947}
+[2023-04-09 12:28:23] NODE - SourceIP : 34.216.170.167, proc1: getAddress, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"03f9986e936ba1b5534f1aef5b32ea9d8a30e30024f25cfd300603752f0220f3f9"}
+[2023-04-09 12:28:24] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/707.png|"}
+[2023-04-09 12:28:27] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2957}
+[2023-04-09 12:28:33] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2959}
+[2023-04-09 12:28:43] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":2964}
+[2023-04-09 12:30:25] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3014}
+[2023-04-09 12:30:34] NODE - SourceIP : 34.216.170.167, proc1: getAddress, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"03f9986e936ba1b5534f1aef5b32ea9d8a30e30024f25cfd300603752f0220f3f9"}
+[2023-04-09 12:30:35] NODE - SourceIP : 34.216.170.167, proc1: MiningStart, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/707.png|"}
+[2023-04-09 12:30:37] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3019}
+[2023-04-09 12:30:49] NODE - SourceIP : 34.213.208.16, proc1: getBalance, proc2: login_id : aurorahunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3026}
+[2023-04-09 12:34:12] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02dcb1b1c81c0e36a0b43c48167bf2f8db4b210913b50330c6c1769e0cb0fcb654"}
+[2023-04-09 12:34:14] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:34:15] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:34:18] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:34:24] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:34:24] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:34:43] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:35:00] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:35:03] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:35:10] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:35:18] NODE - SourceIP : 52.13.201.178, proc1: getAddress, proc2: login_id : perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02dcb1b1c81c0e36a0b43c48167bf2f8db4b210913b50330c6c1769e0cb0fcb654"}
+[2023-04-09 12:35:21] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/707.png|https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/615.png|"}
+[2023-04-09 12:35:22] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:35:27] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-04-09 12:40:39] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":155}
+[2023-04-09 12:40:40] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":156}
+[2023-04-09 12:41:31] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":180}
+[2023-04-09 12:41:34] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":181}
+[2023-04-09 12:41:45] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":187}
+[2023-04-09 12:42:59] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":223}
+[2023-04-09 12:47:45] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Perugiaman1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":362}
+[2023-04-09 12:49:01] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3714}
+[2023-04-09 12:49:06] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3716}
+[2023-04-09 12:49:09] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3718}
+[2023-04-09 12:49:18] NODE - SourceIP : 34.213.208.16, proc1: getAddress, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"0297492b9ea24a2eb5ae4b2a1fc4e0d7577cf57833905db965eff3054ade6b9998"}
+[2023-04-09 12:49:19] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"707|615|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/615.png|"}
+[2023-04-09 12:49:20] NODE - SourceIP : 52.13.201.178, proc1: getBalance, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3723}
+[2023-04-09 12:49:32] NODE - SourceIP : 52.13.201.178, proc1: getBalance, proc2: login_id : ericchang0614, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3729}
+[2023-04-09 12:50:03] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3586}
+[2023-04-09 12:50:17] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3593}
+[2023-04-09 12:50:20] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3595}
+[2023-04-09 12:51:07] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3617}

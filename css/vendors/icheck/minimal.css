@@ -1,0 +1,53 @@
+/* iCheck plugin Minimal skin, black
+----------------------------------- */
+.icheckbox_minimal,
+.iradio_minimal {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(./images/minimal.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal {
+    background-position: 0 0;
+}
+    .icheckbox_minimal.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal.checked {
+        background-position: -40px 0;
+    }
+   /*  .icheckbox_minimal.disabled {
+        background-position: -78px 0;
+        cursor: default;
+    } */
+
+.iradio_minimal {
+    background-position: 0 0;
+}
+    .iradio_minimal.hover {
+        background-position: -20px 0;
+    }
+    .iradio_minimal.checked {
+        background-position: -60px 0;
+    }
+    /* .iradio_minimal.disabled {
+        background-position: -182px 0;
+        cursor: default;
+    } */
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-resolution: 1.25dppx) {
+    .icheckbox_minimal,
+    .iradio_minimal {
+        background-image: url(./images/minimal@2x.png);
+        -webkit-background-size: 78px 18px;
+        background-size: 78px 18px;
+    }
+}

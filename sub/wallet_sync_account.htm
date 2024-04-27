@@ -1,0 +1,131 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+
+if ( $_SESSION['sess_login_id'] == "" ) {
+?>
+	<script>location.href = "/";</script>
+<?php
+	exit;
+}
+
+$SyncAccount = escape_string($_REQUEST['ac']);
+
+	// 지갑 주소 동기화 되어 있는지 확인 AccountsChain -> ETH로 확인해야 함
+	// 먼저 레코드가 없다면 레코드를 만들고 
+	// 있으면 해당 주소 불러와서 표시
+
+	// ETH 지갑 유무 확인
+	$checkChain_query = "SELECT m_index, m_account FROM AccountsChain WHERE m_symbol = 'ETH' and m_login_id = '".$_SESSION['sess_login_id']."'";
+//	echo $checkChain_query;
+	$info_checkChain = array();
+	$que_checkChain = mysqli_query($connect, $checkChain_query);
+	$row_checkChain = mysqli_fetch_array($que_checkChain);
+	$info_checkChain = $row_checkChain;
+
+	$m_index		= $info_checkChain['m_index'];
+	$m_account	= $info_checkChain['m_account'];
+
+	if ( $m_index == "" ) {
+?>
+	
+<div id="container" class="wallet_create_02">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <h3>Sync Account</h3>
+                    <div class="bobby_wallet_desc">
+                        <p><?php echo $lang['Sync_Account_Desc']; ?></p>
+                    </div><!-- .bobby_wallet_desc -->
+                    <div class="wallet_key_wrap">
+                        <input type="text" class="wallet_form_input wallet_key" id="account_eth" name="account_eth" value="<?php echo $SyncAccount; ?>">
+                        <!--a href="#" class="btn_round"><span>Download for CSV file</span></a-->
+                    </div><!-- .wallet_key_wrap -->
+                    <button type="button" class="btn_round btn_process btn_create_wallet" id="sync_account_eth"><span><?php echo $lang['Sync_Wallet_Addr']; ?></span></button>   
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<div class="wallet_create_complete_box_wrap">
+    <div class="wallet_create_complete_box">
+        <i></i>
+        <p id="msg_area">Congratulations on <br>synchronizing your Ethereum wallet.<p>
+        <a href="/" class="btn_round"><span>메인으로</span></a>   
+    </div><!-- .wallet_create_complete_box -->
+</div><!-- .wallet_create_complete_box_wrap -->
+
+<script>
+$("#sync_account_eth").on('click',function(){
+	$.ajax({
+	   type:"POST",        
+	   url:"/includes/proc_baviWallet.php",     
+	   data : ({mode:"ch0010",account:$("#account_eth").val()}),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		switch(args.trim()){
+			 case("sync_done"):
+			 break;
+			 case("already_used"):
+				swal({
+					text: "이미 사용중인 지갑 주소 입니다!",
+					buttons: "<?php echo $lang['Confirm']; ?>",
+				});
+				$("#msg_area").html("지갑 동기화에 실패했습니다. 같은 지갑주소를 사용하시는건 어뷰징 사유에 해당합니다. 관리자에게 연락 바랍니다.")
+				return false;
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		console.log("code : " + e.status + "message : " + e.responseText);
+	  }
+	});
+});
+</script>
+
+<?php
+	} else {
+?>
+
+<div id="container" class="wallet_create_02">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <h3>Synchronized Account</h3>
+                    <div class="bobby_wallet_desc">
+                        <p>아래는 기존에 동기화된 이더리움 지갑 주소입니다.
+						</p>
+                    </div><!-- .bobby_wallet_desc -->
+                    <div class="wallet_key_wrap">
+                        <input type="text" class="wallet_form_input wallet_key" value="<?php echo $m_account; ?>">
+                        <button type="button" class="btn_round clipboard" data-clipboard-text="<?php echo $m_account; ?>"><span>Copy</span></button>
+                        <div class="clipboard_copynote"><p>복사되었습니다.</p></div>
+                        <!--a href="#" class="btn_round"><span>Download for CSV file</span></a-->
+                    </div><!-- .wallet_key_wrap -->
+                    <button type="button" class="btn_round btn_process btn_create_wallet"><span>확인</span></button>   
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<div class="wallet_create_complete_box_wrap">
+    <div class="wallet_create_complete_box">
+        <i></i>
+        <p>기존에 동기화된 이더리움 지갑 주소는<br>변경될 수 없습니다.<br><br>
+		감사합니다!<br></p>
+        <a href="/" class="btn_round"><span>메인으로</span></a>   
+    </div><!-- .wallet_create_complete_box -->
+</div><!-- .wallet_create_complete_box_wrap -->
+
+<?php
+	}
+?>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

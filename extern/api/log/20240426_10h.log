@@ -1,0 +1,44 @@
+[2024-04-26 10:03:34] NODE - SourceIP : 35.191.32.169, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:03:34] NODE - SourceIP : 35.191.3.25, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:03:34] NODE - SourceIP : 35.191.3.30, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:03:34] NODE - SourceIP : 35.191.29.172, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:03:37] NODE - SourceIP : 35.191.32.197, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:03:37] NODE - SourceIP : 35.191.29.163, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:03:37] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:03:38] NODE - SourceIP : 35.191.24.148, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:04] NODE - SourceIP : 35.191.16.192, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:04] NODE - SourceIP : 35.191.16.194, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:04] NODE - SourceIP : 35.191.33.0, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:04] NODE - SourceIP : 35.191.33.6, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:26] NODE - SourceIP : 35.191.16.196, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:26] NODE - SourceIP : 35.191.32.194, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:26] NODE - SourceIP : 35.191.32.11, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:26] NODE - SourceIP : 35.191.3.26, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:57] NODE - SourceIP : 35.191.13.85, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:57] NODE - SourceIP : 35.191.3.26, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:08:57] NODE - SourceIP : 35.191.32.224, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:08:57] NODE - SourceIP : 35.191.32.165, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2024-04-26 10:13:44] NODE - SourceIP : 35.191.33.1, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2024-04-26 10:13:44] NODE - SourceIP : 35.191.32.228, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}

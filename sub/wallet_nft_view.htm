@@ -1,0 +1,576 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="nft_view">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <a href="#" class="btn_back"><span class="sr_only"><?php echo $lang['GetBack'] ;?></span></a>
+                    <div class="wallet_nft">
+                        <figure><img src="../images/sub/nft/nft.png" alt=""></figure>
+                        <b>NFTs</b>
+                    </div><!-- .wallet_pmw -->                    
+                    <!--ul class="wallet_function">
+                        <li class="wallet_function_receive"><a href="#"><i></i><span>Receive</span></a></li>
+                        <li class="wallet_function_send"><a href="./wallet_send.htm"><i></i><span>Send</span></a></li>
+                    </ul--><!-- .wallet_function -->
+
+                    <div class="wallet_tab_list tabs">
+                        <ul class="tabs_menu">
+                            <li class="tabs_active"><a href="#collections"><span>Collections</span></a></li>
+                            <!--li><a href="#activity"><span>Activity</span></a></li-->
+                        </ul><!-- .tabs_menu -->
+
+                        <div class="tabs_panels">
+                            <div id="collections">
+                                <div class="panels_contents match_height">
+                                    <div class="collections_list accordion-list">
+										<?php
+											$query = "SELECT m_game_code FROM AccountsPSCTNodeWallet WHERE m_login_id = '".$_SESSION['sess_login_id']."'";
+											$result = mysqli_query($connect, $query);
+
+											$gameCodes = array();
+											$token = array();
+											
+											while($info = mysqli_fetch_array($result)) {
+
+												$query_game = "SELECT m_title, m_main_banner_title FROM GamesLanding WHERE m_game_code = '".$info['m_game_code']."'";
+												$result_game = mysqli_query($connect, $query_game);
+												$game = mysqli_fetch_array($result_game);
+												
+												$query_nft = "SELECT m_NFTs, m_NFT_images FROM AccountsPSCTNodeWallet WHERE m_login_id = '".$_SESSION['sess_login_id']."' AND m_game_code = '".$info['m_game_code']."'";
+												$result_nft = mysqli_query($connect, $query_nft);
+												$info_nft = mysqli_fetch_array($result_nft);
+
+
+												$nft = explode("|", $info_nft['m_NFTs']);
+												$nft = array_filter($nft);
+
+												$count = count($nft);
+												
+												$image_nft = rtrim($info_nft['m_NFT_images'], '|');
+												$image_nft = explode("|", $image_nft);
+												$image_nft = array_filter($image_nft);
+											
+										?>
+                                        <div class="collections_item <?php if($count != 0) { ?>accordion-item <?php } ?>">
+                                            <div class="collections_title accordion-title">
+                                                <figure><img src="<?php echo $game['m_main_banner_title']; ?>" alt=""></figure>
+                                                <div class="collections_title_contents">
+                                                    <p><b><?php echo $game['m_title']; ?></b><span><?php echo $count; ?></span></p>
+                                                    <?php if($count != 0) { ?><button type="button" class="accordion-control"><i class="sr_only"><!--펼치기/접기--></i></button><?php } ?>
+                                                </div>
+                                            </div><!-- .collections_title -->
+											<?php if($count != 0) { ?>
+                                            <div class="collections_content accordion-content">
+                                                <div class="btn_nft_utility_open_wrap">
+                                                    <a href="#btn_reinforce" class="btn_nft_utility_open btn_reinforce"><span>Level Up</span></a>
+                                                    <a href="#btn_synthesize" class="btn_nft_utility_open btn_synthesize"><span>Breeding</span></a>
+                                                </div>
+                                                <div class="collections_view_list">
+												<?php
+													for($i = 0; $i < $count; $i++){
+												?>
+                                                    <div class="collections_view_item">
+                                                        <a href="#" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-mfp-src="<?php echo $image_nft[$i]; ?>" class="nft_img_expand lozad">
+                                                            <figure><img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="<?php echo $image_nft[$i]; ?>" alt=""></figure>
+                                                            <div class="collections_view_item_info">
+                                                                <b><?php echo $nft[$i]; ?></b>
+                                                                <!--p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i>0.00</p-->
+                                                            </div>
+                                                        </a>
+                                                        <div class="nft_utility_select_wrap">
+                                                            <label class="nft_utility_select">Select<input type="checkbox" id="nft_utility_select_1" name="nft_utility_select"></label>
+                                                        </div>
+                                                    </div><!-- .collections_view_item -->
+												<?php 
+													}
+												?>
+                                                </div><!-- .collections_view_list -->
+                                            </div><!-- .collections_content -->
+											<?php } ?>
+                                        </div><!-- .accordion-item -->
+										<?php
+											}
+										?>
+                                    </div><!-- .collections_list -->
+
+                                </div><!-- .panels_contents -->
+                            </div><!-- #assets -->
+
+                            <div id="activity">
+                                <div class="activity_head">
+                                    <select class="select_small selectric activity_game">
+                                        <option value="Game name">Game name</option>
+                                    </select>
+
+                                    <select class="select_small selectric">
+                                        <option value="All">All</option>
+                                        <option value="Receive">Receive</option>
+                                        <option value="Send">Send</option>
+                                        <option value="Swap">Swap</option>
+                                    </select>
+                                </div>
+                                <div class="panels_contents match_height">
+                                    <div class="activity_item">
+                                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                        <p><b>Purchase</b><span>From : 0x281…8ds9</span><span>July 23, 2022 at 11:30</span></p>
+                                        <div class="nft_info">
+                                            <p><b>Claw Machine</b><span>#1474</span><span>0.000 PMW</span></p>
+                                            <figure><img src="https://picsum.photos/41/41" alt=""></figure>
+                                        </div>
+                                    </div><!-- .activity_item -->
+                                    <div class="activity_item">
+                                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                        <p><b>Receive</b><span>From : 0x281…8ds9</span><span>July 23, 2022 at 11:30</span></p>
+                                        <div class="nft_info">
+                                            <p><b>Claw Machine</b><span>#1474</span><span>0.000 PMW</span></p>
+                                            <figure><img src="https://picsum.photos/41/41" alt=""></figure>
+                                        </div>
+                                    </div><!-- .activity_item -->
+                                    <div class="activity_item">
+                                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                        <p><b>Send</b><span>To : 0x281…8ds9</span><span>July 23, 2022 at 10:30</span></p>
+                                        <div class="nft_info">
+                                            <p><b>Claw Machine</b><span>#1474</span><span>0.000 PMW</span></p>
+                                            <figure><img src="https://picsum.photos/41/41" alt=""></figure>
+                                        </div>
+                                    </div><!-- .activity_item -->
+                                </div><!-- .panels_contents -->
+                            </div><!-- #activity -->
+                        </div><!-- .tabs_panels -->
+                    </div><!-- .wallet_tab_list -->
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php /* 강화하기 팝업 */ ?>
+<div class="nft_utility_popup mfp-hide" id="btn_reinforce" data-rating="normal">
+    <div class="nft_utility_popup_box">
+        <div class="nft_utility_popup_contents nft_utility_popup_reinforce">
+            <figure class="nft_utility_popup_thumb"><img src="https://cdn.aurorahunt.xyz/nft/mm/img/3377.png" alt=""></figure>
+            <div class="nft_utility_popup_info_wrap">
+                <ul class="nft_utility_popup_info">
+                    <li><b>NFT Number</b><p>001</p></li>
+                    <li><b>Rarity</b><p>A</p></li>
+                    <li><b>Current Level</b><p>1</p></li>
+                    <li><b>Upgrade Cost</b><p><img src="../images/layout/symbol-pmw.svg" alt=""><span>10</span></p></li>
+                </ul>
+                <div class="nft_utility_hold">
+                    <figure><img src="../images/layout/symbol-pmw.svg" alt=""></figure><span>PMW Balance</span>
+                    <p>150</p>
+                </div>
+            </div>
+        </div><!-- .nft_utility_popup_contents -->
+        <div class="btn_nft_utility_execute_warp">
+            <button type="button" class="btn_nft_utility_execute"><span>Level Up</span></button>
+        </div>
+        <div class="nft_utility_popup_guide nft_utility_popup_guide_reinforce swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Normal</p>
+                    <table>
+                        <tr>
+                            <th>Current Level</th>
+                            <th>Next Level</th>
+                            <th>Upgrade Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>16</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>20</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>24</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>28</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>32</td>
+                            <td>50</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Rare</p>
+                    <table>
+                        <tr>
+                            <th>Current Level</th>
+                            <th>Next Level</th>
+                            <th>Upgrade Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>40</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>50</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>60</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>70</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>80</td>
+                            <td>40</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Epic</p>
+                    <table>
+                        <tr>
+                            <th>Current Level</th>
+                            <th>Next Level</th>
+                            <th>Upgrade Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>81</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>101</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>121</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>141</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>161</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Unique</p>
+                    <table>
+                        <tr>
+                            <th>Current Level</th>
+                            <th>Next Level</th>
+                            <th>Upgrade Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>162</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>202</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>242</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>282</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>322</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Legend</p>
+                    <table>
+                        <tr>
+                            <th>Current Level</th>
+                            <th>Next Level</th>
+                            <th>Upgrade Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>810</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1,010</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>1,210</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>1,410</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>1,610</td>
+                            <td>50</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+            <div class="swiper_navigation">
+                <button class="swiper-button-prev"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+                <button class="swiper-button-next"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+            </div><!-- .swiper_navigation -->
+        </div>
+        <button type="button" class="btn_nft_utility_popup_close"><span class="sr_only">Close</span></button>
+    </div><!-- .nft_utility_popup_box -->
+</div><!-- .nft_utility_popup -->
+
+<?php /* 합성하기 팝업  */ ?>
+<div class="nft_utility_popup mfp-hide" id="btn_synthesize" data-rating="rare">
+    <div class="nft_utility_popup_box">
+        <div class="nft_utility_popup_contents nft_utility_popup_synthesize">
+            <div class="nft_utility_popup_synthesize_list">
+                <div class="nft_utility_popup_synthesize_item">
+                    <figure class="nft_utility_popup_thumb"><img src="https://cdn.aurorahunt.xyz/nft/mm/img/3377.png" alt=""></figure>
+                    <ul class="nft_utility_popup_info">
+                        <li><b>NFT Number</b><p>001</p></li>
+                        <li><b>Breeding Count</b><p>(0/5)</p></li>
+                        <li><b>Breeding Cost</b><p><img src="../images/layout/symbol-pmw.svg" alt=""><span>10</span></p></li>
+                    </ul>
+                </div>
+                <div class="nft_utility_popup_synthesize_item">
+                    <figure class="nft_utility_popup_thumb"><img src="https://cdn.aurorahunt.xyz/nft/mm/img/3377.png" alt=""></figure>
+                    <ul class="nft_utility_popup_info">
+                        <li><b>NFT Number</b><p>001</p></li>
+                        <li><b>Breeding Count</b><p>(0/5)</p></li>
+                        <li><b>Breeding Cost</b><p><img src="../images/layout/symbol-pmw.svg" alt=""><span>10</span></p></li>
+                    </ul>
+                </div>
+                <ul class="nft_utility_popup_synthesize_result">
+                    <li><b>Total Breeding Cost</b><p><img src="../images/layout/symbol-pmw.svg" alt=""><span>10</span></p></li>
+                    <li><b>Probability</b><p>50%</p></li>
+                </ul>
+            </div>
+            <div class="nft_utility_popup_info_wrap">
+                <div class="nft_utility_hold">
+                    <figure><img src="../images/layout/symbol-pmw.svg" alt=""></figure><span>PMW Balance</span>
+                    <p>150</p>
+                </div>
+            </div>
+        </div><!-- .nft_utility_popup_contents -->
+        <div class="btn_nft_utility_execute_warp">
+            <button type="button" class="btn_nft_utility_execute"><span>Breeding</span></button>
+        </div>
+        <div class="nft_utility_popup_guide nft_utility_popup_guide_synthesize swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Normal</p>
+                    <table>
+                        <tr>
+                            <th>Current Breeding Count</th>
+                            <th>Breeding Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>108</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>162</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>216</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>270</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>324</td>
+                            <td>80</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Rare</p>
+                    <table>
+                        <tr>
+                            <th>Current Breeding Count</th>
+                            <th>Breeding Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>270</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>405</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>540</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>675</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1080</td>
+                            <td>50</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Epic</p>
+                    <table>
+                        <tr>
+                            <th>Current Breeding Count</th>
+                            <th>Breeding Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>540</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>810</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1080</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1350</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1620</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+                <div class="swiper-slide">
+                    <p class="nft_utility_popup_guide_title">Unique</p>
+                    <table>
+                        <tr>
+                            <th>Current Breeding Count</th>
+                            <th>Breeding Cost (PMW)</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1081</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1621</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2161</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2701</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>3241</td>
+                            <td>20</td>
+                        </tr>
+                    </table>
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+            <div class="swiper_navigation">
+                <button class="swiper-button-prev"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+                <button class="swiper-button-next"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+            </div><!-- .swiper_navigation -->
+        </div>
+        <button type="button" class="btn_nft_utility_popup_close"><span class="sr_only">Close</span></button>
+    </div><!-- .nft_utility_popup_box -->
+</div><!-- .nft_utility_popup -->
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

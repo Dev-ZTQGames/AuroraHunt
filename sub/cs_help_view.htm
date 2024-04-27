@@ -1,0 +1,193 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+$connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $DB_INFO['NAME']);
+
+$index = escape_string(trim($_REQUEST['index']));
+
+$u_m_lang_code = strtoupper($lang_code);
+?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+
+            <div class="cs_help_head">
+                <div class="cs_help_util">
+                    <a href="mypage_inquiry_list.htm" class="basic_btn basic_btn_tertiary"><span><?php echo $lang['My_Inquiry_History']; ?></span></a>
+                    <a href="cs_inquiry.htm" class="basic_btn basic_btn_primary"><span><?php echo $lang['Inquiry']; ?></span></a>
+                </div><!-- .cs_help_util -->
+                 <div class="search_field">
+					<form action="cs_help_list.htm?page=1" method="POST">
+						<div class="select select_filter">
+							<label for="select_category" class="sr_only"><?php echo $lang['Select_Category']; ?></label>
+							<select id="select_category" name="select_category" class="select_email selectric">
+								<option value="<?php echo $lang['All']; ?>"><?php echo $lang['All']; ?></option>
+								<option value="<?php echo $lang['Title_Name']; ?>"><?php echo $lang['Title_Name']; ?></option>
+								<option value="<?php echo $lang['Contents']; ?>"><?php echo $lang['Contents']; ?></option>
+							</select>                                                   
+						</div>
+						<div class="search_input_wrap">
+							<label class="search_label">
+								<span class="sr_only"><?php echo $lang['Enter_Search']; ?></span>
+								<input name="search_text" type="text" value="" placeholder="<?php echo $lang['Enter_Search']; ?>" class="form_input search_input">
+							</label>
+							<button type="submit" class="search_button basic_btn basic_btn_primary"><?php echo $lang['Search']; ?></button>
+						</div><!-- .search_input_wrap -->
+					</form>
+                </div><!-- .search_field -->
+            </div>
+
+            <div class="ce_help_body">
+
+                <div class="recommend_help">
+                    <h3><span><?php echo $lang['Recommended_Help']; ?></span></h3>
+                    <ul class="recommend_help_list">
+					<?php
+					if($_GET['page']){
+						$page = $_GET['page'];
+					} else {
+						$page = 1; 
+						$_GET['page'] = 1;
+					}
+
+					$list_num = 5;
+
+					$page_num = 3; 
+
+					$start = ($page - 1) * $list_num;
+
+					$cnt = $start + 1;
+
+					$recommend = mysqli_query($connect,"SELECT * FROM FAQ WHERE m_status = '1' AND m_recommend = '1' AND m_lang_code = '".$u_m_lang_code."' LIMIT 5");
+
+					$num = mysqli_num_rows($recommend);
+
+					$que = mysqli_query($connect, "SELECT * FROM FAQ WHERE m_index =".$index);
+
+					$row = mysqli_fetch_array($que);
+
+					$info = array();
+
+					$info = $row;
+
+					switch($info['m_game_code']){
+						case '1' : $game_name = 'Claw Machine - Catch! The Friends -';
+						break; 
+					}
+
+					switch($info['m_type']){
+						case '1' : $type = $lang['Guide'];
+						break;
+						case '2' : $type = $lang['Terms'];
+						break;
+						case '3' : $type = $lang['Account_Login'];
+						break;
+						case '4' : $type = $lang['Join_Withdraw'];
+						break;
+						case '5' : $type = $lang['Payment'];
+						break;
+						case '6' : $type = $lang['Etc'];
+						break;
+					}
+
+					$pages = ceil($num/$page_num);
+
+					$total_page = ceil($num/$list_num);
+
+					$total_block = ceil($total_page/$page_num);
+
+					$now_block = ceil($page / $page_num);
+
+					$s_pageNum = ($now_block - 1) * $page_num + 1;
+
+					$e_pageNum = $now_block * $page_num;
+
+					if($s_pageNum <= 0){
+						$s_pageNum = 1;
+					};
+
+					if($e_pageNum > $total_page){
+						$e_pageNum = $total_page;
+					};
+
+					while($row = mysqli_fetch_array($recommend)){
+						echo '<li><a href="cs_help_view.htm?page='.$page.'&index='.$row["m_index"].'">'.$row["m_title"].'</a></li>';
+					}
+
+					?>
+                    </ul>
+					<!--?php
+						if($num != '0'){
+					?>
+						<div class="tabe_pagination">
+							<a class="page_numbers first" href="cs_help_view.htm?page=1&index=<?php echo $index; ?>">&gt;</a>
+							<?php
+								if($page == 1){
+							?>
+									<a class="page_numbers prev" href="cs_help_view.htm?page=<?php echo $s_pageNum; ?>&index=<?php echo $index; ?>">&gt;&gt;</a>
+							<?php
+								} else {
+							?>
+									<a class="page_numbers prev" href="cs_help_view.htm?page=<?php echo ($page-1); ?>&index=<?php echo $index; ?>">&gt;&gt;</a>
+							<?php
+								}
+							?>
+							<?php
+								for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
+							?>
+									<a id="page_<?php echo $print_page; ?>" class="page page_numbers" href="cs_help_view.htm?page=<?php echo $print_page; ?>&index=<?php echo $index; ?>"><?php echo $print_page; ?></a>
+							<?php 
+								};
+							?>	
+							<?php
+								if($page == $total_page){
+							?>
+									<a class="page_numbers next" href="cs_help_view.htm?page=<?php echo $e_pageNum; ?>&index=<?php echo $index; ?>">&gt;</a>
+							<?php
+								} else {
+							?>
+									<a class="page_numbers next" href="cs_help_view.htm?page=<?php echo ($page+1); ?>&index=<?php echo $index; ?>">&gt;</a>
+							<?php
+								}
+							?>
+							<a class="page_numbers last" href="cs_help_view.htm?page=<?php echo $total_page; ?>&index=<?php echo $index; ?>">&gt;&gt;</a>
+						</div><!-- .tabe_pagination -->
+					<!--?php
+						}
+					?-->
+                </div><!-- .recommend_help -->
+
+                <div class="cs_hlep_content_wrap">
+                    <div class="cs_hlep_veiw">
+                        <h3><span class="help_veiw_title">[<?php echo $type; ?>] <?php echo $info['m_title']; ?></h3>
+                        <div class="help_veiw_content">
+                            <?php echo $info['m_content']; ?>
+                        </div><!-- .help_veiw_content -->
+                        <div class="help_veiw_control">
+                            <a href="cs_help_list.htm?page=<?php echo $page; ?>" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_To_Lists']; ?></span></a>
+                        </div><!-- .help_veiw_control -->
+                    </div><!-- .cs_hlep_veiw -->
+                </div><!-- .cs_hlep_content_wrap -->
+
+            </div><!-- .cs_help_body -->
+
+            <!--div class="ad_banner ad_1200_672"><img src="https://dummyimage.com/1200x672/000/fff"></div-->
+
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+$(document).ready(function() {
+    $('#page_<?php echo $_GET["page"]; ?>').addClass('current');
+} );
+</script>

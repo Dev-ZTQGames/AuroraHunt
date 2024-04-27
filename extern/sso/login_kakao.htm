@@ -1,0 +1,53 @@
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/includes/header.htm"; ?>
+
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+Kakao.init('113ac1409b96b89fec19f677a405908a');
+</script>
+<?php
+	$returnCode = $_GET["code"]; // code 값 수신
+	$restAPIKey = "3dce9c618fd23223583d81c1d8701802"; // REST API KEY
+	$callback = "https://".$return_url."/extern/sso/login_kakao.htm";
+	$callbacURI = urlencode($callback); // Call Back URL 지정
+	$getTokenUrl = "https://kauth.kakao.com/oauth/token?grant_type=authorization_code&client_id=".$restAPIKey."&redirect_uri=".$callbacURI."&code=".$returnCode;
+
+	$isPost = false;
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $getTokenUrl);
+	curl_setopt($ch, CURLOPT_POST, $isPost);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	$headers = array();
+	$loginResponse = curl_exec ($ch);
+	$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	curl_close ($ch);
+	$accessToken= json_decode($loginResponse)->access_token; //Access Token만 따로 뺌
+	$header = "Bearer ".$accessToken; // Bearer 다음에 공백 추가
+
+?>
+<script>
+ kakaoLogin();
+  function kakaoLogin() {
+	var token = '<?php echo $accessToken; ?>';
+	if(token) {
+	  Kakao.Auth.setAccessToken(token)
+	  Kakao.Auth.getStatusInfo(({ status }) => {
+		if(status === 'connected') {
+		   Kakao.API.request({
+				url: '/v2/user/me',
+				success: function(response){
+					userEmail = response.kakao_account.email;
+					name = response.properties.nickname;
+					location.href='join_social_check.php?prefix_id=kk&userEmail='+userEmail+'&name='+name;
+				},
+				fail: function(error){
+					console.log(error);
+				}
+			});
+		} else {
+		  Kakao.Auth.setAccessToken(null)
+		}
+	  })
+	} 
+  }
+</script>

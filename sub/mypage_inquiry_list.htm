@@ -1,0 +1,190 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$info = array();
+
+$query = "SELECT * FROM Accounts WHERE login_id = '" . $_COOKIE['login_id'] . "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+$user_index = $info['m_index'];
+
+
+
+?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<?php include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<!--div class="ad_banner ad_728x90"><img src="https://dummyimage.com/728x90/000/fff"></div-->
+            <div class="basic_table_wrap">
+				<table class="basic_table rwd_table inquiry_list_table my_inquiry_list">
+				    <caption><?php echo $lang['List_Of_My_Inquiry']; ?></caption>
+                    <colgroup>
+                        <col style="width: *;"/>
+                        <col style="width: 15%;"/>
+                        <col style="width: 15%;"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!--th>서비스</th-->
+                            <th><?php echo $lang['Title_Name']; ?></th>
+                            <th><?php echo $lang['Processing_Status']; ?></th>
+                            <th><?php echo $lang['Registration_Date']; ?></th>
+                        </tr>
+                    </thead>
+				    <tbody>
+					<?php
+
+					if($_GET['page']){
+						$page = $_GET['page'];
+					} else {
+						$page = 1; 
+						$_GET['page'] = 1;
+					}
+
+					$list_num = 5;
+
+					$page_num = 5; 
+
+					$start = ($page - 1) * $list_num;
+
+					//$cnt = $start + 1;
+					$count = mysqli_query($connect, "SELECT * FROM CSCenter WHERE m_login_id = '".$_COOKIE['login_id']."' ORDER BY m_date DESC");
+
+					$result = mysqli_query($connect, "SELECT * FROM CSCenter WHERE m_login_id = '".$_COOKIE['login_id']."' ORDER BY m_date DESC LIMIT ".$start.",".$list_num);
+
+					$num = mysqli_num_rows($count);
+
+					$info = array();
+
+					if($num == 0){
+						echo '<tr class="no_list"><td colspan="3">'.$lang['No_Inquiry_History'].'</td></tr>';
+					} else {
+						while($row = mysqli_fetch_array($result)){
+							$info = $row; 
+
+							switch($info['m_status']){
+								case '0' : $status = '<span class="inquiry_accepting">'.$lang['Receiving'].'</span>';
+								break;
+								case '1' : $status = '<span class="inquiry_confirming">'.$lang['Checking'].'</span>';
+								break;
+								case '2' : $status = '<span class="inquiry_confirming">'.$lang['Checking'].'</span>';
+								break;
+								case '7' : $status = '<span class="inquiry_completed">'.$lang['Answer_Complete'].'</span>';
+								break;
+							}
+
+							switch($info['m_game_code']){
+								case '1' : $game = 'Claw Machine';
+								break;
+							}
+
+							$chk_date = date('Y-m-d', time());
+
+							$date = substr($info["m_date"],0,10);
+
+							if($chk_date == $date){
+								$new = '<span class="icon_new"><i class="sr_only">'.$lang['New_Post'].'</i></span>';
+							} else {
+								$new = '';
+							}
+
+							$pages = ceil($num/$page_num);
+
+							$total_page = ceil($num/$list_num);
+
+							$total_block = ceil($total_page/$page_num);
+
+							$now_block = ceil($page / $page_num);
+
+							$s_pageNum = ($now_block - 1) * $page_num + 1;
+
+							$e_pageNum = $now_block * $page_num;
+
+							if($s_pageNum <= 0){
+								$s_pageNum = 1;
+							};
+
+							if($e_pageNum > $total_page){
+								$e_pageNum = $total_page;
+							};
+
+							echo ' <tr>
+										<td class="tit"><a href="mypage_inquiry_view.htm?index='.$info['m_index'].'">'.$info["m_title"].$new.'</a></td>
+										<td class="state">'.$status.'</td>
+										<td class="date">'.substr($info["m_date"],0,10).'</td>
+									</tr>';
+						}
+					}
+					?>
+					</tbody>
+				</table>
+				<?php
+					if($num != '0'){
+				?>
+					<div class="tabe_pagination">
+						<a class="page_numbers first" href="mypage_inquiry_list.htm?page=1">&gt;</a>
+						<?php
+							if($page == 1){
+						?>
+								<a class="page_numbers prev" href="mypage_inquiry_list.htm?page=<?php echo $s_pageNum; ?>">&gt;&gt;</a>
+						<?php
+							} else {
+						?>
+								<a class="page_numbers prev" href="mypage_inquiry_list.htm?page=<?php echo ($page-1); ?>">&gt;&gt;</a>
+						<?php
+							}
+						?>
+						<?php
+							for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
+						?>
+								<a id="page_<?php echo $print_page; ?>" class="page page_numbers" href="mypage_inquiry_list.htm?page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
+						<?php 
+							};
+						?>	
+						<?php
+							if($page == $total_page){
+						?>
+								<a class="page_numbers next" href="mypage_inquiry_list.htm?page=<?php echo $e_pageNum; ?>">&gt;</a>
+						<?php
+							} else {
+						?>
+								<a class="page_numbers next" href="mypage_inquiry_list.htm?page=<?php echo ($page+1); ?>">&gt;</a>
+						<?php
+							}
+						?>
+						<a class="page_numbers last" href="mypage_inquiry_list.htm?page=<?php echo $total_page; ?>">&gt;&gt;</a>
+					</div><!-- .tabe_pagination -->
+				<?php
+					}
+				?>
+			</div><!-- .gift_table_wrap -->
+
+
+
+
+
+
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<script>
+$(document).ready(function() {
+    $('#page_<?php echo $_GET["page"]; ?>').addClass('current');
+} );
+</script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

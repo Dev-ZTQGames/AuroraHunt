@@ -1,0 +1,48 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<script src="https://apis.google.com/js/platform.js?" async defer></script>
+<?php
+if($_REQUEST['code']){
+	$client_id = "87635311469-bus165sdqm9d4n28r8u64759qhvp0a1f.apps.googleusercontent.com";
+	$client_secret = "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";
+	$redirect_uri = "https://".$return_url."/extern/sso/login_google.htm";
+
+	$code = $_REQUEST['code'];
+	
+	$scope = 'https://www.googleapis.com/auth/userinfo?fields=name,email';
+	$url = 'https://www.googleapis.com/oauth2/v4/token';			
+
+	$curlPost = 'client_id=' . $client_id . '&redirect_uri=' . urlencode($redirect_uri) . '&client_secret=' . $client_secret . '&code='. $code . '&grant_type=authorization_code';
+
+	$ch = curl_init();		
+	curl_setopt($ch, CURLOPT_URL, $url);		
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);		
+	curl_setopt($ch, CURLOPT_POST, 1);		
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);	
+	$data = json_decode(curl_exec($ch), true);
+	$access_token = $data['access_token'];
+	$http_code = curl_getinfo($ch,CURLINFO_HTTP_CODE);		
+	if($http_code != 200) 
+		throw new Exception('Error : Failed to receieve access token');
+}
+	curl_close ($ch);
+
+?>
+<script>
+	if('<?php echo $access_token?>' != ''){
+		$.ajax({
+			type : "GET",
+			url : "https://www.googleapis.com/oauth2/v2/userinfo",
+			data : "access_token=<?php echo $access_token; ?>",
+			cache : false,
+			success : function(json) { 
+				if ( json ) {
+				var userEmail = json.email;
+				var userName = json.name;
+				location.href='join_social_check.php?prefix_id=gg&userEmail='+userEmail+'&name='+name;
+				}
+			},
+			error : function(){console.log('실패');} 
+		});
+	}
+</script>

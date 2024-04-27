@@ -1,0 +1,36 @@
+[2023-12-05 07:02:35] BILLING - SourceIP : 35.191.29.161, proc1: , proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-12-05 07:02:58] BILLING - SourceIP : 35.191.29.161, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"Invalid parameter or server error."}
+[2023-12-05 07:03:04] BILLING - SourceIP : 35.191.29.162, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"Invalid parameter or server error."}
+[2023-12-05 07:03:26] BILLING - SourceIP : 35.191.29.161, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"Invalid parameter or server error."}
+[2023-12-05 07:04:30] BILLING - SourceIP : 35.191.32.193, proc1: getCash, proc2: login_id : neoguru0
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-12-05 07:09:14] BILLING - SourceIP : 35.191.24.150, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-05 07:09:22] BILLING - SourceIP : 35.191.3.30, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-05 07:09:37] BILLING - SourceIP : 35.191.32.161, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:09:42] BILLING - SourceIP : 35.191.3.30, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:11:17] BILLING - SourceIP : 35.191.33.2, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:11:32] BILLING - SourceIP : 35.191.32.13, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:12:31] BILLING - SourceIP : 35.191.29.163, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:32:33] BILLING - SourceIP : 35.191.32.200, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:32:37] BILLING - SourceIP : 35.191.32.193, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:33:12] BILLING - SourceIP : 35.191.32.227, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:33:35] BILLING - SourceIP : 35.191.13.86, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:35:16] BILLING - SourceIP : 35.191.32.225, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}
+[2023-12-05 07:49:59] BILLING - SourceIP : 35.191.32.193, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"0","msg":"HTTP Status Code (  ), Failure."}

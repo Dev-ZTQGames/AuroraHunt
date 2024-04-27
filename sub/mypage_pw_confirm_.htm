@@ -1,0 +1,80 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<?php
+
+$info = array();
+
+$query = "SELECT * FROM Accounts WHERE login_id = '" . $_COOKIE['login_id'] . "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage form_pw">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Confirm_Password']; ?></h3>
+                    <p class="form_basic_head_guide"><?php echo $lang['Confirm_Password_Privacy']; ?></p>
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+					<div class="filed_item">
+						<p class="label_item"><?php echo $lang['Account']; ?></p>
+						<p class="input_item"><?php echo $info['login_id']; ?></p>
+					</div><!-- .filed_item -->
+					<div class="form_field_item_wrap">
+						<div class="form_field_item">
+							<label class="form_label" for="pw"><span><?php echo $lang['Password']; ?></span></label>
+                            <div class="form_input_wrap">
+							    <input type="password" name = "encrypted_password" class="form_input" id="pw"/>
+                            </div><!-- .form_input_wrap -->
+
+<script>
+	$(function(){
+    $('#$info['login_id').keyup(function(){
+    });
+
+    $('#encrypted_password').keyup(function(){
+
+        if($('#$info['login_id').val() != $('#encrypted_password').val()){
+          $('#chkNotice').html('<?php echo $lang['Password_Not_Match_Br']; ?>');
+          $('#chkNotice').attr('color', '#f82a2aa3');
+        } else{
+          $('#chkNotice').html('<?php echo $lang['Password_Match_Br']; ?>');
+          $('#chkNotice').attr('color', '#199894b3');
+        }
+
+    });
+});
+</script>
+
+							<p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['Password_Incorrect_Try_Again']; ?></span></p> 
+			
+						</div><!-- .form_field_item -->
+					</div><!-- .form_field_item_wrap -->
+				</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="mypage_pw_modify.htm" class="basic_btn basic_btn_primary"><span><?php echo $lang['Confirm']; ?></span></a>
+
+				<!-- 비밀번호가 맞으면 확인버튼을 통해 연결" -->
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

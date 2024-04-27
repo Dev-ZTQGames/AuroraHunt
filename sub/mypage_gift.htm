@@ -1,0 +1,65 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="has_cash_box cocash_box">
+                <b class="tit"><?php echo $lang['Cash_You_Have']; ?></b>
+                <p class="cash">플랫폼 캐시 <span>5,500</span> 마블</p>
+			</div><!-- .has_cash_box -->
+            <div class="basic_table_wrap">
+			    <h3><?php echo $lang['Gift_Details']; ?></h3>
+				<table class="basic_table">
+				    <caption><?php echo $lang['List_Of_Gift_Details']; ?></caption>
+                    <thead>
+                        <tr>
+                            <th><?php echo $lang['Date_Utc+9']; ?></th>
+                            <th><?php echo $lang['Division']; ?></th>
+                            <th><?php echo $lang['Target']; ?></th>
+                            <th><?php echo $lang['Contents']; ?></th>
+                            <th><?php echo $lang['Message']; ?></th>
+                        </tr>
+                    </thead>
+				    <tbody>
+					    <tr>
+							<td data-title="날짜 (UTC+9)">2020-06-10</td>
+							<td data-title="구분">수신</td>
+							<td data-title="대상">test123</td>
+							<td data-title="내용">3000</td>
+							<td data-title="메시지">메시지내용</td>
+						</tr>
+						<tr>
+							<td data-title="날짜 (UTC+9)">2020-06-10</td>
+							<td data-title="구분">수신</td>
+							<td data-title="대상">test123</td>
+							<td data-title="내용">3000</td>
+							<td data-title="메시지">메시지내용</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <div class="tabe_pagination">
+					<a class="page_numbers first" href="#">&gt;</a>
+					<a class="page_numbers prev" href="#">&gt;&gt;</a>
+					<span class="current page_numbers">1</span>
+					<a class="page_numbers" href="#">2</a>
+					<a class="page_numbers" href="#">3</a>
+					<a class="page_numbers next" href="#">&gt;</a>
+					<a class="page_numbers last" href="#">&gt;&gt;</a>
+				</div><!-- .tabe_pagination -->
+			</div><!-- .gift_table_wrap -->
+
+            <div class="ad_banner ad_1200_672"><img src="https://dummyimage.com/1200x672/000/fff"></div>
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

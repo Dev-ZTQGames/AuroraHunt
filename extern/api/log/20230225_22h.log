@@ -1,0 +1,32 @@
+[2023-02-25 22:13:38] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: 
+{"result":"0","msg":"data error"}
+[2023-02-25 22:17:27] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"0","msg":"data error"}
+[2023-02-25 22:19:52] BILLING - SourceIP : 34.80.134.81, proc1: getCash, purchase, proc2: mode : login_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"0","msg":"data error"}
+[2023-02-25 22:20:41] BILLING - SourceIP : 34.80.134.81, proc1: getCash/purchase, proc2: mode : login_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"0","msg":"data error"}
+[2023-02-25 22:31:30] BILLING - SourceIP : 34.80.134.81, proc1: getCash/purchase, proc2: mode : getCashlogin_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:32:31] BILLING - SourceIP : 34.80.134.81, proc1: getCash/purchase, proc2: mode : getCashlogin_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:33:34] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"0","msg":"data error"}
+[2023-02-25 22:33:35] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc, product : , cash : 
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:36:27] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0game_code : clwmc
+{"result":"0","msg":"data error"}
+[2023-02-25 22:36:28] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:36:54] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"data error"}
+[2023-02-25 22:36:55] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:39:05] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"data error"}
+[2023-02-25 22:39:06] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-02-25 22:40:14] BILLING - SourceIP : 34.80.134.81, proc1: , proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"data error"}
+[2023-02-25 22:40:15] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}

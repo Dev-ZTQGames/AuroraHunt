@@ -1,0 +1,130 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$info = array();
+
+$query = "SELECT * FROM Accounts WHERE login_id = '" . $_SESSION['sess_login_id'] . "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+$login_id = $info['login_id'];
+
+?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->        
+        <?php include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Member_Info']; ?></h3>
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+				<?php 
+				if($info['social_type'] != ''){
+					switch ( substr($_SESSION['sess_login_id'], 0, 2) ) {
+						case "nv": $login_id = '네이버 소셜 로그인 회원'; break;
+						case "kk": $login_id = '카카오 소셜 로그인 회원'; break;
+						case "gg": $login_id = '구글 소셜 로그인 회원'; break;
+						case "ap": $login_id = '애플 소셜 로그인 회원'; break;
+						case "fb": $login_id = '페이스북 소셜 로그인 회원'; break;
+						case "ln": $login_id = '라인 소셜 로그인 회원'; break;
+					}				
+				}
+				?>
+					<div class="filed_item">
+						 <p class="label_item"><?php echo $lang['ID']; ?></p>
+						 <p class="input_item"><?php echo $login_id; ?></p>
+					 </div><!-- .filed_item -->
+					 <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['Nickname']; ?></p>
+						 <p class="input_item"><?php echo $info['name']; ?></p>
+					 </div><!-- .filed_item -->
+					 <?php
+					 if($info['social_type'] == ''){ ?>
+					  <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['Password']; ?></p>
+						 <p class="input_item"><a href="mypage_pw_modify.htm" class="basic_btn_small basic_btn_primary"><span><?php echo $lang['Change_Password']; ?></span></a></p>
+					 </div><!-- .filed_item -->
+					<?php 
+					}
+					 ?>
+					 <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['Email']; ?></p>
+						 <p class="input_item"><?php echo $info['email']; ?></p>
+					 </div><!-- .filed_item -->
+					 <!--<div class="filed_item">
+						 <p class="label_item">본인인증</p>
+						 <p class="input_item is_cert"></p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">휴대폰</p>
+						 <p class="input_item"><?php echo $info['mobile_phone']; ?></p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">생년월일</p>
+						 <p class="input_item"><?php echo $info['birth_date']; ?></p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">성별</p>
+						 <p class="input_item"><?php echo $info['sex']; ?></p>
+					 </div><!-- .filed_item -->
+				</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+			
+			<!--div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3>A-Hunt Developers</h3>
+				</div--><!-- .form_basic_head -->
+				<!--div class="form_basic_body">
+					 <div class="filed_item">
+						 <p class="label_item">회사명</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">홈페이지</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">담당자</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+					 <!--div class="filed_item">
+						 <p class="label_item">연락처</p>
+						 <p class="input_item">-</p>
+					 </div><!-- .filed_item -->
+				<!--</div>--><!-- .form_basic_body -->
+			<!--</div>--><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <button class="basic_btn basic_btn_primary" onclick="location.href='mypage_modify.htm'"><span><?php echo $lang['Edit']; ?></span></button>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<script>
+<?php 
+if( $info['email_cert'] == 'y') {
+?>	
+		let isCert = document.querySelector('.is_cert');
+		isCert.innerText = '<?php echo $lang['Authentication_Complete']; ?>';
+		//console.log(isCert.innerText);
+		//console.log(isCert.innerHTML);
+<?php } else { ?> 
+		let isCert = document.querySelector('.is_cert');
+		isCert.innerText = "<?php echo $lang['Unauthorized']; ?>";
+		//console.log('false');
+<?php } ?></script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

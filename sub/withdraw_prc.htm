@@ -1,0 +1,80 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+	$email		 = escape_string(trim($_REQUEST['email']));
+	$id 		 = escape_string(trim($_REQUEST['id']));
+	$name 		 = escape_string(trim($_REQUEST['name']));
+	$date 		 = escape_string(trim($_REQUEST['date']));
+	$lang_code	 = escape_string(trim($_REQUEST['lang_code']));
+
+	$fp = fopen($_SERVER['DOCUMENT_ROOT'].'/mail/mail_09.htm', "r"); 
+
+	while( !feof($fp) ) { 
+		$content .= fgets($fp); 
+	} 
+
+	fclose($fp);
+
+	$content = str_replace("{{title}}", $lang['Completion_Membership_Withdrawal'], $content);
+	$content = str_replace("{{Mail02_Text1}}", $lang['Mail02_Text1'], $content);
+	$content = str_replace("{{Mail09_Text1}}", $lang['Mail09_Text1'], $content);
+	$content = str_replace("{{Target_ID}}", $lang['Target_ID'], $content);
+	$content = str_replace("{{Target_Email}}", $lang['Target_Email'], $content);
+	$content = str_replace("{{Application_Withdrawal_Date}}", $lang['Application_Withdrawal_Date'], $content);
+	$content = str_replace("{{Mail09_Text2}}", $lang['Mail09_Text2'], $content);
+	$content = str_replace("{{Withdraw_Membership_Request}}", $lang['Withdraw_Membership_Request'], $content);
+	$content = str_replace("{{Thank_You}}", $lang['Thank_You'], $content);
+	$content = str_replace("{{Mail01_Text3}}", $lang['Mail01_Text3'], $content);
+	$content = str_replace("{{id}}", $id, $content);
+	$content = str_replace("{{email}}", $email, $content);
+	$content = str_replace("{{name}}", $name, $content);
+	$content = str_replace("{{date}}", $date, $content);
+	$content = str_replace("{{HOST}}", $HOST, $content);
+	$content = str_replace("{{url}}", $return_url, $content);
+
+	$nameFrom  = $lang['AuroraHunt'];
+	$mailFrom = "noreply@aurorahunt.xyz";
+	$mailTo = $email;
+
+	$subject = $lang['Withdrawal_Completion'];
+
+	$result = curl_post('https://freepassdev.perugiacorp.com/proc_aurorahunt.php', array('email'=>$email, 'subject'=>$subject, 'content'=>$content, 'from'=>$nameFrom, 'to'=>$mailFrom, 'lang_code'=>'ko', 'type'=>'7', 'platform'=>'aurorahunt'));
+
+	$query = "UPDATE Accounts SET status = '1', day_ask_remove = NOW() WHERE login_id = '" . $_COOKIE['login_id'] . "'";
+
+	$que = mysqli_query($connect, $query);
+
+	if($que){?>
+		
+		<script>
+		swal({
+		  text: "<?php echo $lang['Withdrawal_Membership_Completed_Desc']; ?>",
+		  buttons: "<?php echo $lang['Confirm']; ?>",
+		  closeOnClickOutside: false,
+		  closeOnEsc: false,
+		}).then(function(isConfirm) {
+			  if (isConfirm) {
+				location.href='https://<?php echo $return_url; ?>/extern/sso/logout.php';
+			  }
+			})		
+		</script>
+<?php
+
+	} else { ?>
+		<script>
+			swal({
+			  text: "<?php echo $lang['Try_Again_Later']; ?>",
+			  buttons: "<?php echo $lang['Confirm']; ?>",
+			}).then(function(isConfirm){
+				if(isConfirm){
+					location.href='mypage_withdraw.htm';
+				}
+			})
+		</script>;
+	<?php
+}
+
+
+
+
+?>

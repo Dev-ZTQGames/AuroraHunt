@@ -1,0 +1,24 @@
+[2024-04-22 04:53:26] NODE - SourceIP : 35.191.32.196, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:53:26] NODE - SourceIP : 35.191.33.5, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:19] NODE - SourceIP : 35.191.29.166, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:19] NODE - SourceIP : 35.191.32.181, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:24] NODE - SourceIP : 35.191.32.192, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:25] NODE - SourceIP : 35.191.33.7, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:35] NODE - SourceIP : 35.191.32.200, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:54:35] NODE - SourceIP : 35.191.32.128, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:55:28] NODE - SourceIP : 35.191.33.2, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:55:28] NODE - SourceIP : 35.191.32.224, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:55:55] NODE - SourceIP : 35.191.24.188, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-04-22 04:55:55] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : qkrtnal92, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

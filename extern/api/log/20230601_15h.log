@@ -1,0 +1,8 @@
+[2023-06-01 15:01:13] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : qkrtnal1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 15:19:02] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : AuroraHunt1004, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":24019}
+[2023-06-01 15:43:35] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":22073}
+[2023-06-01 15:43:37] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":22073}

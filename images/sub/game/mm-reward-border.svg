@@ -1,0 +1,1177 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1163.257" height="263.189" viewBox="0 0 1163.257 263.189">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_237" data-name="사각형 237" width="61.835" height="54.382" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="사각형_231" data-name="사각형 231" width="61.835" height="9.888" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="패스_35" data-name="패스 35" d="M0,11.59C0,8.859,13.843,6.647,30.916,6.647S61.835,8.859,61.835,11.59s-13.843,4.943-30.919,4.943S0,14.322,0,11.59" transform="translate(0 -6.647)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="3.127" gradientTransform="matrix(-0.16, 0, 0, 0.16, 0, 2.73)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b88137"/>
+      <stop offset="0.251" stop-color="#b88137"/>
+      <stop offset="0.357" stop-color="#91652b"/>
+      <stop offset="0.516" stop-color="#5d411b"/>
+      <stop offset="0.664" stop-color="#35250f"/>
+      <stop offset="0.799" stop-color="#171007"/>
+      <stop offset="0.915" stop-color="#060401"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <clipPath id="clip-path-5">
+      <rect id="사각형_233" data-name="사각형 233" width="32.447" height="54.382" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <path id="패스_36" data-name="패스 36" d="M4.93,54.265C2.537,52.886,7.6,39.645,16.23,24.691S33.8-1.265,36.191.117s-2.668,14.62-11.3,29.574S7.32,55.644,4.93,54.265" transform="translate(-4.337 0)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.524" gradientTransform="matrix(-0.887, 0, 0, 0.16, 0.082, 0.803)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#544531"/>
+      <stop offset="0.251" stop-color="#544531"/>
+      <stop offset="0.446" stop-color="#342b1e"/>
+      <stop offset="0.667" stop-color="#17130d"/>
+      <stop offset="0.86" stop-color="#060503"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <clipPath id="clip-path-8">
+      <path id="패스_37" data-name="패스 37" d="M36.191,54.265C33.8,55.644,24.865,44.642,16.23,29.691S2.537,1.5,4.93.117,16.256,9.74,24.888,24.691s13.7,28.195,11.3,29.574" transform="translate(-4.337 0)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.464" gradientTransform="matrix(0, 1, 0.18, 0, -0.178, 0.919)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#785c36"/>
+      <stop offset="0.251" stop-color="#785c36"/>
+      <stop offset="0.364" stop-color="#5c4729"/>
+      <stop offset="0.558" stop-color="#342817"/>
+      <stop offset="0.735" stop-color="#17120a"/>
+      <stop offset="0.889" stop-color="#060402"/>
+      <stop offset="1"/>
+    </radialGradient>
+  </defs>
+  <g id="그룹_149" data-name="그룹 149" transform="translate(2893 -775)">
+    <g id="사각형_228" data-name="사각형 228" transform="translate(-2865.872 802.667)" fill="none" stroke="#ff8331" stroke-width="25">
+      <rect width="1109" height="210" rx="35" stroke="none"/>
+      <rect x="12.5" y="12.5" width="1084" height="185" rx="22.5" fill="none"/>
+    </g>
+    <g id="사각형_229" data-name="사각형 229" transform="translate(-2855.872 812.667)" fill="none" stroke="#fff" stroke-width="6" opacity="0.7">
+      <rect width="1089" height="190" rx="25" stroke="none"/>
+      <rect x="3" y="3" width="1083" height="184" rx="22" fill="none"/>
+    </g>
+    <circle id="타원_62" data-name="타원 62" cx="8.5" cy="8.5" r="8.5" transform="translate(-2741.872 806.667)" fill="#fff"/>
+    <circle id="타원_63" data-name="타원 63" cx="8.5" cy="8.5" r="8.5" transform="translate(-2692.872 806.667)" fill="#fff"/>
+    <circle id="타원_64" data-name="타원 64" cx="8.5" cy="8.5" r="8.5" transform="translate(-2645.872 806.667)" fill="#fff"/>
+    <circle id="타원_65" data-name="타원 65" cx="8.5" cy="8.5" r="8.5" transform="translate(-2598.872 806.667)" fill="#fff"/>
+    <circle id="타원_66" data-name="타원 66" cx="8.5" cy="8.5" r="8.5" transform="translate(-2551.872 806.667)" fill="#fff"/>
+    <circle id="타원_67" data-name="타원 67" cx="8.5" cy="8.5" r="8.5" transform="translate(-2504.872 806.667)" fill="#fff"/>
+    <circle id="타원_68" data-name="타원 68" cx="8.5" cy="8.5" r="8.5" transform="translate(-2457.872 806.667)" fill="#fff"/>
+    <circle id="타원_69" data-name="타원 69" cx="8.5" cy="8.5" r="8.5" transform="translate(-2410.872 806.667)" fill="#fff"/>
+    <circle id="타원_70" data-name="타원 70" cx="8.5" cy="8.5" r="8.5" transform="translate(-2363.872 806.667)" fill="#fff"/>
+    <circle id="타원_71" data-name="타원 71" cx="8.5" cy="8.5" r="8.5" transform="translate(-2316.872 806.667)" fill="#fff"/>
+    <circle id="타원_72" data-name="타원 72" cx="8.5" cy="8.5" r="8.5" transform="translate(-2269.872 806.667)" fill="#fff"/>
+    <circle id="타원_73" data-name="타원 73" cx="8.5" cy="8.5" r="8.5" transform="translate(-2222.872 806.667)" fill="#fff"/>
+    <circle id="타원_74" data-name="타원 74" cx="8.5" cy="8.5" r="8.5" transform="translate(-2175.872 806.667)" fill="#fff"/>
+    <circle id="타원_75" data-name="타원 75" cx="8.5" cy="8.5" r="8.5" transform="translate(-2128.872 806.667)" fill="#fff"/>
+    <circle id="타원_76" data-name="타원 76" cx="8.5" cy="8.5" r="8.5" transform="translate(-2081.872 806.667)" fill="#fff"/>
+    <circle id="타원_77" data-name="타원 77" cx="8.5" cy="8.5" r="8.5" transform="translate(-2034.872 806.667)" fill="#fff"/>
+    <circle id="타원_78" data-name="타원 78" cx="8.5" cy="8.5" r="8.5" transform="translate(-1987.872 806.667)" fill="#fff"/>
+    <circle id="타원_79" data-name="타원 79" cx="8.5" cy="8.5" r="8.5" transform="translate(-1940.872 806.667)" fill="#fff"/>
+    <circle id="타원_80" data-name="타원 80" cx="8.5" cy="8.5" r="8.5" transform="translate(-1893.872 806.667)" fill="#fff"/>
+    <circle id="타원_81" data-name="타원 81" cx="8.5" cy="8.5" r="8.5" transform="translate(-1799.872 806.667)" fill="#fff"/>
+    <circle id="타원_82" data-name="타원 82" cx="8.5" cy="8.5" r="8.5" transform="translate(-1778.872 898.667)" fill="#fff"/>
+    <circle id="타원_83" data-name="타원 83" cx="8.5" cy="8.5" r="8.5" transform="translate(-1778.872 851.667)" fill="#fff"/>
+    <circle id="타원_84" data-name="타원 84" cx="8.5" cy="8.5" r="8.5" transform="translate(-1778.872 945.667)" fill="#fff"/>
+    <circle id="타원_85" data-name="타원 85" cx="8.5" cy="8.5" r="8.5" transform="translate(-1799.872 991.667)" fill="#fff"/>
+    <circle id="타원_86" data-name="타원 86" cx="8.5" cy="8.5" r="8.5" transform="translate(-2741.872 991.667)" fill="#fff"/>
+    <circle id="타원_87" data-name="타원 87" cx="8.5" cy="8.5" r="8.5" transform="translate(-2692.872 991.667)" fill="#fff"/>
+    <circle id="타원_88" data-name="타원 88" cx="8.5" cy="8.5" r="8.5" transform="translate(-2645.872 991.667)" fill="#fff"/>
+    <circle id="타원_89" data-name="타원 89" cx="8.5" cy="8.5" r="8.5" transform="translate(-2598.872 991.667)" fill="#fff"/>
+    <circle id="타원_90" data-name="타원 90" cx="8.5" cy="8.5" r="8.5" transform="translate(-2551.872 991.667)" fill="#fff"/>
+    <circle id="타원_91" data-name="타원 91" cx="8.5" cy="8.5" r="8.5" transform="translate(-2504.872 991.667)" fill="#fff"/>
+    <circle id="타원_92" data-name="타원 92" cx="8.5" cy="8.5" r="8.5" transform="translate(-2457.872 991.667)" fill="#fff"/>
+    <circle id="타원_93" data-name="타원 93" cx="8.5" cy="8.5" r="8.5" transform="translate(-2410.872 991.667)" fill="#fff"/>
+    <circle id="타원_94" data-name="타원 94" cx="8.5" cy="8.5" r="8.5" transform="translate(-2363.872 991.667)" fill="#fff"/>
+    <circle id="타원_95" data-name="타원 95" cx="8.5" cy="8.5" r="8.5" transform="translate(-2316.872 991.667)" fill="#fff"/>
+    <circle id="타원_96" data-name="타원 96" cx="8.5" cy="8.5" r="8.5" transform="translate(-2269.872 991.667)" fill="#fff"/>
+    <circle id="타원_97" data-name="타원 97" cx="8.5" cy="8.5" r="8.5" transform="translate(-2222.872 991.667)" fill="#fff"/>
+    <circle id="타원_98" data-name="타원 98" cx="8.5" cy="8.5" r="8.5" transform="translate(-2175.872 991.667)" fill="#fff"/>
+    <circle id="타원_99" data-name="타원 99" cx="8.5" cy="8.5" r="8.5" transform="translate(-2128.872 991.667)" fill="#fff"/>
+    <circle id="타원_100" data-name="타원 100" cx="8.5" cy="8.5" r="8.5" transform="translate(-2081.872 991.667)" fill="#fff"/>
+    <circle id="타원_101" data-name="타원 101" cx="8.5" cy="8.5" r="8.5" transform="translate(-2034.872 991.667)" fill="#fff"/>
+    <circle id="타원_102" data-name="타원 102" cx="8.5" cy="8.5" r="8.5" transform="translate(-1987.872 991.667)" fill="#fff"/>
+    <circle id="타원_103" data-name="타원 103" cx="8.5" cy="8.5" r="8.5" transform="translate(-1940.872 991.667)" fill="#fff"/>
+    <circle id="타원_104" data-name="타원 104" cx="8.5" cy="8.5" r="8.5" transform="translate(-1893.872 991.667)" fill="#fff"/>
+    <circle id="타원_105" data-name="타원 105" cx="8.5" cy="8.5" r="8.5" transform="translate(-2840.872 808.667)" fill="#fff"/>
+    <circle id="타원_106" data-name="타원 106" cx="8.5" cy="8.5" r="8.5" transform="translate(-2860.872 898.667)" fill="#fff"/>
+    <circle id="타원_107" data-name="타원 107" cx="8.5" cy="8.5" r="8.5" transform="translate(-2860.872 851.667)" fill="#fff"/>
+    <circle id="타원_108" data-name="타원 108" cx="8.5" cy="8.5" r="8.5" transform="translate(-2860.872 945.667)" fill="#fff"/>
+    <circle id="타원_109" data-name="타원 109" cx="8.5" cy="8.5" r="8.5" transform="translate(-2840.872 991.667)" fill="#fff"/>
+    <circle id="타원_110" data-name="타원 110" cx="8.5" cy="8.5" r="8.5" transform="translate(-2792.872 806.667)" fill="#fff"/>
+    <circle id="타원_111" data-name="타원 111" cx="8.5" cy="8.5" r="8.5" transform="translate(-2792.872 991.667)" fill="#fff"/>
+    <circle id="타원_112" data-name="타원 112" cx="8.5" cy="8.5" r="8.5" transform="translate(-1846.872 991.667)" fill="#fff"/>
+    <circle id="타원_113" data-name="타원 113" cx="8.5" cy="8.5" r="8.5" transform="translate(-1846.872 806.667)" fill="#fff"/>
+    <g id="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2459.311, 959.303)">
+      <g id="그룹_146" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132" data-name="그룹 132">
+                <g id="그룹_131" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-2" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2367.182, 959.303)">
+      <g id="그룹_146-2" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-2" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-2" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-2" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-2" data-name="그룹 132">
+                <g id="그룹_131-2" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-2" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-2" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-2" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-2" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-2" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-2" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-2" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-2" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-2" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-2" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-2" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-2" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-2" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-2" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-2" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-3" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2273.182, 959.303)">
+      <g id="그룹_146-3" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-3" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-3" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-3" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-3" data-name="그룹 132">
+                <g id="그룹_131-3" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-3" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-3" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-3" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-3" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-3" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-3" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-3" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-3" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-3" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-3" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-3" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-3" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-3" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-3" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-3" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-4" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2177.053, 959.303)">
+      <g id="그룹_146-4" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-4" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-4" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-4" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-4" data-name="그룹 132">
+                <g id="그룹_131-4" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-4" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-4" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-4" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-4" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-4" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-4" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-4" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-4" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-4" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-4" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-4" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-4" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-4" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-4" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-4" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-5" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2085.182, 959.303)">
+      <g id="그룹_146-5" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-5" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-5" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-5" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-5" data-name="그룹 132">
+                <g id="그룹_131-5" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-5" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-5" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-5" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-5" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-5" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-5" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-5" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-5" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-5" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-5" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-5" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-5" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-5" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-5" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-5" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-6" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1988.182, 959.303)">
+      <g id="그룹_146-6" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-6" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-6" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-6" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-6" data-name="그룹 132">
+                <g id="그룹_131-6" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-6" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-6" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-6" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-6" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-6" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-6" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-6" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-6" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-6" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-6" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-6" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-6" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-6" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-6" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-6" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-7" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1896.311, 959.303)">
+      <g id="그룹_146-7" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-7" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-7" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-7" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-7" data-name="그룹 132">
+                <g id="그룹_131-7" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-7" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-7" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-7" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-7" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-7" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-7" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-7" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-7" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-7" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-7" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-7" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-7" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-7" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-7" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-7" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-8" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1801.054, 959.303)">
+      <g id="그룹_146-8" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-8" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-8" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-8" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-8" data-name="그룹 132">
+                <g id="그룹_131-8" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-8" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-8" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-8" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-8" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-8" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-8" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-8" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-8" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-8" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-8" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-8" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-8" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-8" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-8" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-8" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-9" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1782.182, 866.78)">
+      <g id="그룹_146-9" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-9" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-9" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-9" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-9" data-name="그룹 132">
+                <g id="그룹_131-9" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-9" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-9" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-9" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-9" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-9" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-9" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-9" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-9" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-9" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-9" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-9" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-9" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-9" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-9" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-9" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-10" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2459.311, 775)">
+      <g id="그룹_146-10" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-10" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-10" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-10" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-10" data-name="그룹 132">
+                <g id="그룹_131-10" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-10" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-10" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-10" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-10" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-10" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-10" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-10" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-10" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-10" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-10" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-10" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-10" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-10" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-10" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-10" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-11" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2367.182, 775)">
+      <g id="그룹_146-11" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-11" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-11" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-11" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-11" data-name="그룹 132">
+                <g id="그룹_131-11" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-11" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-11" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-11" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-11" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-11" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-11" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-11" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-11" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-11" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-11" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-11" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-11" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-11" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-11" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-11" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-12" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2273.182, 775)">
+      <g id="그룹_146-12" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-12" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-12" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-12" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-12" data-name="그룹 132">
+                <g id="그룹_131-12" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-12" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-12" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-12" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-12" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-12" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-12" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-12" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-12" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-12" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-12" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-12" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-12" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-12" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-12" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-12" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-13" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2177.053, 775)">
+      <g id="그룹_146-13" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-13" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-13" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-13" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-13" data-name="그룹 132">
+                <g id="그룹_131-13" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-13" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-13" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-13" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-13" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-13" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-13" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-13" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-13" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-13" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-13" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-13" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-13" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-13" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-13" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-13" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-14" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2085.182, 775)">
+      <g id="그룹_146-14" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-14" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-14" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-14" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-14" data-name="그룹 132">
+                <g id="그룹_131-14" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-14" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-14" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-14" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-14" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-14" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-14" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-14" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-14" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-14" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-14" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-14" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-14" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-14" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-14" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-14" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-15" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1988.182, 775)">
+      <g id="그룹_146-15" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-15" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-15" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-15" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-15" data-name="그룹 132">
+                <g id="그룹_131-15" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-15" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-15" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-15" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-15" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-15" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-15" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-15" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-15" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-15" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-15" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-15" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-15" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-15" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-15" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-15" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-16" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1896.311, 775)">
+      <g id="그룹_146-16" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-16" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-16" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-16" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-16" data-name="그룹 132">
+                <g id="그룹_131-16" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-16" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-16" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-16" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-16" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-16" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-16" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-16" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-16" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-16" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-16" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-16" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-16" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-16" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-16" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-16" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-17" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -1801.054, 775)">
+      <g id="그룹_146-17" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-17" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-17" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-17" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-17" data-name="그룹 132">
+                <g id="그룹_131-17" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-17" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-17" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-17" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-17" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-17" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-17" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-17" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-17" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-17" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-17" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-17" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-17" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-17" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-17" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-17" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-18" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2554.182, 775)">
+      <g id="그룹_146-18" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-18" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-18" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-18" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-18" data-name="그룹 132">
+                <g id="그룹_131-18" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-18" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-18" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-18" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-18" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-18" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-18" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-18" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-18" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-18" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-18" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-18" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-18" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-18" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-18" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-18" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-19" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2844.182, 775)">
+      <g id="그룹_146-19" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-19" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-19" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-19" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-19" data-name="그룹 132">
+                <g id="그룹_131-19" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-19" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-19" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-19" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-19" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-19" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-19" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-19" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-19" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-19" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-19" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-19" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-19" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-19" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-19" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-19" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-20" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2744.053, 775)">
+      <g id="그룹_146-20" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-20" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-20" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-20" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-20" data-name="그룹 132">
+                <g id="그룹_131-20" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-20" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-20" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-20" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-20" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-20" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-20" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-20" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-20" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-20" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-20" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-20" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-20" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-20" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-20" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-20" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-21" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2647.182, 775)">
+      <g id="그룹_146-21" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-21" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-21" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-21" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-21" data-name="그룹 132">
+                <g id="그룹_131-21" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-21" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-21" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-21" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-21" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-21" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-21" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-21" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-21" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-21" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-21" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-21" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-21" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-21" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-21" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-21" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-22" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2864.182, 866.78)">
+      <g id="그룹_146-22" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-22" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-22" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-22" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-22" data-name="그룹 132">
+                <g id="그룹_131-22" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-22" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-22" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-22" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-22" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-22" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-22" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-22" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-22" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-22" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-22" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-22" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-22" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-22" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-22" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-22" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-23" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2554.182, 959.303)">
+      <g id="그룹_146-23" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-23" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-23" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-23" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-23" data-name="그룹 132">
+                <g id="그룹_131-23" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-23" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-23" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-23" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-23" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-23" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-23" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-23" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-23" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-23" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-23" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-23" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-23" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-23" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-23" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-23" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-24" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2844.182, 959.303)">
+      <g id="그룹_146-24" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-24" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-24" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-24" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-24" data-name="그룹 132">
+                <g id="그룹_131-24" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-24" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-24" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-24" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-24" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-24" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-24" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-24" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-24" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-24" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-24" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-24" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-24" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-24" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-24" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-24" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-25" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2744.053, 959.303)">
+      <g id="그룹_146-25" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-25" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-25" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-25" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-25" data-name="그룹 132">
+                <g id="그룹_131-25" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-25" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-25" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-25" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-25" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-25" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-25" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-25" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-25" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-25" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-25" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-25" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-25" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-25" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-25" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-25" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="icon-26" data-name="icon" transform="matrix(0.848, 0.53, -0.53, 0.848, -2647.182, 959.303)">
+      <g id="그룹_146-26" data-name="그룹 146" clip-path="url(#clip-path)">
+        <g id="그룹_145-26" data-name="그룹 145" transform="translate(0 0)">
+          <g id="그룹_144-26" data-name="그룹 144" clip-path="url(#clip-path)">
+            <g id="그룹_133-26" data-name="그룹 133" transform="translate(0 22.247)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_132-26" data-name="그룹 132">
+                <g id="그룹_131-26" data-name="그룹 131" clip-path="url(#clip-path-3)">
+                  <g id="그룹_130-26" data-name="그룹 130" transform="translate(0 0)">
+                    <g id="그룹_129-26" data-name="그룹 129" clip-path="url(#clip-path-4)">
+                      <rect id="사각형_230-26" data-name="사각형 230" width="61.835" height="9.887" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_138-26" data-name="그룹 138" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_137-26" data-name="그룹 137" transform="translate(0 0)">
+                <g id="그룹_136-26" data-name="그룹 136" clip-path="url(#clip-path-5)">
+                  <g id="그룹_135-26" data-name="그룹 135" transform="translate(0 0)">
+                    <g id="그룹_134-26" data-name="그룹 134" transform="translate(0 0)" clip-path="url(#clip-path-6)">
+                      <rect id="사각형_232-26" data-name="사각형 232" width="67.308" height="59.672" transform="translate(-26.441 41.417) rotate(-60.001)" fill="url(#radial-gradient-2)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="그룹_143-26" data-name="그룹 143" transform="translate(14.515 0)" style="mix-blend-mode: screen;isolation: isolate">
+              <g id="그룹_142-26" data-name="그룹 142" transform="translate(0 0)">
+                <g id="그룹_141-26" data-name="그룹 141" clip-path="url(#clip-path-5)">
+                  <g id="그룹_140-26" data-name="그룹 140" transform="translate(0 0)">
+                    <g id="그룹_139-26" data-name="그룹 139" clip-path="url(#clip-path-8)">
+                      <rect id="사각형_234-26" data-name="사각형 234" width="59.672" height="67.308" transform="translate(-26.441 12.962) rotate(-29.999)" fill="url(#radial-gradient-3)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+[2023-12-06 08:50:53] BILLING - SourceIP : 35.191.32.184, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-06 08:51:13] BILLING - SourceIP : 35.191.29.170, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"0","msg":"HTTP Status Code ( 401 ), Failure."}
+[2023-12-06 08:53:53] API - SourceIP : 35.191.33.4, proc1: , proc2: 
+{"result":"0","msg":"-20"}
+[2023-12-06 08:53:53] API - SourceIP : 35.191.24.191, proc1: , proc2: 
+{"result":"0","msg":"-20"}
+[2023-12-06 08:54:35] CRYPTOOO - SourceIP : 35.191.32.233, proc1: glo_billsolution_pl1, proc2: mode=checkid|id=ohs11555|partner=Payletter|date=231206045435
+{"result":"1","return":"lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM%2F2vvBSB3Zz4HeI%2BhSIk%2BQbU6w7Vy9zpIvlW7WRe5ItqXQ%3D%3D"}
+[2023-12-06 08:54:36] API - SourceIP : 35.191.32.229, proc1: lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM/2vvBSB3Zz4HeI+hSIk+QbU6w7Vy9zpIvlW7WRe5ItqXQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2023-12-06 08:55:14] API - SourceIP : 35.191.3.26, proc1: lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM/2vvBSB3Zz4HeI+hSIk+QbU6w7Vy9zpIvlW7WRe5ItqXQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2023-12-06 08:55:14] API - SourceIP : 35.191.32.135, proc1: lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM/2vvBSB3Zz4HeI+hSIk+QbU6w7Vy9zpIvlW7WRe5ItqXQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2023-12-06 08:55:16] API - SourceIP : 35.191.33.4, proc1: lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM/2vvBSB3Zz4HeI+hSIk+QbU6w7Vy9zpIvlW7WRe5ItqXQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2023-12-06 08:57:35] CRYPTOOO - SourceIP : 35.191.33.7, proc1: glo_billsolution_pl1, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231206045735
+{"result":"1","return":"lvH6yIGdv4cxaXEn2ILIujIMdH2nOGGdFnsCRDu%2FW%2FDBi4VEuCxBqsXBRj4mvQRC42U2PhTJWKyYuddYplj0bw%3D%3D"}
+[2023-12-06 08:57:35] API - SourceIP : 35.191.33.4, proc1: lvH6yIGdv4cxaXEn2ILIujIMdH2nOGGdFnsCRDu/W/DBi4VEuCxBqsXBRj4mvQRC42U2PhTJWKyYuddYplj0bw==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2023-12-06 08:58:36] API - SourceIP : 35.191.24.188, proc1: lvH6yIGdv4cxaXEn2ILIuvE9OORAIToYCQOm0UdAM/2vvBSB3Zz4HeI+hSIk+QbU6w7Vy9zpIvlW7WRe5ItqXQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}

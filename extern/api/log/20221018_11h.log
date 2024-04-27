@@ -1,0 +1,10 @@
+[2022-10-18 11:00:07] API - SourceIP : 34.80.134.81, proc1: mode=login|id=neoguru0|pw=wpqkfskf12#$|partner=DF|date=170820214210, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}
+[2022-10-18 11:00:52] CRYPTOOO - SourceIP : 34.80.134.81, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12#$|partner=DF|date=220820214210
+{"result":"1","return":"snRHrKcu2XFriSKJ2DWoyUjFyKHIQ4jGbnVddnVRwqQYkUAUFPdOCQaN3CnGS%2B3xt59Dng5pTu2JIyiwck7LKQiaUg%2Fl01zEk0Veoy3PL1k%3D"}
+[2022-10-18 11:01:34] CRYPTOOO - SourceIP : 34.80.134.81, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12#$|partner=DF|date=220820214210
+{"result":"1","return":"snRHrKcu2XFriSKJ2DWoyUjFyKHIQ4jGbnVddnVRwqQYkUAUFPdOCQaN3CnGS%2B3xt59Dng5pTu2JIyiwck7LKQiaUg%2Fl01zEk0Veoy3PL1k%3D"}
+[2022-10-18 11:01:39] CRYPTOOO - SourceIP : 34.80.134.81, proc1: mode=login|id=neoguru123|pw=cosmos0012|partner=Perugia|date=170804114210|ip=211.211.211.211proc2=mode=login|id=neoguru0|pw=wpqkfskf12#$|partner=DF|date=220820214210, proc2: 
+{"result":"0","msg":"empty items"}
+[2022-10-18 11:01:59] API - SourceIP : 34.80.134.81, proc1: mode=login|id=neoguru0|pw=wpqkfskf12#$|partner=DF|date=170820214210, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"0","msg":"-20"}

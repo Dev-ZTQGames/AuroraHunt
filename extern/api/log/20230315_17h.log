@@ -1,0 +1,28 @@
+[2023-03-15 17:01:34] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"03da24de23c7992fe7d0714d8a7837fdd0f2261f619a443b176dfd225711360d6a"}
+[2023-03-15 17:01:39] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-03-15 17:01:53] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-03-15 17:02:09] NODE - SourceIP : 34.80.134.81, proc1: MiningStatus, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":{"LastMiningTime":false,"TotalMiningCount":0,"TotalMiningTime":0,"TotalMiningToken":0}}
+[2023-03-15 17:02:28] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"2190|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/2190.png|"}
+[2023-03-15 17:03:30] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"2190|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/2190.png|"}
+[2023-03-15 17:44:36] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":644}
+[2023-03-15 17:47:52] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02f1a189fbbe82efadc5accf554745a35e863191963190c1282b487696ea644cfa"}
+[2023-03-15 17:49:24] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02f1a189fbbe82efadc5accf554745a35e863191963190c1282b487696ea644cfa"}
+[2023-03-15 17:49:56] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null,"NFT_images":null}
+[2023-03-15 17:50:21] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-03-15 17:50:57] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"03da24de23c7992fe7d0714d8a7837fdd0f2261f619a443b176dfd225711360d6a"}
+[2023-03-15 17:51:13] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":745}
+[2023-03-15 17:51:27] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"2190|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmV2gHsVUfyyYhKiaA1nw1NfMJGU3em4cxYcYFzfLu9dmQ\/2190.png|"}

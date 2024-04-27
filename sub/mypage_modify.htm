@@ -1,0 +1,712 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<?php
+	$info = array();
+
+	$query = "SELECT * FROM Accounts WHERE login_id = '" . $_COOKIE['login_id'] . "'";
+
+	$que = mysqli_query($connect, $query);
+
+	$row = mysqli_fetch_array($que);
+
+	$info = $row;
+
+	$chk_female = '';
+	$chk_male = '';
+
+	switch($info['sex']){
+		case 'female' : $chk_female = 'checked';
+		break;
+		case 'male' : $chk_male = 'checked';
+	}
+	
+	$login_id = $info['login_id'];
+
+?>
+
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Edit_Member_Info']; ?></h3>
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+					<div class="filed_item">
+						<p class="label_item"><?php echo $lang['ID']; ?></p>
+						<?php 
+						switch ( substr($_SESSION['sess_login_id'], 0, 2) ) {
+							case "nv": $login_id = '네이버 소셜 로그인 회원'; break;
+							case "kk": $login_id = '카카오 소셜 로그인 회원'; break;
+							case "gg": $login_id = '구글 소셜 로그인 회원'; break;
+							case "ap": $login_id = '애플 소셜 로그인 회원'; break;
+							case "fb": $login_id = '페이스북 소셜 로그인 회원'; break;
+							case "ln": $login_id = '라인 소셜 로그인 회원'; break;
+						}
+						?>
+						<p class="input_item user_id"><?php echo $login_id; ?></p>
+						<input type="hidden" name="login_id" id="login_id" value="<?php echo $info['login_id']; ?>">
+					</div><!-- .filed_item -->
+                    <div class="form_field_item_wrap">
+                        <div class="form_field_item">
+                            <label class="form_label" for="name"><span><?php echo $lang['Nickname']; ?></span></label>
+                            <div class="form_input_wrap">
+                                <input type="text" class="form_input user_name" id="name" name="name" maxlength="20" value="<?php echo $info['name']; ?>" placeholder="<?php echo $info['name']; ?>"/>
+                            </div><!-- .form_input_wrap -->
+							<div id="valid_message_name"></div>
+                        </div><!-- .form_field_item -->
+                    </div><!-- .form_field_item_wrap -->
+				    <?php
+					 if($info['social_type'] == ''){ ?>
+					  <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['Password']; ?></p>
+						 <p class="input_item"><a href="mypage_pw_modify.htm" class="basic_btn_small basic_btn_primary"><span><?php echo $lang['Change_Password']; ?></span></a></p>
+					 </div><!-- .filed_item -->
+					<?php 
+					}
+					 ?>
+					<div class="filed_item">
+						<p class="label_item"><?php echo $lang['Email']; ?></p>
+						<p class="input_item user_id"><?php echo $info['email']; ?></p>
+						<input type="hidden" name="email" id="email" value="<?php echo $info['email']; ?>">
+					</div><!-- .filed_item -->
+
+					<!--
+					<div class="form_field_item_wrap email_wrap">
+                        <div class="form_field_item">
+                            <label class="form_label" for="form_email"><span>이메일</span></label>
+                            <div class="email_form form_input_wrap">
+								<input class="form_input input_email_local" id="form_email" type="text" value="<?php echo explode('@',$info['email'])[0]; ?>"/>
+                                <span class="separator_email">@</span>
+								<input class="form_input input_email_domain" type="text" id="input_email" value="<?php echo explode('@',$info['email'])[1]; ?>"/>
+                                <span class="select">
+                                    <label for="select_email" class="sr_only">이메일 도메인 선택</label>
+                                    <select id="select_email" class="select_email selectric">
+                                        <option value="">직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                    </select>                                                   
+                                </span>
+                                <input type="button" class="basic_btn btn_email_verify disabled" onclick="return email_verify();" value="이메일 인증"><span>이메일 인증</span>
+                            </div>
+                            <!--p class="valid_message_error" id="valid_message_error"><i class='icon'></i><span>이메일 변경 후에는 꼭 이메일 인증을 진행해 주세요.</span></p-->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+                    
+                    <div class="form_field_item_wrap email_vertify_wrap">
+                        <div class="form_field_item form_field_email_vertify">
+                            <label class="form_label" for="email_vertify"><span><?php echo $lang['Email_Verification_Num']; ?></span></label>
+                                <div class="form_input_wrap">
+                                <div class="input_email_vertify_wrap">
+                                    <input type="text" class="form_input input_email_vertify" id="email_vertify" onkeyup="check_email_cert_number();"/>
+                                    <input type="hidden" name="emailchk_cert_num" id="emailchk_cert_num" value="">
+                                </div><!-- .input_email_vertify_wrap -->
+                                <a class="basic_btn basic_btn_primary" href="javascript:email_cert_number_confirm();"><?php echo $lang['Confirmation_Num']; ?></a>
+                            </div><!-- .form_input_wrap -->
+                        </div><!-- .form_field_item -->
+                    </div><!-- .form_field_item_wrap -->
+
+<!--
+					<div class="form_field_item_wrap phone_wrap">
+                        <div class="form_field_item">
+                             <label class="form_label" for="form_phone"><span>휴대폰 번호</span></label>
+                             <div class="phone_form form_input_wrap">
+							     <span class="select">
+                                    <label for="select_phone_01" class="sr_only">휴대폰 앞자리 선택</label>
+                                    <select id="select_phone_01" class="select_phone_first selectric">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                    </select>                                                   
+                                </span>
+								<span class="separator_phone">-</span>
+                                <input class="form_input input_phone_middle" id="phone_1" name="phone_1" type="number" maxlength="4" oninput="telValidator(this);" value="<?php echo explode('-',$info['mobile_phone'])[1]; ?>"/>
+                                <span class="separator_phone">-</span>
+                                <input class="form_input input_phone_last" id="phone_2" name="phone_2" type="number" maxlength="4" oninput="telValidator(this);" value="<?php echo explode('-',$info['mobile_phone'])[2]; ?>"/>
+                             </div><!-- .phone_form -->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+
+					<!--div class="form_field_item_wrap birth_wrap">
+                        <div class="form_field_item">
+                             <label class="form_label" for="form_birth"><span>생년월일</span></label>
+                             <div class="birth_form">
+							     <div class="form_input_wrap">
+									<input type="number" class="form_input" name="year" maxlength="4" oninput="telValidator(this);" value="<?php echo explode('-',$info['birth_date'])[0]; ?>">
+									<span class="txt">년</span>
+								</div>
+								<div class="form_input_wrap">
+									<input type="number" class="form_input" name="month" maxlength="2" oninput="telValidator(this);" value="<?php echo explode('-',$info['birth_date'])[1]; ?>">
+									<span class="txt">월</span>
+								</div>
+								<div class="form_input_wrap">
+									<input type="number" class="form_input" name="day" maxlength="2" oninput="telValidator(this);" value="<?php echo explode('-',$info['birth_date'])[2]; ?>">
+									<span class="txt">일</span>
+								</div>
+                             </div><!-- .birth_form -->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+
+					<!--div class="form_field_item_wrap gender_wrap">
+                        <div class="form_field_item">
+                            <label class="form_label" for="form_gender"><span>성별</span></label>
+                            <div class="gender_form form_input_wrap">
+								<div class="custom_checkbox_wrap">
+									<label class="custom_radio"><input type="radio" name="gender" value="male" <?php echo $chk_male; ?>><span class="checkmark"></span>남</label>
+									<label class="custom_radio"><input type="radio" name="gender" value="female" <?php echo $chk_female; ?>><span class="checkmark"></span>여</label>
+								</div><!-- .custom_checkbox_wrap -->
+                            <!--/div><!-- .gender_form -->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+
+				</div><!-- .form_basic_body -->
+                <p class="btn_withdraw"><a href="mypage_withdraw.htm"><span><?php echo $lang['Withdrawal_Of_Membership']; ?></span></a></p>
+			</div><!-- .form_basic -->
+
+            <?php /* A-Hunt Developers 숨김
+			<div class="form_basic form_mypage form_ahd">
+			    <div class="form_basic_head">
+			        <h3>A-Hunt Developers
+                        <div class="guide_tooltip">
+                            <button type="button" class="guide_tooltip_btn"><span><i class="sr_only"><?php echo $lang['Tooltip']; ?></i></span></button>
+                            <div id="guide_tooltip_box" class="guide_tooltip_box">
+                                <span><?php echo $lang['Join_A-Hunt_Developers']; ?></span>
+                                <button type="button" class="btn_tooltip_close">
+                                    <span><i class="sr_only"><?php echo $lang['Close_Tooltip']; ?></i></span>
+                                </button>
+                            </div><!-- .guide_tooltip_box -->
+                        </div><!-- .guide_tooltip -->
+					</h3>
+					<div class="custom_checkbox_wrap attend_check">
+						<label class="custom_checkbox"><input type="checkbox"><span class="checkmark"></span><?php echo $lang['Participation']; ?></label>
+					</div><!-- .custom_checkbox_wrap -->
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+					<div class="form_field_item_wrap">
+						<div class="form_field_item required">
+							<label class="form_label" for="company_name"><span><?php echo $lang['Company_Name']; ?></span></label>
+                            <div class="form_input_wrap">
+							    <input type="text" class="form_input" id="company_name"/>
+                            </div><!-- .form_input_wrap -->
+						</div><!-- .form_field_item -->
+					</div><!-- .form_field_item_wrap -->
+					<div class="form_field_item_wrap">
+						<div class="form_field_item required">
+							<label class="form_label" for="company_homepage"><span><?php echo $lang['Homepage']; ?></span></label>
+                            <div class="form_input_wrap">
+							    <input type="text" class="form_input" id="company_homepage"/>
+                            </div><!-- .form_input_wrap -->
+						</div><!-- .form_field_item -->
+					</div><!-- .form_field_item_wrap -->
+					<div class="form_field_item_wrap">
+						<div class="form_field_item required">
+							<label class="form_label" for="company_biz_person"><span><?php echo $lang['Manager']; ?></span></label>
+                            <div class="form_input_wrap">
+							    <input type="text" class="form_input" id="company_biz_person"/>
+                            </div><!-- .form_input_wrap -->
+						</div><!-- .form_field_item -->
+					</div><!-- .form_field_item_wrap -->
+					<div class="form_field_item_wrap phone_wrap">
+                        <div class="form_field_item required">
+                             <label class="form_label" for="form_phone"><span><?php echo $lang['Contact']; ?></span></label>
+                             <div class="phone_form form_input_wrap">
+							     <span class="select">
+                                    <label for="select_phone_01" class="sr_only"><?php echo $lang['Choose_Front_Digit']; ?></label>
+                                    <select id="select_phone_01" class="select_phone_first selectric">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                    </select>                                                   
+                                </span>
+								<span class="separator_phone">-</span>
+                                <input class="form_input input_phone_middle" id="form_phone" type="text" />
+                                <span class="separator_phone">-</span>
+                                <input class="form_input input_phone_last" type="text" />
+                             </div><!-- .phone_form -->
+                        </div><!-- .form_field_item -->
+                    </div><!-- .form_field_item_wrap -->
+					<p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['Can_Use_A-Hunt_Developers_Board']; ?></span></p>
+				</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+            */ ?>
+
+            <div class="process_btn_wrap">      
+				<input type="hidden" id="fullEmail" name="fullEmail">
+				<input type="hidden" name="birthDate">
+				<input type="hidden" name="emailchk_commit" id="emailchk_commit" value="">
+				<input type="hidden" name="phone_1_chk_commit" id="phone_1_chk_commit" value="">
+				<input type="hidden" name="phone_2_chk_commit" id="phone_2_chk_commit" value="">
+				<input type="hidden" name="namechk_commit" id="namechk_commit" value="">
+				<button type="submit" class="basic_btn basic_btn_primary basic_btn_alone" id="btn_modify" onclick="return modify_check();"><?php echo $lang['Edit_Member_Info']; ?></button>
+				</div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+
+</div><!-- #container -->
+
+<script>
+function isValidName(name) {
+	var check = /[`~!@#$%^&*|\\\'\";:\/?^=^+_()<>]/;
+
+	if (check.test(name))     {
+		return false;
+	}
+
+	if (name.length > 20) {
+		return false;
+	}
+
+	return true;
+};
+
+$("#name").keyup(function(){
+	$.ajax({
+	   type:"POST",        
+	   url:"change_validate_name.htm",     
+	   data : ({name: $("#name").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		   console.log(args);
+		switch(args.trim()){
+			 case("true"):
+			  $("#valid_message_name").html("");
+			  $("#namechk_commit").val("Y");
+			  $("#btn_modify").removeClass('disabled');
+			  $("#valid_message_name").html("<p class='valid_message_confirm'><i class='icon'></i><span><?php echo $lang['Available_Nickname']; ?></span></p>");
+			 break;
+			 case("false"):			  				 
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Nickname_Already_Exists']; ?></span></p>");
+			  $("#namechk_commit").val("N");
+			  $("#btn_modify").addClass('disabled');
+			 break;
+			 case("none"):
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Enter_Nickname']; ?></span></p>");
+			  $("#namechk_commit").val("N");
+			  $("#btn_modify").addClass('disabled');
+			 break;
+			 case("long"):
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Within_20_Characters']; ?></span></p>");
+			  $("#namechk_commit").val("N");
+			  $("#btn_modify").addClass('disabled');
+			 break;
+			 case("bad_character"):
+			  $("#valid_message_name").html("<p class='valid_message_error'><i class='icon'></i><span><?php echo $lang['Within_20_Characters']; ?></span></p>");
+			  $("#namechk_commit").val("N");
+			  $("#btn_modify").addClass('disabled');
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+});
+
+function modify_check(){
+	var chk_name = $("#namechk_commit").val();
+	var name = $("#name").val();
+
+	if ( name == "" || !isValidName(name) || chk_name == "N" ) {
+		swal({
+		  text: "<?php echo $lang['Check_Nickname']; ?>",
+		  buttons: "<?php echo $lang['Confirm']; ?>",
+		})
+		return false;
+	} else {
+		modify();
+	} 
+}
+
+function modify() {
+	var email = $("#email").val();
+	var name = $("#name").val();
+	var login_id = $("#login_id").val();
+
+	$.ajax({
+	   type:"POST",       
+	   url:"modify_prc.htm",   
+	   data : ({email: email, name: name, login_id: login_id}),
+	   timeout : 5000,     
+	   cache : false,   
+	/*
+	   beforeSend: function (){
+		loading();
+	   },
+	   complete: function (){
+		endLoading();
+	   },
+	*/
+	   success: function whenSuccess(args){ 
+		if(args.includes('success')){
+			swal({
+			  text: '<?php echo $lang["Edition_Of_Member_Info_Completed"]; ?>',
+			  buttons: '<?php echo $lang["Confirm"]; ?>',
+			}).then(function(isConfirm){
+				if(isConfirm){
+					location.href='mypage_info.htm';
+				}
+			})
+		}
+	   },
+	   error: function whenError(e){    // ERROR FUNCTION
+		 swal({
+		  text: '<?php echo $lang['Try_Again_Later']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		return false;
+	   }
+	});
+	
+}
+
+$("#form_email").keyup(function(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#select_email").val());
+
+	if($("#form_email").val() != '' && $("#input_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+		$("#emailchk_commit").val('N');
+	/*
+	$.ajax({
+		   type:"POST",       
+		   url:"change_validate_email.htm",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+			switch(args){
+			 case("true"):
+			 $("#valid_message_error").html("");
+			 break;
+			 case("false"):
+			  $("#valid_message_error").html("<i class='icon'></i><span>이미 사용중인 이메일입니다.</span>");
+			  $(".btn_email_verify").addClass('disabled');
+			 break;
+			 default:
+			 case("none"):
+			   $("#valid_message_error").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+			   $(".btn_email_verify").addClass('disabled');
+			 break;
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });
+	 */
+	 } else {
+		$(".btn_email_verify").addClass('disabled');
+	}
+});
+
+
+$("#select_email").change(function(){
+	var value  = $(this).val();
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#select_email").val());
+	if($("#select_email").val() != '' && $("#form_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+		$("#emailchk_commit").val('N');
+	} else {
+		$(".btn_email_verify").addClass('disabled');
+	}
+	/*
+	$.ajax({
+		   type:"POST",       
+		   url:"change_validate_email.htm",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+		    $("#valid_message_error").html("");
+			switch(args){
+			 case("true"):
+			 $(".btn_email_verify").removeClass('disabled');
+			 break;
+			 case("false"):
+			  $("#valid_message_error").html("<i class='icon'></i><span>이미 사용중인 이메일입니다.</span>");
+			  $(".btn_email_verify").addClass('disabled');
+			 break;
+			 default:
+			 case("none"):
+			   $("#valid_message_error").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+			   $(".btn_email_verify").addClass('disabled');
+			 break;
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });
+	  */
+});
+
+
+$("#input_email").keyup(function(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	if($("#form_email").val() != '' && $("#input_email").val() != ''){
+		$(".btn_email_verify").removeClass('disabled');
+		$("#emailchk_commit").val('N');
+	} else {
+		$(".btn_email_verify").addClass('disabled');
+	}
+	/*
+	$.ajax({
+		   type:"POST",       
+		   url:"join_validate_email.php",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+		    $("#valid_error_msg").html("");
+			switch(args.trim()){
+			 case("true"):
+			 $(".btn_email_verify").removeClass('disabled');
+			 break;
+			 case("none"):
+			   $("#valid_error_msg").html("<i class='icon'></i><span>이메일을 입력해주세요.</span>");
+			   $(".btn_email_verify").addClass('disabled');
+			 break;
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });*/
+});
+
+function email_verify(){
+
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	var name = '<?php echo $info["name"]; ?>';
+
+	$.ajax({
+	   type:"POST",       
+	   url:"change_validate_email.htm",   
+	   data : ({email: email, name: name, lang_code: 'ko'}),
+	   timeout : 5000,     
+	   cache : false,       
+	   success: function whenSuccess(args){  
+		$("#valid_error_msg").html("");
+		console.log(args);
+		switch(args.trim()){
+			 case("true"):
+			 send_mail();
+			 break;
+			 case("false"):
+			  swal({
+			  text: email+'<?php echo $lang['You_Signed_Up_Same_Email']; ?>',
+			  buttons: '<?php echo $lang['Confirm']; ?>',
+			}).then(function(isConfirm){
+				if(isConfirm){
+					$(".btn_email_verify").removeClass('disabled');
+					$("#emailchk_commit").val('Y');
+					$("#btn_modify").removeClass('disabled');
+				}
+			})
+			  $(".btn_email_verify").addClass('disabled');
+			 break;
+		}
+		  $(".btn_email_verify").addClass('disabled');
+	   },
+	   error: function whenError(e){    // ERROR FUNCTION
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	   }
+	});
+}
+
+function send_mail(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+
+	$.ajax({
+	   type:"POST",       
+	   url:"change_email_certificate.htm",   
+	   data : ({email: email}),
+	   timeout : 5000,     
+	   cache : false,       
+	   success: function whenSuccess(args){  
+		$("#valid_error_msg").html("");
+		$("#emailchk_commit").val("");
+		//console.log(args.trim());
+		if(args.trim().includes('success')){
+			$('#emailchk_cert_num').val(args.trim().substr(7,6));
+			//console.log(args.trim().substr(7,6));
+			//alert
+			swal({
+			  text: email+'<?php echo $lang['Verification_Code_Sending_Text']; ?>',
+			  buttons: '<?php echo $lang['Confirm']; ?>',
+			}).then(function(isConfirm) {
+			  if (isConfirm) {
+				  $('.form_field_email_vertify').addClass('active');
+				  $('.btn_email_verify').addClass('disabled');
+				  $("#emailchk_commit").val('N');
+
+				  var time = 300;
+				  var min = '';
+				  var sec = '';
+
+				  var x = setInterval(function(){
+					min = parseInt(time/60);
+					sec = time%60;
+
+					if(sec < 10){
+						sec = '0'+sec;
+					} 
+
+					$('#timer').html(min+':'+sec);
+					time--;
+
+					if(time < 0){
+						clearInterval(x);
+						$('#timer').html('<?php echo $lang['Timeout']; ?>');
+					}
+				  },1000)
+
+				  setTimeout(function(){
+					$('#resend').removeClass('disabled');
+				  },300000);
+
+			  }
+			})
+		} else {
+			swal({
+			  text: '<?php echo $lang['Try_Again_Later']; ?>',
+			  buttons: '<?php echo $lang['Confirm']; ?>',
+			}).then(function(isConfirm){
+				if(isConfirm){
+					$(".btn_email_verify").removeClass('disabled');
+				}
+			})
+		}
+	   },
+	   error: function whenError(e){    // ERROR FUNCTION
+		 swal({
+		  text: '<?php echo $lang['Try_Again_Later']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		}).then(function(isConfirm){
+				if(isConfirm){
+					$(".btn_email_verify").removeClass('disabled');
+				}
+			})
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		return false;
+	   }
+  });
+}
+
+function resend_mail(){
+	var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+
+	$.ajax({
+	   type:"POST",       
+	   url:"change_email_certificate.htm",   
+	   data : ({email: email}),
+	   timeout : 5000,     
+	   cache : false,       
+	   success: function whenSuccess(args){  
+		$("#valid_error_msg").html("");
+		$("#emailchk_commit").val("");
+		if(args.trim().includes('success')){
+			$('#emailchk_cert_num').val(args.trim().substr(7,6));
+			//console.log(args.trim().substr(7,6));
+			//alert
+			swal({
+			  text: email+'<?php echo $lang['Verification_Code_Resending_Text']; ?>',
+			  buttons: <?php echo $lang['Confirm']; ?>,
+			}).then(function(isConfirm) {
+			  if (isConfirm) {
+				  $('.form_field_email_vertify').addClass('active');
+				  $('.btn_email_verify').addClass('disabled');
+				  $("#emailchk_commit").val('N');
+
+				  var time = 300;
+				  var min = '';
+				  var sec = '';
+
+				  var x = setInterval(function(){
+					min = parseInt(time/60);
+					sec = time%60;
+					
+					if(sec < 10){
+						sec = '0'+sec;
+					} 
+
+					$('#timer').html(min+':'+sec);
+					time--;
+
+					if(time < 0){
+						clearInterval(x);
+						$('#timer').html('<?php echo $lang['Timeout']; ?>');
+					}
+				  },1000)
+
+				  setTimeout(function(){
+					$('#resend').removeClass('disabled');
+				  },300000);
+			  }
+			})
+		}
+	   },
+	   error: function whenError(e){    // ERROR FUNCTION
+		 swal({
+		  text: '<?php echo $lang['Try_Again_Later']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		return false;
+	   }
+  });
+}
+
+
+
+
+function check_email_cert_number(){
+	$("#email_vertify").val($("#email_vertify").val().replace(/[^0-9]/g,""));
+}
+
+function email_cert_number_confirm(){
+	if($.trim($("#select_email").val()) == ''){
+		var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#input_email").val());
+	} else {
+		var email = $.trim($("#form_email").val()) + "@" +  $.trim($("#select_email").val());
+	}
+	
+	if ( $("#email_vertify").val() != $("#emailchk_cert_num").val() ) 	{
+		$("#emailchk_commit").val("N");
+		swal({
+		  text: '<?php echo $lang['Check_Verification_Code']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+	} else {
+		$("#emailchk_commit").val("Y");
+		$("#fullEmail").val(email);
+		//$("#btn_modify").removeClass('disabled');
+		//alert
+		swal({
+		  text: '<?php echo $lang["Have_Been_Authenticated"]; ?>',
+		  buttons: '<?php echo $lang["Confirm"]; ?>',
+		})
+	}
+}
+
+function telValidator(args) {
+
+	if(args.value.length > args.maxLength){
+	  args.value = args.value.slice(0, args.maxLength);
+    } 
+    
+}
+
+</script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

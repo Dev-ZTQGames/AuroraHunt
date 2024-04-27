@@ -1,0 +1,85 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="wallet_main">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <div class="wallet_user_info_wrap">
+                        <figure class="wallet_user_img"><img src="https://picsum.photos/42/42" alt=""></figure>
+                        <div class="wallet_user_info">
+                            <p class="wallet_name">ID name</p>
+                            <div class="wallet_key">
+                                <span>0x389...Da7a</span>
+                                <button type="button" class="btn_round clipboard" data-clipboard-text="0x389...Da7a"><span>Copy</span></button>
+                                <div class="clipboard_copynote"><p>복사되었습니다.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- .wallet_user_info_wrap -->
+                    <div class="wallet_pmw">
+                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                        <b>000 PMW</b>
+                        <span>$0.00</span>
+                    </div><!-- .wallet_pmw -->
+                    <ul class="wallet_function">
+                        <li class="wallet_function_receive"><a href="#"><i></i><span>Receive</span></a></li>
+                        <li class="wallet_function_send"><a href="./wallet_send.htm"><i></i><span>Send</span></a></li>
+                        <li class="wallet_function_swap"><a href="./wallet_swap.htm"><i></i><span>Swap</span></a></li>
+                    </ul><!-- .wallet_function -->
+                    <div class="wallet_tab_list tabs">
+                        <ul class="tabs_menu">
+                            <li class="tabs_active"><a href="#assets"><span>Assets</span></a></li>
+                            <li><a href="#activity"><span>Activity</span></a></li>
+                        </ul><!-- .tabs_menu -->
+
+                        <div class="tabs_panels">
+                            <div id="assets">
+                                <div class="panels_contents match_height">
+                                    <div class="assets_item">
+                                        <a href="./wallet_assets_view.htm">
+                                            <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                            <p><b>000 PMW</b><span>$0.00</span></p>
+                                        </a>
+                                    </div><!-- .assets_item -->
+                                    <div class="assets_item">
+                                        <a href="./wallet_assets_view.htm">
+                                            <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                            <p><b>000 PSCT</b><span>~000PMW</span></p>
+                                        </a>
+                                    </div><!-- .assets_item -->
+                                    <div class="assets_item assets_item_nft">
+                                        <a href="./wallet_nft_view.htm">
+                                            <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                            <p><b>NFTs</b><span>27</span></p>
+                                        </a>
+                                    </div><!-- .assets_item -->
+                                </div><!-- .panels_contents -->
+                            </div><!-- #assets -->
+
+                            <div id="activity">
+                                <div class="panels_contents match_height">
+                                    <div class="activity_item">
+                                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                        <p><b>Receive</b><span>From : 0x281…8ds9</span><span>July 23, 2022 at 11:30</span></p>
+                                        <p><b>0.000 PMW</b><span>$0.00</span></p>
+                                    </div><!-- .activity_item -->
+                                    <div class="activity_item">
+                                        <figure><img src="../images/sub/nft/logo-pmw.svg" alt=""></figure>
+                                        <p><b>Send</b><span>To : 0x281…8ds9</span><span>July 23, 2022 at 10:30</span></p>
+                                        <p><b>0.000 PSCT</b><span>~000PMW</span></p>
+                                    </div><!-- .activity_item -->
+                                </div><!-- .panels_contents -->
+                            </div><!-- #activity -->
+                        </div><!-- .tabs_panels -->
+                    </div><!-- .wallet_tab_list -->
+                    <p class="help">Need Help? <a href="#">Contact AuroraHunt Support</a></p>
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

@@ -1,0 +1,4 @@
+[2023-03-03 19:49:36] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0
+{"result":"0","msg":"Default required parameter not passed."}
+[2023-03-03 19:49:40] BILLING - SourceIP : 34.80.134.81, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, item_id : 1001, cash : 30
+{"result":"0","msg":"HTTP Status Code - 400, Failure."}

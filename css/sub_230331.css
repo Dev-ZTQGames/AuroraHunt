@@ -1,0 +1,1005 @@
+@charset "utf-8";
+/*
+ * File       : sub.css
+ * SUMMARY:
+ * 01) GLOBAL
+ * 02) LOGIN
+ */
+ 
+ 
+ /* **************************************** *
+ * GLOBAL
+ * **************************************** */
+.ad_banner {background:#222;color:#fff;text-align:center;border-radius:8rem;overflow:hidden;display: table; margin:0 auto;}
+.ad_banner img {width:100%; display:block;}
+/*.ad_728x90 {width:728rem; height:90rem;}
+.ad_320_480 {width:320rem; height:480rem;}
+.ad_1200_672 {width:1200rem; height:627rem;}
+.ad_1200_150 {width:1200rem; height:150rem;} 
+.ad_banner .sample_text {font-size: 40rem;font-weight:600;display: table-cell;vertical-align: middle;}*/
+
+.sub_tab_menu { width:100%; text-align:center;position: absolute;bottom: 18rem;left: 50%;transform: translateX(-50%);z-index: 100;}
+.sub_tab_menu li {display:inline-block;margin: 0 25rem;}
+.sub_tab_menu li a {font-size: 18rem;color:#fff; font-weight: 500;display: block; position:relative;}
+.sub_tab_menu li.active a:after {width:100%; height:2rem; background:#fff; content:''; display:block; position:absolute; bottom:-16rem;}
+
+.tab_menu {text-align:center; font-size:0; margin-bottom:60rem;}
+.tab_menu li {display:inline-block;margin:0 10rem;}
+.tab_menu li a,
+.tab_menu li button {padding:8rem 30rem 10rem; font-size: 17rem; color:#aaa; background:transparent;  border:2rem solid #666; border-radius:30rem;}
+.tab_menu li.active a,
+.tab_menu li.active button {color:#fff; background:#a023c4; border-color:#a023c4; display:block;}
+
+.has_cash_box {padding:50rem;background:#252525;text-align: center;font-size:0;border-radius: 8rem;}
+.has_cash_box .tit {font-size: 30rem;color:#fff;font-weight:500;display:inline-block;vertical-align:middle;position:relative;}
+.has_cash_box .cash {font-size: 18rem;color:#fff;display:inline-block;vertical-align:middle;position:relative;padding-left: 20rem;margin-left: 20rem;}
+.has_cash_box .cash:before {width:1rem;height: 35rem;background:#444;content:'';display: block;position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
+.has_cash_box .cash span {margin-left:10rem; font-size: 30rem; font-weight:600; color:#a023c4;}
+.has_cash_box + .dot_info {margin-top:15rem;}
+/* .cocash_box .tit:before {font-family: 'aurora-font';content: '\e90c';font-size: 35rem;font-weight:normal;color: #fff;margin-right: 15rem;display: inline-block;vertical-align: middle;margin-top: -8rem;} */
+.cocash_box .tit:before { display:inline-block; vertical-align:middle; margin-right:10rem; content :''; width: 66rem; height:52rem; background:url(../images/sub/ah_cash.png) no-repeat; background-size:100% auto;}
+.gamecash_box .tit:before {font-family: 'aurora-font';content: '\e90d';font-size: 35rem;font-weight:normal;color: #fff;margin-right: 15rem;display: inline-block;vertical-align: middle;margin-top: -8rem;}
+.wondercash_box .tit:before {font-family: 'aurora-font';content: '\e90b';font-size: 35rem;font-weight:normal;color: #fff;margin-right: 15rem;display: inline-block;vertical-align: middle;margin-top: -8rem;}
+
+.has_cash_box_wrap {font-size:0; margin:0 -1% 0;}
+.has_cash_box_wrap > .has_cash_box {width:48%; margin:0 1%; display:inline-block; vertical-align:top;}
+
+.dot_info {}
+.dot_info li {margin-bottom:5rem;padding-left:12rem;font-size: 15rem; color:#999; letter-spacing:-0.025em; position:relative;}
+.dot_info li:before {width:5rem; height:5rem; background:#aaa; border-radius:50%; content:''; display:block; position:absolute; left:0; top:9rem;}
+.dot_info li span.white {color:#fff;}
+html.ios .dot_info li:before {top:9rem;}
+
+.num_info {counter-reset: item;}
+.num_info li {position: relative;font-size: 15rem;line-height: 1.75;color: #999;letter-spacing: -0.025em;padding-left: 15rem;counter-increment: item;}
+.num_info li:before {text-align: center; font-size: 15rem; content: counter(item)".";display: block;position: absolute;top:7rem;left: 0;background:none; line-height:1;}
+
+.process_btn_wrap + .ad_banner {margin-top:100rem;}
+
+
+/* **************************************** *
+ * LOGIN
+ * **************************************** */
+.page_login .article_header,
+.page_find_id .article_header,
+.page_find_pw .article_header {background:url(../images/sub/login_visual_bg.jpg) no-repeat; background-size:cover;}
+.page_login .article_body {overflow: hidden;}
+.page_login .wrap_narrow {max-width:900rem;}
+.login_content_left {width: 500rem; margin:0 auto;}
+.login_form_field + .valid_message_error {margin-top:15rem;}
+.login_form_wrap .form_field_item {border-bottom:1rem solid #444; margin-top:15rem;}
+.login_form_wrap .form_field_item:first-child {margin-top:0;}
+.login_form_wrap .form_input {/* border:none; background:none; padding-left: 100rem; */}
+.login_form_wrap .btn_login {margin:20rem 0 0; width: 100%; font-size: 16rem;}
+.login_form_wrap .valid_message_error + .valid_message_error {margin-top:5rem;}
+
+.login_helper {margin-top: 18rem;font-size: 0;text-align: right;}
+.login_helper li {display: inline-block;vertical-align: top;position: relative;}
+.login_helper li:after {content: '';display: block;width: 1rem;height: 13rem;position: absolute;left: 0;top: 50%;margin-top: -7rem;background: rgba(255,255,255,0.4);}
+.login_helper li:first-child:after {display: none;}
+.login_helper li a {display: block;padding: 12rem 13rem;font-size: 15rem;line-height: 1;font-weight: 600;color: #888;-webkit-transition: color .3s;transition: color .3s;}
+.login_helper li:first-child a {padding-left: 0;}
+.login_helper li:last-child a {padding-right: 0;}
+
+.social_login_list {margin-top:20rem;}
+.social_login_item { display: block; height: 50rem; font-size: 15rem; line-height: 50rem; color: #fff; border: none; border-radius: 8rem; margin-top: 10rem;}
+.social_login_item> i {float: left;width: 70rem;height: 100%;position: relative;text-align: center;}
+.social_login_item> i:before {content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;font-family: 'aurora-font';font-size: 24rem;line-height: 50rem;text-align: center;font-style: normal;color: #fff;}
+.social_login_item> i:after {content: '';display: block;width: 1rem;height:20rem;background:#fff;position: absolute;top: 50%;right: 0;margin-top: -10rem;opacity:0.3;}
+.social_login_item> span {margin-left:15rem;}
+.social_login_naver {background:#1ec700}
+.social_login_naver > i:before {content:'\e91d';font-size: 21rem;}
+.social_login_kakao {background:#f3ce00;color:#3b1e1e}
+.social_login_kakao > i:before{content:'\e91e';color:#3b1e1e}
+.social_login_kakao > i:after {background:#000; }
+.social_login_google {background:#fff; color:#111;}
+.social_login_google > i:before {background:url(../images/sub/logo-google.svg) no-repeat;background-size: 100% 100%;width: 24rem;height:25rem;margin: 0 auto;left: 50%;top:50%;transform: translate(-50%, -50%);}
+.social_login_google > i:after {background:#000;}
+.social_login_facebook {background:#1877f2}
+.social_login_facebook > i:before {content:'\e91c';}
+.social_login_apple {background:#000}
+.social_login_apple > i:before {content:'\e92a';}
+#naver_id_login, .fb_iframe_widget, #appleid-signin {display:none !important;}
+
+.page_login .ad_banner {float:right; width: calc(100% - 580rem);}
+
+
+
+/* **************************************** *
+ * REGISTER
+ * **************************************** */
+.page_register .article_header {background:url(../images/sub/register_visual_bg.jpg) no-repeat;background-size:cover;}
+.policy_wrap {margin-bottom:30rem;}
+.policy_box_wrap > .scrollbar-inner {max-height: 250rem; overflow:auto;}
+html.ie .policy_box_wrap > .scrollbar-inner {padding-right:0;}
+
+.page_register .policy_box_title {font-size:16rem; margin-bottom:0;border-bottom:none;}
+
+.form_register .form_label {width:18%;}
+.form_register .form_field_item > .form_input_wrap {width:64%;}
+.form_register .form_field_item_wrap {margin-bottom:30rem;}
+.form_register .form_basic_body {padding:50rem 80rem 0; border-bottom:none;}
+.form_register .email_wrap {width:100%;}
+
+.form_register .form_field_item_wrap.user_auth button {margin:0;}
+html[lang="en"] .form_register .form_field_item_wrap.pw_check_wrap .required label span:after {right:-38rem;}
+
+/*completed*/
+.register_completed {}
+.register_completed h3 {font-size: 26rem; color:#fff; text-align:center;}
+.register_completed h3 .icon_completed {margin-right:15rem; width:42rem; height:42rem; background:#2f9c6b; border-radius:50%; font-style:normal; display:inline-block; position:relative;}
+.register_completed h3 .icon_completed:before {font-family: 'aurora-font';content: '\e901';font-size: 17rem;font-weight:normal;color: #fff;}
+.register_completed .register_completed_msg {margin-top:20rem;font-size: 18rem; color:#fff; text-align:center;}
+.register_completed .register_completed_msg span {font-size: 18rem; color:#fff; font-weight:700;border-bottom:1rem solid #fff;}
+.register_completed .secondary_table {width:60%; margin:50rem auto 0;}
+.register_completed .secondary_table th {width:30%; }
+.register_completed .secondary_table td {width:70%;text-align: left;}
+
+.secondary_table {margin-top: 50rem;width: 100%;position: relative;border-top:2rem solid #666;table-layout: fixed;}
+.secondary_table caption {width: 1rem;height: 1rem;position: absolute;top: 0;left: 0;font-size: 0;line-height: 0;overflow: hidden;}
+.secondary_table tr {width: 100%;}
+.secondary_table th {padding: 23rem 0;position: relative;font-size: 16rem;text-align: center;font-weight: 600;color: #fff;vertical-align: middle;border-bottom: 1rem solid #444;background: #222;}
+.secondary_table th:before {content: '';display: block;width: 1rem;height: 11rem;position: absolute;top: 50%;left: 0;margin-top: -6.5rem;background: #444;}
+.secondary_table th:first-child:before {display: none;}
+.secondary_table td {padding: 20rem 30rem;font-size: 16rem;font-weight: 400;text-align: center;color: #fff;vertical-align: middle;border-bottom: 1rem solid #444;background: #1e1e1e;-webkit-transition: background 300ms;transition: background 300ms;}
+.secondary_table tr td { font-size: 15rem;}
+.secondary_table .title_wrap {width: auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;}
+.secondary_table .title_wrap * {vertical-align: middle;}
+.secondary_table .title_wrap a {font-size: 16rem; color:#666; }
+.secondary_table td.board_nothing_found {padding: 20rem 0;background: #fff;cursor: default;}
+
+/* inactive account */
+.page_inactive .article_header {background:url(../images/sub/inactive_visual_bg.jpg) no-repeat; background-size:cover;}
+
+
+/* **************************************** *
+ * GAME
+ * **************************************** */
+.page_game .article_header {background:url(../images/sub/game_visual_bg.jpg) no-repeat; background-size:cover;}
+
+/* GAME VIEW */
+.page_game_view {overflow:hidden;}
+.page_game_view:before {background: #1b1b1b;content:'';display:block;width: 100%;height: 100%;position: absolute;}
+.game_view_visual {height:600rem;margin-top: 175rem;position: relative; background:#23678d;}
+.game_view_visual_gradient_left {width: 36%;height:100%;position: absolute;left: 0;top: 0;background: linear-gradient(90deg, rgba(134,31,145,1) 0%,rgba(35,103,141,1) 100%);z-index: 10;}
+.game_view_visual_gradient_left:before {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;right: -60rem;}
+.game_view_visual_gradient_right {width: 13%;height:100%;position: absolute;right: 0;top: 0;background: linear-gradient(-90deg, rgba(134,31,145,1) 0%,rgba(35,103,141,1) 100%);z-index: 10;}
+.game_view_visual_gradient_right:before {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(-90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;left: -60rem;}
+
+/*.game_view_visual:before {width:45%;height:100%;content:'';display:block;background: linear-gradient(90deg, rgba(134,31,145,1) 0%, rgba(53,90,142,1) 75%, rgba(35,103,141,0) 100%);position: absolute;left: 0;top: 0;}
+.game_view_visual:after {width: 20%;height:100%;content:'';display:block;background: linear-gradient(-90deg, rgba(134,31,145,1) 0%, rgba(53,90,142,1) 75%, rgba(35,103,141,0) 100%);position: absolute;right: 0;top: 0;}*/
+.game_view_visual_inner {height:100%;}
+.game_view_visual_img {position: absolute;right: -80rem;top: 0; bottom:0; z-index: 0;}
+.game_view_visual_img:before {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;left: 0;top: 0;}
+.game_view_visual_img:after {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(-90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;right: 0;top: 0;}
+.game_view_visual_img figure {height:100%;}
+.game_view_visual_img figure img {height:100%; width: 100%; object-fit: cover;}
+.game_view_visual_text {display:table;width: 100%;max-width: 430rem;height: 100%;z-index: 20;position: relative;}
+.game_view_visual_text_inner {display:table-cell;vertical-align:middle;width: 60%;}
+.game_view_visual_title {font-size:40rem;font-weight:700;color:#fff;line-height: 1.3;}
+.game_view_visual_util {max-width:350rem; margin: 130rem 0 20rem; display:flex;align-items: center;}
+.platform_list {font-size:0;display: inline-block;vertical-align: middle;}
+.platform_list li { display:inline-block; vertical-align:middle}
+.platform_list li + li {margin-left: 10rem;}
+.platform_list li:before {font-family: 'aurora-font';font-weight:normal;font-size: 32rem;color:#fff;}
+.platform_list li.platform_pc:before { content:'\e92f'; font-size:36rem;}
+.platform_android:before { content:'\e930';}
+.platform_ios:before { content:'\e92a';}
+.game_rating {width:35rem;height:41rem;display: inline-block;vertical-align: middle;margin-left: 15rem;}
+.game_rating.game_rating_all {background:url(../images/sub/game/rating-all.svg) no-repeat;}
+.game_rating.game_rating_12 {background:url(../images/sub/game/rating-12.svg) no-repeat;}
+.game_rating.game_rating_15 {background:url(../images/sub/game/rating-15.svg) no-repeat;}
+.game_rating.game_rating_18 {background:url(../images/sub/game/rating-18.svg) no-repeat;}
+.game_rating.game_rating_test {background:url(../images/sub/game/rating-test.svg) no-repeat;}
+.game_rating.game_rating_exempt {background:url(../images/sub/game/rating-exempt.svg) no-repeat;}
+.game_view_visual_button {}
+.game_view_visual_button a {padding: 16rem 30rem 18rem;background:#fff;border-radius: 10rem;font-size:35rem;font-weight:700;line-height: 1.2;color:#222;display: inline-block;box-shadow: 7rem 7rem 10rem rgb(0 0 0 / 30%);}
+.game_view_visual_button span {position:relative;padding-right: 160rem;}
+.game_view_visual_button span:before {font-family: 'aurora-font';font-weight:normal;font-size: 25rem;color:#222; content:'\e92b'; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+
+.game_view_content_wrap > div + div {margin-top:50rem; padding-top:50rem; border-top:2rem solid #3c3c3c;}
+.game_view_slide {position:relative;}
+.game_view_slide .swiper-slide {width:auto; height:180rem; margin-right:20rem;}
+.game_view_slide .swiper-slide:last-child {margin-right:0;}
+.game_view_slide .swiper-slide a {height:100%;}
+.game_view_slide .swiper-slide figure {border-radius:10rem; height:100%;overflow:hidden;}
+.game_view_slide .swiper-slide figure img {display:block; max-width: 100%; max-height: 100%;}
+.game_view_slide .swiper_navigation {width:100%; height:auto;}
+.game_view_slide .swiper_navigation > button { width: 63rem; height: 63rem; background: #fff; border-radius: 50%;box-shadow: 0 7rem 4rem rgba(0,0,0,0.46);}
+.game_view_slide .swiper_navigation > button.swiper-button-prev {left:-32rem;}
+.game_view_slide .swiper_navigation > button.swiper-button-next {right:-32rem;}
+.game_view_slide .swiper_navigation > button:after {font-size:20rem; font-weight:bold; color:#959595; text-shadow:none;}
+.game_view_slide .swiper_navigation > button.swiper-button-prev:after {content:'\e903'; margin-right:3rem; }
+.game_view_slide .swiper_navigation > button.swiper-button-next:after {content:'\e904'; margin-left:3rem;}
+.game_view_slide .swiper-button-next.swiper-button-disabled, .game_view_slide .swiper-button-prev.swiper-button-disabled {display:none;}
+.game_view_contact .game_view_field_list {margin:30rem 0 0}
+.game_view_contact .game_view_field_list li { margin:0;}
+.game_view_contact .game_view_field_list li + li { margin-top:36rem;}
+
+
+.game_view_intro {position:relative; padding-bottom:30rem; margin-top:65rem;}
+.game_view_title {font-size:25rem;font-weight:700; line-height: 1.2;color:#fff;position: relative;}
+.game_view_intro_button {border:none;background: none;padding: 5rem;margin-left: 10rem;position: absolute;top: 50%;transform: translateY(-50%);}
+.game_view_intro_button:before {background:url(../images/sub/game/button-plus.svg);content:'';display:block;width: 24rem;height: 24rem;}
+.game_view_intro_desc {margin-top:30rem;font-size:15rem; line-height: 1.6; height: 95rem; color:#fff; text-overflow: ellipsis; overflow: hidden; word-break: break-word; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;}
+.game_view_intro_desc:after {content:'…'; display:block; position:absolute; bottom:0; }
+.game_view_intro_desc p + p {margin-top:20rem;}
+
+.game_view_intro_popup .mfp-container {}
+.game_view_intro_popup .mfp-content {max-width:860rem;}
+#game_view_intro_popup {padding: 30rem 20rem 30rem 40rem;background:#fff;border-radius:10rem;}
+#game_view_intro_popup .popup_header {margin-right:60rem; border-bottom: 1rem solid #959595;padding-bottom: 20rem;font-size:40rem;font-weight:700;line-height:1.3;color:#1284c3;letter-spacing:-0.025em;}
+#game_view_intro_popup .popup_body { padding: 25rem 0 20rem;font-size:25rem; line-height:1.45; color:#313131;letter-spacing:-0.025em;}
+#game_view_intro_popup .popup_body .scroll-wrapper {height:70vh; padding-right:60rem;}
+#game_view_intro_popup .popup_body p + p {margin-top:40rem;}
+#game_view_intro_popup .popup_body .scrollbar-inner > .scroll-element.scroll-y {width:17rem}
+#game_view_intro_popup .popup_body .scrollbar-inner > .scroll-element .scroll-bar {background-color:#1284c3; opacity:1;}
+#game_view_intro_popup .popup_body .scrollbar-inner > .scroll-element .scroll-element_track {background-color:#eee; opacity:1;}
+#game_view_intro_popup button.mfp-close {right:15rem; top:15rem;}
+
+.game_view_hashtag { font-size: 0; margin:80rem -6rem -6rem;}
+.game_view_hashtag li {display:inline-block;vertical-align:middle;padding: 5rem 40rem 7rem;font-size:15rem;color:#fff;border: 1rem solid #fff;border-radius: 30rem; margin:6rem;}
+.game_view_hashtag li span {display:block;}
+
+.video-container {position:relative;width: 1030rem;height: 100%;background:#000;pointer-events: none;position: absolute;right: -80rem;top: 0;}
+.video-container:before {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;left: 0;top: 0;}
+.video-container:after {height:100%;width: 60rem;content:'';display:block;background: linear-gradient(-90deg, rgba(35,103,141,1) 0%,rgba(35,103,141,0) 100%);position: absolute;right: 0;top: 0;}
+.video__scroll-arrow {width:46rem; height:41rem; background:url(../images/sub/scroll-arrow.svg) no-repeat;position: absolute;bottom: 30rem;left: 50%;transform: translateX(-50%); z-index:100;}
+.video-container__inner{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;z-index:1;}
+.video-container__inner iframe {position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%;border: 0 none;z-index:1;}
+.video-youtube {position:absolute; z-index: 1; width: 100%; height: 100%; overflow: hidden; background: #000;}
+.video-width {position: absolute;width: 100%;height: 100%;left: -9999px;right: -9999px;margin: auto;}
+.video-aspect {position: absolute;width: 100%;height: 0;top: -9999px;bottom: -9999px;margin: auto;/* padding-bottom: 56.25%; */ padding-top:60%; overflow: hidden;}
+.video-make-height {position: absolute;top: 0;right: 0;bottom: 0;left: 0;}
+.video-hide-controls {box-sizing: content-box;position: relative;height: 100%;width: 100%;/* padding: 55px 97.7777px; */ padding: 55px 50px; top: -55px;left: -97.7777px;}
+
+.game_view_field_list {font-size:0;margin: 10rem -5rem -20rem;}
+.game_view_field_list li { position:relative; padding-left:15rem; margin:18rem 5rem;}
+.game_view_field_list li:before {width:4rem; height:100%; background:#b057b9; content:''; display:block; position:absolute; left:0; }
+.game_view_field_list li b {display:block;font-size:20rem;font-weight: 400;color:#fff;line-height: 1;}
+.game_view_field_list li span {display:block;font-size:20rem;font-weight: 400;color:#626262;line-height: 1.2;margin-top: 5rem;}
+.game_view_info li {display:inline-block; width:calc(25% - 10rem);}
+
+
+
+/* **************************************** *
+ * NFT
+ * **************************************** *
+ /* game - nft */
+.game_view_title_wrap { display: flex;}
+.nft_shop_button {font-size:15rem;color:#b057b9;border:1rem solid #b057b9;padding: 2rem 10rem;border-radius: 30rem;margin-left: auto;}
+.nft_shop_button span {padding-right: 40rem;position: relative;}
+.nft_shop_button span:after { font-family: 'aurora-font';font-weight:normal;font-size: 11rem;color:#b057b9; content:'\e908'; display:block; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+html.ios .nft_shop_button {padding-top:1rem; padding-bottom:3rem;}
+
+.nft_list_container {margin-top:30rem;}
+.nft_item {background: linear-gradient(145deg, rgba(134,31,145,1) 0%, rgba(115,131,191,1) 44%, rgba(49,176,196,1) 61%, rgba(35,104,142,1) 100%);border-radius: 10rem;padding: 20rem;position: relative;}
+.nft_item button, .nft_item a {z-index:10;}
+.nft_item .nft_item_link {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index:0}
+.nft_item .row2 {display:flex;justify-content: space-between; margin:0 -5rem;}
+.nft_item .row2 > li {margin: 0 5rem;}
+.nft_item figure {margin-bottom:5rem;background:#fff;border-radius: 8rem;height: auto;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);overflow:hidden;}
+.nft_item figure img {width:100%; height: 100%; object-fit: cover; display:block;}
+.nft_item_tit {font-size:20rem;font-weight:700;color:#fff;margin-bottom: 5rem;white-space: nowrap;overflow: hidden; text-overflow: ellipsis;}
+.nft_item_tit br {display:none}
+.nft_item_name {flex-grow: 1;position: relative;border:1rem solid #fff;border-radius:30rem;padding: 6rem 10rem 7rem;font-size:20rem;line-height: 1;font-weight:700;color:#fff;background: none;box-shadow: 0 4rem 1rem rgb(0 0 0 / 15%);white-space: nowrap;overflow: hidden; text-overflow: ellipsis;}
+.nft_item_name:before {display:block;content:'';position:absolute;top: 2rem;left: 0;width: 100%;height: 100%;border-radius: 30rem;box-shadow: inset 0 3rem 1rem rgb(0 0 0 / 15%);}
+.nft_item_wish {flex-shrink: 0;width: 35rem;height: 35rem;}
+.nft_item_wish button {position: relative;border-radius: 50%;background: #fff;width: 35rem;height: 35rem;border:none;display: block;width: 100%;height: 100%;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_item_wish button:before {font-family: 'aurora-font';font-weight:normal;font-size: 17rem;color: #a6a8ab;content: '\e937';display:block;position:absolute;left: 50%;top:50%;transform: translate(-50%, -50%);}
+.nft_item_wish.active button:before {color:#ff6b6b;}
+.nft_item_price {background:#fff;border-radius: 8rem;padding:10rem 0;margin: 10rem 0 0; display: flex; justify-content: space-between;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_item_price li {flex-grow: 1; margin:0; padding:0 10rem;}
+.nft_item_price li + li { border-left:2rem solid #d7d7d7;}
+.nft_item_price b {font-size:15rem; font-weight:400; color:#aaa;line-height: 1;}
+.nft_item_price p {font-size:0; margin-top:5rem;}
+.nft_item_price p i {margin-right:4rem; width:21rem; height:21rem; border-radius:50%; overflow:hidden; display: inline-block; vertical-align: middle;}
+.nft_item_price p i img { width: 100%; height: 100%; display:block; }
+.nft_item_price p span { font-size:20rem;font-weight:700;line-height: 1;color:#535353; vertical-align: middle;}
+.nft_item .nft_item_button {margin-top:10rem;}
+.nft_item_cart {flex-shrink: 0; width: 38px;}
+.nft_item_cart button {position: relative;border-radius: 8rem;background: #1b1b1b;border:none;display: block;width: 38rem;height: 38rem;padding: 0;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_item_cart button:before {font-family: 'aurora-font';font-weight:normal;font-size: 22rem;color: #fff;content: '\e936';display:block;position:absolute;left: 50%;top:50%;transform: translate(-50%, -50%);}
+.nft_item_buy {flex-grow: 1;}
+.nft_item_buy button {position: relative;border-radius: 8rem;background: #1b1b1b;font-size: 20rem;font-weight: 700;line-height: 1;color: #fff;border:none;display: block;width: 100%;height: 38rem;padding: 2rem 20rem 6rem;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_list_slide {position:relative; }
+.nft_list_slide .swiper_navigation {width:100%; height:auto;}
+.nft_list_slide .swiper_navigation > button { width: 63rem; height: 63rem; background: #fff; border-radius: 50%;box-shadow: 0 7rem 4rem rgba(0,0,0,0.46);}
+.nft_list_slide .swiper_navigation > button.swiper-button-prev {left:-32rem;}
+.nft_list_slide .swiper_navigation > button.swiper-button-next {right:-32rem;}
+.nft_list_slide .swiper_navigation > button:after {font-size:20rem; font-weight:bold; color:#959595; text-shadow:none;}
+.nft_list_slide .swiper_navigation > button.swiper-button-prev:after {content:'\e903'; margin-right:3rem; }
+.nft_list_slide .swiper_navigation > button.swiper-button-next:after {content:'\e904'; margin-left:3rem;}
+.nft_list_slide .swiper-button-next.swiper-button-disabled {opacity:1;}
+.nft_list_slide .swiper-button-prev.swiper-button-disabled {display:none;}
+.nft_list_slide .swiper-button-next.swiper-button-disabled {cursor: pointer; pointer-events: auto;}
+
+.game_view_nft_popup .mfp-content {max-width:893rem;margin:30rem auto;}
+.game_view_nft_popup button.mfp-arrow.mfp-arrow-left {left:-80rem}
+.game_view_nft_popup button.mfp-arrow.mfp-arrow-right {right:-80rem}
+.nft_popup {padding: 20rem 25rem 25rem 25rem;background: #eee;border-radius:10rem;}
+.nft_popup .popup_header {font-size:0; border-bottom: 1rem solid #959595;padding-bottom: 15rem;font-size: 35rem;font-weight:700;line-height: 1.2;color: #313131;letter-spacing:-0.025em;}
+.nft_popup .popup_header i {margin-right:8rem; display:inline-block; vertical-align:middle; width:41rem; height:41rem; border-radius:50%; overflow:hidden;}
+.nft_popup .popup_header i img {display:block; width:100%;}
+.nft_popup .popup_header p {line-height:1;display:inline-block; vertical-align:middle;}
+.nft_popup .popup_body {padding: 25rem 0 0;font-size:25rem;line-height:1.45;color:#313131;letter-spacing:-0.025em;}
+.nft_popup .popup_body .scroll-wrapper {height:70vh; padding-right:60rem;}
+.nft_popup .popup_body p + p {margin-top:40rem;}
+.nft_popup .popup_body .scrollbar-inner > .scroll-element.scroll-y {width:17rem}
+.nft_popup .popup_body .scrollbar-inner > .scroll-element .scroll-bar {background-color:#1284c3; opacity:1;}
+.nft_popup .popup_body .scrollbar-inner > .scroll-element .scroll-element_track {background-color:#eee; opacity:1;}
+.nft_popup button.mfp-close {right: 25rem;top: 20rem;width: 39rem;height: 39rem;}
+
+.nft_contents > div + div {padding-top: 30rem;margin-top: 30rem;border-top: 1rem solid #959595;}
+.nft_info_wrap {display:flex;align-items: center;}
+.nft_info_wrap .nft_img {width: 328rem;position: relative;}
+.nft_info_wrap .nft_img figure {height:100%;border-radius: 10rem;overflow:hidden;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_info_wrap .nft_img figure img {display:block;width:100%; height: 100%; object-fit: cover;}
+.nft_info_wrap .nft_img .nft_img_expand {position:absolute;right:10rem;top:10rem;width: 29rem;height: 29rem;background:#fff;padding: 0;border:1rem solid #313131;}
+.nft_info_wrap .nft_img .nft_img_expand:before {display:block;font-family: 'aurora-font';content: '\e931';font-size: 22rem;font-weight:normal; color:#313131; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.nft_info_wrap .nft_info {width: calc(100% - 348rem);margin-left:20rem;}
+.nft_info_top {position:relative; }
+.nft_info_top h2 {font-size:35rem;font-weight:700;color:#b057b9;margin-bottom: 20rem; padding-right:100rem;}
+.nft_info_top .nft_info_util {position: absolute;right: 0;top: 0;display: flex; align-items: center; }
+.nft_info_top .nft_info_util li {position: relative; line-height:1;}
+.nft_info_top .nft_info_util li + li {margin-left: 15rem;}
+.nft_info_top .nft_info_util li button {padding: 0;border: none;position: relative;}
+.nft_info_top .nft_info_wish button {width:35rem;height:35rem;background:#fff;border-radius:50%;}
+.nft_info_top .nft_info_wish button:before {font-family: 'aurora-font';font-weight:normal;font-size: 17rem;line-height: 1;color: #a6a8ab;content: '\e937';display:block;position:absolute;left: 50%;top:50%;transform: translate(-50%, -50%);}
+.nft_info_top .nft_info_wish.active button:before {color:#ff6b6b;}
+.nft_info_top .nft_info_refresh button {width:28rem; height:31rem;background:none;}
+.nft_info_top .nft_info_refresh button:before  {font-family: 'aurora-font';font-weight:normal;font-size: 31rem;line-height: 1;color: #313131;background:none;content: '\e932';display:block;position:absolute;left: 50%;top:50%;transform: translate(-50%, -50%);}
+.nft_info_wrap .nft_info_basic {width:100%;font-size: 0;}
+.nft_info_wrap .nft_info_basic li {display:inline-block; width:50%;}
+.nft_info_wrap .nft_info_basic span { font-size:20rem; font-weight:300;color:#aaa;}
+.nft_info_wrap .nft_info_basic p {font-size:20rem; font-weight:500;color:#313131;}
+.nft_info_wrap .nft_price {margin-top:20rem;}
+.nft_info_wrap .nft_price > p {font-size:20rem;font-weight:300;color:#aaa;margin-bottom: 8rem;}
+.nft_info_wrap .nft_price > ul {display:flex; justify-content: space-between; margin:0 -4rem;}
+.nft_info_wrap .nft_price > ul > li {position: relative;text-align: right;flex: 1;margin: 0 4rem;background:#fff;border-radius: 6rem;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_info_wrap .nft_button {font-size:0;display: flex;justify-content: space-between;margin: 34rem -4rem 0;}
+.nft_info_wrap .nft_button button {border:none;border-radius: 6rem;background:#313131;font-size:20rem;font-weight:700;color:#fff;flex: 1;margin: 0 4rem;padding: 10rem;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_info_wrap .nft_button .sold_out {width: 100%;text-align: center;border-radius: 6rem;background:#a0a0a0;padding: 10rem;font-size:20rem;font-weight:700;color:#fff;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+
+.nft_custom_radio {display: inline-block;width:100%;padding: 32rem 10rem 5rem 53rem;cursor: pointer;font-size: 15rem;letter-spacing:-0.025em;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;color: #313131;}
+.nft_custom_radio input { position: absolute; opacity: 0; cursor: pointer; }
+.nft_custom_radio .checkmark {position: absolute;top: 5rem;left: 5rem;height: 23rem;width: 23rem;background-color: #e5e5e5;border-radius: 4rem;}
+.nft_custom_radio:hover input ~ .checkmark {border-color: #ccc;}
+.nft_custom_radio input:checked ~ .checkmark {border-color: #fff;}
+.nft_custom_radio .checkmark:after { content: ""; position: absolute; display: none; }
+.nft_custom_radio input:checked ~ .checkmark:after {display: block;}
+.nft_custom_radio .checkmark:after {width: 26rem;height: 26rem;background: url(../images/sub/nft/check.svg) no-repeat;border-radius: 50%;color:#fff;content: '';left: calc(50% + 4rem);top: calc(50% + -4rem);transform: translate(-50%,-50%);}
+.nft_custom_radio i {width:17rem;height:17rem;display: inline-block;vertical-align: middle;margin-right: 5rem;}
+.nft_custom_radio i img {display:block; width:100%;}
+
+.nft_custom_radio input:disabled + span {background: #898989;}
+.nft_custom_radio input:disabled + span:before, .nft_custom_radio input:disabled:checked + span:before {background: #898989;}
+.nft_custom_radio input:disabled + span:before, .nft_custom_radio input:disabled:checked + span:before {background: #898989;}
+.nft_custom_radio input:disabled + span:after {border-color: #bbb;}
+
+.nft_info_wrap .nft_price.sold_out > ul > li {background:#a0a0a0;}
+.nft_info_wrap .nft_price.sold_out .nft_custom_radio {color:#fff; pointer-events: none;}
+.nft_info_wrap .nft_price.sold_out .nft_custom_radio i img {filter: grayscale(100%);}
+
+.nft_contents h3 {margin-bottom: 15rem;font-size:25rem;font-weight:700;line-height: 1.2;}
+.nft_contents h3 span {display:inline-block;vertical-align: middle;margin-top: -2rem;margin-left: 3rem;text-indent: -1rem;text-align:center;width:20rem;height:20rem;font-size:15rem;font-weight: 300;line-height: 20rem;background:#313131;border-radius: 3rem;color:#fff;}
+.nft_desc p {height:86rem;font-size:20rem;color:#313131;line-height: 1.4;word-break: break-word; text-overflow: ellipsis; overflow: hidden; word-break: break-word; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;}
+.nft_desc.more p {height:auto; -webkit-line-clamp: inherit;}
+.nft_desc_more {display:block; padding:0;border:none;background:none;font-size:20rem;font-weight: 300;color:#313131;line-height: 1.4;}
+.nft_prop_list {display:flex;justify-content: space-between; margin:0 -4rem;}
+.nft_prop_list li {text-align:center;flex: 1;margin: 0 4rem;padding: 13rem 10rem;background:#fff;border-radius: 6rem;box-shadow: 0 4rem 1rem rgb(0 0 0 / 25%);}
+.nft_prop_list li p {display:block;font-size:15rem;line-height: 1.2;color:#313131}
+.nft_prop_list li b {display:block;margin: 5rem 0;font-size:20rem;font-weight:700;line-height: 1.3;color:#b057b9}
+.nft_prop_list li span {display:block;font-size:15rem;font-weight:300;line-height: 1.2;color:#aaa}
+
+/* nft game list */
+.page_nft_game_list .article_body {margin-top:180rem;overflow:hidden;}
+.page_nft_game_list .content_top {display:flex; align-items: center; margin-bottom:30rem;}
+.page_nft_game_list .content_top h2 {font-size:35rem; font-weight:700; color:#fff;}
+.nft-search__field {position:relative;margin-left:auto;height: 100%;width: 430rem;font-size: 20rem;background: #fff;border: none;border-radius: 30rem;padding: 5rem 5rem 7rem 45rem;}
+.nft-search__label {width: 100%;display: block;}
+.nft-search__label input {border:none;background: none;font-size:20rem;line-height: 1;padding:0;}
+.nft-search__label input::-webkit-input-placeholder{font-size: 20rem; color:#aaa; font-weight:300;}
+.nft-search__label input::-moz-placeholder{font-size: 20rem; color:#aaa; font-weight:300;}
+.nft-search__label input:-ms-input-placeholder {font-size: 20rem; color:#aaa; font-weight:300;}
+.nft-search__submit {width: 33rem;height: 33rem;border: none;background:url(../images/sub/nft/nft-search.svg);border-radius:50%;position:absolute;left:5rem;top:50%;transform:translateY(-50%);}
+.nft_game_list { margin:-25rem; font-size:0; }
+.nft_game_list .nft_item {display:inline-block; width:calc(25% - 50rem); margin:25rem; padding:0; box-shadow: 18rem 7rem 18rem rgb(0 0 0 / 20%);}
+.nft_game_list .nft_item a {padding:20rem; display:block;}
+.nft_game_list .nft_item figure {height:auto; margin-bottom:10rem; overflow:hidden;}
+.nft_game_list .nft_item figure img {width:100%; height: 100%; object-fit: cover; display:block;}
+
+/* nft game view */
+.nft_game_view_visual {margin-top: 175rem; position: relative;}
+.nft_game_view_visual .visual_bg img {display:block; width:100%; height:100%; object-fit:cover;}
+.nft_game_view_visual .visual_bg img.visual-mob {display:none;}
+.nft_game_view_visual .visual_logo {width:194rem;height:194rem;border-radius:8rem;overflow:hidden;position: absolute;bottom: -55rem;left: 0;box-shadow: 0 10rem 18rem rgba(0,0,0,0.60);}
+.nft_game_view_visual .visual_logo img {display:block; width:100%;}
+
+.ntf_game_tit a {font-size:30rem;font-weight:700;line-height: 1;color:#fff;display: inline-block;}
+.ntf_game_tit span {position:relative;padding-right: 46rem;display: block;}
+.ntf_game_tit span:before {display: block;width:27rem;height:27rem;background:#fff;border-radius:50%;font-family: 'aurora-font';content: '\e908';font-size: 10rem;font-weight:normal;line-height: 28rem;text-align: center;color: #aaa;position: absolute;right: 0;top: calc(50% + 1rem);transform: translateY(-50%);}
+.ntf_game_info_wrap {display:flex;justify-content: space-between;align-items: center;}
+.ntf_game_info_left {flex-shrink: 0;width: 62%;margin-top: 25rem;}
+.nft_game_created { font-size:20rem; color:#626262;}
+.nft_game_created span { color:#fff;}
+.nft_game_desc p {height: 140rem;font-size:20rem;color:#626262;word-break: break-word;margin-top: 20rem;line-height: 1.4;word-break: break-word;text-overflow: ellipsis;overflow: hidden;word-break: break-word;display: -webkit-box;-webkit-line-clamp: 7;-webkit-box-orient: vertical;}
+.nft_game_desc.more p {height:auto; -webkit-line-clamp: inherit;}
+.ntf_game_info_left .nft_desc_more {color:#fff;}
+.ntf_game_info_left .nft_desc_more span {display:block;}
+.nft_game_info_right {background:#fff;border-radius:10rem;padding: 10rem 20rem;flex-shrink: 0;width: 32%;}
+.nft_game_info_right li {display:flex;padding: 10rem 0;font-size:20rem;font-weight:700;line-height: 1.2;justify-content: space-between;}
+.nft_game_info_right li + li {border-top:2rem solid #ccc;}
+.nft_game_info_right li > span {color:#313131;}
+.nft_game_info_right li p {color:#b057b9;}
+.nft_game_info_right li i {width: 24rem;height: 24rem;display: inline-block;vertical-align: middle;margin-right: 5rem;margin-top: -2rem;}
+.nft_game_info_right i img {display:block; width:100%;}
+
+.nft_game_view_list_wrap {display:flex; border-top:2rem solid #3c3c3c; padding-top:50rem; margin-top:50rem;}
+.nft_game_filter {flex-shrink: 0;width: 25%;padding-right: 3%;margin-right: 3%;border-right:2rem solid #3c3c3c;}
+.nft_game_filter_title span {border: 1rem solid #707070;border-radius:30rem;padding: 4rem 20rem 6rem;width: 100%;font-size: 20rem;color: #fff;display: block;position: relative;}
+.nft_game_filter_title span:after {font-family: 'aurora-font';content: '\e933';font-size: 22rem;font-weight:normal;color: #fff;display: block;position: absolute;right: 20rem;top: 50%;transform: translateY(-50%);}
+.nft_game_filter_list {margin-top: 10rem;}
+.nft_game_filter_item {}
+.nft_game_filter_item + .nft_game_filter_item {border-top:2rem solid #434343;}
+.nft_game_filter_button {position: relative;background:none;padding: 25rem 15rem;border:none;color:#fff;font-size:20rem;font-weight: 600;display: block;width: 100%;text-align: left;}
+.nft_game_filter_button span {}
+.nft_game_filter_button span:after {font-family: 'aurora-font';content: '\e925';font-size: 18rem;font-weight:normal;color: #fff;position: absolute;right: 17rem;top: 50%;transform: translateY(-50%);}
+.filter_content {margin-top: 0;padding-left: 15rem;padding-right: 15rem;padding-bottom: 25rem;}
+.filter_content li {font-size:20rem; color:#707070;}
+.filter_content li + li {margin-top:6rem}
+.filter_content input {border:none;background:#fff;border-radius:4rem;padding: 6rem 5rem;font-size: 20rem;}
+.filter_content input::-webkit-input-placeholder {font-size: 20rem;}
+.filter_content input::-moz-placeholder {font-size: 20rem;}
+.filter_content input:-ms-input-placeholder {font-size: 20rem;}
+.filter_price_input {display: flex;justify-content: space-between;align-items: center;font-size: 20rem;color: #707070;}
+.filter_price_input input {flex-shrink: 0;width: 38%;}
+.filter_price_input > span {}
+.filter_price_apply {width:100%;background:#b057b9;padding: 1rem 10rem 6rem;margin-top: 15rem;border: none;text-align: center;font-size:20rem;line-height: 1.4;color: #fff;border-radius: 4rem;}
+.nft_custom_checkbox {display: block;position: relative;cursor: pointer;font-size: 20rem;letter-spacing:-0.025em;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;color: #707070;}
+.nft_custom_checkbox input { position: absolute; opacity: 0; cursor: pointer; }
+.nft_custom_checkbox .checkmark {position: absolute;top: 0;right: 0;height: 24rem;width: 24rem;background-color: transparent;border: 3rem solid #fff;border-radius: 4rem;}
+.nft_custom_checkbox:hover input ~ .checkmark {border-color: #fff;}
+.nft_custom_checkbox input:checked ~ .checkmark {}
+.nft_custom_checkbox .checkmark:after { content: ""; position: absolute; display: none; }
+.nft_custom_checkbox input:checked ~ .checkmark:after { display: block; }
+.nft_custom_checkbox .checkmark:after {font-family: 'aurora-font';font-size: 12rem;font-weight: normal;color:#fff;content:'\e901';left: 50%;top: 50%;transform: translate(-50%,-50%);}
+.filter_popup {display:none;}
+
+.nft_game_view_list{flex-shrink: 0;width: 72%; overflow:hidden;}
+.nft_game_view_list_top {display:flex;}
+.nft_game_view_list_top .nft-search__field {width:65%;}
+.nft_game_list {position:relative;}
+.nft_item_list {margin: 13rem -17rem -17rem; font-size:0;}
+.nft_item_list .nft_item { display: inline-block; width: calc(33.33% - 34rem); margin: 17rem;box-shadow: 18rem 7rem 18rem rgb(0 0 0 / 20%);}
+.nft_game_sorting {width: 304rem}
+.nft_game_sorting .selectric {border-radius: 30rem;background: none;height: 40rem;border: 1rem solid #656565;}
+.nft_game_sorting .selectric .label {line-height: 36rem;height: 40rem;color: #fff;font-size: 20rem;font-weight: 300;}
+.nft_game_sorting .selectric .button { height: 38rem; width: 38rem;}
+.nft_game_sorting .selectric .button:after {color: #fff;font-size: 16rem;font-weight: normal;}
+.nft_game_sorting .selectric-items {border-radius: 20rem;overflow: hidden;border: 1rem solid #656565;padding: 5rem 15rem;background: #1b1b1b;margin-top: 5rem;}
+.nft_game_sorting .selectric-items li {color: #fff;font-size: 20rem;font-weight: 300;background:#1b1b1b;border-top: none;padding: 8rem 0;}
+.nft_game_sorting .selectric-items li + li {border-top: 2rem solid #484848;}
+.nft_filter_button {display:none;}
+
+/* nft view */
+.page_nft_view .article_body {margin-top:180rem;}
+.page_nft_view .nft_info_wrap .nft_img {width:401rem; height:401rem;}
+.page_nft_view .nft_info_game_name {display:flex;align-items: center; margin-bottom:20rem; font-size:0; font-size: 35rem;font-weight:700;line-height: 1.2;color: #fff; padding-right:100rem;}
+.page_nft_view .nft_info_game_name i {flex-shrink: 0;margin-right:8rem; display:inline-block; vertical-align:middle; width:41rem; height:41rem; border-radius:50%; overflow:hidden;}
+.page_nft_view .nft_info_game_name img {display:block; width:100%;}
+.page_nft_view .nft_info_game_name span {line-height:1;display:inline-block; vertical-align:middle;}
+.page_nft_view .nft_info_nft_name {font-size: 35rem; font-weight: 700; color: #b057b9; margin-bottom: 19rem;}
+.page_nft_view .nft_info_wrap .nft_price > ul  {margin: 0 -16rem;}
+.page_nft_view .nft_info_wrap .nft_price > ul > li {margin: 0 16rem;}
+.page_nft_view .nft_custom_radio { padding: 10rem 15rem 11rem 0; font-size: 20rem;}
+.page_nft_view .nft_custom_radio .checkmark { top: 50%; left: 8rem; height: 34rem; width: 34rem; transform: translateY(-50%);}
+.page_nft_view .nft_custom_radio .checkmark:after { width: 40rem; height: 40rem;}
+.page_nft_view .nft_info_wrap .nft_button {margin-left:-15rem; margin-right:-15rem;}
+.page_nft_view .nft_info_wrap .nft_button button {background:#b057b9; margin:0 15rem;}
+.page_nft_view .nft_info_wrap .nft_button .sold_out { margin:0 15rem;}
+.page_nft_view .nft_info_wrap .nft_info_basic p {color:#fff;}
+.page_nft_view .nft_info_top .nft_info_refresh button:before {color:#fff;}
+.page_nft_view .nft_contents h3 {color:#fff;}
+.page_nft_view .nft_desc p {color:#fff;}
+.page_nft_view .nft_contents h3 span {color:#313131; background:#fff;}
+.page_nft_view .nft_desc_more {color:#959595;}
+.page_nft_view .nft_prop_list {margin: 0 -10rem;}
+.page_nft_view .nft_prop_list li {margin: 0 10rem;}
+
+.nft_detail_list {font-size:0;margin: 10rem 0 -20rem;}
+.nft_detail_list li {position:relative;padding: 15rem 0;display: flex;align-items: center;}
+.nft_detail_list li + li {border-top:1rem solid #313131;}
+.nft_detail_list li h4:before {width:4rem; height:100%; background:#b057b9; content:''; display:block; position:absolute; left:0; }
+.nft_detail_list li h4 {position: relative;display:block;padding-right:15rem;font-size:20rem;font-weight: 300;color:#fff;line-height: 1;padding-left: 15rem;flex-shrink: 0;width: 20%;}
+.nft_detail_list li .nft_detail_content {display:block;font-size:20rem;font-weight: 300;color: #fff;line-height: 1.2;margin-top: 5rem;width: 80%;}
+.nft_detail_blockchain i {display: inline-block; vertical-align:middle; width: 20rem; height: 23rem; margin-right: 5rem;}
+.nft_detail_blockchain i img {display:block;max-width: 100%; max-height:100%;}
+.nft_detail_blockchain span { vertical-align:middle;}
+.nft_detail_address .nft_detail_content > p {display:flex;}
+.nft_detail_address a {border:1rem solid #b057b9;border-radius:30rem;color:#b057b9;padding: 4rem 10rem 5rem;margin-left: auto;line-height: 1;font-weight: 400;}
+.nft_detail_address a span {position:relative; padding-right:30rem;}
+.nft_detail_address a span:after {font-family: 'aurora-font';font-size: 12rem;font-weight: normal;color:#b057b9;content: '\e908';position:absolute;right:0;top: calc(50% + 2rem);transform: translateY(-50%);}
+.nft_detail_list li.nft_detail_history {align-items: baseline;}
+.nft_detail_history p {display:flex;background:#fff;border-radius:30rem;padding: 2rem 13rem 4rem;color:#313131;}
+.nft_detail_history p + p {margin-top:10rem;}
+.nft_detail_history i {font-style:normal;font-weight: 500;color:#0000ff;margin-left: 10rem;}
+.nft_detail_history .date {color:#aaa;margin-left:auto;}
+html.ios .nft_detail_address a span:after {top:50%;}
+
+/* **************************************** *
+ * CHARGE
+ * **************************************** */
+.page_charge .article_header {background:url(../images/sub/charge_visual_bg.jpg) no-repeat; background-size:cover;}
+
+.form_charge {margin:50rem 0;}
+.form_charge .form_field_item {padding: 50rem 0;border-bottom:1rem solid #444;font-size: 0;}
+.form_charge .form_label,
+.form_charge .label_item { width: 20%; font-size: 22rem;color:#fff; font-weight: 600; display:inline-block; vertical-align:middle; }
+.form_charge .custom_radio {margin:10rem; margin-right:40rem}
+.form_charge .custom_radio:last-child {margin-right:0rem}
+.form_charge .input_item {display: inline-block;vertical-align: middle;width: 80%;font-size: 18rem;color:#fff;}
+.form_charge .custom_checkbox_wrap {margin:-10rem;}
+.form_charge .custom_radio_btn {margin: 10rem;}
+.form_charge .custom_radio_btn:last-child {margin-right:0;}
+.charge_price_total .input_item > span {color:#a023c4; font-size: 30rem; font-weight:700; margin-right:4rem;}
+
+.charge_guide {margin-top:30rem;padding:30rem 0;background:#252525;border-radius:8rem;font-size: 0;}
+.charge_guide_item {margin-bottom:30rem;}
+.charge_guide_item:last-child {margin-bottom:0;}
+.charge_guide h3 {width: 20%;text-align: center;font-size: 18rem;color:#fff;letter-spacing:-0.025em;display: inline-block;vertical-align: middle;}
+.charge_guide .red {color:#d74022}
+.charge_guide p { rem;: 15rem; line-height: 1.75; color: #999; letter-spacing: -0.025em;}
+.charge_guide_list { width: 80%; display: inline-block; vertical-align: middle;}
+.charge_guide_list > ul { display: inline-block; vertical-align: top; margin-right: 50rem;}
+.charge_guide_list > ul:last-child {margin-right:0;}
+.wonder_guide {padding:30rem 50rem;}
+.wonder_guide h3 {width:100%; display:block; text-align:left; margin-bottom:20rem;}
+.wonder_guide .charge_guide_list {width:100%; display:block;}
+.wonder_guide .charge_guide_list > ul {margin-right:0;}
+.wonder_guide .num_info li {margin-bottom:10rem;}
+
+.form_charge_price .form_input_wrap,
+.coupon_num .form_input_wrap {width:auto;}
+.form_charge_price input,
+.coupon_num input {max-width:320rem; display:inline-block;}
+.form_charge_price button,
+.coupon_num button {max-width:85rem; display:inline-block;}
+
+.charge_info .label_item {vertical-align:top;}
+.charge_info .form_field_item { border-bottom:none; padding:20rem 0}
+.charge_info .form_field_item_wrap:first-child .form_field_item {padding-top:0;}
+.charge_info .form_label {font-size: 16rem; color:#eee;}
+.charge_info .custom_checkbox_wrap {margin-bottom:10rem;}
+.charge_info textarea {display: inline-block;width: 100%;height:240rem;margin: 0;padding: 15rem 25rem 15rem;vertical-align: middle;font-size: 15rem;font-weight: 400;line-height: 1.66;color: #fff;background: transparent;border: 1rem solid #444;border-radius: 8rem;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-transition: border 300ms;transition: border 300ms;text-overflow: ellipsis;resize:none;}
+.charge_info #gift_id { max-width:320rem;}
+.charge_info .id_confirm_button {background:#444; }
+.gift_price_input input {border:none; border-bottom:1rem solid #444; border-radius:0; display:inline-block; max-width:50%;}
+.gift_price_input p {font-size: 16rem; color:#fff; display:inline-block; margin-left:10rem;}
+.gift_price_input p  > span {color:#d74022;}
+
+.form_charge .coupon_list {border-bottom:none;}
+.coupon_list .label_item { vertical-align:top;}
+.coupon_list .basic_table {margin-top:0;}
+.coupon_list .basic_table th:last-child {width:32%;}
+
+/* free charge */
+.free_charge_list .label_item {vertical-align:top;}
+.free_charge_list .input_item {font-size:0;margin: -15rem;}
+.free_charge_item {display:inline-block;vertical-align: top;max-width:100rem;margin: 15rem;}
+.free_charge_item figure {border-radius:8rem; overflow:hidden;}
+.free_charge_item figure img {width:100%;}
+.free_charge_item a {display:block;background:#2e9eb7;border-radius:8rem;font-size: 14rem;color:#fff;text-align:center;padding:10rem;margin-top: 10rem;margin-bottom: 10rem;}
+.free_charge_item .free_charge_name {font-size: 14rem;color:#ccc;letter-spacing:-0.025em;line-height: 1.4;word-break: keep-all;text-align: center;}
+
+
+/* **************************************** *
+ * SERVICE CENTER
+ * **************************************** */
+.page_cs .article_header {background:url(../images/sub/cs_visual_bg.jpg) no-repeat; background-size:cover;}
+
+/* sub main */
+.quick_menu {font-size:0; margin:-15rem;}
+.quick_menu_item {padding: 40rem 30rem 40rem 30rem;border:1rem solid #444;border-radius:8rem;width: calc(33.33% - 30rem); margin:15rem; display: inline-block;vertical-align:top;}
+.quick_menu_item h3 {font-size: 17rem;line-height: 1.3;color:#fff;letter-spacing:-0.025em;text-align: center;width: 30%;height:100%;display: inline-block;vertical-align: middle;position: relative;}
+.quick_menu_item h3 span {display:block;position: relative;left: 50%;transform: translateX(-50%);}
+.quick_menu_item h3 span:before {width:70rem;height:70rem;line-height: 70rem;background:#252525;border-radius:50%;position:relative;font-family: 'aurora-font';content: '\e912';font-size: 30rem;font-weight:normal;color: #fff;display: block;text-align: center;margin: 0 auto 6rem;}
+.quick_menu_item ul {display:inline-block;vertical-align: top;width: calc(70% - 20rem); margin-left:20rem;}
+.quick_menu_item li {border-bottom: 1rem solid #333;}
+.quick_menu_item li:last-child {border-bottom:none;}
+.quick_menu_item li a {padding: 15rem 0;font-size: 16rem;color:#fff;letter-spacing:-0.025em;display: block;}
+.quick_menu_item li a span {position: relative;padding-right: 20rem;}
+.quick_menu_item li a span:after {font-family: 'aurora-font';font-size: 10rem;font-weight:normal;color: #aaa;content: '\e904';position: absolute;right:0;top: calc(50% + 1rem);transform: translate(-50%,-50%);}
+.quick_menu_news h3 span:before {content: '\e914';}
+.quick_menu_certification h3 span:before {content: '\e916';}
+.quick_menu_develope h3 span:before {content: '\e918';}
+
+.cs_recommend_help h3 {margin-bottom:40rem;font-size: 26rem; color:#fff; letter-spacing:-0.025em;}
+.cs_recommend_help h3 span {position: relative;vertical-align: middle;}
+.cs_recommend_help h3 span:before {margin-right:10rem;font-family: 'aurora-font';font-size: 32rem;font-weight:normal;color: #fff;content: '\e910';vertical-align: middle;display: inline-block;margin-top: -5rem;}
+
+.cs_help_search_wrap {margin:60rem 0;background:#222;border-radius:8rem;padding: 40rem 50rem 40rem 0;font-size: 0;}
+.cs_help_search_wrap h3 {width: 20%;font-size: 20rem;color:#fff;font-weight:600;letter-spacing:-0.025em;display:inline-block;vertical-align: middle;text-align: center;}
+.cs_help_search_wrap .search_field {width: 80%;float:none;display: inline-block;vertical-align: middle;}
+.cs_help_search_wrap .select_filter {width:25%;display: inline-block;vertical-align: middle;}
+.cs_help_search_wrap .search_input_wrap {width: calc(75% - 10rem);display: inline-block;vertical-align: middle;margin-left: 10rem;}
+.cs_help_search_wrap .search_label {width:75%;display: inline-block;}
+.cs_help_search_wrap .search_input {width: 100%;}
+.cs_help_search_wrap .search_button {width: calc(25% - 10rem);}
+
+.cs_recommend_list {margin:0 -15rem;font-size: 0;}
+.cs_recommend_first {padding-left: 50rem;border-bottom:1rem solid #444;padding-bottom:30rem;margin-bottom: 30rem;}
+.cs_recommend_first b {font-size: 20rem; color:#fff; letter-spacing:-0.025em;font-weight:500;}
+.cs_recommend_first b span {width:36rem; height:36rem; border-radius:50%;font-size: 16rem; text-align:center; line-height:34rem; background:#a023c4; position:absolute; left:0;}
+.cs_recommend_first p {margin-top:20rem;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;word-wrap:break-word;line-height: 1.7em;height: 3.4em;}
+.cs_recommend_first a {color: #bbb;font-size: 16rem;}
+.cs_recommend_item {width:calc(50% - 30rem);display:inline-block;vertical-align: top;font-size:0;margin:0 15rem;position: relative;}
+.cs_recommend_item ul {}
+.cs_recommend_item li {margin-bottom:12rem;padding-left:20rem; position:relative;}
+.cs_recommend_item li:before {width:5rem; height:5rem; background:#aaa; border-radius:50%; content:''; display:block; position:absolute; left:0; top:11rem;}
+.cs_recommend_item li a {max-width:100%;color: #bbb;font-size: 16rem; display:inline-block; border-bottom:1rem solid transparent; text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden; webkit-transition: border .3s;transition: border .3s}
+.cs_recommend_item li a:hover {border-bottom-color:#bbb}
+
+/* help */
+.cs_help_head {background:#222;border-radius:8rem;padding: 50rem 40rem;}
+.cs_help_util {font-size:0;display: inline-block;}
+.cs_help_util a {margin:0; margin-right:10rem;}
+.cs_help_util a:last-child {margin-right:0;}
+.cs_help_head .search_field {width: 55%;}
+.cs_help_head .search_input_wrap {display: inline-block;vertical-align: top;width: calc(75% - 10rem);margin-left: 10rem;}
+.cs_help_head .select {width:25%;display: inline-block;vertical-align: top;}
+.cs_help_head .search_label {width: 75%;display: inline-block;}
+.cs_help_head .search_input {width:100%}
+.cs_help_head .search_button {width: calc(25% - 10rem); min-width:auto;}
+
+.ce_help_body {font-size:0}
+
+.recommend_help {margin-top: 50rem;display: inline-block;vertical-align: top;width: 30%;}
+.recommend_help h3 {margin-bottom:20rem;font-size: 20rem; color:#fff; letter-spacing:-0.025em;}
+.recommend_help h3 span {position: relative;vertical-align: middle;}
+.recommend_help h3 span:before {margin-right:10rem;font-family: 'aurora-font';font-size: 22rem;font-weight:normal;color: #fff;content: '\e910';vertical-align: middle;display: inline-block;margin-top: -5rem;}
+.recommend_help_list {}
+.recommend_help_list li {}
+.recommend_help_list li a {font-size: 16rem;color:#fff;display: block;padding: 15rem 15rem 17rem;border-bottom: 1rem solid #444;}
+.recommend_help_list li:first-child a {border-top:1rem solid #444;}
+
+.cs_hlep_content_wrap {margin-top: 102rem;display: inline-block;vertical-align:top;width: calc(70% - 50rem);margin-left: 50rem;}
+.cs_hlep_list li a {font-size: 18rem;color:#fff;display: block;padding: 20rem 20rem 22rem;border-bottom: 1rem solid #444;}
+.cs_hlep_list li:first-child a {border-top: 2rem solid #444;}
+.cs_hlep_list li.no_list {font-size: 18rem;color:#fff;display: block;padding: 20rem 20rem 22rem;border-top: 2rem solid #444; border-bottom: 1rem solid #444;}
+
+.cs_hlep_veiw {}
+.cs_hlep_veiw h3 {padding:30rem; font-size: 17rem; color:#fff;border-top:2rem solid #444; border-bottom:1rem solid #444; letter-spacing:-0.025em;}
+.cs_hlep_veiw .help_veiw_content {padding:50rem 30rem; font-size: 16rem; color:#ddd; border-bottom:1rem solid #444;}
+.cs_hlep_veiw .help_veiw_content a {color:#ddd;}
+.help_veiw_control { width:100%; margin-top:30rem; margin-bottom:30rem; overflow:hidden;}
+.help_veiw_control a {float:right; margin:0;}
+
+/* inquiry */
+.form_inquiry .filed_item,
+.form_inquiry .form_field_item_wrap { margin-bottom:30rem;} 
+.form_inquiry .form_label {font-size: 18rem; vertical-align:top;}
+.form_inquiry .custom_checkbox_wrap {margin:-10rem;}
+.form_inquiry .custom_radio {margin:10rem;}
+.form_inquiry .custom_radio:last-child {margin-right:0;}
+.form_inquiry textarea.form_input {height:240rem}
+
+.form_file .btn_file { position: relative; overflow: hidden; margin:0;}
+.form_file .multi_file[type=file] { position: absolute; top: 0; right: 0; min-width: 100%; min-height: 100%; text-align: right; filter: alpha(opacity=0); opacity: 0; outline: none; background: white; cursor: inherit; display: block;}
+.form_file .info_guide {margin:10rem 0 0; font-size: 15rem; color:#888;}
+.form_file .file_list > .MultiFile-label {margin-bottom:10rem;}
+.form_file .file_list > .MultiFile-label:first-child {margin-top:20rem;}
+.form_file .file_list > .MultiFile-label:last-child {margin-bottom:0;}
+.form_file .file_list > .MultiFile-label > span {display:inline-block; vertical-align:middle; background:#222;border-radius:8rem;width: calc(100% - 80rem); margin-right:10rem;padding: 13rem 25rem 16rem;}
+.form_file .MultiFile-title {font-size: 15rem; color:#888; text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:100%;overflow:hidden; display:block;}
+.form_file .MultiFile-remove {background:#444; width: 70rem; height: 50rem; line-height: 50rem; display: inline-block; vertical-align: middle; font-weight: 600; font-size: 15rem; color: #fff; letter-spacing: -0.025em; text-align: center; border: none; cursor: pointer;border-radius: 8rem;-webkit-transition: all 300ms;transition: all 300ms;}
+
+/* notice view */
+.notice_view_header {text-align: center; padding-bottom: 30rem; border-bottom: 3rem solid #333;}
+.notice_view_header h2 {font-size: 27rem;color: #fff;letter-spacing:-0.025em;}
+.notice_view_info {margin-top:20rem; font-size: 0;}
+.notice_view_info:last-child {font-size: 0;}
+.notice_view_info li {padding: 0 12rem;font-size: 15rem;color: #888;display:inline-block;vertical-align:middle;position:relative;}
+.notice_view_info li:after {width:1rem;height:12rem;background: #444;content:'';display:block;position:absolute;right:0;top:7rem;}
+.notice_view_info li:last-child:after{ display:none;}
+.notice_view_body{}
+.notice_view_content {padding: 50rem 0 50rem;color: #aaa;line-height:1.75;max-width: 750rem;margin: 0 auto; font-size:16rem;}
+.notice_view_content img {margin-bottom:20rem; width:100%;}
+.notice_control {margin-top:30rem; padding-top:40rem; border-top: 1rem solid #333; text-align:center;}
+
+/* event */
+.event_list {font-size:0; margin:-15rem;}
+.event_list .event_item {width:calc(33.33% - 30rem); display:inline-block; margin:15rem;}
+
+/* certify */
+.certify_select_list {font-size:0; margin:0 -15rem 30rem; text-align:center;}
+.certify_select_item {width:calc(50% - 30rem);margin:0 15rem;padding: 50rem 0 0;display:inline-block;vertical-align:top;text-align:center;border:3rem solid #444;border-radius:8rem;background:#222;}
+.certify_select_item .certify_desc {font-size: 16rem;color:#aaa;letter-spacing:-0.025em;margin-top: 30rem;}
+.certify_select_item.certify_self {padding-bottom:0;}
+.certify_select_item:before {font-family: 'aurora-font';font-size: 50rem;font-weight:normal;color: #fff;}
+.certify_select_item.certify_email:before {content: '\e91a';}
+.certify_select_item.certify_self:before {content: '\e916';}
+.certify_select_item .basic_btn {margin-top:30rem; width:148rem; height:50rem; line-height:49rem; border-radius:30rem; font-size: 14rem;}
+.certify_select_item .valid_message_error {background:#1b1b1b;padding: 15rem;margin-top: 35rem; border-radius:0 0 8rem 8rem;}
+
+.certify_email_01{max-width:640rem; margin:0 auto;}
+.certify_email_01 h3 {font-size: 20rem; color:#fff; letter-spacing:-0.025em; text-align:center;}
+.certify_email_01 .secondary_table {margin:40rem auto 30rem;}
+.certify_email_01 .secondary_table th {padding:20rem;}
+.certify_email_01 .secondary_table tr td {text-align:left;}
+.certify_email_01 .certify_email_guide > * {display:inline-block;vertical-align: middle;margin: 0;}
+.certify_email_01 .guide_message_info {position:relative;}
+.certify_email_01 .guide_message_info .icon {position:absolute; top:2rem}
+.certify_email_01 .guide_message_info span {padding-left:25rem;display:block;}
+.certify_email_01 .basic_btn {font-size: 15rem;border-radius:30rem;width: 180rem;height: 45rem;line-height: 45rem;margin: 0;float: right;}
+.certify_email_01 + .dot_info {margin-top:60rem; padding-top:60rem;border-top:1rem solid #333;}
+
+.certify_email_completed {text-align:center;}
+.certify_email_completed h3 {margin-bottom: 40rem;font-size: 26rem;color:#fff;letter-spacing:-0.025em;}
+.certify_email_completed h3 .icon_completed {margin-right:15rem;width:42rem;height:42rem;background:#2f9c6b;border-radius:50%;font-style:normal;display:inline-block;position:relative;line-height: normal;}
+.certify_email_completed h3 .icon_completed:before {font-family: 'aurora-font';content: '\e901';font-size: 17rem;font-weight:normal;/* line-height: 34rem; */color: #fff;}
+.certify_email_completed_desc { padding:50rem 0; border-top:1rem solid #444; border-bottom:1rem solid #444; }
+.certify_email_completed_desc p {font-size:16rem;color:#ccc;letter-spacing:-0.025em;line-height: 1.8;}
+.certify_email_completed_desc p > b {color:#fff;}
+.certify_email_completed + .dot_info {margin-top:50rem;}
+
+/* a-hunt */
+.basic_table_wrap .select_language {float:left;}
+
+
+
+/* **************************************** *
+ * MYPAGE
+ * **************************************** */
+ /* sub main */
+.quick_menu_info h3 span:before {content: '\e917'; font-size:25rem}
+.quick_menu_game h3 span:before {content: '\e911';}
+.quick_menu_cash h3 span:before {content: '\e913';}
+.quick_menu_inquiry h3 span:before {content: '\e912';}
+.quick_menu_charge h3 span:before {content: '\e90f';}
+.quick_menu_gamecash h3 span:before {content: '\e90e';}
+
+.page_mypage .quick_menu_item li {width:50%;display: inline-block;}
+.page_mypage .quick_menu_item li:last-child,
+.page_mypage .quick_menu_item li:nth-last-child(2) {border-bottom:none;}
+.page_mypage .quick_menu_item.quick_menu_cash li:nth-last-child(2),
+.page_mypage .quick_menu_item.quick_menu_charge li:nth-last-child(2) {border-bottom:1rem solid #333;}
+
+.page_mypage .article_header {background:url(../images/sub/mypage_visual_bg.jpg) no-repeat; background-size:cover;}
+.form_mypage {margin-bottom:80rem;}
+.form_mypage .filed_item,
+.form_mypage .form_field_item_wrap { margin-bottom:30rem;}
+.form_mypage .filed_item:last-child,
+.form_mypage .form_field_item_wrap:last-child { margin-bottom:0;}
+.form_mypage .label_item { font-size: 16rem; color:#fff; display:inline-block; width:20%;}
+.form_mypage .input_item { font-size: 16rem; color:#aaa; display:inline-block; width:80%;}
+.form_mypage .email_wrap .form_field_item > label {width:20%;}
+.form_mypage .form_field_item .email_form {width:80%;}
+
+.form_mypage .form_field_item.form_field_email_vertify .input_email_vertify {padding-right:15rem;}
+
+
+
+.form_mypage .form_field_item .valid_message_confirm,
+.form_mypage .form_field_item .valid_message_error,
+.form_mypage .form_field_item .guide_message_info {margin-left: 20%;}
+
+.quick_menu_game  {padding-right:20rem;}
+.quick_menu_game .my_game_wrap {width:70%; padding:0 35rem; display:inline-block; vertical-align:top; position:relative;}
+.quick_menu_game .my_game figure { width:90rem; height:90rem; margin:0 auto; border-radius:50%; overflow:hidden;}
+.quick_menu_game .my_game figure img {width:100%;}
+.quick_menu_game .my_game .swiper-wrapper {}
+.quick_menu_game .my_game_wrap .swiper-button-next, 
+.quick_menu_game .my_game_wrap .swiper-button-prev {background:none;}
+.quick_menu_game .my_game_wrap .swiper-button-prev {left:0; line-height:44rem;}
+.quick_menu_game .my_game_wrap .swiper-button-prev:after {font-family: 'aurora-font'; font-size:17rem; color:#fff; content:'\e903';}
+.quick_menu_game .my_game_wrap .swiper-button-next {right:0; line-height:44rem;}
+.quick_menu_game .my_game_wrap .swiper-button-next:after {font-family: 'aurora-font';  font-size:17rem; color:#fff; content:'\e904';}
+.quick_menu_game .my_game .my_game_item {text-align:center; }
+.quick_menu_game .my_game .my_game_item p {color:#aaa; font-size:14rem; line-height:1.3; margin-top:7rem;}
+
+.quick_menu_inquiry ul {vertical-align:middle;}
+
+.quick_menu_charge li:first-child { padding-bottom:15rem; font-size:18rem; color:#fff;font-weight:600; display:block; width:100%;}
+.quick_menu_charge li:first-child span {font-size:25rem; color:#a023c4;}
+.quick_menu_charge li.free_charge a,
+.quick_menu_charge li.free_charge a span:after{color:#d74022;}
+
+.page_mypage .quick_menu_gamecash li { display:block; margin-bottom:13rem; width:100%; background:#252525;border-bottom:none; border-radius:8rem;}
+.page_mypage .quick_menu_gamecash li:last-child {margin-bottom:0;}
+.page_mypage .quick_menu_gamecash li a {padding:17rem;}
+.page_mypage .quick_menu_gamecash li a p {position:relative;}
+.page_mypage .quick_menu_gamecash li a span {position: absolute;right: 0;padding-right: 27rem;}
+.page_mypage .quick_menu_gamecash li a span:after {width: 18rem;height: 18rem;line-height: 18rem;color: #fff;font-size: 10rem;text-align: center;content:'\e91f';background: #a023c4;border-radius: 50%;display: block;top: 50%;margin-top: -8rem;transform: none;}
+.page_mypage .quick_menu_gamecash li a b {color:#a023c4;}
+
+/* mypage - modify */
+.form_ahd .form_input_wrap {width:40%;}
+.form_ahd .phone_form {width:80%;}
+.form_ahd .form_basic_head .custom_checkbox_wrap {position:absolute; right:0; top:6rem;}
+
+.guide_tooltip {display:inline-block;position: relative;}
+.guide_tooltip .guide_tooltip_btn {margin-top:-5rem; padding: 0;display: inline-block;vertical-align: middle;border:none;background:none;cursor:pointer;}
+.guide_tooltip .guide_tooltip_btn span {width:16rem;height:16rem;line-height: 16rem;background:#888;border-radius:50%;display: inline-block;vertical-align: middle;position:relative;}
+.guide_tooltip .guide_tooltip_btn span:before {width: 100%;font-family: 'aurora-font';font-size: 10rem;font-weight: normal;color:#fff;content: '\e90a';display:block;transform: scale(0.7);}
+#guide_tooltip_box {width: 280rem;padding: 7rem 25rem 10rem 15rem;background: #363636;border-radius: 6rem;position:absolute;left: 6rem;top: -50rem;z-index: 50;opacity:0;visibility:hidden;-webkit-transition: opacity .3s, visibility .3s;transition: opacity .3s, visibility .3s;}
+#guide_tooltip_box:after {border-top: 7rem solid transparent;border-left: 7rem solid #363636;border-bottom: 7rem solid transparent;border-radius: 10rem;content:'';display:block;position:absolute;bottom: -5rem;left:0;}
+#guide_tooltip_box span {font-size: 13rem;font-weight:normal;color:#fff;letter-spacing: -0.025em;line-height: 1.4;display: block;}
+#guide_tooltip_box .btn_tooltip_close {position:absolute;right:2rem;top: 2rem;border:none;background:none;cursor: pointer;}
+#guide_tooltip_box .btn_tooltip_close:before {font-family: 'aurora-font';content: '\e921';font-size: 13rem;font-weight:normal;color: #fff;}
+.guide_tooltip .guide_tooltip_btn.active + #guide_tooltip_box  {opacity:1; visibility:visible;}
+
+.form_ahd .form_basic_body {display:none;}
+
+.form_mypage .btn_withdraw {margin-top:10rem; text-align:right;}
+.form_mypage .btn_withdraw a { font-size:16rem; color:#ccc; }
+
+/* mypage - pw,id */
+.form_pw .form_input_wrap {width:40%;}
+.form_id .form_input_wrap {width:40%;}
+.form_pw .form_field_item {text-align:center;}
+.pw_confirm .form_input_wrap {width:40%;}
+.pw_change .form_input_wrap {width:40%;}
+
+/* mypage - withdraw */
+.withdraw_notice {margin-bottom:70rem;}
+.withdraw_notice h3 { font-size: 22rem; font-weight: 600; letter-spacing:-0.025em; color:#fff;}
+.withdraw_notice_box {margin-top:15rem; padding:35rem 50rem; background:#252525; border-radius:8rem;}
+.withdraw_notice_box > p {font-size: 18rem; color:#d74022}
+.withdraw_notice_box ul {margin-top:25rem;}
+.withdraw_notice_box li {margin-bottom:5rem;padding-left:12rem;font-size: 15rem; color:#999; letter-spacing:-0.025em; position:relative;}
+.withdraw_notice_box li:before {width:5rem; height:5rem; background:#aaa; border-radius:50%; content:''; display:block; position:absolute; left:0; top:8rem;}
+
+.withdraw_completed {text-align:center;}
+.withdraw_completed h3 {margin-bottom:40rem; font-size: 26rem; color:#fff;  letter-spacing:-0.025em;}
+.withdraw_completed h3 .icon_completed {margin-right:15rem; width:42rem; height:42rem; background:#2f9c6b; border-radius:50%; font-style:normal; display:inline-block; position:relative;}
+.withdraw_completed h3 .icon_completed:before {font-family: 'aurora-font';content: '\e901';font-size: 17rem;font-weight:normal;color: #fff;}
+.withdraw_desc { padding:50rem 0; border-top:1rem solid #444; border-bottom:1rem solid #444;}
+.withdraw_desc p {color:#ccc; letter-spacing:-0.025em; font-size:18rem;}
+.withdraw_desc ul {margin-top:25rem;}
+.withdraw_desc li {margin-bottom:5rem;padding-left:12rem;font-size: 15rem; color:#aaa; letter-spacing:-0.025em; display:inline-block;position:relative;}
+.withdraw_desc li:before {width:5rem; height:5rem; background:#aaa; border-radius:50%; content:''; display:block; position:absolute; left:0; top:8rem;}
+.withdraw_desc li span {color:#d74022;}
+
+.form_mypage .input_item_withdraw_email {width:auto;vertical-align: middle;}
+.form_mypage .attend_check {margin-top:15rem;}
+
+/* mypage - charge */
+.has_cash_charge .has_cash_box {padding:30rem 30rem 40rem}
+.has_cash_charge .has_cash_box.gamecash_box .tit {display:block; margin-bottom:25rem;}
+.has_cash_charge .has_cash_box .cash_item_wrap {margin:-5rem; font-size:0;}
+.has_cash_charge .has_cash_box.cocash_box .cash_item_wrap {display:inline-block; margin:1rem 0 0 20rem;}
+.has_cash_charge .has_cash_box .cash {padding-left:0; margin-left:0; margin:5rem;}
+.has_cash_charge .has_cash_box .cash:before {display:none;}
+.has_cash_charge .has_cash_box.cocash_box {width:100%}
+.has_cash_charge .has_cash_box.gamecash_box {width:100%; margin-top:20rem;}
+.has_cash_charge .has_cash_box.gamecash_box button span { color:#fff; font-weight:500;font-size:16rem;}
+.has_cash_charge .has_cash_box.gamecash_box button span > b {color:#a023c4; font-size:20rem; font-weight:600;}
+.has_cash_charge .has_cash_box .cash button {background:#2f2f2f; padding:6rem 15rem 10rem; border-radius:10rem; border:none; font-size: 16rem; color:#fff; -webkit-transition: background .3s;transition: background .3s;}
+.has_cash_charge .has_cash_box .cash button:hover,
+.has_cash_charge .has_cash_box .cash.active button{background:#444;}
+.has_cash_charge .has_cash_box .cash button:hover span:before,
+.has_cash_charge .has_cash_box .cash.active button span:before {background:#666;}
+.has_cash_charge .has_cash_box .cash span {font-size:20rem; position:relative; padding-left:8rem; margin-left:8rem; }
+.has_cash_charge .has_cash_box .cash span:before {width:1rem; height:12rem; background:#444; content:''; display:block; position:absolute; left:0; top:50%; margin-top:-5rem;}
+.has_cash_charge .has_cash_box .no_item {font-size:16rem; color:#888;}
+
+/* mypage - inquiry list */
+.inquiry_list_table td.tit {text-align:left;padding: 16rem 30rem;}
+.inquiry_list_table td.tit a {color:#aaa; display:block; -webkit-transition: color .3s;transition: color .3s; word-break: break-word;}
+.inquiry_list_table td.tit a:hover {color:#fff;}
+.inquiry_list_table td.tit .icon_new {width:16rem;height:16rem;border-radius:50%;background:#d74022;display: inline-block;vertical-align: middle;margin-left: 8rem;margin-top: -2rem;text-align: center;}
+.inquiry_list_table td.tit .icon_new:before {font-size: 10rem;color:#fff;content:'N';display:block;margin-left: -1rem;}
+.inquiry_list_table td.state > span {border-radius:30rem;padding: 6rem 20rem 8rem;font-size: 14rem;color: #fff;width: 100%;display: block;max-width: 100rem;margin: 0 auto;}
+.inquiry_list_table td.state .inquiry_accepting {border: 2rem solid #666;}
+.inquiry_list_table td.state .inquiry_confirming {background: #d04933;}
+.inquiry_list_table td.state .inquiry_completed {background: #349b6a;}
+html[lang="en"] .inquiry_list_table td.state > span {max-width:100%;}
+
+/* mypage - inquiry view */
+.inquiry_view_header {position:relative;padding:30rem 40rem 32rem;border-top: 1rem solid #555;border-bottom: 1rem solid #333;}
+.inquiry_view_header .inquiry_view_title {max-width:80%; font-size:0;}
+.inquiry_view_header .inquiry_state {width: 90rem;height: 34rem;margin-right: 15rem;line-height: 32rem;font-size: 14rem;text-align:center;background:#bbb;color:#fff;border-radius:30rem;display:inline-block;vertical-align:middle;}
+.inquiry_view_header .inquiry_state.accepting {border: 2rem solid #666; background:none; line-height:28rem;}
+.inquiry_view_header .inquiry_state.complete {background: #349b6a;}
+.inquiry_view_header .inquiry_state.confirming {background: #d04933;}
+.inquiry_view_header h2 { width: calc(100% - 105rem); font-size: 27rem;color: #fff;letter-spacing:-0.025em;display:inline-block;vertical-align: middle;}
+.inquiry_view_header h2 .inquiry_secret {width:17rem;height: 19rem;margin-right: 5rem;background: url(../images/icon/icon-secret.svg) center;background-size:cover;display:inline-block;vertical-align: middle;}
+.inquiry_view_header h2 .inquiry_single_title { display:inline-block;vertical-align: top; word-break: break-word;}
+.inquiry_view_info_wrap { position: absolute; right: 40rem; top: 50%; transform: translateY(-50%);}
+.inquiry_view_info {float:left;font-size: 0;}
+.inquiry_view_info:last-child {float:right;font-size: 0;}
+.inquiry_view_info li {padding: 0 12rem;font-size: 15rem;color: #fff;display:inline-block;vertical-align:middle;position:relative;}
+.inquiry_view_info li:after {width:1rem;height:12rem;background: #444;content:'';display:block;position:absolute;right:0;top:7rem;}
+.inquiry_view_info li:last-child {padding-right:0;}
+.inquiry_view_info li:last-child:after{ display:none;}
+.inquiry_view_info li.writer { padding-left:0;}
+.inquiry_view_info li.writer span { font-weight:600;}
+.inquiry_view_info li.email { padding-right:0;}
+.inquiry_view_info li b {padding-right: 5rem;}
+.inquiry_view_content {padding: 43rem 40rem 45rem;color: #aaa;line-height:1.75; font-size:16rem; word-break: break-word;}
+.inquiry_view_body .attachment {margin-bottom: 78rem;padding-left:25rem;position:relative;}
+.inquiry_view_body .attachment:before { width:18rem; height:17rem; background:url(../images/icon/icon-attachment.svg) no-repeat left center; content:''; display:block; position:absolute; left:0; top:5rem;}
+.inquiry_view_body .attachment > a { position:relative; color:#666; -webkit-transition: 0.3s;transition: 0.3s;}
+.inquiry_view_body .attachment > a:after { width:100%; height:1rem; background: #90ca40; content:''; display:block; position:absolute; left:0; bottom:0; opacity:0}
+.inquiry_view_body .attachment > a:hover { color: #90ca40;}
+.inquiry_view_body .attachment > a:hover:after { opacity:1}
+.inquiry_answer_wrap .comment_form { border-bottom:none;}
+.inquiry_answer_wrap .comment_form:last-child {}
+.inquiry_answer_container {width: 100%;border-top: 1rem solid #444;background: #222;padding: 33rem 40rem 58rem;}
+.inquiry_answer_name {padding-right:13rem;margin-right:10rem;font-size: 16rem;font-weight:600;color: #fff;line-height: 1.65;letter-spacing:-0.01em;position:relative;}
+.inquiry_answer_name:after {width:1rem;height:12rem;background: #444;content:'';display:block;position:absolute;right:0;top:7rem;}
+.inquiry_answer_date {font-size:15rem;color: #aaa;}
+.inquiry_answer_util {float:right;font-size: 0;margin-top: 5rem;}
+.inquiry_answer_util button {padding: 0rem 12rem;background:none;border:none;cursor:pointer;position:relative;}
+.inquiry_answer_util button:before {width:1rem;height:12rem;background:#ddd;position:absolute;left:0;top: 4rem;content:'';display:block;}
+.inquiry_answer_util button:first-child:before, .inquiry_answer_util button.btn_cancel:before { display:none;} 
+.inquiry_answer_util button:last-child { padding-right:0;}
+.inquiry_answer_util button span { position:relative; color:#666;}
+.inquiry_answer_body {font-size: 16rem;color: #aaa;line-height: 1.75;letter-spacing:-0.01em;padding-top: 17rem;}
+.inquiry_control { margin-top:40rem; overflow:hidden;}
+.inquiry_control > div > a > span { position:relative;}
+.inquiry_control_left { float:left; }
+.inquiry_control_left > a { margin:0; }
+.inquiry_control_right {float:right;font-size: 0;}
+.inquiry_control_right > a:last-child {margin-right:0;}
+.inquiry_control .list_btn {background: #a023c4;border: 1rem solid #a023c4;color:#fff;}
+.inquiry_control .list_btn:hover {  background:#fff; color: #41b1e6;}
+
+.inquiry_answer_write_wrap { margin-top:60rem; padding-bottom:60rem; border-bottom:1rem solid #444; font-size:0;}
+.inquiry_answer_write_wrap textarea {display: inline-block;width: calc(100% - 160rem);height: 140rem;margin: 0;padding: 15rem 25rem 15rem;vertical-align: middle;font-size: 15rem;font-weight: 400;line-height: 1.66;color: #fff;background: transparent;border: 1rem solid #444;border-radius: 4rem;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-transition: border 300ms;transition: border 300ms;text-overflow: ellipsis;resize:none;}
+.inquiry_answer_write_wrap .btn_regist {width:140rem; height:140rem; margin-left:20rem;background:#444;border:none; border-radius:4rem; font-size: 16rem; color:#fff;vertical-align:middle;-webkit-transition: background .3s;transition: background .3s;}
+.inquiry_answer_write_wrap .btn_regist:hover {background:#555;}
+.inquiry_answer_write_wrap .btn_regist span {position:relative;}
+.inquiry_answer_write_wrap .btn_regist span:before { margin-bottom:7rem; content:'\e915';font-family:'aurora-font'; font-weight:normal; font-size: 24rem;color: #fff; display:block;}
+
+
+/* **************************************** *
+ * POLICY
+ * **************************************** */
+.page_policy .article_header {background:url(../images/sub/policy_visual_bg.jpg) no-repeat; background-size:cover;}
+
+/* **************************************** *
+ * RECRUIT
+ * **************************************** */
+.page_recruit .article_header {background:url(../images/sub/recruit_visual_bg.jpg) no-repeat; background-size:cover;}
+
+.page_recruit h3 {padding-bottom: 20rem; border-bottom: 3rem solid #ddd; font-size: 22rem; font-weight: 600; color: #fff; position: relative;}
+
+.recruit_item {padding: 50rem 0; border-bottom: 1rem solid #444; font-size: 0;}
+.recruit_item h4 {width: 20%; font-size: 22rem; color: #fff; font-weight: 600; display: inline-block; vertical-align: middle;}
+.recruit_item ul {display: inline-block; vertical-align: middle; width: 80%; counter-reset: item;}
+.recruit_item ul > li {position: relative;font-size: 16rem;line-height: 1.75;color: #aaa;letter-spacing: -0.025em;padding-left: 15rem;counter-increment: item;}
+.recruit_item ul > li:before {text-align: center; font-size: 15rem; content: counter(item)".";display: block;position: absolute;top:7rem;left: 0;background:none; line-height:1;}
+
+/* **************************************** *
+ * CONTACT US
+ * **************************************** */
+.page_contact_us .article_header {background:url(../images/sub/contactus_visual_bg.jpg) no-repeat; background-size:cover;}
+.company_intro_item {padding: 50rem 0; font-size: 0; margin-bottom:50rem;}
+.company_intro_item h3 {width: 15%; font-size: 22rem; color: #fff; font-weight: 600; display: inline-block; vertical-align: middle;}
+.company_intro_item p {width:85%;position: relative;font-size: 16rem;line-height: 1.75;color: #aaa;letter-spacing: -0.025em;padding-left: 15rem; display:inline-block;vertical-align: middle;}
+
+.company_section {}
+.company_section + .company_section {margin-top:100rem;}
+.company_location_map { height: 400rem;}
+.company_info {margin-top:30rem;}
+.company_logo {display:inline-block; vertical-align:middle; margin-right:30rem; width: 170rem; height: 61rem;}
+.company_logo img { width: 100%; height: 100%;}
+.company_section figure {display:inline-block; vertical-align:middle}
+.company_section h3 {margin-right:40rem; margin-left:15rem; font-size:18rem; line-height:1.2; color:#ccc; letter-spacing:-0.025em; display:inline-block; vertical-align:middle}
+.company_section ul { display:inline-block; vertical-align:middle}
+.company_section li + li {margin-top:10rem;}
+.company_section li h4 {font-size:17rem; color:#ddd;}
+.company_section li p { font-size:16rem; color:#aaa;}
+.company_section li .map_btn { margin-left:10rem;padding:4rem 10rem 5rem;display:inline-block; font-size:13rem; color:#fff; background:#5e5e5e; border:none;border-radius:30rem;}
+
+.contact_inquiry {padding: 80rem 0 0; font-size: 0; margin-top:80rem; border-top:1px solid #444}
+.contact_inquiry h3 {width: 20%;font-size: 22rem;color: #fff;font-weight: 600;display: inline-block;vertical-align: top; margin-top:10rem;} 
+.contact_inquiry .inquiry_wrap {display: inline-block;vertical-align: middle;width: 80%;}
+.contact_inquiry .form_field_item + .form_field_item {margin-top:30px;}
+.contact_inquiry .form_label {width:15%; font-size:18rem;}
+.contact_inquiry .form_input_wrap {width:85%;}
+.contact_inquiry textarea {display: inline-block;width: 100%;height:240rem;margin: 0;padding: 15rem 25rem 15rem;vertical-align: middle;font-size: 15rem;font-weight: 400;line-height: 1.66;color: #fff;background: transparent;border: 1rem solid #444;border-radius: 8rem;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-transition: border 300ms;transition: border 300ms;text-overflow: ellipsis;resize:none;}
+.contact_inquiry .process_btn_wrap {width:85%; float:right;}
+.contact_inquiry .process_btn_wrap:after {display:block; content:''; clear:both;}

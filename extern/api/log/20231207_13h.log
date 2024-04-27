@@ -1,0 +1,10 @@
+[2023-12-07 13:00:51] BILLING - SourceIP : 35.191.16.198, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":7700}
+[2023-12-07 13:01:10] CRYPTOOO - SourceIP : 35.191.32.226, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Spofeed|date=231207130110|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS%2BtZdghUo3dPeNSZmvPbrezdGwK1R%2F8cof%2BbTFk1bs4r9NvM9ziXxuAMBPBLHfHNuyx%2Bd%2FKQ3JmUUte%2BMsOd6oowZHyIBQ5AGkaXE6vdbpw4FugbtsE7GA%3D%3D"}
+[2023-12-07 13:01:10] API - SourceIP : 35.191.29.170, proc1: qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS+tZdghUo3dPeNSZmvPbrezdGwK1R/8cof+bTFk1bs4r9NvM9ziXxuAMBPBLHfHNuyx+d/KQ3JmUUte+MsOd6oowZHyIBQ5AGkaXE6vdbpw4FugbtsE7GA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000000","msg":"1010"}
+[2023-12-07 13:01:16] CRYPTOOO - SourceIP : 35.191.32.194, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Spofeed|date=231207130116|ip=210.59.144.44
+{"result":"1","return":"qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS%2BtZdghUo3dPeNSZmvPbrezdGwK1R%2F8cof%2BbTFk1bs4r9NvM9ziXxtYLoR%2FmquZR2HVD%2BDq6vvSZQZXMj8uM8CVNZXQhr3KT"}
+[2023-12-07 13:01:16] API - SourceIP : 35.191.13.81, proc1: qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS+tZdghUo3dPeNSZmvPbrezdGwK1R/8cof+bTFk1bs4r9NvM9ziXxtYLoR/mquZR2HVD+Dq6vvSZQZXMj8uM8CVNZXQhr3KT, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000000","msg":"1010"}

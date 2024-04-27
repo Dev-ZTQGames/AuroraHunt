@@ -1,0 +1,51 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$info = array();
+$query = "SELECT count(m_referral) FROM AccountsReferral WHERE m_login_id = '" . $_SESSION['sess_login_id'] . "'";
+$que = mysqli_query($connect, $query);
+$row = mysqli_fetch_array($que);
+$info = $row;
+
+$referral_code = str_replace('=','',base64_encode($_SESSION['sess_login_id']));
+$referral_link = "https://" . $HOST . ".aurorahunt.xyz/index.htm?r=" . $referral_code;
+?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->        
+        <?php include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['ReferralSystem']; ?></h3>
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+					<div class="filed_item">
+						 <p class="label_item"><?php echo $lang['ReferralCode']; ?></p>
+						 <p class="input_item"><?php echo str_replace('=','',base64_encode($_SESSION['sess_login_id'])); ?></p>
+					 </div><!-- .filed_item -->
+					 <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['ReferralLink']; ?></p>
+						 <div class="input_item"><?php echo $referral_link; ?> &nbsp;&nbsp;<button type="button" class="btn_round clipboard" data-clipboard-text="<?php echo $referral_link; ?>" id="clipboard-referral-link" name="clipboard-referral-link"><span>Copy</span></button><div class="clipboard_copynote"><p><?php echo $lang['CopyDone']; ?></p></div></div>
+					 </div><!-- .filed_item -->
+					 <div class="filed_item">
+						 <p class="label_item"><?php echo $lang['ReferralNumber']; ?></p>
+						 <p class="input_item"><?php echo $info[0]; ?></p>
+					 </div><!-- .filed_item -->
+				</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <button class="basic_btn basic_btn_primary" onclick="location.href='mypage_modify.htm'"><span><?php echo $lang['Edit']; ?></span></button>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

@@ -1,0 +1,46 @@
+[2022-08-28 20:21:00] API - SourceIP : 34.80.134.81, proc1: 0F++qKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa+D4X7EDAEszv1YqCEVn4KQV8sLFThzfnGTswfATLfqf6q2o5LZDYHlx18IIcXiKjzl1, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"125","msg":"1010"}
+[2022-08-28 20:29:01] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Perugia|date=220828202901|ip=210.59.144.44
+{"result":"1","return":"0F%2B%2BqKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa%2BD4X7EDAEszv1YqCEVn4KQV8lvh8Q1UjLzJzYWYBwQl7j12kJrMzkgLwBgf9ZeAYYWi"}
+[2022-08-28 20:29:01] API - SourceIP : 210.59.144.44, proc1: 0F++qKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa+D4X7EDAEszv1YqCEVn4KQV8lvh8Q1UjLzJzYWYBwQl7j12kJrMzkgLwBgf9ZeAYYWi, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"125","msg":"1010"}
+[2022-08-28 20:32:36] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q4n5V%2BBfoPGFbpWWdytRdHE%3D"}
+[2022-08-28 20:32:36] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q4n5V+BfoPGFbpWWdytRdHE=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-20"}
+[2022-08-28 20:33:30] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Perugia|date=220828203330|ip=210.59.144.44
+{"result":"1","return":"0F%2B%2BqKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa%2BD4X7EDAEszv1YqCEVn4KQV8tCVvKDjOUKgfsnM61Vrfgge6LxWvk2kBNAgnzg%2FEL1c"}
+[2022-08-28 20:33:30] API - SourceIP : 210.59.144.44, proc1: 0F++qKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa+D4X7EDAEszv1YqCEVn4KQV8tCVvKDjOUKgfsnM61Vrfgge6LxWvk2kBNAgnzg/EL1c, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"125","msg":"1010"}
+[2022-08-28 20:34:23] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru0
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2BI5pz%2BivQL5yzVFUNl9bio%3D"}
+[2022-08-28 20:34:23] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q+I5pz+ivQL5yzVFUNl9bio=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-20"}
+[2022-08-28 20:35:17] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru0
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2BI5pz%2BivQL5yzVFUNl9bio%3D"}
+[2022-08-28 20:35:17] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q+I5pz+ivQL5yzVFUNl9bio=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-20"}
+[2022-08-28 20:36:34] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru0|partner=Perugia|date=220828203634|ip=210.59.144.44
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q9YjjQ%2FLe8DhLlTYKd8jz2BFfrMNsdgPWfd9qUtYHuiC5JRQ1%2F%2BetAiRoz%2Bf3N%2FknBVY8b%2BCd8VSp0Da57C5QZU%3D"}
+[2022-08-28 20:36:34] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q9YjjQ/Le8DhLlTYKd8jz2BFfrMNsdgPWfd9qUtYHuiC5JRQ1/+etAiRoz+f3N/knBVY8b+Cd8VSp0Da57C5QZU=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","msg":"1020"}
+[2022-08-28 20:36:46] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru|partner=Perugia|date=220828203646|ip=210.59.144.44
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2FWPT5h0gDlBForWKvXAEqPoQ%2FSPb0mDQIx6%2FtyH6kkmXoewWKCVYAtnpXxlX9Ry3IhsV6%2BKVYFGPEf6lEsLX3c%3D"}
+[2022-08-28 20:36:46] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q/WPT5h0gDlBForWKvXAEqPoQ/SPb0mDQIx6/tyH6kkmXoewWKCVYAtnpXxlX9Ry3IhsV6+KVYFGPEf6lEsLX3c=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","msg":"1020"}
+[2022-08-28 20:37:14] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru|partner=Perugia
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2FWPT5h0gDlBForWKvXAEqOgJ6yoED4AEfSJ2T14FBXn"}
+[2022-08-28 20:37:14] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q/WPT5h0gDlBForWKvXAEqOgJ6yoED4AEfSJ2T14FBXn, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-30"}
+[2022-08-28 20:37:26] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru|partner=Perugia|date=220828203726
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2FWPT5h0gDlBForWKvXAEqPoQ%2FSPb0mDQIx6%2FtyH6kkmH0DS2FQWcGqcbUcL1crFYQ%3D%3D"}
+[2022-08-28 20:37:26] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q/WPT5h0gDlBForWKvXAEqPoQ/SPb0mDQIx6/tyH6kkmH0DS2FQWcGqcbUcL1crFYQ==, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","msg":"1020"}
+[2022-08-28 20:37:32] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=logout|id=neoguru|partner=Perugia|date=220828203732|ip=210.59.144.44
+{"result":"1","return":"EznKw46nNwC%2FjM6tZ3R0Q%2FWPT5h0gDlBForWKvXAEqPoQ%2FSPb0mDQIx6%2FtyH6kkmQ98J7DzXGWFwoKKQk13cMdDGLIDsSbQ18SWNAyWycl8%3D"}
+[2022-08-28 20:37:32] API - SourceIP : 210.59.144.44, proc1: EznKw46nNwC/jM6tZ3R0Q/WPT5h0gDlBForWKvXAEqPoQ/SPb0mDQIx6/tyH6kkmQ98J7DzXGWFwoKKQk13cMdDGLIDsSbQ18SWNAyWycl8=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","msg":"1020"}
+[2022-08-28 20:39:02] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=checkid|id=neoguru0|partner=Perugia|date=220828203901|ip=210.59.144.44
+{"result":"1","return":"ilcOGukKlvfd%2BBjJWmGcr6QXi3NRyxMcNpZuLlxiWjzFE2hHo2hxVfeDJTTjIIrP91GfkarC%2BQWr7tDB2OWI5d1t%2FO%2FR0hfUC028QeIkuik%3D"}
+[2022-08-28 20:39:02] API - SourceIP : 210.59.144.44, proc1: ilcOGukKlvfd+BjJWmGcr6QXi3NRyxMcNpZuLlxiWjzFE2hHo2hxVfeDJTTjIIrP91GfkarC+QWr7tDB2OWI5d1t/O/R0hfUC028QeIkuik=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","msg":"1030"}

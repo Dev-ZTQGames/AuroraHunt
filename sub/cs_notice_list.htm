@@ -1,0 +1,212 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+if($_REQUEST['select_category']){
+	switch($_REQUEST['select_category']){
+		case'0': $all = 'selected';
+		break;
+		case'1': $notice = 'selected';
+		break;
+		case'2': $update = 'selected';
+		break;
+		case'3': $event = 'selected';
+		break;
+		case'4': $check = 'selected';
+		break;
+	}
+}
+
+
+?>
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+            <!--div class="ad_banner ad_728x90"><img src="https://dummyimage.com/728x90/000/fff"></div-->
+            <div class="basic_table_wrap">
+                <div class="select select_filter">
+					<form action="cs_notice_list.htm?page=1" method="POST">
+						<label for="select_category" class="sr_only"><?php echo $lang['Category selection']; ?></label>
+						<select id="select_category" name="select_category" class="select_email selectric" onchange="this.form.submit();">
+							<option value="0" <?php echo $all; ?>><?php echo $lang['All']; ?></option>
+							<option value="1" <?php echo $notice; ?>><?php echo $lang['Ctgr_Notice']; ?></option>
+							<option value="2" <?php echo $update; ?>><?php echo $lang['Update']; ?></option>
+							<option value="3" <?php echo $event; ?>><?php echo $lang['Event']; ?></option>
+							<option value="4" <?php echo $check; ?>><?php echo $lang['Inspection']; ?></option>
+						</select>    
+					</form>
+                </div>
+				<table class="basic_table rwd_table inquiry_list_table">
+				    <caption><?php echo $lang['List_Of_Notice']; ?></caption>
+                    <colgroup>
+                        <col style="width: 15%;"/>
+                        <col style="width: *"/>
+                        <col style="width: 15%;"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><?php echo $lang['Classification']; ?></th>
+                            <th><?php echo $lang['Title_Name']; ?></th>
+                            <th><?php echo $lang['Registration_Date']; ?></th>
+                        </tr>
+                    </thead>
+				    <tbody>
+
+					<?php
+
+					if($_GET['page']){
+						$page = $_GET['page'];
+						if($page == '0'){
+							$page == '1';
+						}
+					} else {
+						$page = 1; 
+						$_GET['page'] = 1;
+					}
+
+					$list_num = 5;
+
+					$page_num = 5; 
+
+					$start = ($page - 1) * $list_num;
+
+					//$cnt = $start + 1;
+
+					$connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $DB_INFO['NAME']);
+							
+					$info = array();
+
+					if($_REQUEST['select_category']){
+
+						$count = mysqli_query($connect, "SELECT * FROM News WHERE m_type = ".$_REQUEST['select_category']." AND NOT m_status = 4");
+						$que = mysqli_query($connect, "SELECT * FROM News WHERE m_type = ".$_REQUEST['select_category']." AND NOT m_status = 4 ORDER BY m_index DESC LIMIT ".$start.",".$list_num);
+					
+					} else {
+
+						$count = mysqli_query($connect, "SELECT * FROM News WHERE NOT m_status = 4");
+						$que = mysqli_query($connect, "SELECT * FROM News WHERE NOT m_status = 4 ORDER BY m_index DESC LIMIT ".$start.",".$list_num);					
+					}
+
+					$num = mysqli_num_rows($count);
+					
+				//	$pages = ceil($num/$page_num);
+
+					$total_page = ceil($num/$list_num);
+
+				//	$total_block = ceil($total_page/$page_num);
+
+					$now_block = ceil($page / $page_num);
+
+					$s_pageNum = ($now_block - 1) * $page_num + 1;
+
+					$e_pageNum = $now_block * $page_num;
+
+					if($s_pageNum <= 0){
+						$s_pageNum = 1;
+					};
+
+					if($e_pageNum > $total_page){
+						$e_pageNum = $total_page;
+					};
+
+					if($num == 0){
+						echo '<tr class="no_list"><td colspan="3">'.$lang['Post_Not_Exist'].'</td></tr>';
+					} else {
+						while($row = mysqli_fetch_array($que)){
+
+							$info = $row; 
+							
+							switch($info['m_game_code']){
+								case 'CLWMC' : $game_name = 'Claw Machine <br/>- Catch! The Friends -';
+								break; 
+							}
+
+							switch($info['m_type']){
+								case '1' : $type = $lang['Ctgr_Notice'];
+								break;
+								case '2' : $type = $lang['Update'];
+								break;
+								case '3' : $type = $lang['Event'];
+								break;
+								case '4' : $type = $lang['Inspection'];
+								break;
+							}
+
+							$date = substr($info['m_date'],0,10);
+
+							$new = '';
+
+							$chk_date = date('Y-m-d', time());
+
+							if($chk_date == $date){
+								$new = '<span class="icon_new"><i class="sr_only">'.$lang['New_Post'].'</i></span>';
+							}
+
+							echo '<tr class="list" data-filter="'.$info['m_type'].'">
+									<td class="type">'.$type.'</td>
+									<td class="tit"><a href="cs_notice_view.htm?page='.$page.'&index='.$info['m_index'].'">'.$info['m_title'].$new.'</a></td>
+									<td class="date">'.$date.'</td>
+								  </tr>';
+						}
+					}
+					?>
+					</tbody>
+				</table>
+				<?php
+					if($num != '0'){
+				?>
+					<div class="tabe_pagination">
+						<a class="page_numbers first" href="cs_notice_list.htm?page=1&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;</a>
+					<?php
+						if($page == 1){
+					?>
+							<a class="page_numbers prev" href="cs_notice_list.htm?page=1&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;</a>
+					<?php
+						} else {
+					?>
+							<a class="page_numbers prev" href="cs_notice_list.htm?page=<?php echo ($page-1); ?>&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;&gt;</a>
+					<?php
+						}
+					?>
+					<?php
+						for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
+					?>
+							<a id="page_<?php echo $print_page; ?>" class="page page_numbers" href="cs_notice_list.htm?page=<?php echo $print_page; ?>&select_category=<?php echo $_REQUEST['select_category']; ?>"><?php echo $print_page; ?></a>
+					<?php 
+						};
+					?>	
+					<?php
+						if($page == $total_page){
+					?>
+							<a class="page_numbers next" href="cs_notice_list.htm?page=<?php echo $total_page; ?>&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;</a>
+					<?php
+						} else {
+					?>
+							<a class="page_numbers next" href="cs_notice_list.htm?page=<?php echo ($page+1); ?>&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;</a>
+					<?php
+						}
+					?>
+						<a class="page_numbers last" href="cs_notice_list.htm?page=<?php echo $total_page; ?>&select_category=<?php echo $_REQUEST['select_category']; ?>">&gt;&gt;</a>
+					</div>
+				<?php
+					}
+				?>
+			</div><!-- .gift_table_wrap -->
+			
+            
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+$(document).ready(function() {
+    $('#page_<?php echo $_GET["page"]; ?>').addClass('current');
+} );
+</script>

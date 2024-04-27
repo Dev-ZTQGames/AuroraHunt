@@ -1,0 +1,20 @@
+[2024-01-11 05:45:33] CRYPTOOO - SourceIP : 35.191.32.12, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111014532
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMLb6NbBg%2BLRNo1pch9wi65Q%3D%3D"}
+[2024-01-11 05:45:33] CRYPTOOO - SourceIP : 35.191.32.130, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111014532
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMLb6NbBg%2BLRNo1pch9wi65Q%3D%3D"}
+[2024-01-11 05:45:33] API - SourceIP : 35.191.32.9, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMLb6NbBg+LRNo1pch9wi65Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}
+[2024-01-11 05:45:33] API - SourceIP : 35.191.24.188, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMLb6NbBg+LRNo1pch9wi65Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}
+[2024-01-11 05:45:41] CRYPTOOO - SourceIP : 35.191.32.9, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111014541
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UM18zg4uagK4UbXGR3xL5l8w%3D%3D"}
+[2024-01-11 05:45:41] API - SourceIP : 35.191.32.9, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UM18zg4uagK4UbXGR3xL5l8w==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}
+[2024-01-11 05:45:52] CRYPTOOO - SourceIP : 35.191.32.9, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111014552
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMBC3zzwgZMUIKd1I2kvJUUg%3D%3D"}
+[2024-01-11 05:45:52] API - SourceIP : 35.191.32.9, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMBC3zzwgZMUIKd1I2kvJUUg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}
+[2024-01-11 05:45:54] CRYPTOOO - SourceIP : 35.191.33.2, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=240111014554
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMgLinf4LWrP0TLn20oU%2B67w%3D%3D"}
+[2024-01-11 05:45:54] API - SourceIP : 35.191.32.9, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMgLinf4LWrP0TLn20oU+67w==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"tw"}

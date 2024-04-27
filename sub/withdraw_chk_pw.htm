@@ -1,0 +1,16 @@
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
+
+$info = array();
+$password	= escape_string(trim($_REQUEST['pw']));
+$query = "SELECT login_pw,PASSWORD('".$password."') as check_pw FROM Accounts WHERE login_id='".$_COOKIE['login_id']."'";
+$que = mysqli_query($connect, $query);
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+if($info['login_pw'] == $info['check_pw']){
+	echo 'check';
+} else {
+	echo 'fail';
+}
+?>

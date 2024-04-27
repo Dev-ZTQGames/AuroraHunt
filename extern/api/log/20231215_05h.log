@@ -1,0 +1,4 @@
+[2023-12-15 05:53:43] CRYPTOOO - SourceIP : 35.191.32.176, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=watsonTest9|partner=Payletter|date=231215015342
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zMgvIkO94seZoqBRQh2BTQVE0XopTW2C4w8n6U%2F96HRNolCds9hEj4xhBLqVUOpJ5A%3D%3D"}
+[2023-12-15 05:53:43] API - SourceIP : 35.191.29.163, proc1: R+jyYDzxeatxe0LWIiJ8zMgvIkO94seZoqBRQh2BTQVE0XopTW2C4w8n6U/96HRNolCds9hEj4xhBLqVUOpJ5A==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000145","login_id":"watsonTest9","name":"EveTest","email":"evelyn.wang@petpointasia.com","lang_code":"jp"}

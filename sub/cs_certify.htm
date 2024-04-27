@@ -1,0 +1,166 @@
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+
+$result = mysqli_query($connect, "SELECT * FROM Accounts WHERE login_id='".$_SESSION['sess_login_id']."'");
+$row = mysqli_fetch_array($result);
+
+if($row['certified_day'] != ''){
+	echo '<script>location.href = "https://'.$HOST.'.aurorahunt.xyz/sub/charge_marble.htm";</script>';
+}
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://testpgapi.payletter.com/v1.0/auth/mobile/request',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "client_id":"pay_test",
+    "user_id":"test_user_id",
+    "return_url":"https://'.$HOST.'.aurorahunt.xyz/sub/charge_marble.htm",
+    "cancel_url":"https://'.$HOST.'.aurorahunt.xyz/sub/cs_certify.htm",
+    "site_url":"https://'.$HOST.'.aurorahunt.xyz/sub/cs_certify.htm",
+    "site_name":"오로라헌트"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Authorization: PLKEY MTFBNTAzNTEwNDAxQUIyMjlCQzgwNTg1MkU4MkZENDA=',
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+$online_url = explode(',',$response)[1];
+$online_url_final = explode('"',$online_url)[3];
+
+curl_close($curl);
+
+if($_REQUEST['tid']){
+	//echo "<script type='text/javascript'>opener.document.getElementById('check').value = 'y';</script>";
+	//echo "<script type='text/javascript'>window.close()</script>";
+
+	//인증성공 -> 인증정보 DB 저장
+	$tid		= escape_string(trim($_REQUEST['tid']));
+	$auth_info	= escape_string(trim($_REQUEST['auth_info']));
+	$client_id	= "pay_test";
+
+	//본인인증 결과조회
+	$curl = curl_init();
+
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "https://testpgapi.payletter.com/v1.0/auth/info/".$tid."?client_id=".$client_id."&auth_info=".$auth_info,
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => '',
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 0,
+	  CURLOPT_FOLLOWLOCATION => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => 'GET',
+	  CURLOPT_HTTPHEADER => array(
+		'Authorization: PLKEY MUI3MjM0RUExQTgyRDA1ODZGRDUyOEM4OTY2QTVCN0Y=',
+		'Content-Type: application/json'
+		),
+	));
+
+	$response = curl_exec($curl);
+
+	curl_close($curl);
+
+	if($response['tid']){
+		mysqli_query($connect, "UPDATE Accounts SET certified_day = NOW() WHERE login_id='".$_SESSION['sess_login_id']."'");
+		echo "<script type='text/javascript'>window.close();</script>";
+	}
+} 
+
+?>
+
+<script>
+var win2;
+
+function openWindow(){
+	win2 = window.open('<?php echo $online_url_final; ?>','_blank','height:800px');
+	checkChild();
+}
+
+function checkChild(){
+	if(win2.closed){
+		location.reload();
+	} else {
+		setTimeout("checkChild()",1);
+	}
+
+/*
+	if(win2.closed){
+		if(check == 'y'){
+			swal({
+				text: '인증완료',
+				buttons: {
+					confirm : {
+						text : '확인',
+						value : 'catch'
+					},
+				},
+			}).then(function(value){
+				if(value == 'catch'){
+					document.getElementById('certify_msg').innerText = '본인인증이 완료되었습니다.';
+					location.href='https://<?php echo $HOST; ?>.aurorahunt.xyz/sub/charge_marble.htm';	
+				} 
+			})					
+		} else {
+			swal({
+				text: '인증실패',
+				buttons: {
+					confirm : {
+						text : '확인',
+						value : 'catch'
+					},
+				},
+			}).then(function(value){
+				if(value == 'catch'){
+					//location.reload();
+				} 
+			})		
+		}
+	} else {
+		setTimeout("checkChild()",1);
+	}
+*/
+}
+
+</script>
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><span><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<!--? include "../includes/submenu_mypage.htm"; ?-->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+            <div class="certify_select_list">
+                <!--div class="certify_select_item certify_email">
+                    <p class="certify_desc">오로라헌트 서비스의 원활한 이용을 위해 <br/>이메일 인증을 꼭 진행해 주세요.</p>
+                    <a href="cs_certify_email_01.htm" class="basic_btn basic_btn_primary"><span>이메일 인증</span></a>
+                </div--><!-- .certify_select_item -->
+                <div class="certify_select_item certify_self">
+                    <!--p class="certify_desc"><?php echo $lang['Some_Games_Authentication']; ?></p-->
+					<p class="certify_desc" id="certify_msg">본인인증을 완료해주세요.</p>
+                    <a href="javascript:void(0);" class="basic_btn basic_btn_primary" onclick="openWindow();"><span><?php echo $lang['Authentication']; ?></span></a>
+                    <!--p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['After_Email_Verification_Is_Complete']; ?></span></p-->
+					<p class="valid_message_error"><!--i class="icon"></i><span id="valid_message_error"></span-->오로라헌트 서비스의 원활한 이용을 위해 본인 인증을 꼭 진행해 주세요.</p>
+                </div><!-- .certify_select_item -->
+            </div><!-- .certify_select_list -->
+            <!--ul class="dot_info">
+                <li>이메일은 비밀번호 찾기와 같이 본인확인이 필요한 서비스에 사용되는 중요한 정보입니다.</li>
+                <li>타인의 이메일 도용을 예방하고 부정확한 이메일 사용으로 발생할 수 있는 피해를 최소화하기 위해 이메일 인증을 완료해 주세요.</li>
+            </ul--><!-- .dot_info -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+

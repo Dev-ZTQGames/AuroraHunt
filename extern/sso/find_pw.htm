@@ -1,0 +1,215 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+?>
+<div id="container" class="page_find_pw">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Find_Password']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage form_pw">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Find_Password']; ?></h3>
+				</div><!-- .form_basic_head -->
+					<div class="form_basic_body">
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="id"><span><?php echo $lang['ID']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="hidden" id="idchk_commit" value="">
+									<input type="text" class="form_input" name="id" id="id"/>
+								</div><!-- .form_input_wrap -->
+								<!--p class="guide_message_info"><i class="icon"></i><span>8-16자리 영문+숫자 혼합이어야 하며 특수문자는 사용 불가합니다.</span></p-->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="email"><span><?php echo $lang['Email']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="hidden" id="emailchk_commit" value="">
+									<input type="text" class="form_input" name="email" id="email"/>
+								</div><!-- .form_input_wrap -->
+								<!--p class="guide_message_info"><i class="icon"></i><span>한 개의 계정당 한 개의 이메일 주소를 입력하셔야 합니다.</span></p-->
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+					</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="#" class="basic_btn basic_btn_primary" onclick="check_find_pw();"><span><?php echo $lang['Find_Password']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+
+function isValidLoginId(id) {
+	var check = /^(?=.*[a-z]|[0-9]).{5,16}$/;
+
+	if (!check.test(id))     {
+		return false;
+	}
+
+	if (id.length < 5 || id.length > 16) {
+		return false;
+	}
+
+	return true;
+};
+
+function isValidEmail(email) {
+	var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+	if(regex.test(email) == false) {
+		return false;
+	}
+
+	return true;
+};
+
+$("#id").keyup(function(){
+	$.ajax({
+	   type:"POST",        
+	   url:"login_validate_id.php",     
+	   data : ({id: $("#id").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		switch(args.trim()){
+			 case("true"):
+			  $("#idchk_commit").val("Y");
+			 break;
+			 case("none"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("short"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("long"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("bad_character"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("bad_character2"):
+			  $("#idchk_commit").val("N");
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+})
+
+$("#email").keyup(function(){
+	var email = $("#email").val();
+
+	$.ajax({
+		   type:"POST",       
+		   url:"find_validate_email.php",   
+		   data : ({email: email}),
+		   timeout : 5000,     
+		   cache : false,       
+		   success: function whenSuccess(args){  
+			if(args == "true"){
+				$("#emailchk_commit").val("Y");
+			} else {
+				$("#emailchk_commit").val("N");
+			}
+		   },
+		   error: function whenError(e){    // ERROR FUNCTION
+			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+		   }
+	  });
+})
+
+function check_find_pw(){
+	var id = $("#id").val();
+	var email = $("#email").val();
+	var chk_login_id = $("#idchk_commit").val();
+	var chk_email_id = $("#emailchk_commit").val();
+
+	if ( id == "" || !isValidLoginId(id) || chk_login_id != "Y" ) {
+			swal({
+				text: '<?php echo $lang['ID_Check']; ?>',
+				buttons: '<?php echo $lang['Confirm']; ?>',
+			})	
+			$('#id').focus();
+		} else if (email == "" || !isValidEmail(email) || chk_email_id != "Y" ) {
+			swal({
+				text: '<?php echo $lang['Email_Check']; ?>',
+				buttons: '<?php echo $lang['Confirm']; ?>',
+			})	
+			$('#email').focus();
+		} else {
+			$.ajax({
+			   type:"POST",       
+			   url:"check_find_pw.htm",   
+			   data : ({email: email,id:id}),
+			   timeout : 5000,     
+			   cache : false,
+			   beforeSend: function (){
+				showLoadingBar();
+			   },
+			   success: function whenSuccess(args){  
+				   if(args.includes('incorrect')){
+					   loading();
+						swal({
+							text: '<?php echo $lang['Not_Match_Info']; ?>',
+							buttons: '<?php echo $lang['Confirm']; ?>',
+						})					
+				   } else if(args.includes('fail')){
+						loading();
+						swal({
+							text: '<?php echo $lang['Not_Exist_ID']; ?>',
+							buttons: '<?php echo $lang['Confirm']; ?>',
+						})					
+				   } else if(args.includes('ok')){
+					showLoadingBar();
+					go_search(id,email);
+				   } else {
+					   loading();
+						swal({
+							text: '<?php echo $lang['Not_Valid_Email']; ?>',
+							buttons: '<?php echo $lang['Confirm']; ?>',
+						})							
+				   }
+			   },
+
+		  });	
+			
+		}	
+}
+
+function go_search(id,email) {
+	var id = id;
+	var email = email;
+
+	$.ajax({
+	   type:"POST",       
+	   url:"sendmail_find_pw.htm",   
+	   data : ({email: email,id:id}),
+	   timeout : 5000,     
+	   cache : false,
+	   beforeSend: function (){
+		showLoadingBar();
+	   },
+	   complete: function (){
+		loading();
+		swal({
+			text: '<?php echo $lang['Send_Email']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})	
+	   },
+  });	
+	
+}
+
+</script>

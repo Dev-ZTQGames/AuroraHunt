@@ -1,0 +1,180 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$info = array();
+
+$query = "SELECT * FROM Accounts WHERE login_id = '" . $_COOKIE['login_id'] . "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+
+$login_id = $info['login_id'];
+
+?>
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+            <div class="withdraw_notice">
+                <h3><?php echo $lang['Cautions_Canceling_Membership']; ?></h3>
+                <div class="withdraw_notice_box">
+                    <p><?php echo $lang['Deleted_Not_Possible_Recover']; ?></p>
+                    <ul>
+                        <li><?php echo $lang['Deleted_Game_Info_You_Played']; ?></li>
+                        <li><?php echo $lang['After_Membership_Withdrawal_Desc']; ?></li>
+                        <li><?php echo $lang['Refund_Of_Remaining_Cash_Customer_Center']; ?></li>
+                        <li><?php echo $lang['Withdraw_Membership_Request']; ?></li>
+                    </ul>
+                </div><!-- .withdraw_notice -->
+            </div><!-- .withdraw_notice -->
+
+			<div class="form_basic form_mypage">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Confirm_Account_Cancel_Membership']; ?></h3>
+				</div><!-- .form_basic_head -->
+				<div class="form_basic_body">
+					<div class="filed_item">
+					<?php 
+					switch ( substr($_SESSION['sess_login_id'], 0, 2) ) {
+						case "nv": $login_id = '네이버 소셜 로그인 회원'; break;
+						case "kk": $login_id = '카카오 소셜 로그인 회원'; break;
+						case "gg": $login_id = '구글 소셜 로그인 회원'; break;
+						case "ap": $login_id = '애플 소셜 로그인 회원'; break;
+						case "fb": $login_id = '페이스북 소셜 로그인 회원'; break;
+						case "ln": $login_id = '라인 소셜 로그인 회원'; break;
+					}
+					?>
+						<p class="label_item"><?php echo $lang['ID']; ?></p>
+						<p class="input_item"><?php echo $login_id; ?></p>
+					</div><!-- .filed_item -->
+					<!--
+					<div class="form_field_item_wrap">
+						<div class="form_field_item">
+							<label class="form_label" for="pw"><span>비밀번호</span></label>
+                            <div class="form_input_wrap">-->
+							<form name="form_withdraw" action="withdraw_prc.htm" method="POST">
+								<input type="hidden" name="id" id="id" value="<?php echo $login_id; ?>"/>
+								<input type="hidden" name="email" id="email" value="<?php echo $info['email']; ?>"/>
+								<input type="hidden" name="name" id="name" value="<?php echo $info['name']; ?>"/>
+								<input type="hidden" name="date" id="date" value="<?php echo date("Y.m.d"); ?>"/>
+							    <!--input type="password" name="password" class="form_input" id="pw"/-->
+							</form>
+                            <!--/div><!-- .form_input_wrap -->
+                            <!--p class="valid_message_error"><i class="icon"></i><span>비밀번호가 정확하지 않습니다.</span></p-->
+						<!--/div><!-- .form_field_item -->
+					<!--/div><!-- .form_field_item_wrap -->
+					<div class="form_field_item_wrap">
+						<div class="form_field_item">
+							<label class="form_label" for="pw"><span><?php echo $lang['Email']; ?></span></label>
+                            <div class="form_input_wrap">
+							    <p class="input_item input_item_withdraw_email"><?php echo $info['email']; ?></p>
+								<!--button type="button" class="basic_btn btn_email_verify <?php echo $disabled_cert_btn; ?>" onclick="return send_mail();"><span>이메일 인증</span></button-->
+                            </div><!-- .form_input_wrap -->
+                            <!--p class="valid_message_error"><i class="icon"></i><span>비밀번호가 정확하지 않습니다.</span></p-->
+						</div><!-- .form_field_item -->
+					</div><!-- .form_field_item_wrap -->
+					<!--
+					<div class="form_field_item_wrap code_vertify_wrap">
+						<div class="form_field_item form_field_code_vertify">
+							<label class="form_label" for="pw"><span>인증 코드</span></label>
+                            <div class="form_input_wrap">
+                                <div class="input_code_vertify_wrap">
+                                    <input type="text" class="form_input input_code_vertify" id="email_vertify" onkeyup="check_email_cert_number();"/>
+                                    <input type="hidden" name="emailchk_cert_num" id="emailchk_cert_num" value="">
+                                    <input type="hidden" name="emailchk_commit" id="emailchk_commit" value="">
+									<span id="timer"></span>
+                                </div>
+								<a class="basic_btn basic_btn_primary" href="javascript:email_cert_number_confirm();"><span>인증하기</a>
+								<a class="basic_btn btn_email_verify disabled" id="resend" href="javascript:resend_mail();"><span>코드 재전송</a>
+                            </div><!-- .form_input_wrap -->
+                            <!--p class="valid_message_error"><i class="icon"></i><span>비밀번호가 정확하지 않습니다.</span></p-->
+						<!--/div><!-- .form_field_item -->
+					<!--/div><!-- .form_field_item_wrap -->
+                    <!--div class="form_field_item_wrap birth_wrap">
+                        <div class="form_field_item">
+                             <label class="form_label" for="form_birth"><span>생년월일</span></label>
+                             <div class="birth_form">
+							     <div class="form_input_wrap">
+									<input type="text" class="form_input">
+									<span class="txt">년</span>
+								</div>
+								<div class="form_input_wrap">
+									<input type="text" class="form_input">
+									<span class="txt">월</span>
+								</div>
+								<div class="form_input_wrap">
+									<input type="text" class="form_input">
+									<span class="txt">일</span>
+								</div>
+                             </div><!-- .birth_form -->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+                    <!--div class="form_field_item_wrap gender_wrap">
+                        <div class="form_field_item">
+                            <label class="form_label" for="form_gender"><span>성별</span></label>
+                            <div class="gender_form form_input_wrap">
+								<div class="custom_checkbox_wrap">
+									<label class="custom_radio"><input type="radio" name="gender"><span class="checkmark"></span>남</label>
+									<label class="custom_radio"><input type="radio" name="gender"><span class="checkmark"></span>여</label>
+								</div><!-- .custom_checkbox_wrap -->
+                            <!--/div><!-- .gender_form -->
+                        <!--/div><!-- .form_field_item -->
+                    <!--/div><!-- .form_field_item_wrap -->
+				</div><!-- .form_basic_body -->
+                <div class="custom_checkbox_wrap attend_check">
+                    <p><label class="custom_checkbox"><input type="checkbox" id="agree1"><span class="checkmark"></span><?php echo $lang['Refunds_Not_Possible_Agree']; ?></label></p>
+                    <p><label class="custom_checkbox"><input type="checkbox" id="agree2"><span class="checkmark"></span><?php echo $lang['Precaution_Canceling_Membership_Agree']; ?></label></p>
+                </div><!-- .custom_checkbox_wrap -->
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="javascript:void(0);" class="basic_btn basic_btn_primary basic_btn_alone" onclick="return check_confirm();"><span><?php echo $lang['Withdrawal_Of_Membership']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<script>
+
+function check_confirm(){
+
+	var agree1 = $("#agree1").is(":checked");
+	var agree2 = $("#agree2").is(":checked");
+	var chk_cert = $("#emailchk_commit").val();
+
+	if(agree1 != true || agree2 != true ){
+		swal({
+		  text: '<?php echo $lang['Confirm_Agreement']; ?>',
+		  buttons: '<?php echo $lang['Confirm']; ?>',
+		})
+	} else if(agree1 == true && agree2 == true){
+		swal({
+		  text: '<?php echo $lang['Withdrawal_Membership_Notice']; ?>',
+		   buttons: {
+				cancel : '<?php echo $lang['Cancel']; ?>',
+				confirm : {
+					text : '<?php echo $lang['Withdraw_Membership']; ?>',
+					value : 'catch'
+				},
+			  },
+			}).then(function(isConfirm) {
+			  if (isConfirm) {
+				document.form_withdraw.submit();
+			  }
+			})
+
+		}	
+	}
+
+</script>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

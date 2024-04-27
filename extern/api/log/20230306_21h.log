@@ -1,0 +1,4 @@
+[2023-03-06 21:03:42] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":50}
+[2023-03-06 21:03:43] BILLING - SourceIP : 34.80.134.81, proc1: purchase, proc2: login_id : neoguru0, game_code : clwmc, product_name : product1, item_id : 1005, cash : 20
+{"result":"1","msg":"Request OK, Success."}

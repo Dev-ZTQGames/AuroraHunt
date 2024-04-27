@@ -1,0 +1,24 @@
+[2024-01-16 03:29:01] NODE - SourceIP : 35.191.24.187, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:01] NODE - SourceIP : 35.191.32.11, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:05] NODE - SourceIP : 35.191.29.175, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:05] NODE - SourceIP : 35.191.3.31, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:07] NODE - SourceIP : 35.191.32.15, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:07] NODE - SourceIP : 35.191.3.30, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:09] NODE - SourceIP : 35.191.29.161, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:09] NODE - SourceIP : 35.191.32.198, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:10] NODE - SourceIP : 35.191.16.192, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:10] NODE - SourceIP : 35.191.32.194, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:25] NODE - SourceIP : 35.191.13.86, proc1: getBalance, proc2: login_id : test0002, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2024-01-16 03:29:25] NODE - SourceIP : 35.191.32.226, proc1: getBalance, proc2: login_id : test0002, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

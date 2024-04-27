@@ -1,0 +1,101 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="quick_menu">
+                <div class="quick_menu_item quick_menu_inquiry">
+                    <h3><span><?php echo $lang['Inquiry']; ?></span></h3>
+                    <ul>
+                        <li><a href="cs_help_list.htm"><span><?php echo $lang['Help_Contact_Us']; ?></span></a></li>
+                        <li><a href="mypage_inquiry_list.htm"><span><?php echo $lang['My_Inquiry']; ?></span></a></li>
+                    </ul>
+                </div><!-- .quick_menu_item -->
+                <div class="quick_menu_item quick_menu_news">
+                    <h3><span><?php echo $lang['News']; ?></span></h3>
+                    <ul>
+                        <li><a href="cs_notice_list.htm"><span><?php echo $lang['Notice']; ?></span></a></li>
+                        <li><a href="cs_event_ing.htm"><span><?php echo $lang['Event']; ?></span></a></li>
+                    </ul>
+                </div><!-- .quick_menu_item -->
+                <div class="quick_menu_item quick_menu_certification">
+                    <h3><span>인증센터</span></h3>
+                    <ul>
+                        <li><a href="cs_certify_email_01.htm"><span><?php echo $lang['Email_Verification']; ?></span></a></li>
+                        <li><a href="cs_certify.htm"><span><?php echo $lang['Authentication']; ?></span></a></li>
+                    </ul>
+                </div><!-- .quick_menu_item -->
+                <!--div class="quick_menu_item quick_menu_develope">
+                    <h3><span>A-Hunt <br/>Developers</span></h3>
+                    <ul>
+                        <li><a href="#"><span>런칭 가이드</span></a></li>
+                        <li><a href="cs_help_list.htm"><span>도움말</span></a></li>
+                    </ul>
+                </div><!-- .quick_menu_item -->
+            </div><!-- .quick_menu -->
+
+            <div class="cs_help_search_wrap">
+                <h3 class=""><?php echo $lang['Search_For_Help']; ?></h3>
+                <div class="search_field">
+                    <div class="select select_filter">
+                        <label for="select_email" class="sr_only"><?php echo $lang['Select_Category']; ?></label>
+                        <select id="select_email" class="select_email selectric">
+                            <option value="전체"><?php echo $lang['All']; ?></option>
+                            <option value="제목"><?php echo $lang['Title_Name']; ?></option>
+                            <option value="내용"><?php echo $lang['Contents']; ?></option>
+                        </select>                                                   
+                    </div>
+                    <div class="search_input_wrap">
+                        <label class="search_label">
+                            <span class="sr_only"><?php echo $lang['Enter_Search']; ?></span>
+                            <input name="search" type="text" value="" placeholder="<?php echo $lang['Enter_Search']; ?>" class="form_input search_input">
+                        </label>
+                        <button class="search_button basic_btn basic_btn_secondary"><?php echo $lang['Search']; ?></button>
+                    </div><!-- .search_input_wrap -->
+                </div><!-- .search_field -->
+            </div><!-- .cs_help_search_wrap -->
+
+            <div class="cs_recommend_help">
+                <h3><span><?php echo $lang['Recommended_Help']; ?></span></h3>
+                <div class="cs_recommend_list">
+                    <div class="cs_recommend_item">
+                        <div class="cs_recommend_first">
+                            <a href="#">
+                                <b><span>Q</span>1:1문의접수 방법 안내</b>
+                                <p>①문의할 서비스를 선택합니다. ②문의할 분류를선택합니다. ③문의내용을 입력합니다 ①문의할 서비스를 선택합니다. ②문의할 분류를선택합니다. ③문의내용을 입력합니다</p>
+                            </a>
+                        </div><!-- .cs_recommend_first -->
+                        <ul>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                        </ul>
+                    </div><!-- .cs_recommend_item -->
+                    <div class="cs_recommend_item">
+                        <div class="cs_recommend_first">
+                            <a href="#">
+                                <b><span>Q</span>1:1문의접수 방법 안내</b>
+                                <p>①문의할 서비스를 선택합니다. ②문의할 분류를선택합니다. ③문의내용을 입력합니다 ①문의할 서비스를 선택합니다. ②문의할 분류를선택합니다. ③문의내용을 입력합니다</p>
+                            </a>
+                        </div><!-- .cs_recommend_first -->
+                        <ul>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                            <li><a href="#">[1차분류] [2차분류] 회원탈퇴는 어떻게 하나요?</a></li>
+                        </ul>
+                    </div><!-- .cs_recommend_item -->
+                </div><!-- .cs_recommend_list -->
+            </div><!-- .cs_recommend_help -->
+            
+		</div><!-- .wrap_middle -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

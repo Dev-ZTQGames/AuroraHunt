@@ -1,0 +1,46 @@
+[2023-12-07 11:17:03] BILLING - SourceIP : 35.191.13.82, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"1","msg":"Request OK, Success."}
+[2023-12-07 11:17:03] BILLING - SourceIP : 35.191.32.226, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"1","msg":"Request OK, Success."}
+[2023-12-07 11:17:53] CRYPTOOO - SourceIP : 35.191.32.179, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071752
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMUkBjAt%2BmSo6C4qinkpfiSQ%3D%3D"}
+[2023-12-07 11:17:53] API - SourceIP : 35.191.29.170, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMUkBjAt+mSo6C4qinkpfiSQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:17:56] CRYPTOOO - SourceIP : 35.191.32.179, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071756
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMgVnjTyH0foUoBkiJqtQqOQ%3D%3D"}
+[2023-12-07 11:17:56] API - SourceIP : 35.191.29.170, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMgVnjTyH0foUoBkiJqtQqOQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:09] CRYPTOOO - SourceIP : 35.191.29.169, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071809
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMGeXY5rhFuH8gT9BySJ%2BJ0Q%3D%3D"}
+[2023-12-07 11:18:09] API - SourceIP : 35.191.29.170, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMGeXY5rhFuH8gT9BySJ+J0Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:09] CRYPTOOO - SourceIP : 35.191.32.183, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071809
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMGeXY5rhFuH8gT9BySJ%2BJ0Q%3D%3D"}
+[2023-12-07 11:18:09] API - SourceIP : 35.191.29.169, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMGeXY5rhFuH8gT9BySJ+J0Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:10] CRYPTOOO - SourceIP : 35.191.32.180, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071810
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMlXn7EuUR5EzbG1eFh6WdbA%3D%3D"}
+[2023-12-07 11:18:10] API - SourceIP : 35.191.32.179, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMlXn7EuUR5EzbG1eFh6WdbA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:14] CRYPTOOO - SourceIP : 35.191.32.179, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071814
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMl4slScImy8Z9HHqYXdKt9A%3D%3D"}
+[2023-12-07 11:18:14] API - SourceIP : 35.191.32.179, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMl4slScImy8Z9HHqYXdKt9A==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:14] CRYPTOOO - SourceIP : 35.191.32.179, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071814
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMl4slScImy8Z9HHqYXdKt9A%3D%3D"}
+[2023-12-07 11:18:14] API - SourceIP : 35.191.32.176, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMl4slScImy8Z9HHqYXdKt9A==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:25] CRYPTOOO - SourceIP : 35.191.32.177, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071825
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMUYfClRlbadC%2BsxaCVPECIw%3D%3D"}
+[2023-12-07 11:18:25] API - SourceIP : 35.191.32.181, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMUYfClRlbadC+sxaCVPECIw==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:25] CRYPTOOO - SourceIP : 35.191.32.183, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071825
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMUYfClRlbadC%2BsxaCVPECIw%3D%3D"}
+[2023-12-07 11:18:25] API - SourceIP : 35.191.32.185, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMUYfClRlbadC+sxaCVPECIw==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:18:26] CRYPTOOO - SourceIP : 35.191.32.180, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=neoguru0|partner=Payletter|date=231207071826
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN%2BmROOTxor%2BQ2vVAs0UMuuwJhCkj5ZU11QXGaX88Ng%3D%3D"}
+[2023-12-07 11:18:26] API - SourceIP : 35.191.29.169, proc1: R+jyYDzxeatxe0LWIiJ8zPWB5jEcJUiJelCGUCFRTiHMN+mROOTxor+Q2vVAs0UMuuwJhCkj5ZU11QXGaX88Ng==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-07 11:32:41] BILLING - SourceIP : 35.191.32.134, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":7800}

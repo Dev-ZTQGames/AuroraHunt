@@ -1,0 +1,527 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$get_m_game_code = escape_string(trim($_REQUEST['m_game_code'])) ;
+
+$info = array();
+
+$query = "SELECT * FROM GamesLanding where m_game_code = '" .$get_m_game_code. "'";
+
+$que = mysqli_query($connect, $query);
+
+$row = mysqli_fetch_array($que);
+
+$info = $row;
+					
+if ( $configuration['mode'] == "development / alpha" ) {
+	$image_mount = 'https://image.aurorahunt.xyz/image/ah_dev/game_banner/';
+} elseif($configuration['mode'] == "test / debug") {
+	$image_mount = 'https://'.$HOST.'.aurorahunt.xyz/img_remote/test/game_banner/';
+} elseif($configuration['mode'] == "service / release") {
+	$image_mount = 'https://'.$HOST.'.aurorahunt.xyz/img_remote/live/game_banner/';
+}
+				
+$main_banner = $image_mount.$row['m_main_banner_img'];
+
+$main_video = $info['m_main_banner_video'];
+
+$sub_banner = explode(",",$info['m_sub_banner']);
+
+$g_hashtag = explode(",",$info['g_hashtag']);
+
+?>
+
+
+<div id="container" class="page_game_view page_game_view_sample">
+    <div class="game_view_visual">
+        <div class="game_view_visual_gradient_left"></div>
+        <div class="game_view_visual_gradient_right"></div>
+        <div class="game_view_visual_inner wrap_medium">
+
+		<?php
+			if($main_video != ''){
+		?>
+            <div class="video-container">
+                <div class="video-container__inner">
+                    <div class="video-youtube">
+                        <div class="video-width">
+                            <div class="video-aspect">
+                                <div class="video-make-height">
+                                    <div class="video-hide-controls">
+                                        <div id="video-youtube-player" data-id="<?php echo $main_video; ?>"></div>
+                                    </div><!-- .video-hide-controls -->
+                                </div><!-- .video-make-height -->
+                            </div><!-- .video-aspect -->
+                        </div><!-- .video-width -->
+                    </div><!-- .video-youtube -->
+                </div><!-- .video-container__inner -->
+            </div><!-- .video-container -->		
+		<?php
+			} else {
+		?>
+            <div class="game_view_visual_img">
+                <figure>
+					<img src="<?php echo $main_banner?>">
+                </figure>
+            </div><!-- .game_view_visual_img -->			
+		<?php
+			}
+		?>
+            <div class="game_view_visual_info_wrap">
+                <div class="game_view_visual_info_inner">
+                    <div class="game_view_visual_info">
+                        <figure><img src="../images/sub/game/game-main-img.jpg" alt=""></figure>
+                        <div class="game_view_visual_info_tit">
+                            <h2 class="game_view_visual_title"><?php echo $row['m_title'] ?><br/></h2>
+                            <p class="game_view_visual_company">Perugia Corporation</p>
+                        </div><!-- .game_view_visual_info_tit -->
+                        <ul class="game_view_visual_util">
+                            <li>
+                                <b>Platform</b>
+                                <span>
+                                    <?php
+                                    if($row['m_platform_icon_i'] === 'Y'){
+                                        echo "IOS";
+                                    }
+                                    if($row['m_platform_icon_o'] === 'Y'){
+                                       echo "AOS";
+                                    }
+                                    if($row['m_platform_icon_pc'] === 'Y'){
+                                        echo "WEB";
+                                    }
+                                    ?>
+                                </span>
+                            </li>
+                            <li>
+                                <b>Game</b>
+                                <span>Casual</span>
+                            </li>
+                            <li>
+                                <b>Age</b>
+                                <span>
+                                    <?php if($row['m_platform_rating'] === '0'){
+                                        echo "G-rated";
+                                    }else if($row['m_platform_rating'] === '12'){
+                                        echo "PG 12";
+                                    }else if($row['m_platform_rating'] === '15'){
+                                        echo "PG 15";
+                                    }else if($row['m_platform_rating'] === '18'){
+                                       echo "X-rated";
+                                    }
+                                    ?>
+                                </span>
+                            </li>
+                            <li>
+                                <b>Download</b>
+                                <span>100,000+</span>
+                            </li>
+                            <?php			
+                                $result_games = mysqli_query($connect, "SELECT * FROM Games WHERE m_game_code != ''");
+                                $info_games = array();
+
+                                while($row_games = mysqli_fetch_array($result_games)){
+                                    $info_games = $row_games;
+                                }
+                            ?>
+                        </ul><!-- .game_view_visual_util -->
+                    </div><!-- .game_view_visual_info -->
+                    <div class="game_view_visual_button">
+                        <div class="btn_wrap">
+                            <button type="button"><span>Wish +</span></button>
+                        <?php
+                            if( $_COOKIE['login_id'] != '' ){
+                                if($info['m_game_url'] == ''){?>
+                                    <a href="javascript:void(0);"><span>Download</span></a>
+                        <?php
+                                } else {?>
+                                    <a href="javascript:void(0);" onclick="window.open('<?php echo str_replace('HOST',$HOST,$info['m_game_url']); ?>','','menubar=1');"><span>Download</span></a>
+                        <?php
+                                }
+                            } else {?>
+                                <a href="javascript:void(0);" onclick="needLogin();"><span>Download</span></a>
+                        <?php
+                            }
+                        ?>
+					    </div>
+                    </div><!-- .game_view_visual_button -->
+                </div><!-- .game_view_visual_info_inner -->
+            </div><!-- .game_view_visual_info_wrap -->
+        </div><!-- .game_view_visual_inner -->
+    </div><!-- .game_view_visual -->
+
+    <div class="article_body">
+        <div class="wrap_medium game_view_content_wrap">
+            <div class="game_view_slide">
+                <div class="game_view_slide_container swiper-container">
+                    <div class="swiper-wrapper">
+
+
+                        <?php
+                            foreach($sub_banner as $value)
+                            {
+                                echo "  <div class='swiper-slide'><a class='game_view_slide_link' href='#' data-mfp-src='$image_mount$value'><figure><img src='$image_mount$value'></figure></a></div>";
+                            }
+
+                        ?>
+                    </div><!-- .swiper-wrapper -->
+                </div><!-- .game_view_slide_container -->
+                <div class="swiper_navigation">
+                    <button class="swiper-button-prev"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+                    <button class="swiper-button-next"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+                </div><!-- .swiper_navigation -->
+            </div><!-- .game_view_slide -->
+
+            <div class="game_view_intro">
+                <h3 class="game_view_title"><?php echo $lang['Game_Introduction']; ?></h3>
+                <div class="game_view_intro_desc_wrap">
+                    <div class="game_view_intro_desc"><?php echo $row['m_content'] ?></div>
+                    <button type="button" class="nft_desc_more"><span>... View more</span></button>
+                </div><!-- .game_view_intro_desc_wrap -->
+            </div><!-- .game_view_intro -->
+        <?php
+            if ( $configuration['mode'] == "development / alpha" ) {
+        ?>
+            <div class="game_view_nft">
+                <div class="game_view_title_wrap">
+                    <h3 class="game_view_title">NFT</h3>
+                    <a href="nft_game_view.htm" class="nft_shop_button"><span>Go to shop</span></a>
+                </div><!-- .game_view_title_wrap -->
+                <div class="nft_list_slide">
+                    <div class="nft_list_container swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit"><?php echo $info['m_title']; ?></p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span id="nft_item_name">NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span id="nft_item_price">0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+                            <div class="nft_item swiper-slide">
+                                <p class="nft_item_tit">Game Name</p>
+                                <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                                <ul class="row2">
+                                    <li class="nft_item_name"><span>NFT Name</span></li>
+                                    <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                </ul>
+                                <ul class="nft_item_price">
+                                    <li>
+                                        <b>Price</b>
+                                        <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="nft_item_button row2">
+                                    <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                    <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                                </ul>
+                                <a href="#game_view_nft_popup" class="nft_item_link"></a>
+                            </div><!-- .nft_item -->
+                        </div><!-- .swiper-wrapper -->
+                    </div><!-- .nft_list_container -->
+                    <div class="swiper_navigation">
+                        <button class="swiper-button-prev"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+                        <button class="swiper-button-next"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+                    </div><!-- .swiper_navigation -->
+                </div><!-- .nft_list_slide -->
+            </div><!-- .game_view_nft -->
+
+            <?php /* 
+                각 nft_item_link의 href="#id"와 팝업 id 값을 매칭시켜주세요 
+                매칭된 팝업이 열립니다
+                예 : 
+                <a href="#id-01" class="nft_item_link"></a>
+                <div id="id-01" class="nft_popup mfp-hide">...</div>
+            */ ?>
+
+            <div id="game_view_nft_popup" class="nft_popup mfp-hide">
+                <div class="popup_wrap">
+                    <div class="popup_header">
+                        <i><img src="../images/sub/nft/game-logo-sample.jpg" alt=""></i><p><?php echo $info['m_title']; ?></p>
+                        <button type="button" class="mfp-close">Close</button>
+                    </div>
+                    <div class="popup_body nft_contents">
+                        <div class="nft_info_wrap">
+                            <div class="nft_img">
+                                <figure><img src="../images/sub/nft/nft-img-sample.jpg" alt=""></figure>
+                                <a href="../images/sub/nft/nft-img-sample.jpg" target="_blank" class="nft_img_expand"><span class="sr_only">확대</span></a>
+                            </div><!-- .nft_img -->
+                            <div class="nft_info">
+                                <div class="nft_info_top">
+                                    <h2 id="nft_popup_name">NFT name</h2>
+                                    <ul class="nft_info_util">
+                                        <li class="nft_info_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                        <li class="nft_info_refresh"><button type="button"><span class="sr_only">새로고침</span></button></li>
+                                    </ul>
+                                </div><!-- .nft_info_top -->
+                                <ul class="nft_info_basic">
+                                    <li><span>Creator</span><p>0xa999a…z99z</p></li>
+                                    <li><span>Owner</span><p>-</p></li>
+                                </ul>
+                                <div class="nft_price"> <?php /* 솔드아웃 스타일 적용방법 : nft_price에 sold_out 클래스 추가 + input에 disabled 추가 */ ?>
+                                    <p>Price</p>
+                                    <ul>
+                                        <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 Marble</label></li>
+                                        <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 PMW</label></li>
+                                        <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 PSCT</label></li>
+                                    </ul>
+                                </div><!-- .nft_price -->
+                                <div class="nft_button">
+                                    <button type="button" class="nft_btn_cart"><span>Add to Cart</span></button>
+                                    <button type="button" class="nft_btn_buy"><span>Buy Now</span></button>
+                                    <?php /* sold out 버튼 
+                                    <p class="sold_out"><span>Sold Out</span></p> 
+                                    */ ?>
+                                </div><!-- .nft_button -->
+                            </div><!-- .nft_info -->
+                        </div><!-- .nft_info_wrap -->
+                        <div class="nft_desc">
+                            <h3>Description</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <button type="button" class="nft_desc_more"><span>... View more</span></button>
+                        </div><!-- .nft_desc -->
+                        <div class="nft_properties">
+                            <h3>Properties <span>4</span></h3>
+                            <ul class="nft_prop_list">
+                                <li>
+                                    <p>BACKGROUND</p>
+                                    <b>SKY BLUE</b>
+                                    <span>Rarity 10%</span>
+                                </li>
+                                <li>
+                                    <p>EYES</p>
+                                    <b>HEART</b>
+                                    <span>Rarity 5%</span>
+                                </li>
+                                <li>
+                                    <p>HATS</p>
+                                    <b>RIBBON</b>
+                                    <span>Rarity 11%</span>
+                                </li>
+                                <li>
+                                    <p>WINGS</p>
+                                    <b>NONE</b>
+                                    <span>Rarity 90%</span>
+                                </li>
+                            </ul><!-- .nft_prop_list -->
+                        </div><!-- .nft_properties -->
+                    </div>
+                </div><!-- .popup_wrap -->
+            </div><!-- #game_view_nft_popup -->
+
+            <div class="game_view_info">
+                <h3 class="game_view_title">Information</h3>
+                <ul class="game_view_field_list">
+                    <li><b>Version</b><span>0. 1. 1</span></li>
+                    <li><b>Content Rating</b><span>G-rated</span></li>
+                    <li><b>Required OS Version</b><span>5.0 or higher</span></li>
+                    <li><b>Interaction Elements</b><span>In-game purchase</span></li>
+                    <li><b>Update Date</b><span>2022.10.01</span></li>
+                    <li><b>Release Date</b><span>2022.09.01</span></li>
+                    <li><b>Download</b><span>100,000 + downloads</span></li>
+                    <li><b>Developer</b><span>Perugia Corporation</span></li>
+                </ul>
+            </div><!-- .game_view_info -->
+
+            <div class="game_view_contact">
+                <h3 class="game_view_title">Developer Contact</h3>
+                <ul class="game_view_field_list">
+                    <li><b>Website</b><span><a href="https://perugiacorp.com/" target="_blank">https://perugiacorp.com/</a></span></li>
+                    <li><b>E-mail</b><span><a href="mailto:cs@perugiacorp.co.kr">cs@perugiacorp.co.kr</a></span></li>
+                    <li><b>Address</b><span>Seocho-gu, Seoul, Seocho Jeil Building</span></li>
+                    <li><b>Privacy Policy</b><span><a href="https://test.aurorahunt.xyz/sub/policy_privacy.htm" target="_blank">https://test.aurorahunt.xyz/sub/policy_privacy.htm/</a></span></li>
+                </ul>
+            </div><!-- .game_view_info -->
+        <?php
+            }
+        ?>
+        </div><!-- .wrap -->
+    </div><!-- .article_body -->
+</div><!-- #container -->
+<script>
+    function needLogin(){
+        swal({
+            text: '<?php echo $lang["Login_Required"]; ?>',
+            buttons: {
+                cancel : '<?php echo $lang["Cancel"]; ?>',
+                confirm : {
+                    text : '<?php echo $lang["Go_To_Login"]; ?>',
+                    value : 'catch'
+                },
+            },
+        }).then(function(value){
+            if(value == 'catch'){
+                location.href='/extern/sso/login.htm?return_path=<?php echo $return_url; ?>';
+            }
+        })
+    }
+</script>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

@@ -1,0 +1,2 @@
+[2023-12-10 06:00:12] BILLING - SourceIP : 35.191.32.129, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : product1, cash : 30
+{"result":"1","msg":"Request OK, Success.","data":{"chargeNo":202312100324490,"chargedAmount":30,"wallet":{"cashReal":0,"cashBonus":5900,"cashTotal":5900}},"order_number":"101_701999993_9dfcbc"}

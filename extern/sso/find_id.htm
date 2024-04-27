@@ -1,0 +1,109 @@
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+?>
+
+<div id="container" class="page_find_id">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Find_ID']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="form_basic form_mypage form_id">
+			    <div class="form_basic_head">
+			        <h3><?php echo $lang['Find_ID']; ?></h3>
+				</div><!-- .form_basic_head -->
+					<div class="form_basic_body">
+						<div class="form_field_item_wrap">
+							<div class="form_field_item">
+								<label class="form_label" for="email"><span><?php echo $lang['Email']; ?></span></label>
+								<div class="form_input_wrap">
+									<input type="text" class="form_input" name="email" id="email"/>
+								</div><!-- .form_input_wrap -->
+								<p class="guide_message_info"><i class="icon"></i><span><?php echo $lang['Find_ID_Guide_Message']; ?></span></p>
+							</div><!-- .form_field_item -->
+						</div><!-- .form_field_item_wrap -->
+					</div><!-- .form_basic_body -->
+			</div><!-- .form_basic -->
+
+            <div class="process_btn_wrap"> 
+                <a href="#" class="basic_btn basic_btn_primary" onclick="check_find_id();"><span><?php echo $lang['Confirm']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+function check_find_id(){
+	var email = $("#email").val();
+
+	if (email == "" || !isValidEmail(email)) {
+		swal({
+			text: '<?php echo $lang['Email_Check']; ?>',
+			buttons: '<?php echo $lang['Confirm']; ?>',
+		})			
+		$('#email').focus();
+
+	} else {
+			$.ajax({
+			   type:"POST",       
+			   url:"find_validate_email.php",   
+			   data : ({email: email}),
+			   timeout : 5000,     
+			   cache : false,   
+			   beforeSend: function (){
+				showLoadingBar();
+			   }, 
+			   success: function whenSuccess(args){  
+				   //console.log(args);
+				   if(args.includes('noId')){
+					   loading();
+						swal({
+							text: '<?php echo $lang["No_Account"]; ?>',
+							buttons: '<?php echo $lang["Confirm"]; ?>',
+						})					
+				   } else {
+						showLoadingBar();
+						go_search(email);
+				   } 
+			   },
+		  });
+	}	
+}
+
+function go_search(email) {
+	var email = email;
+
+	$.ajax({
+	   type:"POST",       
+	   url:"sendmail_find_id.htm",   
+	   data : ({email: email}),
+	   timeout : 5000,     
+	   cache : false,   
+	   complete: function (){
+		loading();
+		swal({
+			text: '<?php echo $lang["Send_Email"]; ?>',
+			//text: 'ko<br>ko',
+			buttons: '<?php echo $lang["Confirm"]; ?>',
+		})	
+	   },
+  });
+	
+}
+
+function isValidEmail(email) {
+	var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+	if(regex.test(email) == false) {
+		return false;
+	}
+
+	return true;
+}
+
+</script>

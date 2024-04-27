@@ -1,0 +1,8 @@
+[2023-05-04 16:40:16] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : chlthddl94, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"037efd795a9e000b82f8146fd77f9587bc0bb1852cc4f99e8af1057cc48b14337c"}
+[2023-05-04 16:40:18] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : chlthddl94, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-05-04 16:40:27] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : chlthddl94, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-05-04 16:40:35] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : chlthddl94, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}

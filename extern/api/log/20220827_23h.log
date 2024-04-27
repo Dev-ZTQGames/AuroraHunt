@@ -1,0 +1,4 @@
+[2022-08-27 23:16:21] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+{"result":"1","msg":"u15ju 49A j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU="}
+[2022-08-27 23:16:23] CRYPT - SourceIP : 34.80.134.81, proc1: animalfriends.no1, proc2: animalfriends.no1
+{"result":"1","return":"u15ju 49A j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU="}

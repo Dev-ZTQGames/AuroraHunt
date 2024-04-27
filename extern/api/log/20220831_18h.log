@@ -1,0 +1,20 @@
+[2022-08-31 18:05:32] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=a|pw=a|partner=Perugia|date=220831180531|ip=210.59.144.44
+{"result":"1","return":"ceAtXDdV6xJ%2BnqYpDLOl9atRqR3pNt%2F5fWCTEobvZmcpPzInY2qvv7uP3%2Bav0UMd%2FBo%2Fdt9zgwkd0WwNFdb4oIG23eDmXuZ5%2Ff1lVpj%2FHlU%3D"}
+[2022-08-31 18:05:32] API - SourceIP : 210.59.144.44, proc1: ceAtXDdV6xJ+nqYpDLOl9atRqR3pNt/5fWCTEobvZmcpPzInY2qvv7uP3+av0UMd/Bo/dt9zgwkd0WwNFdb4oIG23eDmXuZ5/f1lVpj/HlU=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-40"}
+[2022-08-31 18:05:43] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=ahtest123|pw=qwer1234|partner=Perugia|date=220831180543|ip=210.59.144.44
+{"result":"1","return":"Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0%2Bc3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7%2BbQBWTsgkEocAFV7trOGAEPU7DTAgIdwTtuInrTjWzVvo"}
+[2022-08-31 18:05:43] API - SourceIP : 210.59.144.44, proc1: Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0+c3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7+bQBWTsgkEocAFV7trOGAEPU7DTAgIdwTtuInrTjWzVvo, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"200000002","msg":"1010"}
+[2022-08-31 18:07:23] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=a|pw=a|partner=Perugia|date=220831180723|ip=210.59.144.44
+{"result":"1","return":"ceAtXDdV6xJ%2BnqYpDLOl9atRqR3pNt%2F5fWCTEobvZmcpPzInY2qvv7uP3%2Bav0UMdmCXF%2F%2BiUIo4vXKf9Sw8OAdLNiQavpYwMtVEXpU1EC6Q%3D"}
+[2022-08-31 18:07:23] API - SourceIP : 210.59.144.44, proc1: ceAtXDdV6xJ+nqYpDLOl9atRqR3pNt/5fWCTEobvZmcpPzInY2qvv7uP3+av0UMdmCXF/+iUIo4vXKf9Sw8OAdLNiQavpYwMtVEXpU1EC6Q=, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"0","msg":"-40"}
+[2022-08-31 18:07:34] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=ahtest123|pw=qwer1234|partner=Perugia|date=220831180734|ip=210.59.144.44
+{"result":"1","return":"Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0%2Bc3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7%2BbRNkR6opemcjXk%2FjWDK3BVAwoPNRUeewrA7%2BcqPsTzBr"}
+[2022-08-31 18:07:34] API - SourceIP : 210.59.144.44, proc1: Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0+c3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7+bRNkR6opemcjXk/jWDK3BVAwoPNRUeewrA7+cqPsTzBr, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"200000002","msg":"1010"}
+[2022-08-31 18:08:29] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=ahtest123|pw=qwer1234|partner=Perugia|date=220831180829|ip=210.59.144.44
+{"result":"1","return":"Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0%2Bc3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7%2BbVI3m%2FrBsCwVm4z5D%2FOPgAJBxqDb79ZVAA3LnotU11yg"}
+[2022-08-31 18:08:29] API - SourceIP : 210.59.144.44, proc1: Jl5EjBCCAuaSJpDZFWm4fFunO7yahpIa2Y0+c3omL8KAd3oqEXzfODblJnP8sOD2Rfat8QdQbRKLeH5GxA7+bVI3m/rBsCwVm4z5D/OPgAJBxqDb79ZVAA3LnotU11yg, proc2: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=
+{"result":"1","usn":"200000002","msg":"1010"}

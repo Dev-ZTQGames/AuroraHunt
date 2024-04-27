@@ -1,0 +1,26 @@
+[2023-03-12 03:00:08] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","0":{"start":"Mining transaction registered in unconfirmed transaction queue."}}
+[2023-03-12 03:00:33] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","0":null}
+[2023-03-12 03:00:41] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","0":{"start":"Mining transaction registered in unconfirmed transaction queue."}}
+[2023-03-12 03:00:59] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":{"start":"Mining transaction registered in unconfirmed transaction queue."}}
+[2023-03-12 03:01:15] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue."}
+[2023-03-12 03:01:34] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"032cebe261c9254fb1890ec94d13965ae2a39ded52d63245ed99aaa823aa092e8b"}
+[2023-03-12 03:01:38] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue."}
+[2023-03-12 03:01:40] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":1}
+[2023-03-12 03:01:57] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":1}
+[2023-03-12 03:01:58] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":1}
+[2023-03-12 03:22:05] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":3}
+[2023-03-12 03:56:53] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"02443bd8d3bdab13e51ded3b28015ff1ac09466e34413edd6c3dc8baa4caa7c45e"}
+[2023-03-12 03:59:01] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"029083e04bc441200a2b59b41a2e445d6c1faae01d5c1bc52da5283cbf761e919c"}

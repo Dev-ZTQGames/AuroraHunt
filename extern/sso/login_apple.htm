@@ -1,0 +1,29 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm';
+
+$apple_state = $_REQUEST['state'];
+
+if ($_SESSION['apple_state'] != $_REQUEST['state']) {
+	header("Location:login.htm");
+} 
+
+$userData = json_decode($_REQUEST['user'],true);
+
+$userName = $userData['name']['lastName'].$userData['name']['firstName'];
+$email = $userData['email'];
+
+if ( $userData['email'] == "" ) {
+	$id_tokens = explode("." , $_REQUEST['id_token']);
+	$payload = base64_decode($id_tokens[1]);
+	$userData = json_decode($payload,true);
+	$email = $userData['email'];
+	$userName = $userData['name']['lastName'].$userData['name']['firstName'];
+}
+
+?>
+<script>
+var userEmail = '<?php echo $email; ?>';
+var name = '<?php echo $userName; ?>';
+
+location.href='join_social_check.php?prefix_id=ap&userEmail='+userEmail+'&name='+name;
+</script>

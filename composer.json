@@ -1,0 +1,5 @@
+{
+    "require": {
+        "kornrunner/ethereum-offline-raw-tx": "^0.6.0"
+    }
+}

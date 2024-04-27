@@ -1,0 +1,151 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_nft_game_view">
+    <div class="nft_game_view_visual">
+        <div class="visual_bg">
+            <figure>
+                <img class="visual-pc" src="../images/sub/nft/nft-game-view-visual.jpg" alt="">
+                <img class="visual-mob" src="../images/sub/nft/nft-game-view-visual-mob.jpg" alt="">
+            </figure>
+        </div>
+        <div class="wrap_medium">
+            <div class="visual_logo"><figure><img src="../images/sub/nft/nft-game-view-logo.jpg" alt=""></figure></div>
+        </div><!-- .wrap_medium -->
+    </div><!-- .nft_game_view_visual -->
+
+    <div class="article_body">
+        <div class="wrap_medium">
+            <div class="content_top">
+                <h2 class="ntf_game_tit"><a href="#" target="_blank"><span>Game Name</span></a></h2>
+                <div class="ntf_game_info_wrap">
+                    <div class="ntf_game_info_left">
+                        <p class="nft_game_created">Created by <span>0xa999a...9aa9</span></p>
+                        <div class="nft_game_desc">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <button type="button" class="nft_desc_more"><span>... View more</span></button>
+                        </div><!-- .nft_game_desc -->
+                    </div>
+                    <ul class="nft_game_info_right">
+                        <li><span>Items</span><p><span>10K</span></p></li>
+                        <li><span>Floor</span><p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.000</span></p></li>
+                        <li><span>Highest</span><p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.000</span></p></li>
+                        <li><span>Volume</span><p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.000</span></p></li>
+                    </ul>
+                </div><!-- .ntf_game_info_wrap -->
+            </div><!-- .content_top -->
+
+            <div class="nft_game_view_list_wrap">
+                <div class="nft_game_filter">
+                    <div class="nft_game_filter_title"><button type="button"><span>Filter</span></button></div>
+                    <div class="nft_game_filter_list">
+                        <div class="nft_game_filter_item">
+                            <button type="button" class="nft_game_filter_button"><span>Status</span></button>
+                            <div class="filter_content">
+                                <ul>
+                                    <li><label class="nft_custom_checkbox">Buy Now<input type="checkbox"><span class="checkmark"></span></label></li>
+                                    <li><label class="nft_custom_checkbox">Sold Out<input type="checkbox"><span class="checkmark"></span></label></li>
+                                </ul>
+                            </div><!-- .filter_content -->
+                        </div><!-- .nft_game_filter_item -->
+                        <div class="nft_game_filter_item">
+                            <button type="button" class="nft_game_filter_button"><span>Price</span></button>
+                            <div class="filter_content">
+                                <p class="filter_price_input"><input type="num" placeholder="Min"><span>to</span><input type="num" placeholder="Max"></p>
+                                <button type="button" class="filter_price_apply"><span>Apply</span></button>
+                            </div><!-- .filter_content -->
+                        </div><!-- .nft_game_filter_item -->
+                        <div class="nft_game_filter_item">
+                            <button type="button" class="nft_game_filter_button"><span>Properties</span></button>
+                            <div class="filter_content">
+                                <ul>
+                                    <li><label class="nft_custom_checkbox">Trait 01<input type="checkbox"><span class="checkmark"></span></label></li>
+                                    <li><label class="nft_custom_checkbox">Trait 02<input type="checkbox"><span class="checkmark"></span></label></li>
+                                    <li><label class="nft_custom_checkbox">Trait 03<input type="checkbox"><span class="checkmark"></span></label></li>
+                                </ul>
+                            </div><!-- .filter_content -->
+                        </div><!-- .nft_game_filter_item -->
+                    </div><!-- .nft_game_filter_list -->
+                </div><!-- .nft_game_filter -->
+
+                <div class="filter_popup">
+                    <div class="filter_popup_overlay"></div>
+                    <div class="filter_popup_box">
+                        <div class="filter_popup_title">
+                            <p>Filter</p>
+                            <div class="filter_popup_close"><span class="sr_only">닫기</span></div>
+                        </div><!-- .filter_popup_title -->
+                        <div class="filter_popup_content">
+                            <button type="button" class="filter_popup_apply"><span>Apply</span></button>
+                        </div><!-- .filter_popup_content -->
+                    </div><!-- .filter_popup_box -->
+                </div><!-- .filter_popup -->
+
+                <div class="nft_game_view_list">
+                    <div class="nft_game_view_list_top">
+                        <button type="button" class="nft_filter_open"><span class="sr_only">필터 열기(pc)</span></button>
+
+                        <div class="select nft_game_sorting">
+                            <button type="button" class="nft_filter_button"><span class="sr_only">필터 팝업 열기</span></button>
+                            <select id="select_email" class="select_email selectric">
+                                <option value="Price : Low to High">Price : Low to High</option>
+                                <option value="Price : High to Low">Price : High to Low</option>
+                            </select>                                                   
+                        </div><!-- .nft_game_sorting -->
+
+                        <div class="nft-search__field">
+                            <label class="nft-search__label">
+                                <input class="nft-search__input" name="search" type="text" value="" placeholder="Search games">
+                            </label><!-- .nft-search__label -->
+                            <button class="nft-search__submit"><span class="sr_only">검색</span></button>
+                        </div><!-- .nft-search__field -->
+                    </div><!-- .nft_game_view_list_top -->
+
+                    <div class="nft_item_list">
+                        <div class="nft_item">
+                            <p class="nft_item_tit">Game Name</p>
+                            <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                            <ul class="row2">
+                                <li class="nft_item_name"><span>NFT Name</span></li>
+                                <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                            </ul>
+                            <ul class="nft_item_price">
+                                <li>
+                                    <b>Price</b>
+                                    <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                </li>
+                            </ul>
+                            <ul class="nft_item_button row2">
+                                <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                            </ul>
+                            <a href="./nft_view.htm" class="nft_item_link"></a>
+                        </div><!-- .nft_item -->
+
+                        <div class="nft_item">
+                            <p class="nft_item_tit">Game Name</p>
+                            <figure><img src="https://via.placeholder.com/213.jpg" alt=""></figure>
+                            <ul class="row2">
+                                <li class="nft_item_name"><span>NFT Name</span></li>
+                                <li class="nft_item_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                            </ul>
+                            <ul class="nft_item_price">
+                                <li>
+                                    <b>Price</b>
+                                    <p><i><img src="../images/sub/nft/logo-pmw.svg" alt="pmw"></i><span>0.00</span></p>
+                                </li>
+                            </ul>
+                            <ul class="nft_item_button row2">
+                                <li class="nft_item_cart"><button type="button"><span class="sr_only">장바구니</span></button></li>
+                                <li class="nft_item_buy"><button type="button"><span>Buy now</span></button></li>
+                            </ul>
+                            <a href="./nft_view.htm" class="nft_item_link"></a>
+                        </div><!-- .nft_item -->
+                    </div><!-- .nft_item_list -->
+                </div><!-- .nft_game_view_list -->
+            </div><!-- .nft_game_view_list_wrap -->
+        </div><!-- .wrap_medium -->
+    </div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

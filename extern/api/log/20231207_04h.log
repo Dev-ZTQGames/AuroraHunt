@@ -1,0 +1,10 @@
+[2023-12-07 04:34:59] BILLING - SourceIP : 35.191.32.192, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"0","msg":"Purchase related parameters for game cash deduction have not been delivered."}
+[2023-12-07 04:35:46] BILLING - SourceIP : 35.191.32.192, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"0","msg":"HTTP Status Code - 401, Failure."}
+[2023-12-07 04:36:20] BILLING - SourceIP : 35.191.32.192, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"0","msg":"HTTP Status Code - 400, Failure."}
+[2023-12-07 04:36:49] BILLING - SourceIP : 35.191.32.192, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":8000}
+[2023-12-07 04:37:02] BILLING - SourceIP : 35.191.3.29, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : gold1, cash : 100
+{"result":"0","msg":"HTTP Status Code - 400, Failure."}

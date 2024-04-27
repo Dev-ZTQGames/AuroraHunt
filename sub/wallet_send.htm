@@ -1,0 +1,76 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="wallet_send">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <a href="#" class="btn_back"><span class="sr_only">뒤로가기</span></a>
+                    <h3>Send</h3>
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_addr"><span>To Address</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <input type="text" class="wallet_form_input" id="wallet_addr">
+                                <p class="valid_icon">
+                                    <i class="valid_confirm"></i>
+                                    <i class="valid_error"></i>
+                                </p>
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_asset"><span>Asset</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <select class="send_select select_small selectric">
+                                    <option class="swap_select_pmw" value="pmw">PMW</option>
+                                    <option class="swap_select_psct" value="psct">PSCT</option>
+                                    <option class="swap_select_psct" value="nft">NFT</option>
+                                </select>
+
+                                <select class="send_select select_small selectric">
+                                    <option class="swap_select_pmw" value="Game Name">Game Name</option>
+                                </select>
+
+                                <select class="send_select select_small selectric">
+                                    <option class="swap_select_pmw" value="Game Name">NFT Name</option>
+                                </select>
+
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+                    <div class="wallet_form_field_item_wrap send_amount">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label"><span>Amount</span></label>
+                            <div class="wallet_form_input_wrap send_input_wrap">
+                                <b>000 PMW</b>
+                                <span>$0.00 USD</span>
+                                <button type="button" class="amount_change"><span class="sr_only">전환</span></button>
+                            </div><!-- .wallet_form_input_wrap -->
+                            <p class="amount_available">Available : 000 PMW</p>
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap --> 
+                    
+                    <div class="wallet_form_field_item_wrap send_gasfee">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label"><span>Gas Fee</span></label>
+                            <div class="wallet_form_input_wrap send_input_wrap">
+                                <b>000 PMW</b>
+                                <span>$0.00 USD</span>
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap --> 
+                    <a href="#" class="btn_round btn_process"><span>SEND</span></a>  
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

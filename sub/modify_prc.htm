@@ -1,0 +1,17 @@
+<?php 
+include $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
+
+$name = escape_string(trim($_REQUEST['name']));
+$login_id = escape_string(trim($_REQUEST['login_id']));
+
+$update_query = "UPDATE Accounts SET name = '".$name."' WHERE login_id = '".$login_id."'";
+
+if(!mysqli_query($connect,$update_query)){
+	echo "fail";
+} else {
+	echo "success";
+	setcookie('name', $name, time() + 60 * 60 * 24, "/", ".aurorahunt.xyz");
+};
+
+mysqli_close($connect);
+?>

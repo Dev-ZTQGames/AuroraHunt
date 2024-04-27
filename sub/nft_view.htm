@@ -1,0 +1,102 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_nft_view">
+    <div class="article_body">
+        <div class="wrap_medium">
+            <div class="nft_contents">
+                <div class="nft_info_wrap">
+                    <div class="nft_img">
+                        <figure><img src="../images/sub/nft/nft-img-sample.jpg" alt=""></figure>
+                        <a href="../images/sub/nft/nft-img-sample.jpg" target="_blank" class="nft_img_expand"><span class="sr_only">확대</span></a>
+                    </div><!-- .nft_img -->
+                    <div class="nft_info">
+                        <div class="nft_info_top">
+                            <p class="nft_info_game_name"><i><img src="../images/sub/nft/game-logo-sample.jpg" alt=""></i><span>Game name</span></p>
+                            <ul class="nft_info_util">
+                                <li class="nft_info_wish"><button type="button"><span class="sr_only">찜</span></button></li>
+                                <li class="nft_info_refresh"><button type="button"><span class="sr_only">새로고침</span></button></li>
+                            </ul>
+                        </div><!-- .nft_info_top -->
+                        <h2 class="nft_info_nft_name">NFT name</h2>
+                        <ul class="nft_info_basic">
+                            <li><span>Creator</span><p>0xa999a…z99z</p></li>
+                            <li><span>Owner</span><p>-</p></li>
+                        </ul>
+                        <div class="nft_price"> <?php /* 솔드아웃 스타일 적용방법 : nft_price에 sold_out 클래스 추가 + input에 disabled 추가 */ ?>
+                            <p>Price</p>
+                            <ul>
+                                <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 Marble</label></li>
+                                <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 PMW</label></li>
+                                <li><label class="nft_custom_radio"><input type="radio" name="charge_system"><i><img src="../images/sub/nft/logo-pmw.svg" alt=""></i>000 PSCT</label></li>
+                            </ul>
+                        </div><!-- .nft_price -->
+                        <div class="nft_button">
+                            <button type="button" class="nft_btn_cart"><span>Add to Cart</span></button>
+                            <button type="button" class="nft_btn_buy"><span>Buy Now</span></button>
+                            <?php /* sold out 버튼 
+                            <p class="sold_out"><span>Sold Out</span></p> 
+                            */ ?>
+                        </div><!-- .nft_button -->
+                    </div><!-- .nft_info -->
+                </div><!-- .nft_info_wrap -->
+                <div class="nft_desc">
+                    <h3>Description</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <button type="button" class="nft_desc_more"><span>... View more</span></button>
+                </div><!-- .nft_desc -->
+                <div class="nft_properties">
+                    <h3>Properties <span>4</span></h3>
+                    <ul class="nft_prop_list">
+                        <li>
+                            <p>BACKGROUND</p>
+                            <b>SKY BLUE</b>
+                            <span>Rarity 10%</span>
+                        </li>
+                        <li>
+                            <p>EYES</p>
+                            <b>HEART</b>
+                            <span>Rarity 5%</span>
+                        </li>
+                        <li>
+                            <p>HATS</p>
+                            <b>RIBBON</b>
+                            <span>Rarity 11%</span>
+                        </li>
+                        <li>
+                            <p>WINGS</p>
+                            <b>NONE</b>
+                            <span>Rarity 90%</span>
+                        </li>
+                    </ul><!-- .nft_prop_list -->
+                </div><!-- .nft_properties -->
+                <div class="nft_detail">
+                    <h3>Details</h3>
+                    <ul class="nft_detail_list">
+                        <li class="nft_detail_blockchain">
+                            <h4>Blockchain</h4>
+                            <div class="nft_detail_content">
+                                <p><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum (ERC-721)</span></p>
+                            </div>
+                        </li>
+                        <li class="nft_detail_address">
+                            <h4>Contract Address</h4>
+                            <div class="nft_detail_content">
+                                <p><span>0xe123a…4a5z</span><a href="#" target="_blank"><span>View on PSCscan</span></a></p>
+                            </div>
+                        </li>
+                        <li class="nft_detail_history">
+                            <h4>History</h4>
+                            <div class="nft_detail_content">
+                                <p><span>0xa999a...9z99<i>minted</i></span><span class="date">Oct-18-2022 05:00:01 PM</span></p>
+                                <p><span>0xa999a...9z99<i>minted</i></span><span class="date">Oct-18-2022 05:00:01 PM</span></p>
+                            </div>
+                        </li>
+                    </ul><!-- .nft_detail_list -->
+                </div><!-- .nft_detail -->
+            </div><!-- .nft_contents -->
+        </div><!-- .wrap -->
+    </div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

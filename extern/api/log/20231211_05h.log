@@ -1,0 +1,220 @@
+[2023-12-11 05:00:31] NODE - SourceIP : 35.191.3.24, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:00:31] NODE - SourceIP : 35.191.29.168, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:43] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:43] NODE - SourceIP : 35.191.32.12, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:43] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:43] NODE - SourceIP : 35.191.29.165, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:46] NODE - SourceIP : 35.191.16.192, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:46] NODE - SourceIP : 35.191.16.194, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:49] NODE - SourceIP : 35.191.24.150, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:01:49] NODE - SourceIP : 35.191.24.190, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:05:41] NODE - SourceIP : 35.191.13.82, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:05:41] NODE - SourceIP : 35.191.24.186, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:05:54] NODE - SourceIP : 35.191.16.199, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:05:54] NODE - SourceIP : 35.191.29.172, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:03] NODE - SourceIP : 35.191.24.186, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:03] NODE - SourceIP : 35.191.32.133, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:28] NODE - SourceIP : 35.191.3.26, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:28] NODE - SourceIP : 35.191.29.164, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:32] NODE - SourceIP : 35.191.32.232, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:32] NODE - SourceIP : 35.191.32.132, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:44] NODE - SourceIP : 35.191.29.161, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:06:44] NODE - SourceIP : 35.191.33.0, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:07:10] NODE - SourceIP : 35.191.32.195, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:07:11] NODE - SourceIP : 35.191.32.224, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:07:21] NODE - SourceIP : 35.191.32.137, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:07:21] NODE - SourceIP : 35.191.13.86, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:08:49] NODE - SourceIP : 35.191.29.161, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:08:49] NODE - SourceIP : 35.191.16.193, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:08:56] NODE - SourceIP : 35.191.32.136, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:08:56] NODE - SourceIP : 35.191.32.128, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:01] NODE - SourceIP : 35.191.3.24, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:01] NODE - SourceIP : 35.191.33.0, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:13] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:13] NODE - SourceIP : 35.191.29.168, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:34] NODE - SourceIP : 35.191.32.134, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:34] NODE - SourceIP : 35.191.32.193, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:39] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:39] NODE - SourceIP : 35.191.32.182, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:44] NODE - SourceIP : 35.191.29.166, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:44] NODE - SourceIP : 35.191.24.149, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:52] NODE - SourceIP : 35.191.32.226, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:09:52] NODE - SourceIP : 35.191.16.195, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:18] NODE - SourceIP : 35.191.16.192, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:18] NODE - SourceIP : 35.191.3.24, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:22] NODE - SourceIP : 35.191.33.1, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:22] NODE - SourceIP : 35.191.29.162, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:30] NODE - SourceIP : 35.191.13.81, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:30] NODE - SourceIP : 35.191.32.163, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:46] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:46] NODE - SourceIP : 35.191.3.26, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:52] NODE - SourceIP : 35.191.32.13, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:11:52] NODE - SourceIP : 35.191.24.187, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:12:03] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:12:03] NODE - SourceIP : 35.191.29.164, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:22:59] NODE - SourceIP : 35.191.13.86, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:22:59] NODE - SourceIP : 35.191.33.3, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:26:54] NODE - SourceIP : 35.191.33.3, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:26:54] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:11] NODE - SourceIP : 35.191.24.146, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:11] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:39] NODE - SourceIP : 35.191.32.231, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:39] NODE - SourceIP : 35.191.32.163, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:43] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:27:43] NODE - SourceIP : 35.191.24.186, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:33:10] NODE - SourceIP : 35.191.32.12, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:33:10] NODE - SourceIP : 35.191.24.148, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:34:53] NODE - SourceIP : 35.191.32.192, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:34:53] NODE - SourceIP : 35.191.16.196, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:36:57] BILLING - SourceIP : 35.191.32.230, proc1: getCash, proc2: login_id : Tester1perugia, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-12-11 05:36:57] CRYPTOOO - SourceIP : 35.191.29.170, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=perugiatest10|pw=perugia1|partner=Spofeed|date=231211053657|ip=210.59.144.44
+{"result":"1","return":"8PKSV%2BMW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX%2B3wSMQIYT%2FgM3w7qqstW82jELet7WQh%2BlHwzC9jNkLu%2B6lRcE7RQkyowWqVhaEqK2r"}
+[2023-12-11 05:36:57] API - SourceIP : 35.191.24.186, proc1: 8PKSV+MW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX+3wSMQIYT/gM3w7qqstW82jELet7WQh+lHwzC9jNkLu+6lRcE7RQkyowWqVhaEqK2r, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000132","msg":"1010"}
+[2023-12-11 05:36:58] CRYPTOOO - SourceIP : 35.191.3.26, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=perugiatest10|partner=Spofeed|date=231211053658|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOKuOMvHf64I4rhby6Fzwv%2FL2tT6WfS0MxNJb%2FifwZ3IJFU5PhCXfK%2FtMEVYm0ysVvGzd0zHPHDvf11RU6ShttEOA%3D%3D"}
+[2023-12-11 05:36:58] API - SourceIP : 35.191.32.8, proc1: GE/QHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOKuOMvHf64I4rhby6Fzwv/L2tT6WfS0MxNJb/ifwZ3IJFU5PhCXfK/tMEVYm0ysVvGzd0zHPHDvf11RU6ShttEOA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000132","login_id":"perugiatest10","name":"pt10","email":"testperugia10@gmail.com","lang_code":"en"}
+[2023-12-11 05:36:58] BILLING - SourceIP : 35.191.24.148, proc1: getCash, proc2: login_id : perugiatest10, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":8000}
+[2023-12-11 05:46:21] CRYPTOOO - SourceIP : 35.191.33.2, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=akira040609|pw=QWER1234|partner=Spofeed|date=231211054621|ip=210.59.144.44
+{"result":"1","return":"nwEV9LSaV8%2B5Mn1OlbaGZH%2BtN2bCz1rkw0%2BfPB94IMRhuIM3u8f9JQ%2Ba74Xej7YePlb3YEezvCiW7byt0PsUtnC0w0Ij%2B6GddBRhb0xWe%2BwLmyiwCmkqSplkcAAcOcRS"}
+[2023-12-11 05:46:21] API - SourceIP : 35.191.24.189, proc1: nwEV9LSaV8+5Mn1OlbaGZH+tN2bCz1rkw0+fPB94IMRhuIM3u8f9JQ+a74Xej7YePlb3YEezvCiW7byt0PsUtnC0w0Ij+6GddBRhb0xWe+wLmyiwCmkqSplkcAAcOcRS, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000125","msg":"1010"}
+[2023-12-11 05:46:21] CRYPTOOO - SourceIP : 35.191.33.6, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=akira040609|partner=Spofeed|date=231211054621|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8slOyfUTPOzey%2FJOdr1lR0H9J35HeFktiiCBGesNbqNwnldIhypNqLFZ%2BVB%2FT9Lnte%2FNjByeBCtUatQqfJPeyXa3j3asojUbnbx2CWUlyomqm"}
+[2023-12-11 05:46:21] API - SourceIP : 35.191.29.170, proc1: GE/QHt25gvfDff5QLOK8slOyfUTPOzey/JOdr1lR0H9J35HeFktiiCBGesNbqNwnldIhypNqLFZ+VB/T9Lnte/NjByeBCtUatQqfJPeyXa3j3asojUbnbx2CWUlyomqm, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-11 05:46:21] BILLING - SourceIP : 35.191.32.183, proc1: getCash, proc2: login_id : akira040609, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-12-11 05:46:22] CRYPTOOO - SourceIP : 35.191.3.26, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=akira040609|pw=QWER1234|partner=Spofeed|date=231211054622|ip=210.59.144.44
+{"result":"1","return":"nwEV9LSaV8%2B5Mn1OlbaGZH%2BtN2bCz1rkw0%2BfPB94IMRhuIM3u8f9JQ%2Ba74Xej7YePlb3YEezvCiW7byt0PsUtlD9yc8sF1oPJaaI91hJR9Au1j35odSfEO65laNWiFub"}
+[2023-12-11 05:46:22] API - SourceIP : 35.191.13.86, proc1: nwEV9LSaV8+5Mn1OlbaGZH+tN2bCz1rkw0+fPB94IMRhuIM3u8f9JQ+a74Xej7YePlb3YEezvCiW7byt0PsUtlD9yc8sF1oPJaaI91hJR9Au1j35odSfEO65laNWiFub, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000125","msg":"1010"}
+[2023-12-11 05:46:22] CRYPTOOO - SourceIP : 35.191.16.194, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=akira040609|partner=Spofeed|date=231211054622|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8slOyfUTPOzey%2FJOdr1lR0H9J35HeFktiiCBGesNbqNwn4jQIE3aMsswoKn6EX34mW5%2BK%2BzYlrDelTiUWnrWxzGO5qsVCx28Wykv5FGvWWTMp"}
+[2023-12-11 05:46:22] API - SourceIP : 35.191.16.193, proc1: GE/QHt25gvfDff5QLOK8slOyfUTPOzey/JOdr1lR0H9J35HeFktiiCBGesNbqNwn4jQIE3aMsswoKn6EX34mW5+K+zYlrDelTiUWnrWxzGO5qsVCx28Wykv5FGvWWTMp, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-11 05:46:22] BILLING - SourceIP : 35.191.32.8, proc1: getCash, proc2: login_id : akira040609, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-12-11 05:47:07] NODE - SourceIP : 35.191.24.144, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:47:07] NODE - SourceIP : 35.191.29.161, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:51:22] CRYPTOOO - SourceIP : 35.191.32.224, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=logout|id=akira040609|partner=Spofeed|date=231211055122|ip=210.59.144.44
+{"result":"1","return":"i1x0PHxWMq2DGtVCQLzXm0Kfm3rG4knf82R84%2Flfri7pLdwwiQ320XJQZ3ofqLUtAUl7Z24tXf8FQ6NQs4EKPlHJtW7jAhki1F8twyyZgsI%3D"}
+[2023-12-11 05:51:22] API - SourceIP : 35.191.13.86, proc1: i1x0PHxWMq2DGtVCQLzXm0Kfm3rG4knf82R84/lfri7pLdwwiQ320XJQZ3ofqLUtAUl7Z24tXf8FQ6NQs4EKPlHJtW7jAhki1F8twyyZgsI=, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1020"}
+[2023-12-11 05:51:50] NODE - SourceIP : 35.191.13.87, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:51:50] NODE - SourceIP : 35.191.13.87, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:51:52] NODE - SourceIP : 35.191.24.184, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:51:52] NODE - SourceIP : 35.191.29.163, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:51:55] CRYPTOOO - SourceIP : 35.191.32.15, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231211015154
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H70RCmazTIsiFA1ZqQBNj5CA%3D%3D"}
+[2023-12-11 05:51:55] API - SourceIP : 35.191.32.15, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H70RCmazTIsiFA1ZqQBNj5CA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-11 05:51:57] CRYPTOOO - SourceIP : 35.191.33.2, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231211015157
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7L4fB670M1O6xFklDsFgKFw%3D%3D"}
+[2023-12-11 05:51:57] API - SourceIP : 35.191.33.0, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7L4fB670M1O6xFklDsFgKFw==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-11 05:57:46] NODE - SourceIP : 35.191.32.233, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:46] NODE - SourceIP : 35.191.32.193, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:49] NODE - SourceIP : 35.191.16.192, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:49] NODE - SourceIP : 35.191.16.199, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:53] NODE - SourceIP : 35.191.24.146, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:53] NODE - SourceIP : 35.191.29.168, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:57] NODE - SourceIP : 35.191.32.198, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:57:57] NODE - SourceIP : 35.191.24.184, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:58:04] NODE - SourceIP : 35.191.3.24, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:58:04] NODE - SourceIP : 35.191.29.164, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:58:49] NODE - SourceIP : 35.191.13.87, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:58:49] NODE - SourceIP : 35.191.24.148, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:59:04] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 05:59:04] NODE - SourceIP : 35.191.32.232, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}

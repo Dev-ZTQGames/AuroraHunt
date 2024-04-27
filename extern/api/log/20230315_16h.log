@@ -1,0 +1,46 @@
+[2023-03-15 16:07:46] NODE - SourceIP : 34.80.134.81, proc1: MiningStatus, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":null}
+[2023-03-15 16:12:44] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"0259842233e945e24a59512b9abebe8b3e680cd0e92d85d67794c2ac53f9b55377"}
+[2023-03-15 16:12:58] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null}
+[2023-03-15 16:13:15] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":-4}
+[2023-03-15 16:13:23] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":15961}
+[2023-03-15 16:13:24] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":15961}
+[2023-03-15 16:13:29] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":15963}
+[2023-03-15 16:14:07] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":15972}
+[2023-03-15 16:16:58] NODE - SourceIP : 34.80.134.81, proc1: getAddress, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"0259842233e945e24a59512b9abebe8b3e680cd0e92d85d67794c2ac53f9b55377"}
+[2023-03-15 16:17:03] NODE - SourceIP : 34.80.134.81, proc1: MiningStart, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null}
+[2023-03-15 16:17:09] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":6}
+[2023-03-15 16:17:18] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":6}
+[2023-03-15 16:17:47] NODE - SourceIP : 34.80.134.81, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":7}
+[2023-03-15 16:33:24] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16287}
+[2023-03-15 16:33:41] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16291}
+[2023-03-15 16:34:01] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16296}
+[2023-03-15 16:40:10] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16390}
+[2023-03-15 16:40:59] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16403}
+[2023-03-15 16:41:32] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16411}
+[2023-03-15 16:42:21] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16424}
+[2023-03-15 16:43:53] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16447}
+[2023-03-15 16:57:07] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16649}
+[2023-03-15 16:57:20] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":16652}

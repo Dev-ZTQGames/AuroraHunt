@@ -1,0 +1,2 @@
+[2023-03-02 10:26:13] BILLING - SourceIP : 34.80.134.81, proc1: getCash, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}

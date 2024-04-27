@@ -1,0 +1,83 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<?php
+
+$index = escape_string(trim($_REQUEST['index']));
+$type = escape_string(trim($_REQUEST['type']));
+
+$result_query = "SELECT * FROM News WHERE m_index =".$index." AND NOT m_status = 4";
+
+$que = mysqli_query($connect, $result_query);
+
+$row = mysqli_fetch_array($que);
+
+$info = array();
+
+$info = $row;
+
+switch($info['m_game_code']){
+	case 'CLWMC' : $game_name = 'Claw Machine - Catch! The Friends -';
+	break; 
+}
+
+$date = substr($info['m_date'],0,10);
+
+if($_GET['page']){
+	$page = $_GET['page'];
+	if($page == '0'){
+		$page == '1';
+	}
+} else {
+	$page = 1; 
+	$_GET['page'] = 1;
+}
+
+
+?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+
+            <div class="notice_view_header">
+                <h2><span class="notice_single_title"><?php echo $info['m_title']; ?></span></h2>
+                <ul class="notice_view_info">
+                    <!--li class="service"><span><?php echo $game_name; ?></span></li-->
+                    <li class="date"><span><time class="date" datetime="2019-03-04 05:31"><?php echo $date; ?></time></span></li>
+                </ul>
+            </div><!-- .notice_view_header -->
+            <div class="notice_view_body">
+                <div class="notice_view_content">
+                    <!--img src="<?php echo $info['m_link']; ?>" alt=""-->
+					<?php echo $info['m_content']; ?>
+                </div><!-- .notice_view_content -->
+                <div class="notice_control">
+				<?php
+					if($type == 'end_event'){
+				?>
+					<a href="cs_event_end.htm?page=<?php echo $page; ?>" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_To_Lists']; ?></span></a>
+				<?php
+					} else if ($type == 'ing_event'){
+				?>
+					<a href="cs_event_ing.htm?page=<?php echo $page; ?>" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_To_Lists']; ?></span></a>
+				<?php
+					} else {
+				?>
+					<a href="cs_notice_list.htm?page=<?php echo $page; ?>" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_To_Lists']; ?></span></a>
+				<?php
+				}
+				?>
+                    
+                </div><!-- .notice_control -->
+            </div><!-- .notice_view_body -->
+        </div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

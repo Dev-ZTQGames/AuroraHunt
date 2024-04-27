@@ -1,0 +1,19 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_policy">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Terms_And_Policies']; ?></h2>
+		</div><!-- .article_header_inner -->
+        <?php include "../includes/submenu_policy.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap">
+		   <!--?php include 'policy_safeguard_content.htm'; ?-->
+		   <?php include $_SERVER['DOCUMENT_ROOT'] . "/lang/" . $lang_code . "/policy_safeguard_content.htm"; ?>
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

@@ -1,0 +1,490 @@
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm';
+//header('location: https://' .$HOST. '.aurorahunt.xyz');
+
+if ( $_COOKIE['aurorahunt_lang_code'] != "" ) {
+	$lang_code = $_COOKIE['aurorahunt_lang_code'];
+}
+if ( in_array($url_lang, $lang_list) ) {
+	$lang_code = $url_lang;
+}
+else {
+	if ( $configuration['mode'] == "service / release" ) {
+		$region = "KO"; 
+		$lang_code = strtolower($region);
+		setcookie('aurorahunt_lang_code', $lang_code, time() + 60 * 60 * 24 * 365, "/", ".aurorahunt.xyz");
+		echo "<script type='text/javascript'>location.href='https://".$lang_code.".aurorahunt.xyz';</script>";
+	} else {
+		$lang_code = "ko";
+		setcookie('aurorahunt_lang_code', $lang_code, time() + 60 * 60 * 24 * 365, "/", ".aurorahunt.xyz");
+		echo "<script type='text/javascript'>location.href='https://".$HOST.".aurorahunt.xyz';</script>";
+	}
+}
+
+$query = "SELECT * FROM Accounts WHERE login_id = '" . $_SESSION['sess_login_id'] . "'";
+$que = mysqli_query($connect, $query);
+$row = mysqli_fetch_array($que);
+$info = $row;
+
+$name = $info['name'];
+?>
+<div id="container" class="main lozad" data-background-image="../images/main/main_bg.jpg">
+	<div class="wrap">
+	    <div class="main_first_contents">
+			<div class="main_section main_visual_wrap">
+				<div class="main_visual swiper-container">
+					<div class="main_visual_slider swiper-wrapper">
+					<?php 
+					if($region == "TW" || $lang_code == "tw"){ //Hard coding needs to be modified.
+					?>
+						<div class="main_visual_item swiper-slide">
+							<figure>
+								<img class="main_visual_item_pc lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://tw.aurorahunt.xyz/img_remote/live/game/spolive/1_1118x584.png" alt=""/>
+							</figure>
+							<div class="main_visual_content">
+								<div class="main_visual_content_inner">
+									<div class="content_wrap">
+										<h2><span>SPOLIVE</span></h2>
+										<p><span></span></p>
+										<p><span><?php echo $lang['SPOLIVE_Desc']; ?>囊括國內外大小體育賽事<br>多種輕鬆有趣小遊戲<br>立即加入，下一個預測王就是你！</span></p>
+										<div class="btn_wrap"><a href="/sub/game_view.htm?game_code=spolive"><span><?php echo $lang['Game_Start']; ?></span></a></div>
+									</div><!-- .content_wrap -->
+								</div><!-- .main_visual_content_inner -->
+							</div><!-- .main_visual_content -->
+						</div><!-- .main_visual_item -->
+					<?php
+					}
+					?>
+                        <div class="main_visual_item swiper-slide">
+							<figure>
+								<img class="main_visual_item_pc lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="../images/main/main_visual_mm_01.jpg" alt=""/>
+							</figure>
+							<div class="main_visual_content">
+								<div class="main_visual_content_inner">
+									<div class="content_wrap">
+										<h2><span>Mining Maze</span></h2>
+										<p><span>- Get a big treasure box! -</span></p>
+										<p><span><?php echo $lang['Mining_Maze_Desc']; ?></span></p>
+										<div class="btn_wrap"><a href="/sub/game_view.htm?game_code=mm"><span><?php echo $lang['Game_Start']; ?></span></a></div>
+									</div><!-- .content_wrap -->
+								</div><!-- .main_visual_content_inner -->
+							</div><!-- .main_visual_content -->
+						</div><!-- .main_visual_item -->
+
+                        <div class="main_visual_item swiper-slide">
+							<figure>
+								<img class="main_visual_item_pc lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="../images/main/main_visual_mm_02.jpg" alt=""/>
+							</figure>
+							<div class="main_visual_content">
+								<div class="main_visual_content_inner">
+									<div class="content_wrap">
+										<h2><span>Mining Maze</span></h2>
+										<p><span>- Get a big treasure box! -</span></p>
+										<p><span><?php echo $lang['Mining_Maze_Desc']; ?></span></p>
+										<div class="btn_wrap"><a href="/sub/game_view.htm?game_code=mm"><span><?php echo $lang['Game_Start']; ?></span></a></div>
+									</div><!-- .content_wrap -->
+								</div><!-- .main_visual_content_inner -->
+							</div><!-- .main_visual_content -->
+						</div><!-- .main_visual_item -->
+
+						<div class="main_visual_item swiper-slide">
+							<figure>
+								<img class="main_visual_item_pc lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="../images/main/main_visual_01.jpg" alt=""/>
+							</figure>
+							<div class="main_visual_content">
+								<div class="main_visual_content_inner">
+									<div class="content_wrap">
+										<h2><span>Claw Machine</span></h2>
+										<p><span>- Catch! The Friends -</span></p>
+										<p><span><?php echo $lang['Claw_Machine_Desc_Br']; ?></span></p>
+										<div class="btn_wrap"><a href="/sub/game_view.htm?game_code=clwmc"><span><?php echo $lang['Game_Start']; ?></span></a></div>
+									</div><!-- .content_wrap -->
+								</div><!-- .main_visual_content_inner -->
+							</div><!-- .main_visual_content -->
+						</div><!-- .main_visual_item -->
+
+                        <div class="main_visual_item swiper-slide">
+							<figure>
+								<img class="main_visual_item_pc lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="../images/main/main_visual_02.jpg" alt=""/>
+							</figure>
+							<div class="main_visual_content">
+								<div class="main_visual_content_inner">
+									<div class="content_wrap">
+										<h2><span>Claw Machine</span></h2>
+										<p><span>- Catch! The Friends -</span></p>
+										<p><span><?php echo $lang['Claw_Machine_Desc_Br']; ?></span></p>
+										<div class="btn_wrap"><a href="/sub/game_view.htm?game_code=clwmc"><span><?php echo $lang['Game_Start']; ?></span></a></div>
+									</div><!-- .content_wrap -->
+								</div><!-- .main_visual_content_inner -->
+							</div><!-- .main_visual_content -->
+						</div><!-- .main_visual_item -->
+
+					</div><!-- .main_visual_slider -->
+
+					<div class="swiper_control main_visual_state">
+						<div class="swiper-pagination"></div>
+						<div class="swiper_progress_wrap"><span class="swiper_progress"></span></div>
+						<div class="swiper_navigation">
+							<button class="swiper-button-prev element_cursor"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+							<button class="swiper-button-next element_cursor"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+						</div><!-- .swiper_navigation -->
+                        <div class="swiper_play_state play">
+                            <button class="swiper_play_state_btn swiper_state_play"><span class="sr_only">재생</span></button>
+                            <button class="swiper_play_state_btn swiper_state_pause"><span class="sr_only">일시정지</span></button>
+                        </div><!-- .swiper_play_state -->
+					</div><!-- .swiper_control -->
+				</div><!-- .main_visual_wrap -->                    
+
+			</div><!-- .main_visual -->
+			
+			<div class="main_first_contents_right">
+                <?php
+				if( $_SESSION['sess_login_id'] != '' ){?>
+				<div class="main_login_banner login">
+				    <div class="main_login_banner_inner login_info">
+                        <i class="login_icon"></i>
+                        <b><?php echo $name; ?></b>
+						<?php
+						if( $configuration['mode'] == "development / alpha" ){
+						?>
+                        <ul>
+                            <li><span>마블</span><span>1,000 캐시</span></li>
+                        </ul>
+						<?php
+						}
+						?>
+                        <a href="/extern/sso/logout.php"><span><?php echo $lang['LogOut']; ?></span></a>
+					</div><!-- .main_login_banner_inner -->
+				</div><!-- .main_login_banner -->
+				<?php
+				} else {?>
+				<div class="main_login_banner">
+					<div class="main_login_banner_inner">
+						<i class="login_icon"></i>
+						<b><?php echo $lang['AH_Login']; ?></b>
+						<p><?php echo $lang['Login_Try_Services']; ?></p>
+						<a href="../extern/sso/login.htm?return_path=<?php echo $HOST; ?>.aurorahunt.xyz"><span><?php echo $lang['Login']; ?></span></a>
+					</div><!-- .main_login_banner_inner -->
+				</div><!-- .main_login_banner -->
+				<?php
+				}
+				?>
+
+				<?php
+			// for xsolla billing auth
+			//	if ( $configuration['mode'] == "test / debug" ) {
+				?>
+				<div class="main_ad_banner">
+                    <div class="main_ad_banner_inner">
+                        <a href="https://discord.com/invite/photonmilkyway" target="_blank">
+                            <div class="main_ad_banner_logo main_ad_banner_discord"></div>
+                            <p>Join Our Discord!</p>
+                        </a>
+
+                        <?php /* 기존 배너
+                            <a href="<?php echo 'https://www.perugiacorp.com?lang_code='.$lang_code; ?>" target="_blank">
+                            <?php 
+                            if ( $lang_code == 'ko' ){
+                            ?>
+                                <div class="main_ad_banner_logo"><img src="../images/main/logo_perugia.svg" alt=""></div>
+                            <?php 
+                            } elseif ( $lang_code == 'tw' ){
+                            ?>
+                                <div class="main_ad_banner_logo"><img src="../images/main/logo_petpoint.svg" alt=""></div>
+                            <?php
+                            } elseif ( $lang_code == 'en' ){
+                            ?>
+                                <div class="main_ad_banner_logo"><img src="../images/main/logo_astrogaz.svg" alt=""></div>
+                            <?php
+                            }
+                            ?>
+                                <p><?php echo $lang['Shortcuts']; ?></p>
+                            </a>
+                        */ ?>
+                    </div><!-- .main_ad_banner_inner -->
+                </div><!-- .main_ad_banner -->
+				<?php
+			//	}	// for xsolla billing auth
+				?>
+			</div><!-- .main_first_contents_right -->
+		</div><!-- .main_first_contents -->
+
+		<div class="main_game_wrap main_content_section">
+		    <div class="main_game_top main_content_section_top">
+				<h2 lang="en">GAME</h2>
+				<ul class="main_game_tab_list" id="main_game_tab_list">
+					<li class="active" data-filter="*"><button type="button"><span>ALL</span></button></li>
+					<li data-filter=".game_html5"><button type="button"><span>WEB</span></button></li>
+					<li class="game_pc" data-filter=".game_pc"><button type="button"><span>PC</span></button></li>
+					<li class="game_mobile" data-filter=".game_mobile"><button type="button"><span>MOBILE</span></button></li>
+				</ul>
+				<a href="../sub/game.htm" class="btn_more_view"><span><?php echo $lang['More']; ?></span></a>
+			</div><!-- .marin_game_top -->
+            <div class="game_list">
+				<?php
+				$result_games = mysqli_query($connect, "SELECT * FROM Games WHERE m_game_code != '' ORDER BY m_game_sort DESC");
+				$info_games = array();
+
+				while($row_games = mysqli_fetch_array($result_games)){
+					$info_games = $row_games;
+
+					if($info_games["m_badge"] == "1"){
+						$badge_class = "game_tag game_tag_new";
+					}else if($info_games["m_badge"] == "2"){
+						$badge_class = "game_tag game_tag_comingsoon";
+					}
+					
+					switch($info_games['m_badge']){
+						case '1' : $badge = $lang['New'];
+						break;
+						case '2' : $badge = $lang['Coming_Soon'];
+						break;
+						case '3' : $badge = "HOT";
+						break;
+					}
+
+					if ( strpos($info_games['m_category1'], "1") !== false ) {		
+						$category1 .= 'WEB';
+						if ( strpos($info_games['m_category1'], "2") !== false ){
+							$category1 .= ' / PC';
+							if ( strpos($info_games['m_category1'], "3") !== false )	{
+								$category1 .= ' / MOBILE';
+							}
+						}
+					} else {
+						if ( strpos($info_games['m_category1'], "2") !== false ){
+							$category1 .= ' PC';
+							if ( strpos($info_games['m_category1'], "3") !== false )	{
+								$category1 .= ' / MOBILE';
+							}
+						}
+					}
+
+					switch($info_games['m_category2']){
+						case '1' : $category2 = $lang['Casual'];
+						break;
+						case '2' : $category2 = $lang['Metaverse'];
+						break;
+						case '3' : $category2 = $lang['Sports'];
+						break;
+					}
+
+					if ( strpos($info_games['m_category1'], "1") !== false ) {
+						$game_class .= ' game_html5';
+					}
+					if ( strpos($info_games['m_category1'], "2") !== false ){
+						$game_class .= ' game_pc';
+					}
+					if ( strpos($info_games['m_category1'], "3") !== false )	{
+						$game_class .= ' game_mobile';
+					}
+
+				$game_url = str_replace('HOST',$HOST,$info_games["m_landing_url"]);
+			//	$game_url = "/sub/game_view.htm?game_code=" . $info_games["m_game_code"];
+				?>
+				<div class="game_item<?php echo $game_class; ?>">
+				<?php
+					if($game_url == ''){?>
+						<a href="javascrip:void(0);>">
+				<?php
+					} 
+					else {
+				?>
+						<a href="<?php echo $game_url; ?>">
+				<?php
+					}	
+					
+					echo '
+						<figure><img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="'.$info_games["m_img_url"].'" alt=""></figure>
+						<span class="'.$badge_class.'">'.$badge.'</span>
+						<div class="game_info">
+							<ul>
+								<li>'.$category1.'</li>
+								<li>'.$category2.'</li>
+							</ul>
+							<h3>'.$info_games["m_name_" . $lang_code].'</h3>
+							<p class="game_desc">'.$info_games["m_description"].'</p>
+						</div>
+					</a>
+					<button type="button" class="add_game" onclick="addGame("clwmc",this);"><span class="sr_only">'.$lang['Add_My_Game'].'</span></button></div><!-- .game_item -->';
+
+					$game_class='';
+					$category1 = '';
+				
+				};
+				?>
+            </div><!-- .game_list -->
+            <div class="no_list"><p><?php echo $lang['Preparing']; ?></p></div>
+        </div><!-- main_game_wrap -->
+
+		<div class="main_event_wrap main_content_section">
+			<div class="marn_event_top main_content_section_top">
+				<h2 lang="en">EVENT</h2>
+				<a href="../sub/cs_event_ing.htm" class="btn_more_view"><span><?php echo $lang['More']; ?></span></a>
+			</div><!-- .marin_event_top -->
+			<div class="event_slide_wrap">
+			<?php
+				$ck_date = date('Y-m-d H:i:s');
+				$result = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '3' AND m_start < '".$ck_date."' AND NOT m_status = 4 AND '".$ck_date."' < m_end");
+				$count = mysqli_num_rows($result);
+				$info = array();
+
+				if ( $count == 0 ) {
+					echo '<div class="no_list" id="no_list"><p>'.$lang['No_Ongoing_Event'].'</p></div>';
+				}		
+			?>
+				<div class="event_slider swiper-container">
+					<div class="swiper-wrapper">
+						<?php
+							while($row = mysqli_fetch_array($result)){
+								
+								$info = $row;
+
+								switch($info['m_game_code']){
+									case 'clwmc' : $game_name = 'Claw Machine';
+									break;
+									case 'mm' : $game_name = 'Mining Maze';
+									break; 
+								}
+
+								echo '<div class="event_item event_item_ing swiper-slide">
+										<a href="/sub/cs_notice_view.htm?index='.$info["m_index"].'">
+											<figure>
+												<img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="'.$info["m_link"].'"/>
+											</figure>
+											<div class="event_info">
+												<h3><span>'.$lang['Ongoing'].'</span> '.$game_name.'</h3>
+												<h4>'.$info["m_title"].'</h4>
+												<p lang="en">'.substr($info["m_start"],0,10).' ~ '.substr($info["m_end"],0,10).'</p>
+											</div>
+										</a>
+									</div><!-- .event_item -->';
+							}
+						?>
+					</div><!-- .swiper-wrapper -->
+                    <div class="swiper-scrollbar"></div>
+				</div><!-- .swiper-container -->
+                <div class="swiper_navigation">
+                    <button class="swiper-button-prev element_cursor"><span class="sr_only">PREVE</span></button><!-- .swiper-button-next -->
+                    <button class="swiper-button-next element_cursor"><span class="sr_only">NEXT</span></button><!-- .swiper-button-prev -->
+                </div><!-- .swiper_navigation -->
+			</div><!-- .event_slide_wrap -->
+		</div><!-- main_event_wrap -->
+		<div class="main_notice_wrap main_content_section">
+			<div class="main_notice_top main_content_section_top">
+				<h2 lang="en">NOTICE</h2>
+				<a href="../sub/cs_notice_list.htm" class="btn_more_view"><span><?php echo $lang['More']; ?></span></a>
+			</div><!-- .marin_notice_top -->
+		    <div class="main_notice_list">
+				<div class="notice_slider swiper-container">
+					<div class="swiper-wrapper">
+						<?php
+							$result = mysqli_query($connect, "SELECT * FROM News");
+
+							$info = array();
+
+							while($row = mysqli_fetch_array($result)){
+								
+								$info = $row;
+
+								switch($info['m_type']){
+									case '1' : $type = $lang["Ctgr_Notice"];
+									break;
+									case '2' : $type = $lang["Update"];
+									break;
+									case '3' : $type = $lang["Event"];
+									break;
+									case '4' : $type = $lang["Inspection"];
+									break;
+								}
+
+								$start_date = strtotime($info['m_start']);
+								$end_date = strtotime($info['m_end']);
+								$date = strtotime(date('Y-m-d H:i:s'));
+
+								if($type == $lang["Event"]){
+									if($start_date < $date && $date < $end_date){
+										echo '<div class="main_notice_item swiper-slide">
+											<p><span>'.$type.'</span></p>
+											<h3><a href="/sub/cs_notice_view.htm?index='.$info["m_index"].'">'.$info['m_title'].'</a></h3>
+										</div>';
+									} else {
+										echo '';
+									}
+								} else {
+									echo '<div class="main_notice_item swiper-slide">
+										<p><span>'.$type.'</span></p>
+										<h3><a href="/sub/cs_notice_view.htm?index='.$info["m_index"].'">'.$info['m_title'].'</a></h3>
+									</div>';								
+								}
+							}
+						?>
+					</div><!-- .swiper-wrapper -->
+					<div class="swiper-button-wrap">
+						<button type="button" class="swiper-button-prev"></button>
+                        <button type="button" class="swiper-button-next"></button>
+					</div><!-- .swiper-button-wrap -->
+				</div><!-- .notice_slider -->
+			</div><!-- .main_notice_list -->
+		</div><!-- main_notice_wrap -->
+	</div><!-- .wrap -->
+</div><!-- .main_container -->
+<script>	
+function needLogin(){
+	swal({
+		text: '<?php echo $lang['Login_Required']; ?>',
+		buttons: {
+			cancel : '<?php echo $lang['Cancel']; ?>',
+			confirm : {
+				text : '<?php echo $lang['Go_To_Login']; ?>',
+				value : 'catch'
+			},
+		},
+	}).then(function(value){
+		if(value == 'catch'){
+			location.href='/extern/sso/login.htm?return_path=<?php echo $return_url; ?>';
+		} 
+	})
+}
+
+function addGame(game,btn){
+
+	if (btn.classList.contains('active')){
+		btn.classList.remove('active');
+		$.ajax({
+			url: "/includes/add_game_prc.php", 
+			data: { type: '0', game: game },  
+			method: "POST",   
+		})
+		.done(function(json) {
+			var msg = json.trim();
+			console.log(msg);
+		})
+		.fail(function(xhr, status, errorThrown) {
+			console.log(errorThrown);
+		})
+	} else {
+		$.ajax({
+			url: "/includes/add_game_prc.php", 
+			data: { type: '1', game: game },  
+			method: "POST",   
+		})
+		.done(function(text) {
+			var msg = text.trim();
+			if(msg == 'need to login'){
+				swal({
+				text: "<?php echo $lang['Login_Required']; ?>",
+				buttons: "$lang['Confirm']",
+			});
+			} else if(msg == 'success add'){
+				btn.classList.add('active');
+			}
+		})
+		.fail(function(xhr, status, errorThrown) {
+			console.log(errorThrown);
+		})
+	}
+
+}
+</script>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

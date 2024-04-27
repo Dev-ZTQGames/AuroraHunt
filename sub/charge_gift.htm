@@ -1,0 +1,119 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_charge">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Charge']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_charge.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+			<div class="has_cash_box cocash_box">
+                <b class="tit"><?php echo $lang['Cash_You_Have']; ?></b>
+                <p class="cash">플랫폼 캐시 <span>5,500</span> 마블</p>
+			</div><!-- .has_cash_box -->
+            <div class="charge_guide">
+                <div class="charge_guide_item">
+                    <h3><?php echo $lang['Gift_Method']; ?></h3>
+                    <div class="charge_guide_list">
+                        <ul class="num_info">
+                            <li><?php echo $lang['Enter_Recipient_ID']; ?></li>
+                            <li><?php echo $lang['Enter_Gift_Amount_Click_Gift_Button']; ?></li>
+                        </ul><!-- .dot_info -->
+                    </div><!-- .charge_guide_list -->
+                </div><!-- .charge_guide_item -->
+                <div class="charge_guide_item">
+                    <h3 class="red"><?php echo $lang['Precautions']; ?></h3>
+                    <div class="charge_guide_list">
+                        <ul class="dot_info">
+                            <li><?php echo $lang['Give_within_Charge_Limit']; ?></li>
+                            <li><?php echo $lang['History_Of_Sending_Receiving']; ?></li>
+                            <li><?php echo $lang['Be_Careful_Using_Gift_Function']; ?></li>
+                            <li><?php echo $lang['Need_Help_Contact_Customer_Center']; ?></li>
+                        </ul><!-- .dot_info -->
+                    </div><!-- .charge_guide_list -->
+                </div><!-- .charge_guide_item -->
+            </div>><!-- .charge_guide -->
+
+            <div class="form_charge">
+                <div class="form_field_item_wrap">
+                    <div class="form_field_item">
+                        <label class="form_label" for="charge_system"><span><?php echo $lang['Select_Payment_Method']; ?></span></label>
+                        <div class="form_input_wrap">
+                            <div class="custom_checkbox_wrap">
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Payment_By_Phone']; ?></label>
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Payment_By_Credit_Card']; ?></label>
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Direct_Debit']; ?></label>
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Cultural_Gift']; ?></label>
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Point_Payment']; ?></label>
+                                <label class="custom_radio"><input type="radio" name="charge_system"><span class="checkmark"></span><?php echo $lang['Overseas_Payment']; ?></label>
+                            </div><!-- .custom_checkbox_wrap -->
+                        </div>
+                    </div><!-- .form_field_item -->
+
+                    <div class="form_field_item charge_info">
+						<p class="label_item"><?php echo $lang['Enter_Information']; ?></p>
+						<div class="input_item">
+                            <div class="form_field_item_wrap">
+                                <div class="form_field_item">
+                                    <label class="form_label" for="gift_id"><span><?php echo $lang['Recipient_ID']; ?></span></label>
+                                    <div class="form_input_wrap">
+                                        <input type="text" class="form_input" id="gift_id"/>
+                                        <button class="id_confirm_button basic_btn"><?php echo $lang['Confirm_ID']; ?></button>
+                                    </div><!-- .form_input_wrap -->
+                                    <p class="valid_message_error"><i class="icon"></i><span><?php echo $lang['Enter_Again_After_Confirmation']; ?></span></p>
+                                    <p class="valid_message_confirm"><i class="icon"></i><span><?php echo $lang['ID_Verification_Is_Completed']; ?></span></p>
+                                </div><!-- .form_field_item -->
+                            </div><!-- .form_field_item_wrap -->
+                            <div class="form_field_item_wrap">
+                                <div class="form_field_item">
+                                    <label class="form_label" for="gift_price"><span><?php echo $lang['Gift_Amount']; ?></span></label>
+                                    <div class="form_input_wrap">
+                                        <div class="custom_checkbox_wrap">
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span>1천</span></label>
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span>5천</span></label>
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span>1만</span></label>
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span>5만</span></label>
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span>10만</span></label>
+                                            <label class="custom_radio_btn"><input type="radio" name="gift_price"><span><?php echo $lang['Direct_Input']; ?></span></label>
+                                        </div><!-- .custom_checkbox_wrap -->
+                                        <div class="gift_price_input">
+                                            <input type="text" class="form_input num_only" id="gift_price"/>
+                                            <p>마블(<span>1,000</span>단위)</p>
+                                        </div>
+                                    </div><!-- .form_input_wrap -->
+                                </div><!-- .form_field_item -->
+                            </div><!-- .form_field_item_wrap -->
+                            <div class="form_field_item_wrap">
+                                <div class="form_field_item">
+                                    <label class="form_label" for="gift_message"><span><?php echo $lang['Gift_Message']; ?></span></label>
+                                    <div class="form_input_wrap">
+                                        <textarea class="form_field" id="gift_message" placeholder="<?php echo $lang['Enter_Your_Message']; ?>" maxlength="200"></textarea>
+                                        <div class="textarea_count"><span>0</span> / 200</div>
+                                    </div><!-- .form_input_wrap -->
+                                </div><!-- .form_field_item -->
+                            </div><!-- .form_field_item_wrap -->
+                        </div><!-- .input_item -->
+					</div><!-- .form_field_item -->
+
+                    <div class="form_field_item charge_price_total">
+						<p class="label_item"><?php echo $lang['Gift_Amount']; ?></p>
+						<p class="input_item"><span>11,000</span>원</p>
+					</div><!-- .form_field_item -->
+                </div><!-- .form_field_item_wrap -->
+            </div><!-- .form_charge -->
+
+            <div class="process_btn_wrap"> 
+                <a href="#" class="basic_btn basic_btn_primary"><span><?php echo $lang['Give_Gift']; ?></span></a>
+                <a href="#" class="basic_btn basic_btn_secondary"><span><?php echo $lang['Cancel']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+            
+            <div class="ad_banner ad_1200_672"><img src="https://dummyimage.com/1200x672/000/fff"></div>
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

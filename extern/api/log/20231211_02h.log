@@ -1,0 +1,16 @@
+[2023-12-11 02:22:27] NODE - SourceIP : 35.191.32.164, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 02:22:27] NODE - SourceIP : 35.191.3.25, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 02:23:14] NODE - SourceIP : 35.191.24.186, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 02:23:14] NODE - SourceIP : 35.191.13.86, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 02:47:28] CRYPTOOO - SourceIP : 35.191.29.160, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=perugiatest10|pw=perugia1|partner=Spofeed|date=231211024728|ip=210.59.144.44
+{"result":"1","return":"8PKSV%2BMW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX%2B3wSMQIYT%2FgM3w7qqstW82jGwviCRDp1HVsvFZBxlgPcZsnExoe6oqaHNXeAZiMz%2Bl"}
+[2023-12-11 02:47:28] API - SourceIP : 35.191.16.196, proc1: 8PKSV+MW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX+3wSMQIYT/gM3w7qqstW82jGwviCRDp1HVsvFZBxlgPcZsnExoe6oqaHNXeAZiMz+l, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000132","msg":"1010"}
+[2023-12-11 02:47:29] CRYPTOOO - SourceIP : 35.191.33.0, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=perugiatest10|partner=Spofeed|date=231211024728|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOKk9w9lzxtFFXwooigDk2zBVAIobZIiSOVBa3XgIgUTS6SKng1%2FX85W2kN1BkPkxCwqlu386UHzbc6pPDHdWapmQ%3D%3D"}
+[2023-12-11 02:47:29] API - SourceIP : 35.191.33.4, proc1: GE/QHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOKk9w9lzxtFFXwooigDk2zBVAIobZIiSOVBa3XgIgUTS6SKng1/X85W2kN1BkPkxCwqlu386UHzbc6pPDHdWapmQ==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000132","login_id":"perugiatest10","name":"pt10","email":"testperugia10@gmail.com","lang_code":"en"}

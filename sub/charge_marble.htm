@@ -1,0 +1,181 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<script type="text/javascript">document.domain = "aurorahunt.xyz";</script>
+<?php
+if ( $_SESSION['sess_login_id'] == "" )	{
+?>
+<script type='text/javascript'>
+	swal({
+		text: '<?php echo $lang["Login_Required"]; ?>',
+		buttons: {
+			cancel : '<?php echo $lang["Cancel"]; ?>',
+			confirm : {
+				text : '<?php echo $lang["Go_To_Login"]; ?>',
+				value : 'catch'
+			},
+		},
+	}).then(function(value){
+		if(value == 'catch'){
+			location.href='/extern/sso/login.htm?return_path=<?php echo $HOST; ?>.aurorahunt.xyz/sub/charge_marble.htm';
+		} else {
+			location.href='/index.htm';
+		} 
+	})
+
+</script>	
+<?php
+} else {
+	if($configuration['mode'] == "development / alpha" || $configuration['mode'] == "test / debug"){
+		//인증 여부 체크
+		$que = mysqli_query($connect, "SELECT * FROM Accounts WHERE login_id='".$_SESSION['sess_login_id']."'");
+		$row = mysqli_fetch_array($que);
+		$info = array();
+		$info = $row;
+
+		$certified_day = strtotime(substr($info['day_certified'],0,10));
+		$today = strtotime(date('Y-m-d'));
+		$plus_day = $certified_day.strtotime('+365days');
+
+		//한국만 본인인증 필요
+		if($info['lang_code'] == 'ko'){
+
+			//미인증 또는 인증기간 만료시 재인증
+			if($certified_day == '' || $today > $plus_day){
+
+				//본인인증 url 획득
+				$curl = curl_init();
+
+				curl_setopt_array($curl, array(
+				  CURLOPT_URL => 'https://testpgapi.payletter.com/v1.0/auth/mobile/request',
+				  CURLOPT_RETURNTRANSFER => true,
+				  CURLOPT_ENCODING => '',
+				  CURLOPT_MAXREDIRS => 10,
+				  CURLOPT_TIMEOUT => 0,
+				  CURLOPT_FOLLOWLOCATION => true,
+				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_CUSTOMREQUEST => 'POST',
+				  CURLOPT_POSTFIELDS =>'{
+					"client_id":"pay_test",
+					"user_id":"test_user_id",
+					"return_url":"https://'.$HOST.'.aurorahunt.xyz/sub/charge_marble.htm",
+					"cancel_url":"https://'.$HOST.'.aurorahunt.xyz",
+					"site_url":"https://'.$HOST.'.aurorahunt.xyz",
+					"site_name":"오로라헌트"
+				}',
+				  CURLOPT_HTTPHEADER => array(
+					'Authorization: PLKEY MTFBNTAzNTEwNDAxQUIyMjlCQzgwNTg1MkU4MkZENDA=',
+					'Content-Type: application/json'
+				  ),
+				));
+
+				$response = curl_exec($curl);
+				$online_url = explode(',',$response)[1];
+				$online_url_final = explode('"',$online_url)[3];
+
+				curl_close($curl);
+
+				//본인인증 안내
+				echo "
+					<script>
+					swal({
+						text: '본인인증이 필요합니다.',
+						buttons: {
+							cancel : '취소',
+							confirm : {
+								text : '확인',
+								value : 'catch'
+							},
+						},
+					}).then(function(value){
+						if(value == 'catch'){
+							//window.open('".$online_url_final."','_blank','height:800px');
+							location.href='https://".$HOST.".aurorahunt.xyz/sub/cs_certify.htm';	
+						} else {
+							location.href='https://".$HOST.".aurorahunt.xyz';						
+						}
+					})
+					</script>
+					";
+				if($_REQUEST['tid']){
+					echo "<script>window.close();</script>";
+
+					//인증성공 -> 인증정보 DB 저장
+					$tid		= escape_string(trim($_REQUEST['tid']));
+					$auth_info	= escape_string(trim($_REQUEST['auth_info']));
+					$client_id	= "pay_test";
+
+					$curl = curl_init();
+
+					curl_setopt_array($curl, array(
+					  CURLOPT_URL => "https://testpgapi.payletter.com/v1.0/auth/info/".$tid."?client_id=".$client_id."&auth_info=".$auth_info,
+					  CURLOPT_RETURNTRANSFER => true,
+					  CURLOPT_ENCODING => '',
+					  CURLOPT_MAXREDIRS => 10,
+					  CURLOPT_TIMEOUT => 0,
+					  CURLOPT_FOLLOWLOCATION => true,
+					  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+					  CURLOPT_CUSTOMREQUEST => 'GET',
+					  CURLOPT_HTTPHEADER => array(
+						'Authorization: PLKEY MUI3MjM0RUExQTgyRDA1ODZGRDUyOEM4OTY2QTVCN0Y=',
+						'Content-Type: application/json'
+						),
+					));
+
+					$response = curl_exec($curl);
+
+					curl_close($curl);
+
+					mysqli_query($connect, "UPDATE Accounts SET certified_day = NOW() WHERE login_id='".$_SESSION['sess_login_id']."'");
+					
+				} 
+			}
+		}
+	}
+}
+
+?>
+	<!-- Page Content -->
+    <div class="container">
+	<?php
+		if ( $lang_code == "ko" )	{
+			if($region == "dev" || $region == "test"){
+				//test url 연결 필요
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billkotest.aurorahunt.xyz/fillup/PaymentOption" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			} else {
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billko.aurorahunt.xyz/fillup/PaymentOption" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			}		
+		}
+		else {
+			if($region == "dev" || $region == "test"){
+				//test url 연결 필요
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://billtest.aurorahunt.xyz/fillup/PaymentOption" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			} else {
+	?>
+				<div class="text-center">
+					<iframe id="myframe_charge" name="myframe_charge" src="https://bill.aurorahunt.xyz/fillup/PaymentOption" style="width:100%; height:1920px;"></iframe>
+				</div>
+	<?php
+			}	
+		}
+	?>
+    </div>
+    <!-- /.container -->
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+<?php
+	// 충전시에 실명인증을 했는지는 추가로 확인하지 않는다
+	// 실수로 실명인증을 하지 않았더라도 결제는 가능해야 할수도 있고
+	// 원더게임의 경우 계정을 생성했을때 게임 진입만 막으면, 결제는 나중문제기 때문이다.
+	// 게임을 못하는 사람이 결제를 하지는 않기 때문이다...
+	// 플랫폼과 펫포인트는 나눠서 생각하되 보다 간편한 방법을 생각해야 한다.
+?>

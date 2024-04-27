@@ -1,0 +1,88 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<!--?php
+
+$login_id	= $_REQUEST['login_id'];
+$phone_1	= $_REQUEST['phone_1'];
+$phone_2	= $_REQUEST['phone_2'];
+$year		= $_REQUEST['year'];
+$month		= $_REQUEST['month'];
+$day		= $_REQUEST['day'];
+$email		= $_REQUEST['fullEmail'];
+$gender		= $_REQUEST['gender'];
+
+if($phone_1 == '' || $phone_2 == ''){
+	$phone_number = 'NULL';
+} else {
+	$phone_number = '010-'.$phone_1.'-'.$phone_2;
+}
+
+if($year == '' || $month == '' || $day == ''){
+	$birth = 'NULL';
+} else {
+	if($month < 10){
+		if($month.count() < 2){
+			$month = '0'.$month;
+		}
+	}
+
+	if($day < 10){
+		if($day.count() < 2){
+			$day = '0'.$day;
+		}
+	}
+	$birth = $year.$month.$day;
+}
+
+if($gender == ''){
+	$gender = 'NULL';
+}
+
+if($email == ''){
+	$update_query = "UPDATE Accounts SET sex = '".$gender."', birth_date = ".$birth.", mobile_phone = '".$phone_number."' WHERE login_id = '".$login_id."'";
+} else {
+	$update_query = "UPDATE Accounts SET email = '".$email."', sex = '".$gender."', birth_date = ".$birth.", mobile_phone = '".$phone_number."' WHERE login_id = '".$login_id."'";
+}
+//echo $update_query;
+if(!mysqli_query($connect,$update_query)){
+	echo "<script>
+			swal({
+			  text: '문제가 발생했습니다.',
+			  buttons: '확인',
+			}).then(function(isConfirm) {
+			  location.href = 'mypage_modify.htm';
+			})
+			</script>";
+} else {
+	echo "<script>location.href = 'mypage_info.htm'; ;</script>";
+};
+
+mysqli_close($connect);
+
+
+?-->
+
+<?php
+$query = escape_string(trim($_REQUEST['query']));
+$email = escape_string(trim($_REQUEST['fullEmail']));
+$name = escape_string(trim($_REQUEST['query_name']));
+$login_id = escape_string(trim($_REQUEST['login_id']));
+
+if($query == 'modify'){
+	if($email == ''){
+		$update_query = "UPDATE Accounts SET name = '".$name."' WHERE login_id = '".$login_id."'";
+	} else {
+		$update_query = "UPDATE Accounts SET email = '".$email."', name = '".$name."' WHERE login_id = '".$login_id."'";
+	}
+
+	if(!mysqli_query($connect,$update_query)){
+		echo "fail";
+	} else {
+		echo "success";
+	};
+
+	mysqli_close($connect);
+}
+
+
+?>

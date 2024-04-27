@@ -1,0 +1,63 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="wallet_create_01">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <h3>Create Wallet</h3>
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_email"><span>Email Address</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <input type="text" class="wallet_form_input" id="wallet_email">
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_email_code"><span>Email Verification Code</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <input type="text" class="wallet_form_input" id="wallet_email_code">
+                                <button type="button" class="btn_round btn_send_code"><span>Send code</span></button>
+                                <!-- <span class="timer">04:59</span> //타이머 코드 -->
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_passcode"><span>Wallet Passcode</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <input type="text" class="wallet_form_input" id="wallet_passcode" placeholder="Please enter only 6-digit numbers">
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <label class="wallet_form_label" for="wallet_passcode"><span>Confirm Passcode</span></label>
+                            <div class="wallet_form_input_wrap">
+                                <input type="text" class="wallet_form_input" id="wallet_passcode" placeholder="Please enter only 6-digit numbers">
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+
+                    <div class="custom_checkbox_wrap">
+                        <label class="custom_checkbox">
+                            <input type="checkbox" id="agree4"><span class="checkmark"></span>
+                            By creating wallet, you agree to our <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Data Protection Guidelines.</a>
+                        </label>
+                    </div><!-- .custom_checkbox_wrap -->
+                    <a href="./wallet_create_02.htm" class="btn_round btn_process"><span>Next</span></a>   
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

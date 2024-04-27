@@ -1,0 +1,289 @@
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+
+if ( $_SESSION['sess_login_id'] == "" ) {
+?>
+	<script>location.href="/";</script>
+<?php
+	exit;
+}
+
+?>
+
+<div id="container" class="wallet_swap">
+	<div class="article_body no_visual">
+		<div class="wrap">
+            <div class="bobby_wallet_wrap">
+                <h2><span><i class="bavi"></i></span></h2>
+
+                <div class="bobby_wallet_contents">
+                    <a href="javascript:void(0);" class="btn_back"><span class="sr_only">뒤로가기</span></a>
+                    <a href="javascript:void(0);" class="btn_refresh" onclick="javascript:location.reload();"><span class="sr_only">새로고침</span></a>
+                    <h3>Swap</h3>
+
+                    <p class="valid_message_confirm msg_area" id=""><i class="icon"></i><span>-</span></p>
+                    &nbsp;<p class="valid_message_error msg_area"><i class="icon"></i><span>-</span></p> <!-- valid_message_confirm -->
+
+					<div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <div class="wallet_form_tit">
+                                <label class="wallet_form_label" for="swap_to"><span>To [Estimate]</span></label>
+                                <p id="pmw_to_max"><a href="javascript:void(0);" onclick="javascript:placeMaxPMW();">Max</a></p>
+                            </div>
+                            <div class="wallet_form_input_wrap">
+                                <div class="swap_select_container">
+                                    <select class="swap_select selectric">
+                                        <!--option class="swap_select swap_select_psct" value="psct">PSCT</option-->
+                                        <option class="swap_select swap_select_pmw" value="pmw">PMW</option>
+                                    </select>
+                                </div>
+                                <input type="number" class="wallet_form_input swap_input" id="swap_to" value="0" onkeyup="placePMWvalue()";>
+								<!--p class="balnce_text" id="area_pmw_balance"><a href="javascript:void(0);" onclick="javascript:placeMaxPMW();">Balance : - PMW</a></p-->
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+					 
+
+                    <button type="button" class="btn_change"><span class="sr_only">swap</span></button>
+
+                    <div class="wallet_form_field_item_wrap">
+                        <div class="wallet_form_field_item">
+                            <div class="wallet_form_tit">
+                                <label class="wallet_form_label" for="swap_from"><span>From</span></label>
+								<p class="balnce_text" id="gas_for_swap">fee : - CAT</p>
+                            </div>
+                            <div class="wallet_form_input_wrap">
+								<!--p class="balnce_text" id="pmw_to_max"><a href="javascript:void(0);" onclick="javascript:placeMaxCAT();">Max</a></p-->
+                                <div class="swap_select_container">
+                                    <select class="swap_select selectric" onchange="javascript:show_cat();" id="select_swap_from">
+                                        <option class="swap_select swap_select_cat" value="clwmc" selected>CLWMC CAT</option>
+                                        <option class="swap_select swap_select_cat" value="mm">MM CAT</option>
+                                        <!--option class="swap_select swap_select_pmw" value="pmw">PMW</option-->
+                                    </select>
+                                </div>
+                                <input type="number" class="wallet_form_input swap_input swap_over" id="swap_from" value="0" readonly> <!-- swap_over 클래스 추가/삭제에 따라 스타일 변경 -->
+                                <p class="balnce_text" id="area_cat_balance">Balance : - CAT</p>
+                            </div><!-- .wallet_form_input_wrap -->
+                        </div><!-- .wallet_form_field_item -->
+                    </div><!-- .wallet_form_field_item_wrap -->
+                   
+                    <a href="javascript:void(0);" class="btn_round btn_process disabled" id="execute_swap_button" onclick="javascript:execute_swap();"><span>SWAP</span></a> 
+					
+                </div><!-- .bobby_wallet_contents -->
+            </div><!-- .bobby_wallet_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<script>
+const CAT_gas_fee = 1560000;
+function placeMaxPMW() {
+	clear_msg();
+	var output_cat = getSelectedCATvalue();
+	
+	if (output_cat < CAT_gas_fee + 3600 ) {
+		show_msg("Not enough CAT.");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+	$("#gas_for_swap").html("fee : " + CAT_gas_fee + " CAT");
+	can_swap_pmw = parseInt((output_cat - CAT_gas_fee ) / 3600);
+	$("#swap_to").val(can_swap_pmw);
+	$("#swap_from").val(can_swap_pmw * 3600 + CAT_gas_fee);
+	$("#gas_for_swap").html("fee : " + CAT_gas_fee + " CAT");	
+
+	if ( can_swap_pmw < 1000) {
+		show_msg("The minimum swap PMW is 1000 PMW.");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+
+	$("#swap_from").removeClass("swap_over");
+	$("#execute_swap_button").removeClass("disabled");
+}
+
+function placePMWvalue() {
+	clear_msg();
+//	console.log($("#swap_to").val());
+
+	var output_cat = getSelectedCATvalue();
+	var PMW_value = $("#swap_to").val(); 
+	$("#swap_to").val(PMW_value.replace(/^[ 0]/g,''));
+
+	if ( PMW_value == "" || PMW_value < 0 ) {
+		$("#swap_to").val("0")
+		$("#swap_from").val("0");
+		$("#gas_for_swap").html("fee : - CAT");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+
+	if ( PMW_value * 3600 > output_cat - CAT_gas_fee ) {
+		show_msg("Not enough CAT.");
+		$("#swap_from").val(PMW_value * 3600 + CAT_gas_fee );
+		$("#gas_for_swap").html("fee : " + CAT_gas_fee + " CAT");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+	else {
+		$("#swap_from").val(PMW_value * 3600 + CAT_gas_fee );
+		$("#gas_for_swap").html("fee : " + CAT_gas_fee + " CAT");	
+		clear_msg();
+	}
+
+	if ( PMW_value < 1000) {
+		show_msg("The minimum swap PMW is 1000 PMW.");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+
+	$("#swap_from").removeClass("swap_over");
+	$("#execute_swap_button").removeClass("disabled");
+}
+
+function placeMaxCAT() {
+	clear_msg();
+	var output_cat = getSelectedCATvalue();
+	$("#swap_from").val(output_cat);
+}
+
+function show_cat() {
+	clear_msg();
+	var output_cat = getSelectedCATvalue();
+	$("#swap_to").val("0");
+	$("#swap_from").val("0");
+	$("#gas_for_swap").html("fee : - CAT");	
+	$("#area_cat_balance").html('Balance : ' + output_cat + ' CAT');
+}
+
+
+function execute_swap() {
+
+	// check sync account
+	$("#execute_swap_button").addClass("disabled");
+	if ( $("#swap_to").val() < 1000) {
+		show_msg("The minimum swap PMW is 1000 PMW.");
+		$("#swap_from").addClass("swap_over");
+		$("#execute_swap_button").addClass("disabled");
+		return false;
+	}
+	
+	$.ajax({
+	   type:"POST",        
+	   url:"/includes/proc_baviWallet.php",     
+	   data : ({mode:"ch0020"}),
+	   timeout : 600000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+			//console.log(args.trim());
+			switch(args.trim()){
+			 case("done"):
+
+				$("#execute_swap_button").html("Processing...");
+				
+				$.ajax({
+				   type:"POST",        
+				   url:"/includes/proc_baviWallet.php",     
+				   data : ({mode:"swap", swap_from:"cat", swap_from_amount:$("#swap_from").val(), swap_to:"pmw", swap_to_amount:$("#swap_to").val(), swap_gas_fee:CAT_gas_fee, game_code: $("#select_swap_from").val() }),
+				   timeout : 600000,  
+				   cache : false,        
+				   success: function whenSuccess(args){
+						console.log(args);
+						switch(args.trim()){
+							case("InvalidConnection"):
+								show_msg("Invalid connection access.");
+								break;
+							case("CATTokenInsufficient"):
+								show_msg("Insufficient balance for CAT token.");
+								break;
+							case("NoCATWallet"):
+								show_msg("CAT token wallet does not exist.");
+								break;
+							case("NoSyncEthWallet"):
+								show_msg("ETH wallet is out of sync.");
+								break;
+							case("OutOfGas"):
+								show_msg("Not enough gas. Please contact CS Center or Community administrator.");
+								break;
+							case("OutOfPMWBalance"):
+								show_msg("Not enough PMW for swap. Please contact CS Center or Community administrator.");
+								break;
+							case("BusyNetwork"):
+								show_msg("The Ethereum network is very congested. Please try again later to avoid congestion.");
+								break;
+							case("Success"):
+								clear_msg();
+								$(".valid_message_confirm span").html("The SWAP was successful.");
+								$(".valid_message_confirm").show()
+								$("#execute_swap_button").html("Success!!!");
+								setTimeout(function() {
+								  $("#execute_swap_button").html("Refreshing...");
+								  location.href="/sub/wallet_assets_view.htm";
+								}, 5000);
+							 break;
+						}
+				   },
+				   error: function whenError(e){
+					console.log("code : " + e.status + ", message : " + e.responseText);
+				   }
+				});
+
+			 break;
+			 case("yet"):
+
+				swal({
+					text: '<?php echo $lang["MM_Sync_MoveToPage"]; ?>',
+					buttons: {
+						cancel : '<?php echo $lang["Cancel"]; ?>',
+						confirm : {
+							text : '<?php echo $lang["Confirm"]; ?>',
+							value : 'catch'
+						},
+					},
+				}).then(function(value){
+					if(value == 'catch'){
+						window.open("https://metamask.io/download/", "_blank");
+						return false;
+					}
+					location.href="/sub/wallet_sync_account.htm";
+				});
+
+				return false;
+
+			 break;
+		  }
+		
+	   },
+	   error: function whenError(e){
+		console.log("code : " + e.status + "message : " + e.responseText);
+		return false;
+	  }
+	});
+	
+}
+
+function getSelectedCATvalue() {
+	if ( $("#select_swap_from").val() == "clwmc" ) output_cat = '<?php echo $return_data_clwmc["balance"]; ?>';
+	if ( $("#select_swap_from").val() == "mm" ) output_cat = '<?php echo $return_data_mm["balance"]; ?>';
+	$("#execute_swap_button").addClass("disabled");
+	return output_cat;
+}
+function show_msg(msg) {
+    $(".valid_message_error").show()
+	$(".valid_message_error span").html(msg);
+}
+function clear_msg() {
+    $(".valid_message_error").hide()
+	$(".valid_message_error span").html("");
+}
+
+//$("#area_pmw_balance").html('Balance : ' + PMW + ' CAT');
+$("#area_cat_balance").html('Balance : <?php echo $return_data_clwmc["balance"]; ?> CAT');
+</script>
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

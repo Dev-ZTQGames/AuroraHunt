@@ -1,0 +1,6 @@
+[2023-07-07 16:46:53] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : qkrtnal1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-07-07 16:46:58] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : qkrtnal1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-07-07 16:47:01] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : qkrtnal1, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}

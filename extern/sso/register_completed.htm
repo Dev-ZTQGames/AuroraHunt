@@ -1,0 +1,84 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm';
+
+$return_path = escape_string(trim($_REQUEST['return_path']));
+$id = escape_string(trim($_REQUEST['id']));
+$name = escape_string(trim($_REQUEST['name']));
+$email = escape_string(trim($_REQUEST['email']));
+
+$fp = fopen($_SERVER['DOCUMENT_ROOT'].'/mail/mail_02.htm', "r"); 
+while( !feof($fp) ) { 
+	$content .= fgets($fp); 
+} 
+fclose($fp);
+
+$content = str_replace("{{title}}", $lang['Mail02_Registration_Complete'], $content);
+$content = str_replace("{{Mail02_Text1}}", $lang['Mail02_Text1'], $content);
+$content = str_replace("{{Mail02_Text2}}", $lang['Mail02_Text2'], $content);
+$content = str_replace("{{Mail02_Text3}}", $lang['Mail02_Text3'], $content);
+$content = str_replace("{{Mail02_Text4}}", $lang['Mail02_Text4'], $content);
+$content = str_replace("{{Thank_You}}", $lang['Thank_You'], $content);
+$content = str_replace("{{Mail01_Text3}}", $lang['Mail01_Text3'], $content);
+$content = str_replace("{{name}}", $name, $content);
+$content = str_replace("{{email}}", $email, $content);
+$content = str_replace("{{url}}", $return_url, $content);
+
+$nameFrom  = $lang['AuroraHunt'];
+$mailFrom = "noreply@aurorahunt.xyz";
+$mailTo = $email;
+
+$subject = $lang['Registration_Complete'];
+
+$result = curl_post('https://freepassdev.perugiacorp.com/proc_aurorahunt.php', array('email'=>$email, 'subject'=>$subject, 'content'=>$content, 'from'=>$nameFrom, 'to'=>$mailFrom, 'lang_code'=>'ko', 'type'=>'4', 'platform'=>'aurorahunt'));
+
+//if($result == 'success'){
+//	echo $result;
+//} 
+
+?>
+
+<div id="container" class="page_register">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Join']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="register_completed">
+			    <h3><i class="icon_completed"></i><?php echo $lang['Registration_Completed']; ?></h3>
+				<p class="register_completed_msg"><span><?php echo $name; ?></span><?php echo $lang['Welcome_To_AH']; ?></p>
+				<table class="secondary_table">
+				    <caption><?php echo $lang['Membership_Info']; ?></caption>
+					<colgroup>
+						<col style="width: 30%;"/>
+						<col style="width: 70%;"/>
+					</colgroup>
+				    <tbody>
+					    <tr>
+						    <th><?php echo $lang['ID']; ?></th>
+							<td><?php echo $id; ?></td>
+						</tr>
+						<tr>
+						    <th><?php echo $lang['Name']; ?></th>
+							<td><?php echo $name; ?></td>
+						</tr>
+						<tr>
+						    <th><?php echo $lang['Register_Join_Date']; ?></th>
+							<td><?php echo date('Y.m.d'); ?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- .register_completed -->
+            <div class="process_btn_wrap"> 
+                <a href="login.htm?return_path=<?php echo $_REQUEST['return_path']; ?>" class="basic_btn basic_btn_primary"><span><?php echo $lang['Login']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+</body>
+</html>

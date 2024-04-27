@@ -1,0 +1,61 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap">
+            <ul class="tab_menu">
+                <li class="active"><a href="cs_event_ing.htm"><?php echo $lang['Ongoing_Event']; ?></a></li>
+                <li><a href="cs_event_end.htm"><?php echo $lang['Closed_Event']; ?></a></li>
+            </ul><!-- .tab_menu -->
+            <div class="event_list">
+			<?php
+				$ck_date = date('Y-m-d H:i:s');
+
+				$result = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '3' AND m_status = 1 AND m_start < '".$ck_date."' AND '".$ck_date."' < m_end");
+
+				$count = mysqli_num_rows($result);
+
+				$info = array();
+
+				if($count == 0){
+					echo '<div class="no_list"><p>'.$lang['No_Ongoing_Event'].'</p></div>';
+				}		
+
+				while($row = mysqli_fetch_array($result)){
+					
+					$info = $row;
+
+					switch($info['m_game_code']){
+						case 'clwmc' : $game_name = 'Claw Machine';
+						break;
+						case 'mm' : $game_name = 'Mining Maze';
+						break;
+					}
+
+					echo '<div class="event_item event_item_ing">
+							<a href="cs_notice_view.htm?type=ing_event&index='.$info["m_index"].'">
+								<figure>
+									<img class="lozad" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="'.$info["m_link"].'" alt="" />
+								</figure>
+								<div class="event_info">
+									<h3><span>'.$lang['Ongoing'].'</span> '.$game_name.'</h3>
+									<h4>'.$info["m_title"].'</h4>
+									<p lang="en">'.substr($info["m_start"],0,10).' ~ '.substr($info["m_end"],0,10).'</p>
+								</div>
+							</a>
+						</div><!-- .event_item -->';
+				}
+			?>
+            </div><!-- .event_list -->           
+		</div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

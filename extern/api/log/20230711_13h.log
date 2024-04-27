@@ -1,0 +1,12 @@
+[2023-07-11 13:48:25] NODE - SourceIP : 34.216.170.167, proc1: getAddress, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","public_key":"03bdd246b26e4b64880e56d8b15f48c833cf21185316ed7a33be17501def0e487b"}
+[2023-07-11 13:48:27] NODE - SourceIP : 34.216.170.167, proc1: MiningStart, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null,"NFT_images":null}
+[2023-07-11 13:48:28] NODE - SourceIP : 34.213.208.16, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-07-11 13:49:49] NODE - SourceIP : 34.213.208.16, proc1: getAddress, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","public_key":"03bdd246b26e4b64880e56d8b15f48c833cf21185316ed7a33be17501def0e487b"}
+[2023-07-11 13:49:51] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":null,"NFT_images":null}
+[2023-07-11 13:49:52] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":2}

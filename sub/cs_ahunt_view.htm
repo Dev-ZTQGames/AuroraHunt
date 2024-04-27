@@ -1,0 +1,134 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_cs">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Customer_Center']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_cs.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_middle">
+
+            <div class="inquiry_view_header">
+                <div class="inquiry_view_title">
+                    <h2><span class="inquiry_single_title">연결 문의</span></h2>
+                </div>
+                <!-- .inquiry_view_title -->
+                <div class="inquiry_view_info_wrap">
+                    <ul class="inquiry_view_info">
+                        <li class="date"><span><time class="date" datetime="2020-06-06">2020-06-06</time></span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .inquiry_view_header -->
+            <div class="inquiry_view_body">
+                <div class="inquiry_view_content">
+                    8인실로  10월 8일[토요일] 13시 30 부터 17시 00분까지<br/>
+                    예약을 했었는데 아무래도 처음 이용하는 곳이다 보니 사전에 알아야 저희가 부족한 부분은<br/>
+                    준비를 할 수가 있기에 한번 더 문의 글을 작성하게 되었습니다<br/>
+                    다름이 아니오라 소모임 방을 보면 화이트보드 쪽으로 테이블이 놓여있던데 저희는 유무선 인터넷 과 대형PDP 사용을 하지 않으며<br/>
+                    화이트보드 사용[판서]을 하면서 강의를 해야 하는 입장이라 테이블이 화이드 보드쪽에 붙어있는 것이 아니라 반대쪽으로 놓을 수 있는지 여부와<br/>
+                    화이트보드에 사용하는 보드마카와 지우개 구비는 저희가 준비를 해서 사용 하는 것인지<br/>
+                    이 두가지에 대한 문의를 드립니다 감사합니다
+                </div><!-- .inquiry_view_content -->
+
+                <div class="inquiry_answer_wrap">
+                    <form class="comment_form" method="post">
+                        <div class="inquiry_answer_container">
+                            <div class="inquiry_answer_header">
+                                <span class="inquiry_answer_name">오로라헌트</span>
+                                <span class="inquiry_answer_date">2020-06-06</span>
+                            </div><!-- .inquiry_answer_header -->
+                            <div class="inquiry_answer_body">
+                                <div class="comment">
+                                    안녕하세요 고객님 ^^<br/>
+                                    테이블은 화이트보드가 있는 벽에 완전히 붙어있는게 아니라 이동 가능하세요 ^^<br/>
+                                    여유공간 두시고 판서가 가능하세요~<br/>
+                                    보드마카와 지우개는 셋팅 되어 있으니 준비하실 필요 없이 오시면 됩니다.<br/>
+                                    감사합니다.
+                                </div><!-- .inquiry_answer_content -->
+                            </div><!-- .inquiry_answer_body -->
+                        </div><!-- .inquiry_answer_container -->
+                    </form>
+                </div><!-- .inquiry_answer_wrap -->
+
+                <div class="inquiry_answer_write_wrap">
+                    <textarea class="form_field" id="field_content"></textarea>
+                    <button type="button" class="btn_regist"><span>등록</span></button>
+                </div><!-- .inquiry_answer_write_wrap -->
+
+                <div class="inquiry_control">
+                    <div class="inquiry_control_left">
+                        <a href="mypage_inquiry_list.htm" class="basic_btn basic_btn_primary"><span>목록으로</span></a>
+                    </div><!-- .inquiry_control_left -->
+                    <div class="inquiry_control_right">
+                        <a href="#" class="basic_btn basic_btn_secondary btn_delete"><span>삭제하기</span></a>
+                        <a href="#" class="basic_btn basic_btn_tertiary btn_modify"><span>수정하기</span></a>
+                    </div><!-- .inquiry_control_right -->
+                </div>
+                <!-- .inquiry_control -->
+            </div><!-- .inquiry_view_body -->
+
+            <div class="basic_table_wrap">
+				<table class="basic_table rwd_table inquiry_list_table">
+				    <caption>A-Hunt Developers 리스트</caption>
+                    <colgroup>
+                        <col style="width: 15%;"/>
+                        <col style="width: 40%"/>
+                        <col style="width: 15%;"/>
+                        <col style="width: 15%;"/>
+                        <col style="width: 15%;"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>분류</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>계정명</th>
+                            <th>작성일자</th>
+                        </tr>
+                    </thead>
+				    <tbody>
+					    <tr>
+							<td>??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td>오로라</td>
+							<td>aurora123</td>
+							<td>2020-05-01</td>
+						</tr>
+						<tr>
+							<td>??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td>오로라</td>
+							<td>aurora123</td>
+							<td>2020-05-01</td>
+						</tr>
+                        <tr>
+							<td>??</td>
+							<td class="tit"><a href="cs_ahunt_view.htm">제목 제목 제목 제목<span class="icon_new"><i class="sr_only">새글</i></span></a></td>
+							<td>오로라</td>
+							<td>aurora123</td>
+							<td>2020-05-01</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <div class="tabe_pagination">
+					<a class="page_numbers first" href="#">&gt;</a>
+					<a class="page_numbers prev" href="#">&gt;&gt;</a>
+					<span class="current page_numbers">1</span>
+					<a class="page_numbers" href="#">2</a>
+					<a class="page_numbers" href="#">3</a>
+					<a class="page_numbers next" href="#">&gt;</a>
+					<a class="page_numbers last" href="#">&gt;&gt;</a>
+				</div><!-- .tabe_pagination -->
+			</div><!-- .gift_table_wrap -->
+
+        </div><!-- .wrap -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

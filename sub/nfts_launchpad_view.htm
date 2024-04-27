@@ -1,0 +1,146 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_nfts">
+    <div class="wrap">
+        <div class="launchpad-view">
+            <div class="launchpad-view__left">
+                <div class="launchpad-view__img">
+                    <figure><img src="https://via.placeholder.com/650x650.jpg" alt=""></figure>
+                </div>
+            </div>
+            <div class="launchpad-view__right">
+                <div class="launchpad-view__info">
+                    <div class="launchpad-view__tit">
+                        <figure class="launchpad-view__logo"><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
+                        <div class="launchpad-view__tit__info">
+                            <h3>Mining Maze: Get a big treasure box!</h3>
+                            <p class="goods"><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum</span></p>
+                        </div>
+                    </div>
+                    <ul class="launchpad-sns__list">
+                        <li class="sns-web"><a href="#" target="_blank"><span class="sr_only">web site</span></a></li>
+                        <li class="sns-twitter"><a href="https://twitter.com/PhotonMilkyway" target="_blank"><span class="sr_only">twitter</span></a></li>
+                        <li class="sns-telegram"><a href="https://t.me/photon_milkyway" target="_blank"><span class="sr_only">telegram</span></a></li>
+                    </ul>
+                    <p class="desc">
+                        Embark on an adventure to a different dimension with animal friends! <br>
+                        Have the collection and mining the PMW within short time bla bla
+                    </p>
+                    <div class="launchpad-view__btn">
+                        <!--<a href="/extern/sso/login.htm?return_path=<?php echo $HOST; ?>.aurorahunt.xyz"><span>Log In</span></a>-->
+                        <a href="#mint-purchase-popup" class="btn-mint"><span>Mint</span></a>
+                    </div>
+                </div>
+                
+                <div class="launchpad-view__mint-info">
+                    <div class="launchpad-view__mint-info__item">
+                        <h3>Guaranteed WL</h3>
+                        <ul class="launchpad-view__mint-info__box">
+                            <li>
+                                <b>Price</b>
+                                <p>Free</p>
+                            </li>
+                            <li>
+                                <b>Pieces</b>
+                                <p>3,333</p>
+                            </li>
+                            <li>
+                                <b>Limit</b>
+                                <p><span>1 pc per wallet</span></p>
+                            </li>
+                            <li>
+                                <b>Minting Date</b>
+                                <p><span>20 March 2024, 13:00-15:00 UTC</span></p>
+                            </li>
+                        </ul>
+                        <div class="mint-progressbar">
+                            <div class="mint-progressbar__box">
+                                <div class="progressbar">
+                                    <figure><img src="../images/sub/nft-bar-character.gif" alt=""></figure>
+                                    <div class="progressbar-item" data-value="10" id="mint_bar"></div> 
+                                </div>
+                            </div>
+                            <ul>
+                                <li><span id="mint_percent">10% minted</span></li>
+                                <li><span id="mint_total">333 / 3,333</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .launchpad-view__mint-info__item -->
+                    
+                    <div class="launchpad-view__mint-info__item">
+                        <h3>FCFS WL</h3>
+                        <ul class="launchpad-view__mint-info__box">
+                            <li>
+                                <b>Price</b>
+                                <p>Free</p>
+                            </li>
+                            <li>
+                                <b>Pieces</b>
+                                <p>2,222</p>
+                            </li>
+                            <li>
+                                <b>Limit</b>
+                                <p><span>1 pc per wallet</span></p>
+                            </li>
+                            <li>
+                                <b>Minting Date</b>
+                                <p><span>20 March 2024, 13:00-15:00 UTC</span></p>
+                            </li>
+                        </ul>
+                        <div class="mint-progressbar">
+                            <div class="mint-progressbar__box">
+                                <div class="progressbar">
+                                    <figure><img src="../images/sub/nft-bar-character.gif" alt=""></figure>
+                                    <div class="progressbar-item" data-value="0" id="mint_bar"></div> 
+                                </div>
+                            </div>
+                            <ul>
+                                <li><span id="mint_percent">0% minted</span></li>
+                                <li><span id="mint_total">0 / 2,222</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .launchpad-view__mint-info__item -->
+                </div>
+            </div><!-- .launchpad-view__right -->
+        </div><!-- .article_body -->
+    </div><!-- .wrap -->
+</div><!-- #container -->
+
+<div id="mint-purchase-popup" class="mint-purchase-popup mfp-hide">
+    <div class="mint-purchase-popup__head">
+        <h2>Mint</h2>
+        <button type="button" class="mint-purchase-popup__close"><span class="sr_only">close</span></button>
+    </div><!-- .mint-purchase-popup__head -->
+    <div class="mint-purchase-popup__body">
+        <div class="project-info">
+            <figure><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
+            <div class="project-info__name">
+                <b>Mining Maze</b>
+                <p><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum</span></p>
+            </div>
+        </div><!-- .project-info -->
+        <ul class="mint-purchase-info">
+            <li>
+                <b>Price</b>
+                <p><i><img src="../images/sub/nft/icon-ethereum.svg" alt="pmw"></i> <span>0.00</span> ( free minting )</p>
+            </li>
+            <li>
+                <b>Quantity</b>
+                <div class="quantity">
+                    <button class="btn-count count-down"><span class="sr_only">-</span></button>
+                    <p><input type="text" class="qty-input" value="1" id="amount"></p>
+                    <button class="btn-count count-up"><span class="sr_only">+</span></button>
+                </div><!-- .quantity -->
+            </li>
+        </ul>
+        <div class="mint-total">
+            <b>Total</b>
+            <p><em>0 ETH</em> + gas fee</p>
+        </div>
+		<!--button type="button" class="btn-pruchase" id="button_mint"><span id="button_mint_span">TBA</span></button-->
+        <button type="button" class="btn-pruchase" id="button_mint" onclick="go_Mint('WhitelistSale_PublicPhase');"><span id="button_mint_span">Mint</span></button>
+    </div><!-- .mint-purchase-popup__body -->
+</div><!-- .mint-purchase-popup -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

@@ -1,0 +1,4 @@
+[2024-01-03 12:11:37] BILLING - SourceIP : 35.191.29.161, proc1: purchase, proc2: login_id : neoguru0, game_code : spolive, product_name : 10TEST10, cash : 10
+{"result":"1","msg":"Request OK, Success.","data":{"chargeNo":202401030324861,"chargedAmount":10,"wallet":{"cashReal":0,"cashBonus":13790,"cashTotal":13790}},"order_number":"3394_1"}
+[2024-01-03 12:11:39] BILLING - SourceIP : 35.191.32.15, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":13790}

@@ -1,0 +1,465 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; 
+
+$return_path = escape_string(trim($_REQUEST['return_path']));
+
+if ( $return_path == "" )	{
+	$return_path = $return_url;
+}
+
+$id = escape_string(trim($_REQUEST['id']));
+
+$login_id = get_secure_login_id();
+
+if ( $login_id != "" && $_SESSION['sess_login_id'] == "" ) {
+
+ // [[자동 로그인을 처리 부분 이슈]]
+ // 우선 해시값, 시간, 그리고 계정을 저장해서 
+ // 계정이 문제 없으면 해시값과 비교해서 처리를 하고 있으나 
+ // 3가지 값이 모두 카피되어 함께 저장되면 문제가 된다. 
+ // 일단 정기적으로 서버에서 해시값을 변경해줘야 할 필요가 있으며
+ // 클라의 해시값도 변경 및 수정을 해줘야 할 필요가 있다
+ // 저장된 해시값의 시간을 가지고 컨트롤 하는 것으로 접속 시간과 자동 로그인 보안 
+ // 그리고 서버에 저장된 위 3가지 값에 대한 유효성 검사를 통해서 
+ // 서버 / 클라의 연결을 로직상으로 적절히 바인딩하는게 필요할 듯 하다
+ // 
+ // 우선 순위 : 심각, 중요
+ //
+
+ // m_type : 1 - 자동 로그인, 2 - 일반 로그인, 3 - 소셜 로그인
+
+ $post_id = $login_id;
+
+ $info = array();
+
+  $que = mysqli_query($connect, "SELECT login_pw,PASSWORD('".$post_pw."') as check_pw, usn, id, email, birth, sex, name, status, grade FROM Accounts WHERE login_id='".$post_id."' COLLATE utf8_bin");  // 향후 ID 검색은 대소문자 구분 위해 COLLATE utf8_bin 추가 요망
+//  echo "SELECT login_pw,PASSWORD('".$post_pw."') as check_pw,usn,id,email, birth, comment, img_profile, sex, interest, comment, nickname, latlng, latlng_address, latlng_base, latlng_address_base, filter, filter_community FROM Accounts WHERE login_id='".$post_id."'";
+//  exit;
+  if($que){
+  $row = mysqli_fetch_array($que);
+
+  $info = $row;
+
+
+		// 로그인 성공
+		session_start(); 
+
+		$_SESSION['sess_id'] = $info['id'];
+		$_SESSION['sess_login_id'] = $post_id;
+		//$_SESSION['sess_email'] = $info['email'];
+		$_SESSION['sess_usn'] = $info['usn'];
+		$_SESSION['sess_name'] = $info['name'];
+
+		setcookie('login_id', '', time()-3600, "/", ".aurorahunt.xyz", true, true);
+		setcookie('name', '', time()-3600, "/", ".aurorahunt.xyz", true, true);
+		setcookie('time', $time, time()-3600, "/", ".aurorahunt.xyz");		
+		setcookie('id', '', time()-3600, "/",".aurorahunt.xyz");
+		setcookie('email', '', time()-3600, "/", ".aurorahunt.xyz");
+		setcookie('hash', '', time()-3600, "/", ".aurorahunt.xyz");
+
+		setcookie('m_account', '', time()-3600,"/",".aurorahunt.xyz");
+		setcookie('m_finalETH', '', time()-3600,"/",".aurorahunt.xyz");
+		setcookie('m_countNFT', '', time()-3600,"/",".aurorahunt.xyz");
+		setcookie('m_NFTs', '', time()-3600,"/",".aurorahunt.xyz");
+		setcookie('m_NFT_images', '', time()-3600,"/",".aurorahunt.xyz");
+
+		$time = time();
+		setcookie('login_id', $post_id, time() + 60 * 60 * 24, "/", ".aurorahunt.xyz");			
+		setcookie('time', $time, time() + 60 * 60 * 24, "/", ".aurorahunt.xyz");			
+		setcookie('hash', AES128Encrypt("Aurorahunt", $post_id."|".$time."|CSVersion:221019"), time() + 60 * 60 * 24, "/", ".aurorahunt.xyz");	
+
+		$statistics_year = intval(date('Y'));
+		$statistics_month = intval(date('m'));
+		$statistics_day = intval(date('d'));
+		$statistics_hour = intval(date('H'));
+
+		// 지금 시간과 날짜를 맞춰야 한다 -> UMT+? 에 따라 다른 설정으로 갈 것인지 확인 요망
+
+		$statistics = mysqli_query($connect, "INSERT INTO LoginLog (m_id, m_login_id, m_usn, m_lang_code, m_game_code, m_service_code, m_type, m_success, m_year, m_month, m_day, m_hour, m_date, m_ip) VALUES (".$info['id'].",'".$login_id."', ".$info['usn'].",'".$language_code."','".$game_code."', '".$service_code."','1','0'," . $statistics_year . "," . $statistics_month . "," . $statistics_day . "," . $statistics_hour . ",now(),'". $ip ."' )");
+
+  echo '<script>window.location.href = "https://'.$return_path.'";</script>';
+  exit;
+}
+}
+
+?>
+
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+Kakao.init('113ac1409b96b89fec19f677a405908a');
+
+function loginWithKakao() {
+	Kakao.Auth.authorize({
+	  redirectUri: 'https://<?php echo $return_path; ?>/extern/sso/login_kakao.htm'
+	})
+  }
+</script>
+
+<script src="https://apis.google.com/js/platform.js?" async defer></script>
+<script>
+function loginWithGoogle(){
+	location.href="https://accounts.google.com/o/oauth2/auth?client_id=87635311469-bus165sdqm9d4n28r8u64759qhvp0a1f.apps.googleusercontent.com&redirect_uri=https://<?php echo $return_path; ?>/extern/sso/login_google.htm&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email";
+};
+</script>
+
+<div id="container" class="page_login">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['Login']; ?></h2>
+		</div><!-- .article_header_inner -->
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+		   <div class="login_content_left">
+		   		<form name="form_login" id="form_login" action="login.htm" method="POST">
+				<input type="hidden" name="query" value="login">
+				<input type="hidden" name="return_path" value="<?php echo $return_path; ?>">
+				<input type="hidden" id="idchk_commit" value="">
+				<input type="hidden" id="pwchk_commit" value="">
+					<div class="login_form_wrap">
+						<div class="login_form_field">
+							<div class="form_field_item secondary">
+								<label class="form_label" for="register_id"><span><?php echo $lang['ID']; ?></span></label>
+								<input type="text" class="form_input" name="login_id" id="login_id" value="<?php echo $id; ?>"/>
+							</div><!-- .form_field_item -->
+							<div class="form_field_item secondary">
+								<label class="form_label" for="register_pw"><span><?php echo $lang['Password']; ?></span></label>
+								<input type="password" class="form_input" name="login_pw" id="login_pw"/>
+							</div><!-- .form_field_item -->
+						</div>
+						<p class="valid_message_error capsLock_on" style="display:none;"><i class="icon"></i><span><?php echo $lang['CapsLock_Activate']; ?></span></p>
+						<p class="valid_message_error" style="display:none;" id="valid_message_error"><i class="icon"></i><span><?php echo $lang['Check_Try_Again']; ?></span></p>
+						<button class="btn_login basic_btn basic_btn_primary" type="button" onclick="return login_check();"><span><?php echo $lang['Login']; ?></span></button>
+					</div><!-- .login_form_wrap -->
+				</form>
+				<ul class="login_helper">
+					<?php
+					if($lang_code != 'ko'){
+					?>
+						<li><a href="register_form.htm?return_path=<?php echo $return_path?>"><span><?php echo $lang['Join']; ?></span></a></li>     
+					<?php
+					} else {
+					?>
+						<li><a href="register_agree.htm?return_path=<?php echo $return_path?>"><span><?php echo $lang['Join']; ?></span></a></li>     
+					<?php
+					}	
+					?>                       
+					<li><a href="/extern/sso/find_id.htm"><span><?php echo $lang['Find_ID']; ?></span></a></li>
+					<li><a href="/extern/sso/find_pw.htm"><span><?php echo $lang['Find_Password']; ?></span></a></li>
+				</ul>
+				<div class="social_login_list">
+					<div id="naver_id_login"></div>
+					<?php
+						if($region == "dev"){?>
+						<a href="#" class="social_login_item social_login_naver"><i></i><span><?php echo $lang['Naver_Login']; ?></span></a>
+						<a href="#" class="social_login_item social_login_kakao" onclick="loginWithKakao();"><i></i><span><?php echo $lang['Kakao_Login']; ?></span></a>
+						<a href="#" class="social_login_item social_login_google" onclick="loginWithGoogle();"><i></i><span><?php echo $lang['Google_Login']; ?></span></a>
+						<a href="#" class="social_login_item social_login_facebook"><i></i><span><?php echo $lang['Facebook_Login']; ?></span></a>		
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>		
+						<a href="#" class="social_login_item social_login_apple" id="social_login_apple"><i></i><span><?php echo $lang['Apple_Login']; ?></span></a>
+					<?php	
+						} else { ?>
+						<!--a href="#" class="social_login_item social_login_naver"><i></i><span>네이버 아이디로 로그인</span></a-->
+						<!--a href="#" class="social_login_item social_login_kakao" onclick="loginWithKakao();"><i></i><span>카카오톡 아이디로 로그인</span></a-->
+						<!--a href="#" class="social_login_item social_login_google" onclick="loginWithGoogle();"><i></i><span>구글 아이디로 로그인</span></a-->
+						<!--a href="#" class="social_login_item social_login_facebook"><i></i><span>페이스북 아이디로 로그인</span></a-->		
+						<!--fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button-->		
+						<!--a href="#" class="social_login_item social_login_apple" id="social_login_apple"><i></i><span>애플 아이디로 로그인</span></a-->
+					<?php
+						}
+					?>
+                    <div id="appleid-signin"></div>
+				</div><!-- .social_login_list -->
+			</div><!-- .login_content_left -->
+
+			<!--div class="ad_banner ad_320_480"><img src="https://dummyimage.com/320x480/000/fff"></div-->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+<?php
+session_start();
+
+$apple_state = substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 30);
+$_SESSION['apple_state'] = $apple_state;
+?>
+<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+<script type="text/javascript">
+            AppleID.auth.init({
+                clientId : 'aurorahunt.xyz',
+                scope : 'name email',
+                redirectURI : 'https://<?php echo $return_path; ?>/extern/sso/login_apple.htm',
+				state : '<?php echo $apple_state; ?>',
+                usePopup : false 
+            });
+</script>
+<script>
+    $(document).on("click", ".social_login_apple", function(){ 
+        var btnAppleLogin = document.getElementById("appleid-signin").firstChild;
+        btnAppleLogin.click();
+    });
+
+	document.addEventListener('AppleIDSignInOnSuccess', (event) => {
+        console.log(event.detail.data);
+    });
+
+</script>
+
+<?php
+if( $configuration['mode'] == "development / alpha" ){
+?>?
+<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var naver_id_login = new naver_id_login("ZCcy5dqfybzigf7vJdVn", "https://<?php echo $return_path; ?>/extern/sso/login_naver.htm");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("green");
+    naver_id_login.setState(state);
+    //naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+     
+    $(document).on("click", ".social_login_naver", function(){ 
+        var btnNaverLogin = document.getElementById("naver_id_login").firstChild;
+        btnNaverLogin.click();
+    });
+</script>
+
+<script>
+  function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      testAPI();
+    } 
+  }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '623467932234688',
+    cookie     : true,  
+    xfbml      : true,  
+    version    : 'v14.0'
+  });
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function testAPI() {
+    FB.api('/me', {fields: 'name,email'},function(response) {
+      location.href='join_social_check.php?prefix_id=fb&userEmail='+response.email+'&name='+response.name;
+    });
+  }
+
+  $(".social_login_facebook").click(function() {
+    FB.login(statusChangeCallback, {scope: 'email,public_profile', return_scopes: true});
+  });
+
+</script>
+<?php
+}
+?>
+<?php
+$login_id			= escape_string(trim($_POST['login_id']));
+$login_pw			= escape_string(trim($_POST['login_pw']));
+$query				= escape_string(trim($_POST['query']));
+
+
+if( $query == "login" ){
+
+	$info = array();
+
+	$que = mysqli_query($connect, "SELECT *,PASSWORD('".$login_pw."') as check_pw FROM Accounts WHERE login_id='".$login_id."'");
+	$row = mysqli_fetch_array($que);
+	$info = $row;
+
+	if($login_id == ''){
+		echo '<script>
+			swal({
+				text: "'.$lang['ID_Check'].'",
+				buttons: "'.$lang['Confirm'].'",
+			});
+			</script>';
+		$query = '';
+	} else if ($login_pw == '' || $info['login_pw'] != $info['check_pw']) {
+		echo '<script>
+			swal({
+				text: "'.$lang['Password_Not_Match'].'",
+				buttons: "'.$lang['Confirm'].'",
+			});
+			</script>';
+		$query = '';
+	} else if(!isset($info['login_id'])) {
+		echo '<script>
+			swal({
+				text: "'.$lang['Not_Exist_ID'].'",
+				buttons: "'.$lang['Confirm'].'",
+			});
+			</script>';
+	}	else if ($info['email_cert'] != 'y') {
+			echo '<script>
+				swal({
+					text: "'.$lang['Email_Not_Verified'].'",
+					buttons: "'.$lang['Confirm'].'",
+				});
+				</script>';
+			$_POST['query'] = "";
+	} else { ?>
+
+		<form name="login_proc" method="post" action="login_check.php">
+			<input type='hidden' name='login_id' value='<?php echo $login_id; ?>'>
+			<input type='hidden' name='login_pw' value='<?php echo $login_pw; ?>'>
+			<input type='hidden' name='return_path' value='<?php echo $return_path; ?>'>
+		</form>
+
+		<script type='text/javascript'>
+			document.login_proc.submit();
+		</script>
+<?php
+	}
+}
+?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>
+
+<script>
+function isValidLoginId(id) {
+	var check = /^(?=.*[a-z])(?=.*[0-9]).{5,16}$/;
+
+	if (!check.test(id))     {
+		return false;
+	}
+
+	if (id.length < 5 || id.length > 16) {
+		return false;
+	}
+
+	return true;
+}
+
+function isValidPassword(pw) {
+	var check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,16}$/;	
+
+	if (!check.test(pw))     {
+		return false;
+	}
+
+	if (pw.length < 8 || pw.length > 16) {
+		return false;
+	}
+
+	return true;
+}
+
+function login_check() {
+	var login_id = $.trim($("#login_id").val());
+	var login_pw = $.trim($("#login_pw").val());
+	var chk_login_id = $.trim($("#idchk_commit").val());
+	var chk_login_pw = $.trim($("#pwchk_commit").val());
+
+	if (login_id == "" || !isValidLoginId(login_id) || chk_login_id != "Y") {
+		$("#valid_message_error").css("display","block");
+		$("#login_id").focus();
+		return false;
+	} 
+
+	if (login_pw == "" || !isValidPassword(login_pw) || chk_login_id != "Y") {
+		$("#valid_message_error").css("display","block");
+		$("#login_pw").focus();
+		return false;
+	} else {
+		$("#valid_message_error").css("display","none");
+		document.form_login.submit();
+	}
+}
+
+$("#login_id").keyup(function(){
+	let division = document.querySelector(".capsLock_on");
+	let incorrect = document.querySelector("#valid_message_error");	
+	incorrect.style.display= "none";
+
+	$.ajax({
+	   type:"POST",        
+	   url:"login_validate_id.php",     
+	   data : ({id: $("#login_id").val() }),
+	   timeout : 5000,  
+	   cache : false,        
+	   success: function whenSuccess(args){
+		switch(args.trim()){
+			 case("true"):
+			  $("#idchk_commit").val("Y");
+			 break;
+			 case("none"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("short"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("long"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("bad_character"):
+			  $("#idchk_commit").val("N");
+			 break;
+			 case("bad_character2"):
+			  $("#idchk_commit").val("N");
+			 break;
+		  }
+	   },
+	   error: function whenError(e){
+		//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
+	  }
+	});
+})
+
+$("#login_pw").keyup(function(){
+	let division = document.querySelector(".capsLock_on");
+	let incorrect = document.querySelector("#valid_message_error");
+	incorrect.style.display= "none";
+
+	 if (event.getModifierState("CapsLock")) {
+		division.style.display = "block";
+		//console.log('true');
+	} else {
+		division.style.display = "none";
+		//console.log('false');
+	}
+	
+	var passwd = $("#login_pw").val();
+	$.ajax({
+		type: "POST",
+		url: "login_validate_pw.php",
+		data : ({pw: passwd }),
+		cache: false,
+		success: function(args){
+			if(args.trim().includes("bad_pw")){
+				$("#pwchk_commit").val("N");
+			}
+			else {
+				$("#pwchk_commit").val("Y");
+			}
+
+		}
+	});
+
+})
+
+$("#form_login").keypress(function(e){
+	if(e.keyCode === 13){
+		document.form_login.submit();
+	}
+});
+
+</script>

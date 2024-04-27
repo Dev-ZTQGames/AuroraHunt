@@ -1,0 +1,144 @@
+[2023-12-11 08:02:23] CRYPTOOO - SourceIP : 35.191.13.85, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=perugiatest07|pw=perugia1|partner=Spofeed|date=231211080223|ip=210.59.144.44
+{"result":"1","return":"8PKSV%2BMW41OLAKkfhaxqyQ0ogORz8OjptykUpUlCoOjA%2BX1W5EwbZc7K7R9mehAQkf7lL%2BqRRN7wGFFEMaI7lSaxVwdGZNrID59JAyW5svLOzMOpVhh2wsSu2qbFtx0w"}
+[2023-12-11 08:02:23] API - SourceIP : 35.191.24.184, proc1: 8PKSV+MW41OLAKkfhaxqyQ0ogORz8OjptykUpUlCoOjA+X1W5EwbZc7K7R9mehAQkf7lL+qRRN7wGFFEMaI7lSaxVwdGZNrID59JAyW5svLOzMOpVhh2wsSu2qbFtx0w, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000129","msg":"1010"}
+[2023-12-11 08:02:23] CRYPTOOO - SourceIP : 35.191.32.225, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=perugiatest07|partner=Spofeed|date=231211080223|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8snbvlL58fMXB%2BmuTSJn%2BrZuK3T7TM1mho%2B3mnhroVh1ZzH6rG73YisjD7Lj9z8RxP0U7tEHBvBoxUGB9rADN8EJjhtUw40cwD5dmukKqg0xjaGNCX5gTnT9ATL3gr%2BuxmA%3D%3D"}
+[2023-12-11 08:02:23] API - SourceIP : 35.191.3.25, proc1: GE/QHt25gvfDff5QLOK8snbvlL58fMXB+muTSJn+rZuK3T7TM1mho+3mnhroVh1ZzH6rG73YisjD7Lj9z8RxP0U7tEHBvBoxUGB9rADN8EJjhtUw40cwD5dmukKqg0xjaGNCX5gTnT9ATL3gr+uxmA==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:02:23] BILLING - SourceIP : 35.191.13.86, proc1: getCash, proc2: login_id : perugiatest07, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":8000}
+[2023-12-11 08:04:21] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:04:21] NODE - SourceIP : 35.191.29.160, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:04:21] CRYPTOOO - SourceIP : 35.191.24.151, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040421
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q2Ie8o91KVg%2BZRyiooN1hAQ2wJwSl0TP3qIpLyVNjRKQ%3D"}
+[2023-12-11 08:04:21] API - SourceIP : 35.191.24.151, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q2Ie8o91KVg+ZRyiooN1hAQ2wJwSl0TP3qIpLyVNjRKQ=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:04:22] CRYPTOOO - SourceIP : 35.191.32.160, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040422
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q2Ie8o91KVg%2BZRyiooN1hARaOUpCt8J4ltxPB8h4uuqk%3D"}
+[2023-12-11 08:04:22] API - SourceIP : 35.191.32.160, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q2Ie8o91KVg+ZRyiooN1hARaOUpCt8J4ltxPB8h4uuqk=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:04:50] NODE - SourceIP : 35.191.32.131, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:04:50] NODE - SourceIP : 35.191.32.10, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:04:50] CRYPTOOO - SourceIP : 35.191.3.30, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040450
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo%2BL1PjfoKltoYMFEdmproNFwLdg%3D"}
+[2023-12-11 08:04:50] API - SourceIP : 35.191.32.165, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo+L1PjfoKltoYMFEdmproNFwLdg=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:04:51] CRYPTOOO - SourceIP : 35.191.32.160, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040451
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo%2BL1PviCJ9oU29PDOeu8JBdzREU%3D"}
+[2023-12-11 08:04:51] API - SourceIP : 35.191.24.151, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo+L1PviCJ9oU29PDOeu8JBdzREU=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:04:51] CRYPTOOO - SourceIP : 35.191.3.24, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040451
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo%2BL1PviCJ9oU29PDOeu8JBdzREU%3D"}
+[2023-12-11 08:04:51] API - SourceIP : 35.191.3.30, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9Q15oKyiD6zYVab8dJo+L1PviCJ9oU29PDOeu8JBdzREU=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:06:41] CRYPTOOO - SourceIP : 35.191.24.186, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Spofeed|date=231211080641|ip=210.59.144.44
+{"result":"1","return":"qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS%2BtZdghUo3dPeNSZmvPbrezdGwK1R%2F8cRBPcod9NQoWLY2ZRpNTuZYnM%2BWp1HpGniEo3MGiNxRuvXWyAp2uXbJy8N9wP38XU"}
+[2023-12-11 08:06:41] API - SourceIP : 35.191.32.233, proc1: qNRd5IIZNinBt0Ly3PBeoXMO8xs8v5uVS+tZdghUo3dPeNSZmvPbrezdGwK1R/8cRBPcod9NQoWLY2ZRpNTuZYnM+Wp1HpGniEo3MGiNxRuvXWyAp2uXbJy8N9wP38XU, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000000","msg":"1010"}
+[2023-12-11 08:06:41] CRYPTOOO - SourceIP : 35.191.32.198, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=neoguru0|partner=Spofeed|date=231211080641|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8shqMBjMSAJvHR3kgDyPxK1D3mGq%2Bkw3NL2RR%2FepplCfdOkoD4Wq9hPGWf8HrfLvdJhyhISaNeqm7agr3H6Lntg1uCa7D2f0XKhQTm3E2ReCV"}
+[2023-12-11 08:06:41] API - SourceIP : 35.191.32.195, proc1: GE/QHt25gvfDff5QLOK8shqMBjMSAJvHR3kgDyPxK1D3mGq+kw3NL2RR/epplCfdOkoD4Wq9hPGWf8HrfLvdJhyhISaNeqm7agr3H6Lntg1uCa7D2f0XKhQTm3E2ReCV, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000000","login_id":"neoguru0","name":"Ramon","email":"neoguru@perugiacorp.com","lang_code":"ko"}
+[2023-12-11 08:06:41] BILLING - SourceIP : 35.191.16.199, proc1: getCash, proc2: login_id : neoguru0, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":5810}
+[2023-12-11 08:09:35] NODE - SourceIP : 35.191.32.163, proc1: getBalance, proc2: login_id : neoguru0, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":64726645.599999994}
+[2023-12-11 08:09:35] NODE - SourceIP : 35.191.29.166, proc1: getBalance, proc2: login_id : neoguru0, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":3242800}
+[2023-12-11 08:09:41] NODE - SourceIP : 35.191.3.30, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:09:41] NODE - SourceIP : 35.191.16.193, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:09:44] NODE - SourceIP : 35.191.33.4, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:09:44] NODE - SourceIP : 35.191.3.24, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:09:45] CRYPTOOO - SourceIP : 35.191.24.151, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040945
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QL91wzdi3%2BaE%2BHtWj9DBdV8xA4toyoC0UshdEUaPCsWI%3D"}
+[2023-12-11 08:09:45] API - SourceIP : 35.191.3.25, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QL91wzdi3+aE+HtWj9DBdV8xA4toyoC0UshdEUaPCsWI=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:09:45] CRYPTOOO - SourceIP : 35.191.32.169, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040945
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QL91wzdi3%2BaE%2BHtWj9DBdV8xA4toyoC0UshdEUaPCsWI%3D"}
+[2023-12-11 08:09:45] API - SourceIP : 35.191.32.163, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QL91wzdi3+aE+HtWj9DBdV8xA4toyoC0UshdEUaPCsWI=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:09:45] CRYPTOOO - SourceIP : 35.191.24.151, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=perugiatest07|partner=Payletter|date=231211040945
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X%2BHz3bBigQiL88UShNfSt9QL91wzdi3%2BaE%2BHtWj9DBdV8xA4toyoC0UshdEUaPCsWI%3D"}
+[2023-12-11 08:09:45] API - SourceIP : 35.191.32.162, proc1: R+jyYDzxeatxe0LWIiJ8zBJlsukcXwXBz0WzKeL19X+Hz3bBigQiL88UShNfSt9QL91wzdi3+aE+HtWj9DBdV8xA4toyoC0UshdEUaPCsWI=, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000129","login_id":"perugiatest07","name":"pt7","email":"testperugia07@gmail.com","lang_code":"en"}
+[2023-12-11 08:11:22] NODE - SourceIP : 35.191.29.166, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:11:22] NODE - SourceIP : 35.191.13.85, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:11:27] NODE - SourceIP : 35.191.32.185, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:11:27] NODE - SourceIP : 35.191.32.229, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:11:34] NODE - SourceIP : 35.191.32.225, proc1: getBalance, proc2: login_id : perugiatest07, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":171400}
+[2023-12-11 08:11:34] NODE - SourceIP : 35.191.32.128, proc1: getBalance, proc2: login_id : perugiatest07, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":9934946}
+[2023-12-11 08:14:10] CRYPTOOO - SourceIP : 35.191.3.24, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=perugiatest10|pw=perugia1|partner=Spofeed|date=231211081410|ip=210.59.144.44
+{"result":"1","return":"8PKSV%2BMW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX%2B3wSMQIYT%2FgM3w7qqstW82jIouV6C%2BCvbS6nHDK931E4kUu1a9%2BOpO7Wwdu0urF5iW"}
+[2023-12-11 08:14:10] API - SourceIP : 35.191.32.133, proc1: 8PKSV+MW41OLAKkfhaxqyc1aQQ9rCZWQW35N5srGXZEY6aMvBXqEfcSgIbTUnX+3wSMQIYT/gM3w7qqstW82jIouV6C+CvbS6nHDK931E4kUu1a9+OpO7Wwdu0urF5iW, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000132","msg":"1010"}
+[2023-12-11 08:14:11] CRYPTOOO - SourceIP : 35.191.13.84, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=perugiatest10|partner=Spofeed|date=231211081411|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOK4HjKKUzOMSDdwB1upuxvC2i8rkBTTzc1m5e7jZqi7bL10Ir2m%2FHoWNEYUXJAwgB4tZHH4JnWOhH02%2FoIJlSo5w%3D%3D"}
+[2023-12-11 08:14:11] API - SourceIP : 35.191.13.84, proc1: GE/QHt25gvfDff5QLOK8sowJMCGZcT5wx7SCu8vmniU76PYUZMgHbNE7Y5gHGbOK4HjKKUzOMSDdwB1upuxvC2i8rkBTTzc1m5e7jZqi7bL10Ir2m/HoWNEYUXJAwgB4tZHH4JnWOhH02/oIJlSo5w==, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000132","login_id":"perugiatest10","name":"pt10","email":"testperugia10@gmail.com","lang_code":"en"}
+[2023-12-11 08:14:11] BILLING - SourceIP : 35.191.32.14, proc1: getCash, proc2: login_id : perugiatest10, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":2500}
+[2023-12-11 08:20:56] NODE - SourceIP : 35.191.32.163, proc1: getBalance, proc2: login_id : perugiatest09, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:20:56] NODE - SourceIP : 35.191.32.224, proc1: getBalance, proc2: login_id : perugiatest09, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":19615}
+[2023-12-11 08:26:29] CRYPTOOO - SourceIP : 35.191.16.197, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=gpal4434|pw=fjqmxlt1!|partner=Spofeed|date=231211082629|ip=210.59.144.44
+{"result":"1","return":"DvsS2rhBjYRJqw43F2np7t9X84zuO4zfTDr1sc%2ByVDW9fFt688yFJzTqTXfETisoofeAuHdP%2BgMdBwWVrVwExz61GJen5nDhMJs4bNwhKqr8fmYL0qk0XKTTtmBpGuHi"}
+[2023-12-11 08:26:29] API - SourceIP : 35.191.13.80, proc1: DvsS2rhBjYRJqw43F2np7t9X84zuO4zfTDr1sc+yVDW9fFt688yFJzTqTXfETisoofeAuHdP+gMdBwWVrVwExz61GJen5nDhMJs4bNwhKqr8fmYL0qk0XKTTtmBpGuHi, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000142","msg":"1010"}
+[2023-12-11 08:26:29] CRYPTOOO - SourceIP : 35.191.33.4, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=gpal4434|partner=Spofeed|date=231211082629|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8shUcTGmhMCh3EKORaR8r8maeQC0vZSavfZR64mOf%2FJ5UvklQRrDbFP16w234i1uuKidbZT4f1VxejL9hbQUTrZXjg2tLKSciraGdy9QihGVs"}
+[2023-12-11 08:26:29] API - SourceIP : 35.191.16.194, proc1: GE/QHt25gvfDff5QLOK8shUcTGmhMCh3EKORaR8r8maeQC0vZSavfZR64mOf/J5UvklQRrDbFP16w234i1uuKidbZT4f1VxejL9hbQUTrZXjg2tLKSciraGdy9QihGVs, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000142","login_id":"gpal4434","name":"\uc554\uba54\ub514","email":"gpal4434@naver.com","lang_code":"tw"}
+[2023-12-11 08:26:29] BILLING - SourceIP : 35.191.32.232, proc1: getCash, proc2: login_id : gpal4434, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}
+[2023-12-11 08:29:41] BILLING - SourceIP : 35.191.16.195, proc1: purchase, proc2: login_id : perugiatest10, game_code : spolive, product_name : 3369, cash : 50
+{"result":"1","msg":"Request OK, Success.","data":{"chargeNo":202312110324533,"chargedAmount":50,"wallet":{"cashReal":0,"cashBonus":2450,"cashTotal":2450}},"order_number":"358_702281199_5960b0"}
+[2023-12-11 08:31:10] NODE - SourceIP : 35.191.32.228, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:31:10] NODE - SourceIP : 35.191.16.194, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:31:18] BILLING - SourceIP : 35.191.24.150, proc1: purchase, proc2: login_id : perugiatest10, game_code : spolive, product_name : 3369, cash : 50
+{"result":"1","msg":"Request OK, Success.","data":{"chargeNo":202312110324534,"chargedAmount":50,"wallet":{"cashReal":0,"cashBonus":2400,"cashTotal":2400}},"order_number":"358_702281219_6599ae"}
+[2023-12-11 08:31:25] NODE - SourceIP : 35.191.32.200, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:31:25] NODE - SourceIP : 35.191.32.232, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:32:51] NODE - SourceIP : 35.191.3.26, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:32:51] NODE - SourceIP : 35.191.32.162, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:34:14] BILLING - SourceIP : 35.191.29.175, proc1: purchase, proc2: login_id : perugiatest10, game_code : spolive, product_name : 3369, cash : 50
+{"result":"1","msg":"Request OK, Success.","data":{"chargeNo":202312110324535,"chargedAmount":50,"wallet":{"cashReal":0,"cashBonus":2350,"cashTotal":2350}},"order_number":"358_702281219_6599ae"}
+[2023-12-11 08:36:01] NODE - SourceIP : 35.191.32.185, proc1: getBalance, proc2: login_id : yhcho8888, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:36:01] NODE - SourceIP : 35.191.32.13, proc1: getBalance, proc2: login_id : yhcho8888, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:36:20] NODE - SourceIP : 35.191.24.150, proc1: getBalance, proc2: login_id : yhcho8888, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:36:20] NODE - SourceIP : 35.191.3.31, proc1: getBalance, proc2: login_id : yhcho8888, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-11 08:44:55] CRYPTOOO - SourceIP : 35.191.32.13, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=login|id=akira040609|pw=QWER1234|partner=Spofeed|date=231211084455|ip=210.59.144.44
+{"result":"1","return":"nwEV9LSaV8%2B5Mn1OlbaGZH%2BtN2bCz1rkw0%2BfPB94IMRhuIM3u8f9JQ%2Ba74Xej7YePlb3YEezvCiW7byt0PsUtkwce4aZ9%2Bq8rSr4VjCnXN1PSWdiB7fSNmpI71peaW6y"}
+[2023-12-11 08:44:55] API - SourceIP : 35.191.32.183, proc1: nwEV9LSaV8+5Mn1OlbaGZH+tN2bCz1rkw0+fPB94IMRhuIM3u8f9JQ+a74Xej7YePlb3YEezvCiW7byt0PsUtkwce4aZ9+q8rSr4VjCnXN1PSWdiB7fSNmpI71peaW6y, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","usn":"2000000125","msg":"1010"}
+[2023-12-11 08:44:55] CRYPTOOO - SourceIP : 35.191.32.169, proc1: q+J8p9NSyafc2jsqb4sXlg==, proc2: mode=checkid|id=akira040609|partner=Spofeed|date=231211084455|ip=210.59.144.44|gamecode=spolive
+{"result":"1","return":"GE%2FQHt25gvfDff5QLOK8slOyfUTPOzey%2FJOdr1lR0H9J35HeFktiiCBGesNbqNwnKiIalvBaLJIjJgRw3ZyNNhiJViU0Y0b0rJaL6z7JcUtNOBk68ojYHK4lpxHsTKcQ"}
+[2023-12-11 08:44:55] API - SourceIP : 35.191.24.189, proc1: GE/QHt25gvfDff5QLOK8slOyfUTPOzey/JOdr1lR0H9J35HeFktiiCBGesNbqNwnKiIalvBaLJIjJgRw3ZyNNhiJViU0Y0b0rJaL6z7JcUtNOBk68ojYHK4lpxHsTKcQ, proc2: q+J8p9NSyafc2jsqb4sXlg==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-11 08:44:55] BILLING - SourceIP : 35.191.24.185, proc1: getCash, proc2: login_id : akira040609, game_code : spolive
+{"result":"1","msg":"Request OK, Success.","totalGameCash":0}

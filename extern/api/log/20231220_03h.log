@@ -1,0 +1,108 @@
+[2023-12-20 03:16:19] NODE - SourceIP : 35.191.32.164, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:19] NODE - SourceIP : 35.191.29.175, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:30] NODE - SourceIP : 35.191.29.163, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:30] NODE - SourceIP : 35.191.33.7, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:32] NODE - SourceIP : 35.191.32.133, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:32] NODE - SourceIP : 35.191.32.8, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:16:36] CRYPTOOO - SourceIP : 35.191.32.194, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111636
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H70pRAQ%2FbcEvr2q8zc5gUGzg%3D%3D"}
+[2023-12-20 03:16:36] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H70pRAQ/bcEvr2q8zc5gUGzg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:16:43] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111643
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H74HjepvBwQJuMZTNT7kcFtg%3D%3D"}
+[2023-12-20 03:16:43] API - SourceIP : 35.191.16.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H74HjepvBwQJuMZTNT7kcFtg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:16:50] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111650
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7iY7cJEbhKLBhiKpPlAEAFQ%3D%3D"}
+[2023-12-20 03:16:50] API - SourceIP : 35.191.32.194, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7iY7cJEbhKLBhiKpPlAEAFQ==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:04] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111704
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7R6RKd4RqF5BLrhAULKucMA%3D%3D"}
+[2023-12-20 03:17:04] API - SourceIP : 35.191.16.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7R6RKd4RqF5BLrhAULKucMA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:05] CRYPTOOO - SourceIP : 35.191.16.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111705
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7v1JyssJXjFOQGzhAwfVpcg%3D%3D"}
+[2023-12-20 03:17:05] API - SourceIP : 35.191.16.194, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7v1JyssJXjFOQGzhAwfVpcg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:05] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111705
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7v1JyssJXjFOQGzhAwfVpcg%3D%3D"}
+[2023-12-20 03:17:05] API - SourceIP : 35.191.16.194, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7v1JyssJXjFOQGzhAwfVpcg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:05] CRYPTOOO - SourceIP : 35.191.16.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111705
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7v1JyssJXjFOQGzhAwfVpcg%3D%3D"}
+[2023-12-20 03:17:05] API - SourceIP : 35.191.32.195, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7v1JyssJXjFOQGzhAwfVpcg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:05] CRYPTOOO - SourceIP : 35.191.32.195, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111705
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7v1JyssJXjFOQGzhAwfVpcg%3D%3D"}
+[2023-12-20 03:17:05] API - SourceIP : 35.191.16.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7v1JyssJXjFOQGzhAwfVpcg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:05] CRYPTOOO - SourceIP : 35.191.16.192, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111705
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7v1JyssJXjFOQGzhAwfVpcg%3D%3D"}
+[2023-12-20 03:17:05] API - SourceIP : 35.191.16.192, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7v1JyssJXjFOQGzhAwfVpcg==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:06] CRYPTOOO - SourceIP : 35.191.16.194, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111706
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7WD%2Bjto58weeay15c1ZSJ1w%3D%3D"}
+[2023-12-20 03:17:06] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7WD+jto58weeay15c1ZSJ1w==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:06] CRYPTOOO - SourceIP : 35.191.16.192, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111706
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7WD%2Bjto58weeay15c1ZSJ1w%3D%3D"}
+[2023-12-20 03:17:06] API - SourceIP : 35.191.16.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7WD+jto58weeay15c1ZSJ1w==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:06] CRYPTOOO - SourceIP : 35.191.32.198, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111706
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7WD%2Bjto58weeay15c1ZSJ1w%3D%3D"}
+[2023-12-20 03:17:06] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7WD+jto58weeay15c1ZSJ1w==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:07] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111707
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7pB%2F3bOqZJUlQe3sR0%2FUTWA%3D%3D"}
+[2023-12-20 03:17:07] API - SourceIP : 35.191.32.195, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7pB/3bOqZJUlQe3sR0/UTWA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:07] CRYPTOOO - SourceIP : 35.191.16.192, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111707
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7pB%2F3bOqZJUlQe3sR0%2FUTWA%3D%3D"}
+[2023-12-20 03:17:07] API - SourceIP : 35.191.16.192, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7pB/3bOqZJUlQe3sR0/UTWA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:07] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111708
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7yTHQbtwBb74oZlLq45CTdA%3D%3D"}
+[2023-12-20 03:17:08] API - SourceIP : 35.191.16.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7yTHQbtwBb74oZlLq45CTdA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:11] CRYPTOOO - SourceIP : 35.191.32.197, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111711
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7i6TBwyDihKjxNdoe%2FcrStA%3D%3D"}
+[2023-12-20 03:17:11] API - SourceIP : 35.191.32.197, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7i6TBwyDihKjxNdoe/crStA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:11] CRYPTOOO - SourceIP : 35.191.32.195, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=shawn001|partner=Payletter|date=231220111711
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp%2FIsim%2FBoUc%2B0H7i6TBwyDihKjxNdoe%2FcrStA%3D%3D"}
+[2023-12-20 03:17:11] API - SourceIP : 35.191.16.194, proc1: R+jyYDzxeatxe0LWIiJ8zLTjTSqJnrsMhVPtb2xEupD4VJqCCp/Isim/BoUc+0H7i6TBwyDihKjxNdoe/crStA==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000139","login_id":"shawn001","name":"shawn","email":"shawn.you@petpointasia.com","lang_code":"tw"}
+[2023-12-20 03:17:13] NODE - SourceIP : 35.191.13.81, proc1: getBalance, proc2: login_id : shawn001, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:17:13] NODE - SourceIP : 35.191.24.149, proc1: getBalance, proc2: login_id : shawn001, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-12-20 03:25:27] CRYPTOOO - SourceIP : 35.191.32.226, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112527
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUmDbHLyFEx7alR1E3ByLm7Q%3D%3D"}
+[2023-12-20 03:25:27] API - SourceIP : 35.191.32.226, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUmDbHLyFEx7alR1E3ByLm7Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-20 03:25:27] CRYPTOOO - SourceIP : 35.191.32.226, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112527
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUmDbHLyFEx7alR1E3ByLm7Q%3D%3D"}
+[2023-12-20 03:25:27] API - SourceIP : 35.191.13.87, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUmDbHLyFEx7alR1E3ByLm7Q==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-20 03:25:29] CRYPTOOO - SourceIP : 35.191.32.232, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112529
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUuvjzbW%2BFvOer0IV3RMEA%2Bg%3D%3D"}
+[2023-12-20 03:25:29] API - SourceIP : 35.191.32.232, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUuvjzbW+FvOer0IV3RMEA+g==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-20 03:25:29] CRYPTOOO - SourceIP : 35.191.32.232, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112529
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUuvjzbW%2BFvOer0IV3RMEA%2Bg%3D%3D"}
+[2023-12-20 03:25:29] API - SourceIP : 35.191.32.226, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUuvjzbW+FvOer0IV3RMEA+g==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-20 03:25:39] CRYPTOOO - SourceIP : 35.191.32.232, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112539
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUoUiI5C4%2FrJx2jO3S5Skq4g%3D%3D"}
+[2023-12-20 03:25:39] API - SourceIP : 35.191.13.82, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUoUiI5C4/rJx2jO3S5Skq4g==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}
+[2023-12-20 03:25:43] CRYPTOOO - SourceIP : 35.191.32.232, proc1: dxatY+fE1lZd9o77wWetzQ==, proc2: mode=checkid|id=akira040609|partner=Payletter|date=231220112543
+{"result":"1","return":"R%2BjyYDzxeatxe0LWIiJ8zPBM%2FxErmiz90V2Ui56l%2BpkR4XpAB5jynPsYhtYaDZOUXorUKqazxwiFNuSqxFS0Qw%3D%3D"}
+[2023-12-20 03:25:43] API - SourceIP : 35.191.32.232, proc1: R+jyYDzxeatxe0LWIiJ8zPBM/xErmiz90V2Ui56l+pkR4XpAB5jynPsYhtYaDZOUXorUKqazxwiFNuSqxFS0Qw==, proc2: dxatY+fE1lZd9o77wWetzQ==
+{"result":"1","msg":"1030","usn":"2000000125","login_id":"akira040609","name":"CC","email":"kanakanakana0409@gmail.com","lang_code":"tw"}

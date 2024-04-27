@@ -1,0 +1,16 @@
+[2022-08-28 10:14:58] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+{"result":"1","msg":"u15ju 49A j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU="}
+[2022-08-28 10:15:15] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+%7B%22result%22%3A%221%22%2C%22msg%22%3A%22u15ju%2B49A%2Bj9GRRmPhjKZDaJN5awLEqe03q72qsxHoU%3D%22%7D
+[2022-08-28 10:15:38] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+{"result":"1","msg":"u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU="}
+[2022-08-28 10:17:21] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+{"result":"1","msg":"u15ju%2B49A%2Bj9GRRmPhjKZDaJN5awLEqe03q72qsxHoU%3D"}
+[2022-08-28 10:25:49] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Perugia|data=20220828102548|ip=210.59.144.44
+{"result":"1","return":"0F%2B%2BqKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa%2BD4ASPv8uKqjDZtjJpJN%2FaQ67FxKP2K%2Beb%2B3gLjeP01TIfwNIe4TxDg2UYpGMlkdQyx"}
+[2022-08-28 10:31:46] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Perugia|data=20220828103146|ip=210.59.144.44
+{"result":"1","return":"0F%2B%2BqKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa%2BD4ASPv8uKqjDZtjJpJN%2FaQ63swiNfdpxwvuraTB4UzcPyqwaeJAK0aj2UCUeCqeAJO"}
+[2022-08-28 10:33:24] API - SourceIP : 34.80.134.81, proc1: mkKey, proc2: animalfriends.no1
+{"result":"1","msg":"u15ju%2B49A%2Bj9GRRmPhjKZDaJN5awLEqe03q72qsxHoU%3D"}
+[2022-08-28 10:38:01] CRYPTOOO - SourceIP : 210.59.144.44, proc1: u15ju+49A+j9GRRmPhjKZDaJN5awLEqe03q72qsxHoU=, proc2: mode=login|id=neoguru0|pw=wpqkfskf12|partner=Perugia|data=20220828103801|ip=210.59.144.44
+{"result":"1","return":"0F%2B%2BqKLZ4kCSVDdXs4cxVBqVehJ57O22pdrAsAX8hfwajbpl9iD8DgzYcQeFa%2BD4ASPv8uKqjDZtjJpJN%2FaQ6y%2BRnoWkVD6ozssHSR5wHCJZeMnwpMZWFn4ODm61MdvZ"}

@@ -1,0 +1,30 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_mypage">
+	<div class="article_header">
+		<div class="article_header_inner">
+			<h2 class="article_title"><?php echo $lang['My_Info']; ?></h2>
+		</div><!-- .article_header_inner -->
+		<? include "../includes/submenu_mypage.htm"; ?>
+	</div><!-- .article_header -->
+
+	<div class="article_body">
+		<div class="wrap_narrow">
+			<div class="withdraw_completed">
+			    <h3><i class="icon_completed"></i><?php echo $lang['Withdrawal_Request_Completed']; ?></h3>
+				<div class="withdraw_desc">
+                    <p><?php echo $lang['See_You_Again']; ?></p>
+                    <ul>
+                        <li><?php echo $lang['Log_In_Within_7days']; ?></li>
+                    </ul>
+                </div><!-- .withdraw_desc -->
+			</div><!-- .withdraw_completed -->
+            <div class="process_btn_wrap"> 
+                <a href="/" class="basic_btn basic_btn_primary"><span><?php echo $lang['Go_Home']; ?></span></a>
+            </div><!-- .process_btn_wrap -->
+		</div><!-- .wrap_narrow -->
+	</div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

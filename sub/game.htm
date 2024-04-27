@@ -1,0 +1,152 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_game">
+    <div class="article_header">
+        <div class="article_header_inner">
+            <h2 class="article_title"><?php echo $lang['Game']; ?></h2>
+        </div><!-- .article_header_inner -->
+    </div><!-- .article_header -->
+
+    <div class="article_body">
+        <div class="wrap">
+            <div class="main_game_wrap main_content_section">
+                <ul class="tab_menu game_tab_menu">
+                    <li class="active" data-filter="*"><button type="button"><span>ALL</span></button></li>
+                    <li data-filter=".game_html5"><button type="button"><span>WEB</span></button></li>
+                    <li class="game_pc" data-filter=".game_pc"><button type="button"><span>PC</span></button></li>
+                    <li class="game_mobile" data-filter=".game_mobile"><button type="button"><span>MOBILE</span></button></li>
+
+                    <?php
+                    if( $_COOKIE['login_id'] != '' ){?>
+                    <!--li><button type="button"><span>내 게임</span></button></li-->
+                    <?php }
+                    ?>
+                </ul>
+                <div class="game_list">
+
+
+				<?php
+				$result_games = mysqli_query($connect, "SELECT * FROM Games WHERE m_game_code != ''");
+				$info_games = array();
+
+				while($row_games = mysqli_fetch_array($result_games)){
+					$info_games = $row_games;
+
+					if($info_games["m_badge"] == "1"){
+						$badge_class = "game_tag game_tag_new";
+					}else if($info_games["m_badge"] == "2"){
+						$badge_class = "game_tag game_tag_comingsoon";
+					}
+					
+					switch($info_games['m_badge']){
+						case '1' : $badge = $lang['New'];
+						break;
+						case '2' : $badge = $lang['Coming_Soon'];
+						break;
+						case '3' : $badge = "HOT";
+						break;
+					}
+
+					if ( strpos($info_games['m_category1'], "1") !== false ) {		
+						$category1 .= 'WEB';
+						if ( strpos($info_games['m_category1'], "2") !== false ){
+							$category1 .= ' / PC';
+							if ( strpos($info_games['m_category1'], "3") !== false )	{
+								$category1 .= ' / MOBILE';
+							}
+						}
+					} else {
+						if ( strpos($info_games['m_category1'], "2") !== false ){
+							$category1 .= ' PC';
+							if ( strpos($info_games['m_category1'], "3") !== false )	{
+								$category1 .= ' / MOBILE';
+							}
+						}
+					}
+
+
+					switch($info_games['m_category2']){
+						case '1' : $category2 = $lang['Casual'];
+						break;
+						case '2' : $category2 = $lang['Metaverse'];
+						break;
+					}
+
+
+					if ( strpos($info_games['m_category1'], "1") !== false ) {
+						$game_class .= ' game_html5';
+					}
+					if ( strpos($info_games['m_category1'], "2") !== false ){
+						$game_class .= ' game_pc';
+					}
+					if ( strpos($info_games['m_category1'], "3") !== false )	{
+						$game_class .= ' game_mobile';
+					}
+
+					$game_url = str_replace('HOST',$HOST,$info_games["m_landing_url"]);
+				?>
+				<?php
+						echo '
+				<div class="game_item'.$game_class.'">';
+				?>
+					<!--a href="https://cdn.aurorahunt.xyz/game_res/<?php echo $HOST; ?>/web/animalfriends/index.html" target="_blank" width="1920px" height="1080px"-->
+					<?php
+						if( $_COOKIE['login_id'] != '' ){
+							if($game_url == ''){?>
+								<a href="javascript:void(0);">
+					<?php
+							} else {?>
+								<a href="<?php echo $game_url; ?>">
+					<?php
+							}
+						} else {?>
+							<a href="<?php echo $game_url; ?>">
+					<?php
+						}
+					?>
+					<?php echo '
+						<figure><img src="'.$info_games["m_img_url"].'" alt=""></figure>
+						<span class="'.$badge_class.'">'.$badge.'</span>
+						<div class="game_info">
+							<ul>
+								<li>'.$category1.'</li>
+								<li>'.$category2.'</li>
+							</ul>
+							<h3>'.$info_games["m_name_" . $lang_code].'</h3>
+							<p class="game_desc">'.$info_games["m_description"].'</p>
+						</div>
+					</a>
+					<button type="button" class="add_game" onclick="addGame("CLWMC",this);"><span class="sr_only">'.$lang['Add_My_Game'].'</span></button>
+				</div><!-- .game_item -->';
+				$game_class='';
+				$category1 = '';
+				};
+				?>
+
+
+                </div><!-- .game_list -->
+                <div class="no_list"><p><?php echo $lang['Preparing']; ?></p></div>
+            </div><!-- main_game_wrap -->
+
+        </div><!-- .wrap -->
+    </div><!-- .article_body -->
+</div><!-- #container -->
+<script>
+    function needLogin(){
+        swal({
+            text: '<?php echo $lang["Login_Required"]; ?>',
+            buttons: {
+                cancel : '<?php echo $lang["Cancel"]; ?>',
+                confirm : {
+                    text : '<?php echo $lang["Go_To_Login"]; ?>',
+                    value : 'catch'
+                },
+            },
+        }).then(function(value){
+            if(value == 'catch'){
+                location.href='/extern/sso/login.htm?return_path=<?php echo $return_url; ?>';
+            }
+        })
+    }
+</script>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

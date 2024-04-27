@@ -1,0 +1,28 @@
+[2023-06-01 16:18:27] NODE - SourceIP : 210.59.144.44, proc1: getAddress, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"034a4a59accdbe949bce45d6500e00b84b6f4e618b70e17a084d7fe5a4c14e160b"}
+[2023-06-01 16:18:40] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 16:18:44] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 16:18:45] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 16:18:46] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 16:19:30] NODE - SourceIP : 52.13.201.178, proc1: getAddress, proc2: login_id : tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","public_key":"034a4a59accdbe949bce45d6500e00b84b6f4e618b70e17a084d7fe5a4c14e160b"}
+[2023-06-01 16:19:33] NODE - SourceIP : 34.213.208.16, proc1: MiningStart, proc2: login_id : tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"132|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmPAfdabQFddyj7uQ74jtHEbWmUgUVf7GfpQZijDTEavs6\/132.png|"}
+[2023-06-01 16:19:34] NODE - SourceIP : 34.213.208.16, proc1: getBalance, proc2: login_id : tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":0}
+[2023-06-01 16:20:42] NODE - SourceIP : 34.216.170.167, proc1: getBalance, proc2: login_id : tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":18}
+[2023-06-01 16:20:44] NODE - SourceIP : 34.216.170.167, proc1: MiningStart, proc2: login_id : tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":"Mining transaction registered in unconfirmed transaction queue.","NFTs":"132|","NFT_images":"https:\/\/ipfs.io\/ipfs\/QmPAfdabQFddyj7uQ74jtHEbWmUgUVf7GfpQZijDTEavs6\/132.png|"}
+[2023-06-01 16:22:17] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":42}
+[2023-06-01 16:22:23] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":43}
+[2023-06-01 16:28:22] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":135}
+[2023-06-01 16:28:59] NODE - SourceIP : 210.59.144.44, proc1: getBalance, proc2: login_id : Tester1perugia, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":144}

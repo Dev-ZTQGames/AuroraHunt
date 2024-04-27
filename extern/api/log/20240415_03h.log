@@ -1,0 +1,34 @@
+[2024-04-15 03:10:49] NODE - SourceIP : 35.191.13.87, proc1: Reward, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","status":{"amount":"1000","sender":"028565bc4536de9a8e962cff0a8a71ce14e1bd6050dd790acce4c786d7aa100a35","receiver":"03e1207b602d35f3de8d542fefabafa0c600486c43fd266e2fa8c8eaa7af81593d"}}
+[2024-04-15 03:11:01] NODE - SourceIP : 35.191.33.8, proc1: Reward, proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2024-04-15 03:11:24] NODE - SourceIP : 35.191.13.86, proc1: Reward, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":{"amount":"1000","sender":"03363b80d838c3462b1101534365d8705611891a23e27246d9b29a47a416524410","receiver":"03f967c319c19f3bc43faa008c9a26776fca9f279d3002f55eed617e91c447be38"}}
+[2024-04-15 03:11:35] NODE - SourceIP : 35.191.24.148, proc1: Reward, proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2024-04-15 03:31:48] NODE - SourceIP : 35.191.24.186, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":468395}
+[2024-04-15 03:31:48] NODE - SourceIP : 35.191.29.164, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":70291}
+[2024-04-15 03:31:57] NODE - SourceIP : 35.191.33.3, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":468395}
+[2024-04-15 03:31:57] NODE - SourceIP : 35.191.29.169, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":70291}
+[2024-04-15 03:45:50] NODE - SourceIP : 35.191.32.232, proc1: , proc2: 
+{"result":"0","msg":"Default required parameter not passed."}
+[2024-04-15 03:50:40] NODE - SourceIP : 35.191.29.166, proc1: Reward, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","status":{"type":"error","msg":"amount must be an integer parameter."}}
+[2024-04-15 03:52:05] NODE - SourceIP : 35.191.32.224, proc1: Reward, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","status":{"amount":"100","sender":"028565bc4536de9a8e962cff0a8a71ce14e1bd6050dd790acce4c786d7aa100a35","receiver":"03e1207b602d35f3de8d542fefabafa0c600486c43fd266e2fa8c8eaa7af81593d"}}
+[2024-04-15 03:52:29] NODE - SourceIP : 35.191.16.195, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":468395}
+[2024-04-15 03:52:29] NODE - SourceIP : 35.191.33.3, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":70391}
+[2024-04-15 03:53:23] NODE - SourceIP : 35.191.13.86, proc1: Reward, proc2: login_id : csquare7, game_code : clmc
+{"result":"0","msg":"Host information is not set properly due to an invalid game_code."}
+[2024-04-15 03:54:53] NODE - SourceIP : 35.191.13.86, proc1: Reward, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","status":{"amount":"100","sender":"03363b80d838c3462b1101534365d8705611891a23e27246d9b29a47a416524410","receiver":"03f967c319c19f3bc43faa008c9a26776fca9f279d3002f55eed617e91c447be38"}}
+[2024-04-15 03:55:06] NODE - SourceIP : 35.191.24.190, proc1: getBalance, proc2: login_id : csquare7, game_code : clwmc
+{"result":"1","msg":"Request OK, Success.","balance":468495}
+[2024-04-15 03:55:06] NODE - SourceIP : 35.191.33.3, proc1: getBalance, proc2: login_id : csquare7, game_code : mm
+{"result":"1","msg":"Request OK, Success.","balance":70391}
