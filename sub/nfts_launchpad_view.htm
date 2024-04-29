@@ -1,8 +1,9 @@
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
 
-<div id="container" class="page_nfts">
+<div id="container" class="page_nfts page_launchpad_view">
     <div class="wrap">
+        <?php /* live project start */ ?>
         <div class="launchpad-view">
             <div class="launchpad-view__left">
                 <div class="launchpad-view__img">
@@ -103,19 +104,130 @@
                     </div><!-- .launchpad-view__mint-info__item -->
                 </div>
             </div><!-- .launchpad-view__right -->
-        </div><!-- .article_body -->
+        </div><!-- .launchpad-view -->
+        <?php /* live project end */ ?>
+
+        <?php /* upcoming project start */ ?>
+        <div class="launchpad-view">
+            <div class="launchpad-view__left">
+                <div class="launchpad-view__img">
+                    <figure><img src="https://via.placeholder.com/650x650.jpg" alt=""></figure>
+                </div>
+            </div>
+            <div class="launchpad-view__right">
+                <div class="launchpad-view__info">
+                    <div class="launchpad-view__tit">
+                        <figure class="launchpad-view__logo"><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
+                        <div class="launchpad-view__tit__info">
+                            <h3>Mining Maze: Get a big treasure box!</h3>
+                            <p class="goods"><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum</span></p>
+                        </div>
+                    </div>
+                    <ul class="launchpad-sns__list">
+                        <li class="sns-web"><a href="#" target="_blank"><span class="sr_only">web site</span></a></li>
+                        <li class="sns-twitter"><a href="https://twitter.com/PhotonMilkyway" target="_blank"><span class="sr_only">twitter</span></a></li>
+                        <li class="sns-telegram"><a href="https://t.me/photon_milkyway" target="_blank"><span class="sr_only">telegram</span></a></li>
+                    </ul>
+                    <p class="desc">
+                        Embark on an adventure to a different dimension with animal friends! <br>
+                        Have the collection and mining the PMW within short time bla bla
+                    </p>
+                </div>
+                
+                <div class="launchpad-view__mint-info">
+                    <div class="launchpad-view__mint-info__item">
+                        <h3>NFT Launch Information</h3>
+                        <ul class="launchpad-view__mint-info__box">
+                            <li>
+                                <b>Price</b>
+                                <p>Free</p>
+                            </li>
+                            <li>
+                                <b>Pieces</b>
+                                <p>3,333</p>
+                            </li>
+                            <li>
+                                <b>Limit</b>
+                                <p><span>1 pc per wallet</span></p>
+                            </li>
+                            <li>
+                                <b>Minting Date</b>
+                                <p><span>20 March 2024, 13:00-15:00 UTC</span></p>
+                            </li>
+                        </ul>
+                    </div><!-- .launchpad-view__mint-info__item -->
+                </div>
+            </div><!-- .launchpad-view__right -->
+        </div><!-- .launchpad-view -->
+        <?php /* upcoming project end */ ?>
+
+        <?php /* previous project start */ ?>
+        <div class="launchpad-view">
+            <div class="launchpad-view__left">
+                <div class="launchpad-view__img">
+                    <figure><img src="https://via.placeholder.com/650x650.jpg" alt=""></figure>
+                    <p class="minting-result"><span>SOLD OUT</span></p>
+                    <!--<p class="minting-result"><span>SALE ENDED</span></p>-->
+                </div>
+            </div>
+            <div class="launchpad-view__right">
+                <div class="launchpad-view__info">
+                    <div class="launchpad-view__tit">
+                        <figure class="launchpad-view__logo"><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
+                        <div class="launchpad-view__tit__info">
+                            <h3>Mining Maze: Get a big treasure box!</h3>
+                            <p class="goods"><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum</span></p>
+                        </div>
+                    </div>
+                    <ul class="launchpad-sns__list">
+                        <li class="sns-web"><a href="#" target="_blank"><span class="sr_only">web site</span></a></li>
+                        <li class="sns-twitter"><a href="https://twitter.com/PhotonMilkyway" target="_blank"><span class="sr_only">twitter</span></a></li>
+                        <li class="sns-telegram"><a href="https://t.me/photon_milkyway" target="_blank"><span class="sr_only">telegram</span></a></li>
+                    </ul>
+                    <p class="desc">
+                        Embark on an adventure to a different dimension with animal friends! <br>
+                        Have the collection and mining the PMW within short time bla bla
+                    </p>
+                </div>
+                
+                <div class="launchpad-view__mint-info">
+                    <div class="launchpad-view__mint-info__item">
+                        <h3>NFT Launch Information</h3>
+                        <ul class="launchpad-view__mint-info__box">
+                            <li>
+                                <b>Price</b>
+                                <p>Free</p>
+                            </li>
+                            <li>
+                                <b>Pieces</b>
+                                <p>3,333</p>
+                            </li>
+                            <li>
+                                <b>Limit</b>
+                                <p><span>1 pc per wallet</span></p>
+                            </li>
+                            <li>
+                                <b>Minting Date</b>
+                                <p><span>20 March 2024, 13:00-15:00 UTC</span></p>
+                            </li>
+                        </ul>
+                    </div><!-- .launchpad-view__mint-info__item -->
+                </div>
+            </div><!-- .launchpad-view__right -->
+        </div><!-- .launchpad-view -->
+        <?php /* previous project end */ ?>
+
     </div><!-- .wrap -->
 </div><!-- #container -->
 
 <div id="mint-purchase-popup" class="mint-purchase-popup mfp-hide">
     <div class="mint-purchase-popup__head">
         <h2>Mint</h2>
-        <button type="button" class="mint-purchase-popup__close"><span class="sr_only">close</span></button>
     </div><!-- .mint-purchase-popup__head -->
     <div class="mint-purchase-popup__body">
-        <div class="project-info">
-            <figure><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
-            <div class="project-info__name">
+        <div class="project-info__wrap">
+            <figure class="project-info__img"><img src="../images/sub/launchpad-logo-mm.png" alt=""></figure>
+            <div class="project-info">
                 <b>Mining Maze</b>
                 <p><i><img src="../images/sub/nft/icon-ethereum.svg" alt=""></i><span>Ethereum</span></p>
             </div>

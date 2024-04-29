@@ -1,0 +1,53 @@
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+
+<div id="container" class="page_nfts page_info">
+    <div class="article_header">
+        <div class="article_header_inner">
+            <h2 class="article_title">NFTs Info</h2>
+        </div><!-- .article_header_inner -->
+    </div><!-- .article_header -->
+
+    <div class="article_body">
+        <div class="wrap">
+            <div class="nfts-info__wrap">
+                <div class="nft_game_filter_list">
+                    <div class="nft_game_filter_item">
+                        <button type="button" class="nft_game_filter_button"><span>Status</span></button>
+                        <div class="filter_content">
+                            <ul>
+                                <li><label class="nft_custom_checkbox">Buy Now<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="nft_custom_checkbox">Sold Out<input type="checkbox"><span class="checkmark"></span></label></li>
+                            </ul>
+                        </div><!-- .filter_content -->
+                    </div><!-- .nft_game_filter_item -->
+                    <div class="nft_game_filter_item">
+                        <button type="button" class="nft_game_filter_button"><span>Price</span></button>
+                        <div class="filter_content">
+                            <p class="filter_price_input"><input type="num" placeholder="Min"><span>to</span><input type="num" placeholder="Max"></p>
+                            <button type="button" class="filter_price_apply"><span>Apply</span></button>
+                        </div><!-- .filter_content -->
+                    </div><!-- .nft_game_filter_item -->
+                    <div class="nft_game_filter_item">
+                        <button type="button" class="nft_game_filter_button"><span>Properties</span></button>
+                        <div class="filter_content">
+                            <ul>
+                                <li><label class="nft_custom_checkbox">Trait 01<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="nft_custom_checkbox">Trait 02<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="nft_custom_checkbox">Trait 03<input type="checkbox"><span class="checkmark"></span></label></li>
+                            </ul>
+                        </div><!-- .filter_content -->
+                    </div><!-- .nft_game_filter_item -->
+                </div><!-- .nft_game_filter_list -->
+
+                <div class="collections_view_list">
+                    <div class="collections_view_item">
+                        <figure><img class="lozad" src="https://cdn.aurorahunt.xyz/nft/mm/img/3062.png" alt=""></figure>
+                    </div><!-- .collections_view_item -->
+                </div><!-- .collections_view_list -->
+            </div>
+        </div><!-- .wrap -->
+    </div><!-- .article_body -->
+</div><!-- #container -->
+
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

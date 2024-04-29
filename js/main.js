@@ -2481,6 +2481,7 @@ function nft_mint(){
         //mainClass: 'game_view_intro_popup',
         fixedContentPos: true,
         fixedBgPos: true,
+        closeBtnInside: true,
         callbacks: {
             open: function() {
                 $('body').addClass('mfp-popup-open');
@@ -2493,10 +2494,6 @@ function nft_mint(){
         },
         midClick: true
     })
-
-    $('.mint-purchase-popup__close').on( "click", function() {
-      $.magnificPopup.close();
-    });
 
 
     //mint quantity

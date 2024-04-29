@@ -1,6 +1,6 @@
 import http from 'http';
 import { AuthClient } from "@dfinity/auth-client";
-import { HttpAgent, Actor } from "@dfinity/agent"; // 導入 createActor
+import { HttpAgent, Actor } from "@dfinity/agent";
 
 const hostname = '0.0.0.0';
 const port = '8080';
