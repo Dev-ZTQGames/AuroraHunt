@@ -2,3 +2,4 @@
 /includes/
 /img_remote/
 *.log
+*/node_module/*
