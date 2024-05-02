@@ -11,43 +11,73 @@
     <div class="article_body">
         <div class="wrap">
             <div class="nfts-info__wrap">
-                <div class="nft_game_filter_list">
-                    <div class="nft_game_filter_item">
-                        <button type="button" class="nft_game_filter_button"><span>Status</span></button>
-                        <div class="filter_content">
+                <a href="#nfts-filter-popup" class="nfts-filter-popup-open"><span>Filter</span></a>
+                <div class="nfts-filter">
+                    <div class="nfts-filter__item nfts-filter__item--active">
+                        <button type="button" class="nfts-filter__button"><span>Games</span></button>
+                        <div class="nfts-filter__content">
                             <ul>
-                                <li><label class="nft_custom_checkbox">Buy Now<input type="checkbox"><span class="checkmark"></span></label></li>
-                                <li><label class="nft_custom_checkbox">Sold Out<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Mining Maze<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Claw Machine<input type="checkbox"><span class="checkmark"></span></label></li>
                             </ul>
-                        </div><!-- .filter_content -->
-                    </div><!-- .nft_game_filter_item -->
-                    <div class="nft_game_filter_item">
-                        <button type="button" class="nft_game_filter_button"><span>Price</span></button>
-                        <div class="filter_content">
-                            <p class="filter_price_input"><input type="num" placeholder="Min"><span>to</span><input type="num" placeholder="Max"></p>
-                            <button type="button" class="filter_price_apply"><span>Apply</span></button>
-                        </div><!-- .filter_content -->
-                    </div><!-- .nft_game_filter_item -->
-                    <div class="nft_game_filter_item">
-                        <button type="button" class="nft_game_filter_button"><span>Properties</span></button>
-                        <div class="filter_content">
+                        </div><!-- .nfts-filter__content -->
+                    </div><!-- .nfts-filter__item -->
+                    <div class="nfts-filter__item nfts-filter__item--active">
+                        <button type="button" class="nfts-filter__button"><span>Rarity</span></button>
+                        <div class="nfts-filter__content">
                             <ul>
-                                <li><label class="nft_custom_checkbox">Trait 01<input type="checkbox"><span class="checkmark"></span></label></li>
-                                <li><label class="nft_custom_checkbox">Trait 02<input type="checkbox"><span class="checkmark"></span></label></li>
-                                <li><label class="nft_custom_checkbox">Trait 03<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Normal<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Rare<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Epic<input type="checkbox"><span class="checkmark"></span></label></li>
+                                <li><label class="custom_checkbox">Legendary<input type="checkbox"><span class="checkmark"></span></label></li>
                             </ul>
-                        </div><!-- .filter_content -->
-                    </div><!-- .nft_game_filter_item -->
-                </div><!-- .nft_game_filter_list -->
+                        </div><!-- .nfts-filter__content -->
+                    </div><!-- .nfts-filter__item -->
+                    <div class="nfts-filter__item nfts-filter__item--active">
+                        <button type="button" class="nfts-filter__button"><span>Number</span></button>
+                        <div class="nfts-filter__content">
+                            <div class="nfts-filter__search">
+                                <label class="nfts-search__label">
+                                    <input class="nfts-search__input" name="search" type="text" value="" placeholder="Search by number">
+                                </label><!-- .nfts-search__label -->
+                                <button class="nfst-search__submit"><span class="sr_only">검색</span></button>
+                            </div>
+                        </div><!-- .nfts-filter__content -->
+                    </div><!-- .nfts-filter__item -->
+                </div><!-- .nfts-filter -->
 
-                <div class="collections_view_list">
-                    <div class="collections_view_item">
+                <div class="nfts-info__list">
+                    <div class="nfts-info__item">
                         <figure><img class="lozad" src="https://cdn.aurorahunt.xyz/nft/mm/img/3062.png" alt=""></figure>
-                    </div><!-- .collections_view_item -->
-                </div><!-- .collections_view_list -->
+                        <ul>
+                            <li><b>NFT Number</b><p>001</p><li>
+                            <li><b>Rarity</b><p>L</p><li>
+                            <li><b>Breeding Count</b><p>(0/5)</p><li>
+                            <li><b>Current Level </b><p>(0/5)</p><li>
+                        </ul>
+                    </div><!-- .nfts-info__item -->
+                    <div class="nfts-info__item">
+                        <figure><img class="lozad" src="https://cdn.aurorahunt.xyz/nft/mm/img/3062.png" alt=""></figure>
+                        <ul>
+                            <li><b>NFT Number</b><p>001</p><li>
+                            <li><b>Rarity</b><p>L</p><li>
+                            <li><b>Breeding Count</b><p>(0/5)</p><li>
+                            <li><b>Current Level </b><p>(0/5)</p><li>
+                        </ul>
+                    </div><!-- .nfts-info__item -->
+                </div><!-- .nfts-info__list -->
             </div>
         </div><!-- .wrap -->
     </div><!-- .article_body -->
 </div><!-- #container -->
 
+
+<div id="nfts-filter-popup" class="nfts-filter-popup mfp-hide">
+    <div class="nfts-filter-popup__head">
+        <h2>Filter</h2>
+    </div><!-- .nfts-filter-popup__head -->
+    <div class="nfts-filter-popup__body">
+        <button type="button" class="nfts-filter-popup__confirm"><span>OK</span></button>
+    </div><!-- .nfts-filter-popup__body -->
+</div><!-- .nfts-filter-popup -->
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.htm'; ?>

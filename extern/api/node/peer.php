@@ -26,7 +26,11 @@ $mode			= escape_string(trim($_REQUEST['mode']));				// mode 메소드 값
 $login_id			= escape_string(trim($_REQUEST['login_id']));				// 로그인 아이디 ( 필수값 )
 $game_code		= escape_string(trim($_REQUEST['game_code']));			// 게임 코드 ( 필수 값 )
 
-$amount			= escape_string(trim($_REQUEST['amount']));			// 토큰 수량 ( PSCT )
+$amount			= escape_string(trim($_REQUEST['amount']));				// 토큰 수량 ( PSCT )
+
+$data			= escape_string(trim($_REQUEST['data']));						// 게임 데이터 -> web2, web3 관련 게임 데이터
+$date_from	= escape_string(trim($_REQUEST['from']));				// 게임 데이터 검색 시작 시간
+$date_to		= escape_string(trim($_REQUEST['to']));					// 게임 데이터 검색 끝 시간
 
 //$option			= escape_string(trim($_REQUEST['option']));				//  채굴 옵션
 
@@ -67,6 +71,58 @@ if ( $HOST == "" )	{
 	exit;
 }
 
+
+// login_id에 대한 지갑 주소가 있는지 확인하고 없으면 발급해서 전달한다. 
+if ( $mode == "setGameData" ) {
+
+	// 지갑 부존재시 생성하여 디비 삽입
+	mysqli_query($connect, "INSERT INTO AccountsGameData (m_login_id,m_game_code,m_data,m_date) VALUES ('".$login_id."', '".$game_code."', '".$data."','".date("Y-m-d H:i:s")."')");
+
+	$array = array("result" => "1", "msg" => "Request OK, Success.");
+
+	$json_result = json_encode($array);
+	print($json_result);
+
+	output_log($json_result, "DATA");
+
+}
+
+// login_id에 대한 지갑 주소가 있는지 확인하고 없으면 발급해서 전달한다. 
+if ( $mode == "getGameData" ) {
+
+	// 지갑 유무 확인
+	$info_gamedata = array();
+
+	if ( $date_from != "" && $date_to != "" ) {
+		$que_gamedata = mysqli_query($connect, "SELECT m_index, m_data, m_date FROM AccountsGameData WHERE m_game_code = '".$game_code."' AND m_login_id='".$login_id."' AND m_date<='".$date_to."' AND m_date>='".$date_from."' ORDER BY m_index DESC");
+	//	echo "SELECT m_index, m_data, m_date FROM AccountsGameData WHERE m_game_code = '".$game_code."' AND m_login_id='".$login_id."' AND m_date<='".$date_to."' AND m_date>='".$date_from."' ORDER BY m_index DESC";
+	}
+	else {
+		$que_gamedata = mysqli_query($connect, "SELECT m_index, m_data, m_date FROM AccountsGameData WHERE m_game_code = '".$game_code."' AND m_login_id='".$login_id."' ORDER BY m_index DESC");
+	}
+
+
+	
+	$list_data = array();
+	$list_date = array();
+	while($row_gamedata = mysqli_fetch_array($que_gamedata)) {
+		$info_gamedata = $row_gamedata;
+
+		$m_data  = $info_gamedata['m_data'];
+		$m_date  = $info_gamedata['m_date'];
+
+		array_push($list_data, $m_data);
+		array_push($list_date, $m_date);
+	}
+
+	$array = array("result" => "1", "msg" => "Request OK, Success.", "count(s)" => sizeof($list_data), "data" => $list_data, "date" => $list_date);
+
+	$json_result = json_encode($array);
+	print($json_result);
+
+	output_log($json_result, "DATA");
+
+}
 
 // login_id에 대한 지갑 주소가 있는지 확인하고 없으면 발급해서 전달한다. 
 if ( $mode == "getAddress" ) {

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'aurora-font';
-  src:  url('fonts/aurora-font.eot?8l7c0w');
-  src:  url('fonts/aurora-font.eot?8l7c0w#iefix') format('embedded-opentype'),
-    url('fonts/aurora-font.ttf?8l7c0w') format('truetype'),
-    url('fonts/aurora-font.woff?8l7c0w') format('woff'),
-    url('fonts/aurora-font.svg?8l7c0w#aurora-font') format('svg');
+  src:  url('fonts/aurora-font.eot?h3k0uh');
+  src:  url('fonts/aurora-font.eot?h3k0uh#iefix') format('embedded-opentype'),
+    url('fonts/aurora-font.ttf?h3k0uh') format('truetype'),
+    url('fonts/aurora-font.woff?h3k0uh') format('woff'),
+    url('fonts/aurora-font.svg?h3k0uh#aurora-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.aurora-minus:before {
+  content: "\e942";
+}
+.aurora-globe:before {
+  content: "\e943";
+}
+.aurora-search:before {
+  content: "\e944";
+}
+.aurora-plus1:before {
+  content: "\e945";
+}
 .aurora-close1:before {
   content: "\e956";
 }

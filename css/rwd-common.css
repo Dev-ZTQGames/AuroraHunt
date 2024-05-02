@@ -27,7 +27,6 @@
     .basic_btn { font-size:14rem;}
 
     /* FORM */
-    .email_wrap .input_email_domain {width:26%;}
     .btn_email_verify {width:20%;font-size:14rem;}
     html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-103rem;}
 }
@@ -51,7 +50,7 @@
     .form_basic_body {padding:30rem 0}
     .form_basic_body {padding:30rem 0}
     .form_input {padding-left:15rem; padding-right:15rem;}
-    .email_wrap .input_email_domain {width:25%;}
+    .email_wrap .input_email_domain {width:48%;}
     .btn_email_verify {width:21%;padding:0 6rem;}
     html[lang="en"] .form_label {font-size:14rem;}
     html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-96rem;}
@@ -115,42 +114,33 @@
     .basic_btn {font-size:14rem;}
 
     /* FORM */
-    .form_field_item .valid_message_confirm, 
-    .form_field_item .valid_message_error,
-    .form_field_item .guide_message_info {margin-left:20%;}
+    .form_field_item {display:block;}
 
 	.form_field_item.secondary .form_input {padding-left:17%;}
     html[lang="ja"] .form_field_item.secondary .form_input {padding-left:17%;}
     .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap { width: 80%;}
-    .email_wrap .form_field_item > label {width:20%;}
-    .email_wrap .input_email_domain {width:27%}
-    .btn_email_verify {width:19%; }
+    .email_wrap .form_field_item > label,
+    .email_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
+    .btn_email_verify {width:100%; margin:10rem 0 5rem;}
     .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap { width: 80%;}
     .code_vertify_wrap .form_field_item > label {width:20%;}
 
     .form_mypage .label_item {width:16%;}
     .form_mypage .input_item { width:84%;}
-    .form_field_item .email_form { width:80%;}
+    .form_field_item .email_form { width:100%;}
     .form_label { width:16%;}
+    .form_label, .label_item {margin-bottom:10rem;}
     .form_input {padding-left:15rem; padding-right:15rem;}
     .form_field_item > .form_input_wrap { width:84%;}
 
     .form_register .form_field_item_wrap {width:100%; margin-bottom:20rem;}
-    .form_register .form_label {width:20%;}
-    .form_register .form_field_item > .form_input_wrap {width:80%;}
-
+    .form_register .form_field_item > .form_input_wrap, .form_register .form_label {width:100%;}
+    .email_wrap .input_email_domain {width: 65%;}
+    .email_wrap .input_email_local  {width: 30%;}
 
     html[lang="en"] .form_basic_head_guide {display:block; position:static; margin-top:10rem;}
-    html[lang="en"] .form_register .form_field_item > .form_input_wrap, html[lang="en"] .form_register .form_label {width:100%;}
-    html[lang="en"] .form_label, html[lang="en"] .label_item {margin-bottom:10rem;}
-    html[lang="en"] .form_field_item .email_form {width:100%;}
-    html[lang="en"] .email_wrap .input_email_local  {width: 30%;}
-    html[lang="en"] .email_wrap .input_email_domain {width: 35%;}
     html[lang="en"] .email_wrap .select{width: 28%;}
-    html[lang="en"] .email_wrap .form_field_item > label,
-    html[lang="en"] .email_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
     html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify.required > label span:after {right:-11rem;}
-    html[lang="en"] .btn_email_verify {width:100%; margin:10rem 0 5rem;}
 
     html[lang="en"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap, 
     html[lang="en"] .code_vertify_wrap .form_field_item.form_field_code_vertify .form_input_wrap .input_code_vertify_wrap {width: 47%;}
@@ -178,9 +168,6 @@
     .form_field_item > .form_input_wrap, .input_item {display:block; width:100%;}
     .form_field_item .email_form {width:100%;}
 
-    .form_field_item .valid_message_confirm, 
-    .form_field_item .valid_message_error,
-    .form_field_item .guide_message_info {margin-left:0;}
 
     .birth_form {width:100%;}
     .birth_form .form_input_wrap {width:31%;}
@@ -198,7 +185,6 @@
 	.email_wrap .secondary .input_email_domain {width:27%;}
 	.email_wrap .secondary .select {width:26%}
     .email_wrap .input_email_local  {width: 30%;}
-    .email_wrap .input_email_domain {width: 35%;}
     .email_wrap .select{width: 28%;}
     .email_wrap .form_field_item > label,
     .email_vertify_wrap .form_field_item > label {width:100%; display:block; margin-bottom:10rem;}
@@ -207,6 +193,7 @@
 	.btn_email_verify {width:100%; margin:10rem 0 5rem;}
     .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap {width:100%;}
 	.email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width: 49%;}
+    .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn {width:24%;}
     .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn:last-child {width:23%;}
     .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .basic_btn.btn_email_verify {margin-top:0; margin-bottom:0;}
     html[lang="zh-TW"] .email_wrap .form_field_item.form_field_email_vertify .form_input_wrap .input_email_vertify_wrap {width: 70%;}
@@ -264,7 +251,7 @@
 @media (max-width: 480px){
 
     /* BUTTON */
-    .basic_btn { min-width:auto; width: calc(50% - 10rem); margin:0 5rem; font-size:14rem;}
+    .basic_btn { min-width:100rem; width:auto; /* width: calc(50% - 10rem); */ margin:0 5rem; font-size:14rem;}
     .basic_table_wrap .search_button {width: calc(30% - 5rem); margin-right:0;}
     .process_btn_wrap {margin-top:50rem;}
     .basic_btn_alone {min-width:calc(50% - 10rem);width:auto;}

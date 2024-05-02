@@ -79,6 +79,10 @@
     /* game view nft - mm */
     .nft-breeding__ex__item img {max-width:350rem;}
 
+    /* NFTS */
+    .launchpad-view__tit__info h3 { font-size: 24rem; }
+    .launchpad-view__info .desc br {display:none;}
+
 }
 
 
@@ -403,8 +407,6 @@
     .accordion-content { font-size: 18rem;}
 
     .mm-panel .nft-community__box { padding-top: 70rem; padding-bottom: 70rem;}
-    
-
 
     /* EVENT */
     .event_list .event_item {width: calc(50% - 30rem);}
@@ -412,6 +414,40 @@
     /* REGISTER */
     .form_register .form_basic_body {padding-left:40rem; padding-right:40rem;}
     html[lang="en"] .form_register .form_field_item_wrap.pw_check_wrap .required label span:after {right:-35rem;}
+
+    /* NFTS */
+    .nft-launchpad__wrap h2 { font-size: 26rem;}
+    .nft-launchpad__info .goods { font-size: 15rem;}
+    .nft-launchpad__info .goods i img {padding:2rem;}
+    .nft-launchpad__info h3 {font-size:20rem;}
+    .nft-launchpad__date {width:55rem;}
+    .nft-launchpad__date b {font-size:18rem;}
+    .nft-launchpad__date span { font-size: 13rem;}
+
+    .page_launchpad_view {margin-top:140rem;}
+    .launchpad-view {display:block;}
+    .launchpad-view__right {margin-top:50rem;}
+
+    .nfts-info__wrap {display:block;}
+    .nfts-filter {display:none;}
+    .nfts-info__item {width: calc(33.33% - 20rem);}
+    .nfts-filter-popup-open {display:inline-block;border: 1rem solid #555; padding: 5rem 20rem 7rem; border-radius: 30rem; margin-bottom:20rem;}
+    .nfts-filter-popup-open span {position:relative; padding-left: 30rem; font-size: 18rem; color: #fff;}
+    .nfts-filter-popup-open span:before { font-family: 'aurora-font'; content: '\e933'; font-size: 17rem; font-weight: normal; color: #fff; display: block; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+    .nfts-filter-popup {color:#fff;}
+    .nfts-filter-popup .nfts-filter {display:block;width:100%;}
+    .nfts-filter-popup {background:#fff;border-radius: 10rem;overflow: hidden;width: calc(100% - 48rem);position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999;}
+    .nfts-filter-popup__head {position: relative;padding: 8rem 15rem 10rem;background:linear-gradient(120deg, rgba(134, 31, 145, 1) 0%, rgba(35, 104, 142, 1) 100%);font-size: 16rem;font-weight: 700;color: #fff;}
+    .nfts-filter-popup .mfp-close {top:2rem;}
+    .nfts-filter-popup .mfp-close:after {color:#fff;}
+    .nfts-filter-popup__body {display:block;padding: 25rem;margin-top: 0;}
+    .nfts-filter__item + .nfts-filter__item {margin-top:10rem;}
+    .nfts-filter__button {color:#222;}
+    .nfts-filter-popup__body .custom_checkbox {color:#222;}
+    .nfts-filter__search {background:#fff; border:1rem solid #ddd;}
+    .nfts-search__input {color:#222;}
+    .nfst-search__submit:before {color:#999;}
+    .nfts-filter-popup__confirm {display: block; width: 100%; font-size: 18rem; padding: 10rem; border-radius: 6rem; margin-top:30rem; background:linear-gradient(120deg, rgba(134, 31, 145, 1) 0%, rgba(35, 104, 142, 1) 100%); border:none; color:#fff; text-align:center;}
 
 }
 
@@ -708,6 +744,20 @@
     .nft_info_wrap .nft_price > p {font-size:18rem;}
     .page_nft_view .nft_info_wrap .nft_button {margin-top:20rem;}
     .page_nft_view .nft_info_wrap .nft_button button {font-size:18rem;}
+
+    /* NFTS */
+    .nft-launchpad__wrap + .nft-launchpad__wrap {margin-top: 80rem;}
+    .nft-launchpad__wrap h2 { font-size: 22rem;}
+    .nft-launchpad__item {width: calc(50% - 20rem);}
+    .nft-launchpad__info .goods { font-size: 14rem;}
+    .nft-launchpad__info .goods i {width: 18rem; height:18rem;}
+    .nft-launchpad__info h3 {font-size:18rem;}
+    .nft-launchpad__date {width:50rem;}
+    .nft-launchpad__date b {font-size:16rem;}
+    .nft-launchpad__date span { font-size: 12rem;}
+
+    .launchpad-view__tit__info h3 { font-size: 22rem; }
+    .launchpad-view__btn a, .launchpad-view__btn button {font-size:18rem;}
 
     /* SERVICE CENTER */
     .cs_help_head { padding:30rem;}
@@ -1272,6 +1322,33 @@
     .accordion-content { font-size: 14rem;}
     .mm-panel .nft-community__box figure {max-width:70%; width:auto;}
 
+    /* NFTS */
+    .nft-launchpad__wrap + .nft-launchpad__wrap {margin-top: 60rem;}
+    .nft-launchpad__list { margin:0;}
+    .nft-launchpad__item { width: 100%; margin:0;}
+    .nft-launchpad__item + .nft-launchpad__item {margin-top:20rem;}
+    .nft-launchpad__date { width: auto;}
+    .nft-launchpad__date span { font-size: 11rem;}
+    .nft-launchpad__info { padding: 12rem;}
+    .nft-launchpad__info .goods {font-size: 13rem;}
+    .nft-launchpad__info h3 { font-size: 16rem; }
+    .nfts-info__item {width: calc(50% - 20rem);}
+
+    .page_launchpad_view {margin-top:100rem;}
+    .launchpad-view__right { margin-top: 30rem;}
+    .launchpad-view__tit__info h3 {  font-size: 20rem;}
+    .launchpad-sns__list {margin-top:25rem;}
+    .launchpad-view__info .desc {margin-top:20rem;}
+    .launchpad-view__btn {margin-top:30rem;}
+    .launchpad-view__mint-info h3 {font-size: 18rem;}
+    .launchpad-view__mint-info__box li {font-size:14rem;}
+    .launchpad-view__mint-info__box li b {width:90rem;}
+    .launchpad-view__mint-info__box li p {padding-left:12rem;}
+    .mint-progressbar__box figure {width: 30rem;}
+    .mint-progressbar li {font-size:14rem;}
+
+    .nfts-filter-popup__head {font-size:14rem;}
+    .nfts-filter-popup__body {padding:20rem;}
 
     /* EVENT */
     .event_list {margin:0;}
@@ -1710,6 +1787,41 @@
     .nft-qna .mm-guide-text {margin-top:40rem;}
     
     .mm-panel .nft-community__box figure {margin-bottom:0;}
+
+    /* NFTS */
+    .nft-launchpad__wrap h2 {font-size:20rem;}
+
+    .page_launchpad_view {margin-top:80rem;}
+    .nfts-filter-popup-open span {font-size:16rem;}
+
+    .minting-result {width: 80%;font-size: 24rem; padding:10rem 10rem 11rem;}
+    .launchpad-view__logo { width: 60rem;}
+    .launchpad-view__right { margin-top: 20rem;}
+    .launchpad-view__tit__info h3 { font-size: 18rem;}
+    .launchpad-view__mint-info { padding-top: 25rem;margin-top: 30rem;}
+    .launchpad-view__info .goods { font-size: 14rem;}
+    .launchpad-view__info .goods i { width: 18rem; height: 18rem;}
+    .launchpad-view__info .goods i img {padding:2rem;}
+    .launchpad-view__info .desc {font-size:16rem;}
+    .launchpad-view__btn a, .launchpad-view__btn button {padding:10rem 10rem 11rem;}
+    .launchpad-view__mint-info__item + .launchpad-view__mint-info__item { margin-top: 40rem;}
+    .launchpad-view__mint-info__box {padding:15rem;}
+    .mint-purchase-popup {padding:15rem 20rem 20rem;}
+    .mint-purchase-popup button.mfp-close {top:5rem; right:8rem;}
+    .mint-purchase-popup__head h2 {font-size:20rem;}
+    .mint-purchase-popup .project-info__wrap { margin-top: 15rem;}
+    .mint-purchase-popup .project-info b {font-size: 18rem;}
+    .mint-purchase-popup .project-info p { font-size: 15rem;}
+    .mint-purchase-popup .project-info p i {margin-right:5rem;}
+    .mint-purchase-info li b {font-size: 15rem;}
+    .mint-purchase-info li p {font-size: 15rem;}
+    .mint-total {font-size:16rem;}
+
+    .nfts-info__list {margin:-5rem;}
+    .nfts-info__item {width: calc(50% - 10rem);margin:5rem;}
+    .nfts-info__item ul {padding:10rem;}
+    .nfts-info__item li {font-size:13rem;}
+    .nfts-filter-popup__confirm {font-size:16rem;}
 
     /* EVENT */
     .event_list .event_item + .event_item {margin-top:12rem;}

@@ -194,6 +194,7 @@ if($social_email != ''){
 
 									<button type="button" class="basic_btn btn_email_verify <?php echo $disabled_cert_btn; ?>" onclick="return email_verify();"><span><?php echo $lang['Email_Verification']; ?></span></button>
 								 </div>
+                                 <p class="guide_message_info"><i class="icon"></i><span><?php echo $lang['Enter_Using_Email']; ?></span></p>
 							</div><!-- .form_field_item -->
 
 							 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -203,8 +204,6 @@ if($social_email != ''){
 									});
 							 </script>
 							 -->
-
-							<p class="guide_message_info"><i class="icon"></i><span><?php echo $lang['Enter_Using_Email']; ?></span></p>
 							<div class="form_field_item required form_field_email_vertify">
 								<label class="form_label" for="email_vertify"><span><?php echo $lang['Email_Verification_Num']; ?></span></label>
                                 <div class="form_input_wrap">

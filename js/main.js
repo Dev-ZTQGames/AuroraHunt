@@ -93,8 +93,9 @@ accordion();
 rwd_slider();
 
 galaxy_wallet();
-nft_utility_popup();
-nft_mint();
+nfts_utility_popup();
+nfts_mint();
+nfts_filter()
 
 /* **************************************** *
 * ON LOAD
@@ -121,6 +122,7 @@ function init_resize(){
 
     sticky_btn();
     nft_sub_menu();
+    nfts_filter();
 
     match_height($('.certify_select_item, .quick_menu_item, .has_cash_box'));
 
@@ -589,6 +591,17 @@ function attend_check() {
 function current_menu() {
 
 	var url = window.location.href.split('?')[0];
+
+    if(url.indexOf('nfts_launchpad_view.htm') !== -1){
+		url = window.location.origin+'/sub/nfts_launchpad.htm'
+	}else if(url.indexOf('cs_notice_view.htm') !== -1){
+		url = window.location.origin+'/sub/cs_notice_list.htm'+'?'+window.location.href.split('?')[1].split('&')[0];
+	}else if(url.indexOf('cs_help_view.htm') !== -1){
+		url = window.location.origin+'/sub/cs_help_list.htm'+'?'+window.location.href.split('?')[1].split('&')[0];
+	}else if(url.indexOf('game_view.htm') !== -1){
+		url = window.location.origin+'/sub/game.htm'
+	}
+
 
     $('#menu a').each(function () {
         var link_page = this.href;
@@ -2368,7 +2381,7 @@ function galaxy_wallet(){
 }
 
 
-function nft_utility_popup(){
+function nfts_utility_popup(){
 
     //select
     $('.collections_view_item').each(function () {
@@ -2399,7 +2412,7 @@ function nft_utility_popup(){
             open: function() {
                 $('body').addClass('mfp-popup-open');
                 $('html').css('overflow-y','hidden');
-                nft_utility_popup_slider();
+                nfts_utility_popup_slider();
             },
             afterClose: function() {
                 $('body').removeClass('mfp-popup-open');
@@ -2410,7 +2423,7 @@ function nft_utility_popup(){
     })
 
     
-    function nft_utility_popup_slider(){
+    function nfts_utility_popup_slider(){
 
         if( !$('.nft_utility_popup_guide').length ){ return; }
 
@@ -2461,7 +2474,7 @@ function nft_utility_popup(){
 
 
 
-function nft_mint(){
+function nfts_mint(){
 
     //progress bar
     $('.mint-progressbar__box:not(.mint-soldout)').each(function(){
@@ -2525,6 +2538,74 @@ function nft_mint(){
 
     })
 
+}
+
+
+
+function nfts_filter(){
+    
+    if( $(window).width() < 1024 ) {
+
+         //filter popup
+        $('.nfts-filter-popup-open').magnificPopup({
+            type: 'inline',
+            //mainClass: 'game_view_intro_popup',
+            fixedContentPos: true,
+            fixedBgPos: true,
+            closeBtnInside: true,
+            callbacks: {
+                open: function() {
+                    $('body').addClass('mfp-popup-open');
+                    
+                    //mobile filter popup
+                    if(!$('.nfts-filter-popup__body').find('.nfts-filter').length){
+                        var contents = $('.nfts-filter')[0].outerHTML
+                        $('.nfts-filter-popup__body').prepend(contents);
+                    }
+
+                },
+                afterClose: function() {
+                    $('body').removeClass('mfp-popup-open');
+
+                    //$('.nfts-filter-popup__body').find('.nfts-filter').remove();
+                }
+            },
+            midClick: true
+        })
+
+        $('.nfts-filter-popup__confirm').on('click',function(){
+            $.magnificPopup.close();
+        });
+
+
+
+        /*
+        //nft filter accordion
+        $('.nfts-filter__item').each(function(){
+            //if(!$(this).hasClass('nfts-filter__item--active')) $(this).find('.nfts-filter__content').hide();
+            //if(!$(this).hasClass('nfts-filter__item--active')) $(this).find('.nfts-filter__content').hide();
+        });
+
+        // Toggle the accordion
+        $('.nfts-filter').on('click', '.nfts-filter__button', function(){
+            var $item = $(this).parent('.nfts-filter__item');
+
+            if($item.hasClass('nfts-filter__item--active')){ // close
+                $item.removeClass('nfts-filter__item--active');
+                $item.find('.nfts-filter__content').slideUp();
+            } else { // open
+                $item.addClass('nfts-filter__item--active');
+                //$item.siblings('.nfts-filter__item').removeClass('nfts-filter__item--active')
+                //$item.siblings('.nfts-filter__item').find('.nfts-filter__content').slideUp();
+                $item.find('.nfts-filter__content').slideDown();
+            }
+            return false;
+        });*/
+ 
+        
+    } else {
+        $.magnificPopup.close();
+    }
 }
 
 

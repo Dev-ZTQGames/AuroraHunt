@@ -1,15 +1,11 @@
-<script>
-		let authClient = await AuthClient.create();
+import { Actor, HttpAgent } from '@dfinity/agent';
 
-        await new Promise((resolve) => {
-            authClient.login({
-                identityProvider: 'https://identity.ic0.app',
-                onSuccess: resolve,
-            });
-        });
-       const identity = authClient.getIdentity();
-        const agent = new HttpAgent({ identity });
-/*        const actor = createActor(process.env.CANISTER_ID_II_INTEGRATION_BACKEND, {
-            agent,
-        });*/
-</script>
+async function interactWithCanister() {
+  const agent = new HttpAgent();
+  const actor = Actor.createActor(idlFactory, { agent, canisterId });
+
+  const result = await actor.someMethod();
+  console.log(result);
+}
+
+interactWithCanister().catch(console.error);
