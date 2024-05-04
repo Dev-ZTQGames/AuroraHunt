@@ -76,7 +76,7 @@ if ( $HOST == "" )	{
 if ( $mode == "setGameData" ) {
 
 	// 지갑 부존재시 생성하여 디비 삽입
-	mysqli_query($connect, "INSERT INTO AccountsGameData (m_login_id,m_game_code,m_data,m_date) VALUES ('".$login_id."', '".$game_code."', '".$data."','".date("Y-m-d H:i:s")."')");
+	mysqli_query($connect, "INSERT INTO AccountsGameData (m_login_id,m_game_code,m_data,m_date) VALUES ('".$login_id."', '".$game_code."', '".json_encode($data)."','".date("Y-m-d H:i:s")."')");
 
 	$array = array("result" => "1", "msg" => "Request OK, Success.");
 
@@ -111,7 +111,7 @@ if ( $mode == "getGameData" ) {
 		$m_data  = $info_gamedata['m_data'];
 		$m_date  = $info_gamedata['m_date'];
 
-		array_push($list_data, $m_data);
+		array_push($list_data, json_decode($m_data));
 		array_push($list_date, $m_date);
 	}
 
