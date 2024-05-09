@@ -52,8 +52,8 @@ $SyncAccount = escape_string($_REQUEST['ac']);
 <div class="wallet_create_complete_box_wrap">
     <div class="wallet_create_complete_box">
         <i></i>
-        <p id="msg_area">Congratulations on <br>synchronizing your Ethereum wallet.<p>
-        <a href="/" class="btn_round"><span>메인으로</span></a>   
+        <p id="msg_area"><?php echo $lang['Congratulation']; ?><p>
+        <a href="/" class="btn_round"><span><?php echo $lang['To_main']; ?></span></a>   
     </div><!-- .wallet_create_complete_box -->
 </div><!-- .wallet_create_complete_box_wrap -->
 
@@ -99,16 +99,16 @@ $("#sync_account_eth").on('click',function(){
                 <div class="bobby_wallet_contents">
                     <h3>Synchronized Account</h3>
                     <div class="bobby_wallet_desc">
-                        <p>아래는 기존에 동기화된 이더리움 지갑 주소입니다.
+                        <p><?php echo $lang['Ethereum_wallet']; ?>
 						</p>
                     </div><!-- .bobby_wallet_desc -->
                     <div class="wallet_key_wrap">
                         <input type="text" class="wallet_form_input wallet_key" value="<?php echo $m_account; ?>">
                         <button type="button" class="btn_round clipboard" data-clipboard-text="<?php echo $m_account; ?>"><span>Copy</span></button>
-                        <div class="clipboard_copynote"><p>복사되었습니다.</p></div>
+                        <div class="clipboard_copynote"><p><?php echo $lang['copy']; ?></p></div>
                         <!--a href="#" class="btn_round"><span>Download for CSV file</span></a-->
                     </div><!-- .wallet_key_wrap -->
-                    <button type="button" class="btn_round btn_process btn_create_wallet"><span>확인</span></button>   
+                    <button type="button" class="btn_round btn_process btn_create_wallet"><span><?php echo $lang['confirm']; ?></span></button>   
                 </div><!-- .bobby_wallet_contents -->
             </div><!-- .bobby_wallet_wrap -->
 		</div><!-- .wrap_narrow -->
@@ -118,9 +118,8 @@ $("#sync_account_eth").on('click',function(){
 <div class="wallet_create_complete_box_wrap">
     <div class="wallet_create_complete_box">
         <i></i>
-        <p>기존에 동기화된 이더리움 지갑 주소는<br>변경될 수 없습니다.<br><br>
-		감사합니다!<br></p>
-        <a href="/" class="btn_round"><span>메인으로</span></a>   
+        <p><?php echo $lang['Cant_change']; ?></p>
+        <a href="/" class="btn_round"><span><?php echo $lang['To_main']; ?></span></a>   
     </div><!-- .wallet_create_complete_box -->
 </div><!-- .wallet_create_complete_box_wrap -->
 

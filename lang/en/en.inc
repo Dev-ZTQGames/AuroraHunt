@@ -667,4 +667,10 @@ $lang['Unit']	= "Unit";
 $lang['Units']	= "Units";
 $lang['Sec']	= "sec.";
 $lang['Sports']										= "Sports";
+$lang['Congratulation']										= "Congratulations on <br>synchronizing your Ethereum wallet.";
+$lang['To_main']										= "main";
+$lang['Ethereum_wallet']										= "Below is the existing synchronized Ethereum wallet address.";
+$lang['copy']										= "It has been copied.";
+$lang['confirm']										= "confirm";
+$lang['Cant_change']										= "Existing synchronized Ethereum wallet addresses cannot be changed <br><br>Thank you!<br>";
 ?>

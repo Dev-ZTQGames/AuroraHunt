@@ -666,4 +666,11 @@ $lang['Effect'] = "효과";
 $lang['Unit']	= "개";
 $lang['Units']	= "개";
 $lang['Sec']	= "초";
+$lang['Sports']										= "Sports";
+$lang['Congratulation']										= "Congratulations on <br>synchronizing your Ethereum wallet.";
+$lang['To_main']										= "메인으로";
+$lang['Ethereum_wallet']										= "아래는 기존에 동기화된 이더리움 지갑 주소입니다.";
+$lang['copy']										= "복사되었습니다.";
+$lang['confirm']										= "확인";
+$lang['Cant_change']										= "기존에 동기화된 이더리움 지갑 주소는<br>변경될 수 없습니다.<br><br>감사합니다!<br>";
 ?>

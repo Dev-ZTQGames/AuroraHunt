@@ -2365,7 +2365,9 @@ function galaxy_wallet(){
 
     //plug sign popup
     $('#plug_wallet .plug_principal_popup .principal_btn_send').on('click',function(){
-        $(this).parents('.wallet_panel').find('.plug_sign_popup').show();
+	//	  $(this).parents('.wallet_panel').find('.plug_sign_popup').show();
+		  $(this).parents('.wallet_panel').find('.confirm_transaction_popup').show();
+          $(this).parents('.wallet_panel').find('.plug_principal_popup').hide();
     })
 
     //confirm transaction popup
@@ -2376,6 +2378,8 @@ function galaxy_wallet(){
 
     $('.confirm_transaction_popup .btn_close').on('click',function(){
         $(this).parents('.wallet_panel').find('.confirm_transaction_popup').hide();
+		$('#transferIn_message').text("Processing...");
+		$('#transferOut_message').text("Processing...");
     })
 
 }

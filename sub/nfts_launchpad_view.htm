@@ -1,5 +1,43 @@
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.htm'; ?>
+<script>
+
+function executeMint() {
+	const times = $('#mint_times').val();
+
+	const data = {
+		mode: 'executeMinting',
+		times: times,
+	}
+	var iframe = document.getElementById('Internet_Identity');
+	iframe.contentWindow.postMessage(data, '*');
+}
+</script>
+<script>
+let once = true;
+window.addEventListener('message', function(event) {
+	if (event.data.LoggedIn === true && once === true) {
+		once = false;
+		var iframe = document.getElementById('Internet_Identity');
+		iframe.contentWindow.postMessage('totalSupply', '*');
+	}
+	if (event.data.NFT_totalSupply === true) {
+
+	//	const totalSupplyDip721			= event.data.totalSupplyDip721;
+		const totalSupplyNormalCustom	= event.data.totalSupplyNormalCustom;
+	//	const totalSupplyRareCustom		= event.data.totalSupplyRareCustom;
+	//	const totalSupplyEpicCustom		= event.data.totalSupplyEpicCustom;
+	//	const totalSupplyUniqueCustom	= event.data.totalSupplyUniqueCustom;
+	//	const totalSupplyLegendaryCusto	= event.data.totalSupplyLegendaryCusto;
+
+	}
+
+	if (event.data.status === 'mint') {
+		var result = event.data.result;
+
+	}
+	});
+</script>
 
 <div id="container" class="page_nfts page_launchpad_view">
     <div class="wrap">
@@ -244,17 +282,17 @@
                 <b>Quantity</b>
                 <div class="quantity">
                     <button class="btn-count count-down"><span class="sr_only">-</span></button>
-                    <p><input type="text" class="qty-input" value="1" id="amount"></p>
+                    <p><input type="text" class="qty-input" id="mint_times" value="1" id="amount"></p>
                     <button class="btn-count count-up"><span class="sr_only">+</span></button>
                 </div><!-- .quantity -->
             </li>
         </ul>
         <div class="mint-total">
             <b>Total</b>
-            <p><em>0 ETH</em> + gas fee</p>
+            <p><em>0 ICP</em></p>
         </div>
 		<!--button type="button" class="btn-pruchase" id="button_mint"><span id="button_mint_span">TBA</span></button-->
-        <button type="button" class="btn-pruchase" id="button_mint" onclick="go_Mint('WhitelistSale_PublicPhase');"><span id="button_mint_span">Mint</span></button>
+        <button type="button" class="btn-pruchase" id="button_mint" onclick="executeMint();"><span id="button_mint_span">Mint</span></button>
     </div><!-- .mint-purchase-popup__body -->
 </div><!-- .mint-purchase-popup -->
 
